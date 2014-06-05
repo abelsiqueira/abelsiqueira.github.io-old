@@ -13,7 +13,8 @@
 html, body { height: 100%; }
 
 body {
-  background-color: #adf;
+  background-color: #eee;
+  background-image: url('/assets/background.png');
   font: 13.34px Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
@@ -69,8 +70,9 @@ a:visited { color: #0aa; }
 }
 
 .title {
+  font-size: 1.5em;
   display: inline-block;
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
 }
 
 .title a {
@@ -202,8 +204,21 @@ a:visited { color: #0aa; }
   border: 1px solid black;
   border-width: 2px 1px;
   border-radius: 5px;
-  background-color: #adf;
+  background-color: #aaa;
   padding: 5px 30px;
+  margin: 0.2em 0em 0em 0em;
+}
+
+.left h2 {
+  font-family: sans;
+  font-size: 1.0em;
+  text-align: center;
+  border: 0px solid black;
+  border-width: 0px 1px 1px 1px;
+  border-radius: 0px 0px 5px 5px;
+  background-color: #eef;
+  padding: 2px 30px;
+  margin: 0em 1em;
 }
 
 .sidebar h2 {
@@ -231,4 +246,9 @@ a:visited { color: #0aa; }
   border-left: 2px solid #adf;
   border-radius: 0px 30px;
   color: #999;
+}
+
+.left h1 a, .left h1 a:visited {
+  color: black;
+  text-decoration: none;
 }

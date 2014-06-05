@@ -1,0 +1,20 @@
+---
+layout: default
+title: Fun
+---
+
+<h1>Fun</h1>
+
+<p> Here I will talk about the fun things I like. </p>
+<p> <strong>NO WORK HERE</strong>. </p>
+<p>
+  <ul class="posts">
+  {% for post in site.categories.fun %}
+  <li> <a href="{{ post.url }}"> &raquo; {{ post.title }} </a>
+    <div class="excerpt">
+      {{ post.excerpt | strip_html | truncatewords: 50 }}
+    </div>
+  </li>
+  {% endfor %}
+  </ul>
+</p>
