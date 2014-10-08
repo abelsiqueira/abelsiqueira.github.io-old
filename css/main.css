@@ -204,7 +204,7 @@ a:visited { color: #0aa; }
   border: 1px solid black;
   border-width: 2px 1px;
   border-radius: 5px;
-  background-color: #aaa;
+  background-color: #7dd;
   padding: 5px 30px;
   margin: 0.2em 0em 0em 0em;
 }
@@ -219,6 +219,17 @@ a:visited { color: #0aa; }
   background-color: #eef;
   padding: 2px 30px;
   margin: 0em 1em;
+}
+
+.left h3 {
+  font-family: sans;
+  font-size: 1.0em;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #acc;
+  padding: 2px 30px;
+  margin: 1em 1em;
 }
 
 .sidebar h2 {
