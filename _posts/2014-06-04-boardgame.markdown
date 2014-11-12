@@ -4,7 +4,6 @@ title:  "Board Games"
 date:   2014-06-04
 categories: fun
 ---
-
 <p> I (not so) recently became interested in board games. To clarify, I am not
 talking about the "classic" board games like War, Monopoly, and such.
 I'm talking about board games with advanced mechanics. This does mean they are

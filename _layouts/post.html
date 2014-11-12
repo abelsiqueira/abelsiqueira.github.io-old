@@ -1,15 +1,16 @@
 ---
 layout: default
 ---
-<h1>
-<a href="/{{ page.categories | first }}.html">
-{{ page.categories | first | capitalize }}
-</a>
-</h1>
-
-<h2>{{ page.title }}</h2>
-
 <div class="post">
-{{ content }}
+
+  <header class="post-header">
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}
+      {% if page.author %} - {{ page.author }}{% endif %}
+      {% if page.meta %} - {{ page.meta }}{% endif %}</p>
+  </header>
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+
 </div>
-<p class="meta">{{ page.date | date_to_string }}</p>
