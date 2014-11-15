@@ -5,12 +5,11 @@ date:   2014-06-04
 categories: research
 ---
 <p> After working with references and citations in latex for a while, with
-multiple files, I noticed that some things need improvement.
-First of all, you need to use some way to store your bibliography
-<strong>outside</strong> of the tex file. For instance, using bibtex.
-Second, you probably want some bibliography package, such as biblatex or natbib.
-Third, you need some way to manage your bibliography entries and verify if they
-are correct.</p>
+multiple files, I noticed that some things need improvement.  First of all, you
+need to use some way to store your bibliography <strong>outside</strong> of the
+tex file. For instance, using bibtex.  Second, you probably want some
+bibliography package, such as biblatex or natbib.  Third, you need some way to
+manage your bibliography entries and verify if they are correct.</p>
 
 <p>For the third option, I didn't found a good enough option, <strong>for my
 needs</strong> (light, easy, command line). Thinking about this problem, I

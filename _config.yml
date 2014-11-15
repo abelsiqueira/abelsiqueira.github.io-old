@@ -1,9 +1,21 @@
-# Site settings
 title: Abel Soares Siqueira
 email: abel.s.siqueira@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://abelsiqueira.github.io" # the base hostname & protocol for your site
 github_username:  abelsiqueira
-
-# Build settings
 markdown: kramdown
+permalink: /:title/
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      lang: en
+      layout: default
+nav:
+  fun:
+    title: "Fun"
+    url:   "/fun.html"
+  research:
+    title: "Research"
+    url:   "/research.html"
