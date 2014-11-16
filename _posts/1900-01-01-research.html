@@ -5,13 +5,7 @@ permalink: /research.html
 ---
 <p> Here are the things I'm working at the moment, or worked at some point. </p>
 <p>
-  <ul class="posts">
   {% for post in site.categories.research %}
-  <li> <a href="{{ post.url }}"> &raquo; {{ post.title }} </a>
-    <div class="excerpt">
-      {{ post.excerpt | strip_html | truncatewords: 50 }}
-    </div>
-  </li>
+  {% include excerpt.html %}
   {% endfor %}
-  </ul>
 </p>

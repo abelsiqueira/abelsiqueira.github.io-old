@@ -242,3 +242,22 @@
 .posts {
     list-style-type: none;
 }
+
+.excerpt {
+  padding: 0px 10px;
+  margin: 10px 0px;
+  background-color: $excerpt-color;
+  border-width: 1px 1px 1px 1px;
+  border-style: solid;
+  border-color: $border-color-alt $border-color-alt $border-color $border-color;
+  font-size: 0.9em;
+}
+
+.excerpt strong {
+  font-variant: small-caps;
+  font-size: 1.1em;
+}
+
+.excerpt a, a:hover, a:visited {
+  color: $link-color;
+}

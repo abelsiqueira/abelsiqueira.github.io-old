@@ -4,3 +4,8 @@ title: Welcome
 permalink: /
 ---
 <p> Welcome to my personal page. </p>
+<p> Latest posts:
+  {% for post in site.posts offset: 0 limit: 5 %}
+  {% include excerpt.html %}
+  {% endfor %}
+</p>
