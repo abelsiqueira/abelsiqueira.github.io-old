@@ -13,6 +13,9 @@ defaults:
       lang: en
       layout: default
 nav:
+  disciplines:
+    title: "Disciplines"
+    url:   "/disciplines.html"
   research:
     title: "Research"
     url:   "/research.html"

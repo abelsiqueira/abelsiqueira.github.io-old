@@ -1,8 +1,9 @@
 ---
-layout: post
-title:  "BibCLI - Command Line Interface to manage bibliography"
-date:   2014-06-04
+layout:     post
+title:      "BibCLI - Command Line Interface to manage bibliography"
+date:       2014-06-04
 categories: research
+name:       bibcli
 ---
 <p> After working with references and citations in latex for a while, with
 multiple files, I noticed that some things need improvement.  First of all, you

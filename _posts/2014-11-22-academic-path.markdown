@@ -3,6 +3,7 @@ layout:     post
 title:      Academic Path
 date:       2014-11-22
 categories: curriculum
+name:       academicpath
 ---
 TL;DR:
 

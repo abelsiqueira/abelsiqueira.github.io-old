@@ -18,10 +18,12 @@ done
 
 echo -n "Post title: "
 read title
+echo -n "Post name (no spaces, unique): "
+read name
 
 today=$(date +"%Y-%m-%d")
 
-filename=$today-$(echo $title | tr '[:upper:] ' '[:lower:]-').markdown
+filename=$today-$(echo $title | sed 's/- //g' | tr '[:upper:] ' '[:lower:]-').markdown
 
 cat > _posts/$filename << EOF
 ---
@@ -29,6 +31,7 @@ layout:     post
 title:      $title
 date:       $today
 categories: ${cats[$(($r-1))]}
+name:       $name
 ---
 EOF
 

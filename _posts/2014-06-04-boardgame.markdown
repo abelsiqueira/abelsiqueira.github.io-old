@@ -1,8 +1,9 @@
 ---
-layout: post
-title:  "Board Games"
-date:   2014-06-04
+layout:     post
+title:      "Board Games"
+date:       2014-06-04
 categories: fun
+name:       boardgames
 ---
 <p> I (not so) recently became interested in board games. To clarify, I am not
 talking about the "classic" board games like War, Monopoly, and such.

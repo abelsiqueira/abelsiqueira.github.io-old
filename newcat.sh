@@ -11,6 +11,7 @@ cat > _posts/$filename << EOF
 layout:     category
 title:      $title
 permalink:  /$cat.html
+name:       $cat
 ---
 <p>
 </p>
