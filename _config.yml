@@ -19,3 +19,6 @@ nav:
   research:
     title: "Research"
     url:   "/research.html"
+  curriculum:
+    title: "Curriculum"
+    url:   "/curriculum.html"
