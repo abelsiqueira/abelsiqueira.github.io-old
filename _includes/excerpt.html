@@ -5,5 +5,8 @@
     <a href="{{ post.url | prepend: site.baseurl }}"> {{ post.title }}</a> -
     (<a href="{{ site.baseurl }}/{{ cat }}.html">{{ cat }}</a>) <br> </strong>
   {{ post.excerpt | strip_html | truncatewords: 50 }}
+  <div class="excerpt-date">
+    {{ post.date | date: "%b %-d, %Y" }}
+  </div>
 </div>
 {% endif %}

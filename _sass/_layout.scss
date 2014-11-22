@@ -32,7 +32,8 @@
     }
 
     .page-link {
-        color: $text-color;
+        color: $link-color;
+        font-weight: bold;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the first one
@@ -260,4 +261,11 @@
 
 .excerpt a, a:hover, a:visited {
   color: $link-color;
+}
+
+.excerpt-date {
+  text-align: right;
+  color: $sec-color;
+  font-variant: small-caps;
+  font-weight: bold;
 }

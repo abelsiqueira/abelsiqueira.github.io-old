@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cats=($(grep "^  [a-z]" _config.yml | sed 's/  \(.*\):/\1/g'))
-N=$((${#cats}-1))
+N=${#cats[@]}
 
 r=0
 while [ $r -lt 1 -o $r -gt $N ]; do
@@ -19,15 +19,17 @@ done
 echo -n "Post title: "
 read title
 
-filename=$(date +"%Y-%m-%d")-$(echo $title | tr '[:upper:] ' '[:lower:]-')
+today=$(date +"%Y-%m-%d")
 
-cat >> _posts/$filename << EOF
+filename=$today-$(echo $title | tr '[:upper:] ' '[:lower:]-').markdown
+
+cat > _posts/$filename << EOF
 ---
 layout:     post
 title:      $title
-date:       $(date +"%Y-%m-%d")
+date:       $today
 categories: ${cats[$(($r-1))]}
 ---
-<p>
-</p>
 EOF
+
+vim _posts/$filename

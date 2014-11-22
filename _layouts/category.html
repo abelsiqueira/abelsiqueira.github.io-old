@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{{ content }}
+
+<p>
+  {% for post in site.posts %}
+    {% if post.categories[0] %}
+      {% if post.categories[0] == page.name %}
+        {% include excerpt.html %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</p>
