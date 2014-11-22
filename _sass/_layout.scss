@@ -250,7 +250,7 @@
   background-color: $excerpt-color;
   border-width: 1px 1px 1px 1px;
   border-style: solid;
-  border-color: $border-color-alt $border-color-alt $border-color $border-color;
+  border-color: $border-color-alt;
   font-size: 0.9em;
 }
 
@@ -268,4 +268,10 @@
   color: $sec-color;
   font-variant: small-caps;
   font-weight: bold;
+}
+
+.post-back {
+  text-align: right;
+  font-variant: small-caps;
+  font-size: 0.9em;
 }

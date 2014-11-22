@@ -13,12 +13,12 @@ defaults:
       lang: en
       layout: default
 nav:
-  fun:
-    title: "Fun"
-    url:   "/fun.html"
   research:
     title: "Research"
     url:   "/research.html"
   curriculum:
     title: "Curriculum"
     url:   "/curriculum.html"
+  fun:
+    title: "Fun"
+    url:   "/fun.html"

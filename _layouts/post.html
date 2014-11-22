@@ -4,11 +4,21 @@ layout: default
 <div class="post">
 
   <header class="post-header">
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</p>
+    {% for menu in site.nav %}
+      {% if menu[0] == page.categories[0] %}
+        <p class="post-back"> <a href="/{{ page.categories[0] }}.html">
+          back to {{ menu[1].title }}
+        </a> </p>
+      {% endif %}
+    {% endfor %}
   </header>
 
   <article class="post-content">
     {{ content }}
   </article>
+
+  <footer class="post-footer">
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</p>
+  </footer>
 
 </div>
