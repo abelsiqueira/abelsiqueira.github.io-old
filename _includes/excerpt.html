@@ -2,8 +2,12 @@
 {% assign cat = post.categories[0] %}
 <div class="excerpt">
   <strong> &raquo;
-    <a href="{{ post.url | prepend: site.baseurl }}"> {{ post.title }}</a> -
-    (<a href="{{ site.baseurl }}/{{ cat }}.html">{{ cat }}</a>) <br> </strong>
+    <a href="{{ post.url | prepend: site.baseurl }}"> {{ post.title }}</a>
+    {% if page.name %}
+    {% else %}
+    - (<a href="{{ site.baseurl }}/{{ cat }}.html">{{ cat }}</a>)
+    {% endif %}
+    <br> </strong>
   {{ post.excerpt | strip_html | truncatewords: 50 }}
   <div class="excerpt-date">
     {{ post.date | date: "%b %-d, %Y" }}
