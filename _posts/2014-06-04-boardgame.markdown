@@ -7,7 +7,7 @@ name:       boardgames
 ---
 <p> I (not so) recently became interested in board games. To clarify, I am not
 talking about the "classic" board games like War, Monopoly, and such.
-I'm talking about board games with advanced mechanics. This does mean they are
+I'm talking about board games with advanced mechanics. This does not mean they are
 all complex, but that they are (mostly) well-though and balanced.
 These board games gathered a legion of followers, most of them geeks and nerds,
 that are interested in some fun hobby. Note that RPG and digital games are
