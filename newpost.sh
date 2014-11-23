@@ -24,6 +24,14 @@ read name
 today=$(date +"%Y-%m-%d")
 
 filename=$today-$(echo $title | sed 's/- //g' | tr '[:upper:] ' '[:lower:]-').markdown
+title=$(for i in $title; do
+  if [ ${#i} -gt 2 ]; then
+    echo -n $i | sed 's/\(.\).*/\1/g' | tr [:lower:] [:upper:]
+    echo $i | sed 's/^.//g'
+  else
+    echo $i
+  fi
+done | xargs)
 
 cat > _posts/$filename << EOF
 ---
