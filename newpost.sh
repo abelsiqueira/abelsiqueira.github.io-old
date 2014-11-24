@@ -22,8 +22,8 @@ echo -n "Post name (no spaces, unique): "
 read name
 
 today=$(date +"%Y-%m-%d")
-
-filename=$today-$(echo $title | sed 's/- //g' | tr '[:upper:] ' '[:lower:]-').markdown
+filename=$today-$(echo $title | sed 's/- //g' | tr '[:upper:] ' '[:lower:]-' |\
+  sed 's/://g').markdown
 title=$(for i in $title; do
   if [ ${#i} -gt 2 ]; then
     echo -n $i | sed 's/\(.\).*/\1/g' | tr [:lower:] [:upper:]
@@ -36,7 +36,7 @@ done | xargs)
 cat > _posts/$filename << EOF
 ---
 layout:     post
-title:      $title
+title:      ${title//:/&#58}
 date:       $today
 categories: ${cats[$(($r-1))]}
 name:       $name
