@@ -9,10 +9,13 @@
     <div class="lang-sw">
       {% assign posts = site.posts | where:"name", page.name | sort: 'path' %}
       {% for post in posts %}
+      {% if post.lang != page.lang %}
         <a href="{{ post.url }}" class="{{ post.lang }}">
           <img src="/assets/{{ post.lang }}.png" width="32px">
         </a>
+      {% endif %}
       {% endfor %}
+      <img src="/assets/{{ page.lang }}.png" width="64px">
     </div>
   </div>
 
