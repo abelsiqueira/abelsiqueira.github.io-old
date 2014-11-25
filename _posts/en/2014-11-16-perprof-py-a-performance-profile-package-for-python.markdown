@@ -3,6 +3,7 @@ layout:     post
 title:      perprof-py&#58 A Performance Profile Package for Python
 date:       2014-11-16
 categories: research
+name:       perprof-py
 ---
 One of the things I worked with was a Performance Profile tool, in the sense
 of Dolan and Moré. This tool,

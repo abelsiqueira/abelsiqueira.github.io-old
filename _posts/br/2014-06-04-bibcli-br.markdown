@@ -1,0 +1,24 @@
+---
+layout:     post
+title:      "BibCLI - Interface de Linha de Comando Para Gerenciar
+Bibliografias"
+date:       2014-06-04
+categories: research
+name:       bibcli
+---
+Depois de trabalhar com referências e citações em LaTeX por algum tempo, com
+arquivos múltiplos, percebi que algumas coisas precisam ser melhoradas.
+Primeiro, você precisa de alguma maneira de guardar sua bibliografia **fora** do
+arquivo .tex. Por exemplo, utilizando bibtex. Segundo, você provavelmente quer
+algum pacote para bibliografia, como o biblatex ou natbib. Terceiro, você
+precisa de alguma maneira de gerenciar os registros da bibliografia e verificar
+que estão corretas.
+
+Para a terceira opção, eu não encontrei nada bom o suficiente **para minhas
+necessidades** (leve, fácil, linha de comando). Pensando no problema, eu decidi
+criar uma ferramenta para fazer exatamente isso. Algumas coisas que eu quero é
+ler um arquivo tex para descobrir as chaves de citação; adicionar os registros
+lendo um arquivo .bib; e obter da internet o registro bibliográfico correto.
+
+A ferramenta ainda está em desenvolvimento inicial, mas já é possível obté-la no
+[github](https://github.com/abelsiqueira/bibcli).

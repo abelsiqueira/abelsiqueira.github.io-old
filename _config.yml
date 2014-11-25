@@ -8,20 +8,46 @@ permalink: /:title/
 defaults:
   -
     scope:
-      path: ""
+      path: _posts/en
     values:
       lang: en
       layout: default
-nav:
-  disciplines:
-    title: "Disciplines"
-    url:   "/disciplines.html"
-  research:
-    title: "Research"
-    url:   "/research.html"
-  curriculum:
-    title: "Curriculum"
-    url:   "/curriculum.html"
-  fun:
-    title: "Fun"
-    url:   "/fun.html"
+  -
+    scope:
+      path: _posts/br
+    values:
+      lang: br
+      layout: default
+t:
+  en:
+    home:
+      title: "Welcome"
+      url:  "/home/"
+    disciplines:
+      title: "Disciplines"
+      url:  "/disciplines/"
+    research:
+      title: "Research"
+      url:  "/research/"
+    curriculum:
+      title: "Curriculum"
+      url:  "/curriculum/"
+    fun:
+      title: "Fun"
+      url:  "/fun/"
+  br:
+    home:
+      title: "Bem-vindo"
+      url:  "/"
+    disciplines:
+      title: "Disciplinas"
+      url:  "/disciplinas/"
+    research:
+      title: "Pesquisa"
+      url:  "/pesquisa/"
+    curriculum:
+      title: "Currículo"
+      url:  "/curriculo/"
+    fun:
+      title: "Diversão"
+      url:  "/diversao/"

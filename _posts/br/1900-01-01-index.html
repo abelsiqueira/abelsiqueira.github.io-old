@@ -1,0 +1,13 @@
+---
+layout:    default
+title:     Bem-vindo
+name:      index
+permalink: /
+---
+<p> Bem-vindo à minha página pessoal. </p>
+<p> Últimos posts:
+  {% assign posts = site.posts | where:"lang", page.lang %}
+  {% for post in posts offset: 0 limit: 5 %}
+  {% include excerpt.html %}
+  {% endfor %}
+</p>
