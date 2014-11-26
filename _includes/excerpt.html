@@ -3,9 +3,10 @@
 <div class="excerpt">
   <strong> &raquo;
     <a href="{{ post.url | prepend: site.baseurl }}"> {{ post.title }}</a>
-    {% if page.name %}
-    {% else %}
-    - (<a href="{{ site.baseurl }}/{{ cat }}.html">{{ cat }}</a>)
+    {% if page.name == "index" %}
+    - (<a href="{{ site.baseurl }}/{{ cat }}.html">
+      {{site.t[page.lang][cat].title}}
+    </a>)
     {% endif %}
     <br> </strong>
   {{ post.excerpt | strip_html | truncatewords: 50 }}

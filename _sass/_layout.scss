@@ -165,9 +165,15 @@
     padding: $spacing-unit 0;
 }
 
-.wrapper {
+.wrapper, .footer-wrapper {
     background-color: $block-color;
     border: 1px solid $border-color;
+}
+
+.footer-wrapper {
+    font-variant: small-caps;
+    text-align: center;
+    width: 100%;
 }
 
 .page-heading {

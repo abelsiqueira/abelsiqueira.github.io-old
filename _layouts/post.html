@@ -4,13 +4,10 @@ layout: default
 <div class="post">
 
   <header class="post-header">
-    {% for menu in site.nav %}
-      {% if menu[0] == page.categories[0] %}
-        <p class="post-back"> <a href="/{{ page.categories[0] }}.html">
-          back to {{ menu[1].title }}
-        </a> </p>
-      {% endif %}
-    {% endfor %}
+    {% assign cat = page.categories[0] %}
+    <p class="post-back"> <a href="{{ site.t[page.lang][cat].url }}">
+      {{site.t[page.lang].backto}} {{ site.t[page.lang][cat].title }}
+    </a> </p>
   </header>
 
   <article class="post-content">

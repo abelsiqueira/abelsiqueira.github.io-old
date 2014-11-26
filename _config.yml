@@ -20,9 +20,7 @@ defaults:
       layout: default
 t:
   en:
-    home:
-      title: "Welcome"
-      url:  "/home/"
+    backto: "back to"
     disciplines:
       title: "Disciplines"
       url:  "/disciplines/"
@@ -36,9 +34,7 @@ t:
       title: "Fun"
       url:  "/fun/"
   br:
-    home:
-      title: "Bem-vindo"
-      url:  "/"
+    backto: "voltar para"
     disciplines:
       title: "Disciplinas"
       url:  "/disciplinas/"
