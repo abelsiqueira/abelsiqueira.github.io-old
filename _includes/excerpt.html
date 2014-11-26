@@ -11,7 +11,8 @@
     <br> </strong>
   {{ post.excerpt | strip_html | truncatewords: 50 }}
   <div class="excerpt-date">
-    {{ post.date | date: "%b %-d, %Y" }}
+    {% assign date = post.date %}
+    {% include dateformat.html %}
   </div>
 </div>
 {% endif %}

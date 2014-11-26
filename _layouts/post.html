@@ -15,7 +15,10 @@ layout: default
   </article>
 
   <footer class="post-footer">
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</p>
+    {% assign date = page.date %}
+    <p class="post-meta">
+      {% include dateformat.html %}
+    </p>
   </footer>
 
 </div>
