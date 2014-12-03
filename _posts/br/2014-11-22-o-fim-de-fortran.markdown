@@ -5,7 +5,7 @@ date:       2014-11-22
 categories: research
 name:       endoffortran
 ---
-Um de meus principais interesse é o fim de Fortran **como a única linguagem de
+Um de meus principais interesses é o fim de Fortran **como a única linguagem de
 programação usada por matemáticos**.
 Se você não é da área de programação matemática, provavelmente vai achar
 estranho que eu esteja falando de Fortran, então explicarei.
