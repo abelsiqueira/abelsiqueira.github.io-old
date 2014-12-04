@@ -21,6 +21,7 @@ defaults:
 t:
   en:
     backto: "back to"
+    homeurl:  "/home/"
     disciplines:
       title: "Disciplines"
       url:  "/disciplines/"
@@ -35,6 +36,7 @@ t:
       url:  "/fun/"
   br:
     backto: "voltar para"
+    homeurl:  "/"
     disciplines:
       title: "Disciplinas"
       url:  "/disciplinas/"

@@ -27,7 +27,7 @@ begin=$((${line_number[$(($l-1))]}+1))
 end=$((${line_number[$l]}-1))
 sedcmd="${begin},${end}p"
 
-cats=($(sed $sedcmd _config.yml -n | grep -v backto | grep -v "      " |\
+cats=($(sed $sedcmd _config.yml -n | grep -v backto | grep -v home | grep -v "      " |\
   sed 's/^    \(.*\):/\1/g'))
 N=${#cats[@]}
 
