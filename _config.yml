@@ -34,6 +34,9 @@ t:
     fun:
       title: "Fun"
       url:  "/fun/"
+    public-utility:
+      title: "Public Utility"
+      url:  "/public-utility/"
   br:
     backto: "voltar para"
     homeurl:  "/"
@@ -49,3 +52,6 @@ t:
     fun:
       title: "Diversão"
       url:  "/diversao/"
+    public-utility:
+      title: "Utilidade Pública"
+      url:  "/utilidade-publica/"

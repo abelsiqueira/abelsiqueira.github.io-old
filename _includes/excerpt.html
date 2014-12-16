@@ -4,7 +4,7 @@
   <strong> &raquo;
     <a href="{{ post.url | prepend: site.baseurl }}"> {{ post.title }}</a>
     {% if page.name == "index" %}
-    - (<a href="{{ site.baseurl }}/{{ cat }}.html">
+    - (<a href="{{ site.t[page.lang][cat].url }}">
       {{site.t[page.lang][cat].title}}
     </a>)
     {% endif %}
