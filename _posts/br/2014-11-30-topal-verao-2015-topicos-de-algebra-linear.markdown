@@ -5,7 +5,7 @@ date:       2014-11-30
 categories: disciplines
 name:       topal-summer2014
 ---
-**Atualizado: 05 de Janeiro de 2015, 08:50**
+**Atualizado: 06 de Janeiro de 2015, 09:10**
 
 # Informações
 
@@ -24,6 +24,11 @@ Espaços com produto interno, bases ortonormais, e
 processo de ortogonalização.
 Tipos especiais de operadores lineares.
 
+# Listas
+
+  - [Lista 1](/disciplinas/topal2015/lista1.pdf)
+  - [Lista 2](/disciplinas/topal2015/lista2.pdf)
+
 # Bibliografia
 
   - K. Hoffman e R. Kunze, _Álgebra Linear_. S. Paulo, Ed. Univ.
@@ -34,3 +39,5 @@ Tipos especiais de operadores lineares.
     universitários, Sociedade Brasileira de Matemática, Rio de Janeiro, 2006.
   - A. Kirilov, _Notas de aula de tópicos de álgebra linear de 2012_,
     [people.ufpr.br/~akirilov/ensino/2012/algebralinear.html](http://people.ufpr.br/~akirilov/ensino/2012/algebralinear.html)
+  - S. Roman, _Advanced linear algebra_, 2nd edition, Graduate texts in
+    mathematics, Springer, 2005
