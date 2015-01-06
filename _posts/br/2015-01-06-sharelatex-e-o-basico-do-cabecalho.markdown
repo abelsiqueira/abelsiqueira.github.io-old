@@ -41,4 +41,4 @@ Além disso, para não começar do nada, copie o seguinte código
 no ShareLaTeX e comece a descobrir as coisas.
 
 E não mais importante, se você tiver uma pergunta relacionada ao LaTeX tente
-http://tex.stackexchange.com/.
+[Stack Exchange do Tex](http://tex.stackexchange.com/).
