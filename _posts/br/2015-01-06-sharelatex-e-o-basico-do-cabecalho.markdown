@@ -8,7 +8,7 @@ name:       latexheaderbasic
 Este post serve principalmente para meus alunos e outros interessados em começar
 a usar o LaTeX. A primeira coisa a se notar é que instalar o compilador é bem
 chato e complicado, então sugiro usarem o
-[ShareLaTeX](https://pt.sharelatex.com/)
+[ShareLaTeX](https://www.sharelatex.com?r=09a71589&rm=d&rs=b)
 que é um editor e compilador de LaTeX online.
 O ShareLaTeX possui
 [uma boa documentação para quem está começando](https://pt.sharelatex.com/learn)
