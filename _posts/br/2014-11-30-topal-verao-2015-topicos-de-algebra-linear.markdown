@@ -5,7 +5,7 @@ date:       2014-11-30
 categories: disciplines
 name:       topal-summer2014
 ---
-**Atualizado: 06 de Janeiro de 2015, 09:10**
+**Atualizado: 08 de Janeiro de 2015, 01:00**
 
 # Informações
 
@@ -28,6 +28,11 @@ Tipos especiais de operadores lineares.
 
   - [Lista 1](/disciplinas/topal2015/lista1.pdf)
   - [Lista 2](/disciplinas/topal2015/lista2.pdf)
+
+# Gabaritos
+
+  - Projeto 1: [pdf](/disciplinas/topal2015/ex2015-01-06.pdf) e
+    [tex](/disciplinas/topal2015/ex2015-01-06.tex)
 
 # Bibliografia
 
