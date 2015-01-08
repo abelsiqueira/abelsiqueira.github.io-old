@@ -72,18 +72,19 @@
     \item
     \begin{description}
       \item[$(\Rightarrow)$]
-        Tome $w_1,\dots,w_n \in T(S)$, e sejam
+        Tome $w_1,\dots,w_n \in T(S)$ distintos, e sejam
         $\alpha_1,\dots,\alpha_n\in\K$ tais que
         $$ \alpha_1w_1 + \dots + \alpha_nw_n = 0.$$
         Para cada $w_j$ existe $v_j\in S$ tal que $w_j = Tv_j$.
-        Então,
         $$ \alpha_1Tv_1 + \dots + \alpha_nTv_n = 0.$$
         Logo,
         $$ T(\alpha_1v_1 + \dots + \alpha_nv_n) = 0.$$
         Como $T$ é injetora e $T(0) = 0$, temos
         $$ \alpha_1v_1 + \dots + \alpha_nv_n = 0. $$
-        Mas $v_j\in S$, e por hipótese, $S$ é linearmente independente,
-        de modo que toda combinação linear nula deve
+        Como $T$ é injetora, e $w_j\neq w_i, j\neq i$, então
+        $v_j\neq v_i, j\neq i$. Logo, $v_1,\dots,v_n$ são distintos.
+        Como $v_j\in S$, e por hipótese, $S$ é linearmente independente,
+        então toda combinação linear nula de elemtos de $S$ deve
         ter os coeficientes nulos, ou seja,
         $\alpha_1 = \cdots = \alpha_n = 0$.
         Portanto, os vetores $w_1,\dots,w_n$ são linearmente independentes.
@@ -92,13 +93,14 @@
         linearmente independente.
 
       \item[$(\Leftarrow)$]
-        Tome $v_1,\dots,v_n \in S$, e sejam
+        Tome $v_1,\dots,v_n \in S$ distintos, e sejam
         $\alpha_1,\dots,\alpha_n\in\K$ tais que
         $$ \alpha_1v_1 + \dots + \alpha_nv_n = 0.$$
         Daí,
         $$ T(\alpha_1v_1 + \dots + \alpha_nv_n) = T(0) = 0,$$
         isto é,
-        $$ \alpha_1Tv_1 + \dots + \alpha_nTv_n = 0.$$
+        $$ \alpha_1Tv_1 + \dots + \alpha_nTv_n = 0,$$
+        e como $T$ é injetora, $Tv_1,\dots,Tv_n$ são distintos.
         Mas $Tv_j\in T(S), j=1,\dots,n$, e por hipótese, $T(S)$ é linearmente
         independente,
         de modo que toda combinação linear nula deve
