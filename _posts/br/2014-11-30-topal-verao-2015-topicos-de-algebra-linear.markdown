@@ -29,6 +29,7 @@ Tipos especiais de operadores lineares.
   - [Lista 1](/disciplinas/topal2015/lista1.pdf)
   - [Lista 2](/disciplinas/topal2015/lista2.pdf)
   - [Lista 3](/disciplinas/topal2015/lista3.pdf)
+  - [Lista 4](/disciplinas/topal2015/lista4.pdf)
 
 # Gabaritos
 
