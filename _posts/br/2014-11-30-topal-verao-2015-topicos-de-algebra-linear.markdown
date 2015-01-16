@@ -13,6 +13,7 @@ name:       topal-summer2014
   | **Horário:** | 10h-12h, Seg, Ter, Qui, Sex
   | **Início:**  | 5 de Janeiro de 2015
   | **Término:** | 9 de Fevereiro de 2015
+  | **Data da primeira prova:** | 22 de Janeiro de 2015
 
 # Ementa
 
@@ -30,11 +31,21 @@ Tipos especiais de operadores lineares.
   - [Lista 2](/disciplinas/topal2015/lista2.pdf)
   - [Lista 3](/disciplinas/topal2015/lista3.pdf)
   - [Lista 4](/disciplinas/topal2015/lista4.pdf)
+  - [Lista 5](/disciplinas/topal2015/lista5.pdf)
 
 # Gabaritos
 
-  - Projeto 1: [pdf](/disciplinas/topal2015/ex2015-01-06.pdf) e
+  - Exercício 1: [pdf](/disciplinas/topal2015/ex2015-01-06.pdf) e
     [tex](/disciplinas/topal2015/ex2015-01-06.tex)
+  - Exercício 2 está no livro do Roman.
+  - Exercício 3:
+
+        function d = prodint(x,y)
+        n = length(x);
+        s = 0.0;
+        for i = 1:n
+          s = s + x(i)*y(i);
+        end
 
 # Recursos online
 
@@ -45,6 +56,9 @@ Tipos especiais de operadores lineares.
     - [Latex](https://www.sharelatex.com/?r=09a71589&rm=d&rs=b).
   - [Github](https://github.com/): Uma ferramenta para armazenamento de
     repositórios criados com o [git](http://git-scm.com/).
+  - [Travis CI](https://travis-ci.org/): Uma ferramenta para testes automatizados
+    com integração com o Github.
+  - [Atom.io](https://atom.io/): Um editor multi-propósito.
 
 # Bibliografia
 
