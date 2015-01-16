@@ -5,8 +5,16 @@ name:      index
 ---
 <p> Welcome to my personal page. </p>
 <p> Latest posts:
-  {% assign posts = site.posts | where:"lang", page.lang %}
-  {% for post in posts offset: 0 limit: 5 %}
+  <div class="col-left">
+  {% assign posts = site.posts | where:"lang", "en" %}
+  {% for post in posts offset: 0 limit: 8 %}
   {% include excerpt.html %}
   {% endfor %}
+  </div>
+  <div class="col-right">
+  {% assign posts = site.posts | where:"lang", "br" %}
+  {% for post in posts offset: 0 limit: 8 %}
+  {% include excerpt.html %}
+  {% endfor %}
+  </div>
 </p>

@@ -1,6 +1,7 @@
 {% if post.categories[0] %}
 {% assign cat = post.categories[0] %}
-<div class="excerpt">
+
+<div class="excerpt-{{post.lang}}">
   <strong> &raquo;
     <a href="{{ post.url | prepend: site.baseurl }}"> {{ post.title }}</a>
     {% if page.name == "index" %}
