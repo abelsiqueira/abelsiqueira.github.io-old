@@ -21,7 +21,7 @@ while [ $l -lt 1 -o $l -gt $N ]; do
     echo "Choose a number between 1 and $N"
   fi
 done
-lang=${langs[$l]}
+lang=${langs[$(($l-1))]}
 
 begin=$((${line_number[$(($l-1))]}+1))
 end=$((${line_number[$l]}-1))
