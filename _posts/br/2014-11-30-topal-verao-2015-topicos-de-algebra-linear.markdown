@@ -59,6 +59,8 @@ Tipos especiais de operadores lineares.
   - [Travis CI](https://travis-ci.org/): Uma ferramenta para testes automatizados
     com integração com o Github.
   - [Atom.io](https://atom.io/): Um editor multi-propósito.
+  - [Slides interpretando visualmente o
+    Gram-Schmidt](/disciplinas/topal2015/gram_schmidt_slides.pdf)
 
 # Bibliografia
 
