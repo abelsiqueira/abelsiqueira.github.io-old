@@ -5,7 +5,7 @@ date:       2014-11-30
 categories: disciplines
 name:       topal-summer2014
 ---
-**Atualizado: 19 de Janeiro de 2015, 12:30**
+**Atualizado: 22 de Janeiro de 2015, 21:15**
 
 # Informações
 
@@ -33,6 +33,12 @@ Tipos especiais de operadores lineares.
   - [Lista 4](/disciplinas/topal2015/lista4.pdf)
   - [Lista 5](/disciplinas/topal2015/lista5.pdf)
 
+# Projetos
+
+  - [Projeto 1](/disciplinas/topal2015/projeto1.pdf), Arquivos auxiliares de
+    [Octave/Matlab](/disciplinas/topal2015/octave-auxiliar.tar.gz), e
+    [Julia](/disciplinas/topal2015/julia-auxiliar.tar.gz).
+
 # Gabaritos
 
   - Exercício 1: [pdf](/disciplinas/topal2015/ex2015-01-06.pdf) e
@@ -46,6 +52,7 @@ Tipos especiais de operadores lineares.
         for i = 1:n
           s = s + x(i)*y(i);
         end
+  - [Prova 1](/disciplinas/topal2015/prova1.pdf)
 
 # Recursos online
 
