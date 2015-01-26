@@ -83,3 +83,7 @@ Tipos especiais de operadores lineares.
     mathematics, Springer, 2005.
   - E. Kreyszig, _Introductory functional analysis with applications_,
     John Wiley and Sons, 1978.
+  - G. H. Golub and C. F. Van Loan, _Matrix Computations_, The Johns Hopkins
+    University Press, London, 3rd edition, 1996
+  - R. L. Burden and J. D. Faires, _Numerical Analysis_, Brooks/Cole,
+    7th edition, 2001.
