@@ -87,3 +87,5 @@ Tipos especiais de operadores lineares.
     University Press, London, 3rd edition, 1996
   - R. L. Burden and J. D. Faires, _Numerical Analysis_, Brooks/Cole,
     7th edition, 2001.
+  - M. A. Gomes Ruggiero e V. L. da Rocha Lopes. _Cálculo Numérico - Aspectos
+    Teóricos e Computacionais_, 2a edição, Editora Pearson, 1997
