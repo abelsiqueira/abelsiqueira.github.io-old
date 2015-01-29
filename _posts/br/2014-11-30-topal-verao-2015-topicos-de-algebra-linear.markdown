@@ -38,6 +38,8 @@ Tipos especiais de operadores lineares.
   - [Projeto 1](/disciplinas/topal2015/projeto1.pdf), Arquivos auxiliares de
     [Octave/Matlab](/disciplinas/topal2015/octave-auxiliar.tar.gz), e
     [Julia](/disciplinas/topal2015/julia-auxiliar.tar.gz).
+    - Dica: [pacote listings do
+      LaTeX](http://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings)
 
 # Gabaritos
 
