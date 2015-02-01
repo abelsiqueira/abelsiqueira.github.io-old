@@ -5,14 +5,14 @@ date:       2014-11-30
 categories: disciplines
 name:       topal-summer2014
 ---
-**Atualizado: 30 de Janeiro de 2015, 15:12**
+**Atualizado: 01 de Fevereiro de 2015, 11:34**
 
 # Informações
 
   | **Local:**   | PC01
   | **Horário:** | 10h-12h, Seg, Ter, Qui, Sex
   | **Início:**  | 5 de Janeiro de 2015
-  | **Término:** | 9 de Fevereiro de 2015
+  | **Término:** | 6 de Fevereiro de 2015
   | **Data da primeira prova:** | 22 de Janeiro de 2015
 
 # Ementa
