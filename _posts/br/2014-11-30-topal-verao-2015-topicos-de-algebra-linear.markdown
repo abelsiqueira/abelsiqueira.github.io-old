@@ -5,7 +5,7 @@ date:       2014-11-30
 categories: disciplines
 name:       topal-summer2014
 ---
-**Atualizado: 01 de Fevereiro de 2015, 11:34**
+**Atualizado: 03 de Fevereiro de 2015, 13:11**
 
 # Informações
 
