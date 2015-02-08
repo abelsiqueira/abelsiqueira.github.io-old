@@ -5,7 +5,7 @@ date:       2014-11-30
 categories: disciplines
 name:       topal-summer2014
 ---
-**Atualizado: 03 de Fevereiro de 2015, 13:11**
+**Atualizado: 08 de Fevereiro de 2015, 19:28**
 
 # Informações
 
@@ -57,6 +57,7 @@ Tipos especiais de operadores lineares.
           s = s + x(i)*y(i);
         end
   - [Prova 1](/disciplinas/topal2015/prova1.pdf)
+  - [Prova 2](/disciplinas/topal2015/prova2.pdf)
 
 # Recursos online
 
