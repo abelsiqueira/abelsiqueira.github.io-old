@@ -3,20 +3,21 @@ layout:     post
 title:      CM202 - Cálculo Diferencial e Integral II - 2015s1
 date:       2015-02-18
 categories: disciplines
-name:       cm201-2015s1
-permalink:  cm201-2015s1
+name:       cm202-2015s1
+permalink:  cm202-2015s1
 ---
 
 # Informações
 
   | **Sigla:**   | CM202
   | **Nome:**    | Cálculo Diferencial e Integral II
-  | **Turmas:**  |
-  | **Local:**   |
-  | **Horário:** |
-  | **Prova 1:** |
-  | **Prova 2:** |
-  | **Prova 3:** |
+  | **Turma:**   | [B](/disciplinas/2015s1-cm202/cm202.pdf)
+  | **Local:**   | PF06
+  | **Horário:** | 19h30 Terça e quinta.
+  | **Prova 1:** | 02/04
+  | **Prova 2:** | 21/05
+  | **Prova 3:** | 23/06
+  | **Exame:**   | 09/07
 
 # Ementa
 
@@ -36,3 +37,10 @@ permalink:  cm201-2015s1
 # Listas
 
 # Bibliografia
+
+  - H. L. Guidorizzi, _Um curso de cálculo_, 5a ed. Rio de Janeiro, LTC, 2001,
+    vol. 1.
+  - H. L. Guidorizzi, _Um curso de cálculo_, 5a ed. Rio de Janeiro, LTC, 2001,
+    vol. 2.
+  - J. Stewart, _Cálculo_, São Paulo: Pioneira, 2006, vol. 1.
+  - J. Stewart, _Cálculo_, São Paulo: Pioneira, 2006, vol. 2.
