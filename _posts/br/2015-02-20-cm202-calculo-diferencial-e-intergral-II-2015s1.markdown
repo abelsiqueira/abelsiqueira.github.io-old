@@ -36,6 +36,12 @@ permalink:  cm202-2015s1
 
 # Listas
 
+  - Stewart:
+    - **12.1** 1-8, 11-18, 23-38
+    - **12.2** 5-25
+    - **12.3** 3-10,23-24
+    - **12.4** 1-9,14-28
+
 # Bibliografia
 
   - H. L. Guidorizzi, _Um curso de cálculo_, 5a ed. Rio de Janeiro, LTC, 2001,
