@@ -37,6 +37,10 @@ permalink:  cm201-2015s1
 
 # Listas
 
+  - Lista do [Iezzi](/disciplinas/2015s1-cm201/lista-iezzi.pdf):
+    10-21, 22, 24, 27, 29, 33, 51, 56, 61, 66, 117, 137-142, 144, 145, 153-161,
+    164, 165, 167-172, 177, 194, 214-224
+
 # Bibliografia
 
   - J. Stewart, _Cálculo_. São Paulo: Pioneira, 2006, vol. 1
