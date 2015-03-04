@@ -36,7 +36,7 @@ permalink:  cm202-2015s1
 
 # Listas
 
-  - Stewart:
+  - [Stewart](/disciplinas/2015s1-cm202/lista-stewart.pdf):
     - **12.1** 1-8, 11-18, 23-38
     - **12.2** 5-25
     - **12.3** 3-10,23-24
