@@ -19,6 +19,8 @@ permalink:  cm201-2015s1
   | **Prova 3:** | Turma C: 26/06; Turma J: 25/06
   | **Exame:**   | Turma C: 07/07; Turma J: 07/07
 
+# [Monitorias](/assets/monitorias2015.pdf)
+
 # Ementa
 
   - Funções: Conjuntos. Funções.  Limite e continuidade.

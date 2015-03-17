@@ -19,6 +19,8 @@ permalink:  cm202-2015s1
   | **Prova 3:** | 23/06
   | **Exame:**   | 09/07
 
+# [Monitorias](/assets/monitorias2015.pdf)
+
 # Ementa
 
   - Noções elementares topológicas do Rn: Métricas.  Bolas e esferas.  Distância
