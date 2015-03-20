@@ -14,7 +14,7 @@ permalink:  cm201-2015s1
   | **Turmas:**  | [C](/disciplinas/2015s1-cm201/cm201-C.pdf) e [J](/disciplinas/2015s1-cm201/cm201-J.pdf)
   | **Horário:** | Turma C: 7h30, Terça e Sexta; Turma J: 17h30, Terça e Quinta
   | **Local:**   | Turma C: PA02 e PA01; Turma J: PH04
-  | **Prova 1:** | 31/03
+  | **Prova 1:** | Turma C: 31/03; Turma J: 07/04
   | **Prova 2:** | 19/05
   | **Prova 3:** | Turma C: 26/06; Turma J: 25/06
   | **Exame:**   | Turma C: 07/07; Turma J: 07/07
