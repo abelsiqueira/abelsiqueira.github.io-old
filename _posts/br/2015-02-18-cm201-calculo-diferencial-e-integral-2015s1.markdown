@@ -19,7 +19,7 @@ permalink:  cm201-2015s1
   | **Prova 3:** | Turma C: 26/06; Turma J: 25/06
   | **Exame:**   | Turma C: 07/07; Turma J: 07/07
 
-# [Monitorias](/assets/monitorias2015.pdf)
+# [Monitorias]({{ site.baseurl }}/assets/monitorias2015.pdf)
 
 # Ementa
 
@@ -39,11 +39,11 @@ permalink:  cm201-2015s1
 
 # Listas
 
-  - Lista do [Iezzi](/disciplinas/2015s1-cm201/lista-iezzi.pdf):
+  - Lista do [Iezzi]({{ site.baseurl }}/disciplinas/2015s1-cm201/lista-iezzi.pdf):
     10-21, 22, 24, 27, 29, 33, 51, 56, 61, 66, 117, 137-142, 144, 145, 153-161,
     164, 165, 167-172, 177, 194, 214-224, 251-265, 268-274, 279-284, 289-296,
     313-318, 325-335
-  - Lista do [Stewart](/disciplinas/2015s1-cm201/lista-stewart.pdf):
+  - Lista do [Stewart]({{ site.baseurl }}/disciplinas/2015s1-cm201/lista-stewart.pdf):
     - 1.1 Os que você achar necessário
     - 1.2 1-4
     - 1.3 1-24, 31-50

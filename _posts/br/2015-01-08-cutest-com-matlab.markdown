@@ -98,7 +98,7 @@ Para acessar o gradiente, você pode usar
 
 Além disso, existem outras funções que você pode usar.
 A lista está no apêndice B do
-[Technical Report do CUTEst](/assets/cutest-techreport.pdf).
+[Technical Report do CUTEst]({{ site.baseurl }}/assets/cutest-techreport.pdf).
 
 Para testar sua instação, você pode copiar o programinha a seguir,
 que tenta encontrar o minimizador de uma função através do método

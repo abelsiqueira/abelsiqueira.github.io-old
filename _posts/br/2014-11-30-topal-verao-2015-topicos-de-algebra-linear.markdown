@@ -27,26 +27,26 @@ Tipos especiais de operadores lineares.
 
 # Listas
 
-  - [Lista 1](/disciplinas/topal2015/lista1.pdf)
-  - [Lista 2](/disciplinas/topal2015/lista2.pdf)
-  - [Lista 3](/disciplinas/topal2015/lista3.pdf)
-  - [Lista 4](/disciplinas/topal2015/lista4.pdf)
-  - [Lista 5](/disciplinas/topal2015/lista5.pdf)
-  - [Lista 6](/disciplinas/topal2015/lista6.pdf)
+  - [Lista 1]({{ site.baseurl }}/disciplinas/topal2015/lista1.pdf)
+  - [Lista 2]({{ site.baseurl }}/disciplinas/topal2015/lista2.pdf)
+  - [Lista 3]({{ site.baseurl }}/disciplinas/topal2015/lista3.pdf)
+  - [Lista 4]({{ site.baseurl }}/disciplinas/topal2015/lista4.pdf)
+  - [Lista 5]({{ site.baseurl }}/disciplinas/topal2015/lista5.pdf)
+  - [Lista 6]({{ site.baseurl }}/disciplinas/topal2015/lista6.pdf)
     **Tinha um erro na lista 6, e ela foi atualizada.**
 
 # Projetos
 
-  - [Projeto 1](/disciplinas/topal2015/projeto1.pdf), Arquivos auxiliares de
-    [Octave/Matlab](/disciplinas/topal2015/octave-auxiliar.tar.gz), e
-    [Julia](/disciplinas/topal2015/julia-auxiliar.tar.gz).
+  - [Projeto 1]({{ site.baseurl }}/disciplinas/topal2015/projeto1.pdf), Arquivos auxiliares de
+    [Octave/Matlab]({{ site.baseurl }}/disciplinas/topal2015/octave-auxiliar.tar.gz), e
+    [Julia]({{ site.baseurl }}/disciplinas/topal2015/julia-auxiliar.tar.gz).
     - Dica: [pacote listings do
       LaTeX](http://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings)
 
 # Gabaritos
 
-  - Exercício 1: [pdf](/disciplinas/topal2015/ex2015-01-06.pdf) e
-    [tex](/disciplinas/topal2015/ex2015-01-06.tex)
+  - Exercício 1: [pdf]({{ site.baseurl }}/disciplinas/topal2015/ex2015-01-06.pdf) e
+    [tex]({{ site.baseurl }}/disciplinas/topal2015/ex2015-01-06.tex)
   - Exercício 2 está no livro do Roman.
   - Exercício 3:
 
@@ -56,8 +56,8 @@ Tipos especiais de operadores lineares.
         for i = 1:n
           s = s + x(i)*y(i);
         end
-  - [Prova 1](/disciplinas/topal2015/prova1.pdf)
-  - [Prova 2](/disciplinas/topal2015/prova2.pdf)
+  - [Prova 1]({{ site.baseurl }}/disciplinas/topal2015/prova1.pdf)
+  - [Prova 2]({{ site.baseurl }}/disciplinas/topal2015/prova2.pdf)
 
 # Recursos online
 
@@ -72,7 +72,7 @@ Tipos especiais de operadores lineares.
     com integração com o Github.
   - [Atom.io](https://atom.io/): Um editor multi-propósito.
   - [Slides interpretando visualmente o
-    Gram-Schmidt](/disciplinas/topal2015/gram_schmidt_slides.pdf)
+    Gram-Schmidt]({{ site.baseurl }}/disciplinas/topal2015/gram_schmidt_slides.pdf)
 
 # Bibliografia
 

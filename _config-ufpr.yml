@@ -1,0 +1,57 @@
+title: Abel Soares Siqueira
+email: abel.s.siqueira@gmail.com
+baseurl: "/~abelsiqueira" # the subpath of your site, e.g. /blog/
+url: "http://abelsiqueira.github.io" # the base hostname & protocol for your site
+github_username:  abelsiqueira
+markdown: kramdown
+permalink: /:title/
+defaults:
+  -
+    scope:
+      path: _posts/en
+    values:
+      lang: en
+      layout: default
+  -
+    scope:
+      path: _posts/br
+    values:
+      lang: br
+      layout: default
+t:
+  en:
+    backto: "back to"
+    homeurl:  "/home/"
+    disciplines:
+      title: "Disciplines"
+      url:  "/disciplines/"
+    research:
+      title: "Research"
+      url:  "/research/"
+    curriculum:
+      title: "Curriculum"
+      url:  "/curriculum/"
+    fun:
+      title: "Fun"
+      url:  "/fun/"
+    public-utility:
+      title: "Public Utility"
+      url:  "/public-utility/"
+  br:
+    backto: "voltar para"
+    homeurl:  "/"
+    disciplines:
+      title: "Disciplinas"
+      url:  "/disciplinas/"
+    research:
+      title: "Pesquisa"
+      url:  "/pesquisa/"
+    curriculum:
+      title: "Currículo"
+      url:  "/curriculo/"
+    fun:
+      title: "Diversão"
+      url:  "/diversao/"
+    public-utility:
+      title: "Utilidade Pública"
+      url:  "/utilidade-publica/"

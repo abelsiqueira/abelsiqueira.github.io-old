@@ -19,7 +19,7 @@ permalink:  cm202-2015s1
   | **Prova 3:** | 23/06
   | **Exame:**   | 09/07
 
-# [Monitorias](/assets/monitorias2015.pdf)
+# [Monitorias]({{ site.baseurl }}/assets/monitorias2015.pdf)
 
 # Ementa
 
@@ -38,7 +38,7 @@ permalink:  cm202-2015s1
 
 # Listas
 
-  - [Stewart](/disciplinas/2015s1-cm202/lista-stewart.pdf):
+  - [Stewart]({{ site.baseurl }}/disciplinas/2015s1-cm202/lista-stewart.pdf):
     - **12.1** 1-8, 11-18, 23-38
     - **12.2** 5-25
     - **12.3** 3-10,23-24

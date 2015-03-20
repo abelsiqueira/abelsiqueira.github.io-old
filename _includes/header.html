@@ -1,7 +1,7 @@
 <header class="site-header">
 
   <div class="wrapper">
-    <a class="site-title" href="{{ site.t[page.lang].homeurl }}">
+    <a class="site-title" href="{{ site.t[page.lang].homeurl | prepend: site.baseurl }}">
       {{ site.title }}
     </a>
 
@@ -9,18 +9,18 @@
       {% assign posts = site.posts | where:"name", page.name | sort: 'path' %}
       {% for post in posts %}
       {% if post.lang != page.lang %}
-        <a href="{{ post.url }}" class="{{ post.lang }}">
-          <img src="/assets/{{ post.lang }}.png" width="32px">
+        <a href="{{ post.url | prepend: site.baseurl }}" class="{{ post.lang }}">
+          <img src="{{ site.baseurl }}/assets/{{ post.lang }}.png" width="32px">
         </a>
       {% endif %}
       {% endfor %}
-      <img src="/assets/{{ page.lang }}.png" width="64px">
+      <img src="{{ site.baseurl }}/assets/{{ page.lang }}.png" width="64px">
     </div>
   </div>
 
   <div class="wrapper">
     <a class="feed" href="{{ site.url }}/feed.xml">
-      <img src="/assets/rss.png">
+      <img src="{{ site.baseurl }}/assets/rss.png">
     </a>
 
     <nav class="site-nav">
