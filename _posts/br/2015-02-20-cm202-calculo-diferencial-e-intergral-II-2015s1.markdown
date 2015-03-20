@@ -14,7 +14,7 @@ permalink:  cm202-2015s1
   | **Turma:**   | [B](/disciplinas/2015s1-cm202/cm202.pdf)
   | **Local:**   | PF06
   | **Horário:** | 19h30 Terça e quinta.
-  | **Prova 1:** | 02/04
+  | **Prova 1:** | 09/04
   | **Prova 2:** | 21/05
   | **Prova 3:** | 23/06
   | **Exame:**   | 09/07
