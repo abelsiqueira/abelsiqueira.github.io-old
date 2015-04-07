@@ -11,7 +11,7 @@ permalink:  cm202-2015s1
 
   | **Sigla:**   | CM202
   | **Nome:**    | Cálculo Diferencial e Integral II
-  | **Turma:**   | [B](/disciplinas/2015s1-cm202/cm202.pdf)
+  | **Turma:**   | [B]({{ site.baseurl }}/disciplinas/2015s1-cm202/cm202.pdf)
   | **Local:**   | PF06
   | **Horário:** | 19h30 Terça e quinta.
   | **Prova 1:** | 09/04
