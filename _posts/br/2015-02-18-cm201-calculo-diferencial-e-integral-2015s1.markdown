@@ -19,6 +19,8 @@ permalink:  cm201-2015s1
   | **Prova 3:** | Turma C: 26/06; Turma J: 25/06
   | **Exame:**   | Turma C: 07/07; Turma J: 07/07
 
+# Notas - [(Turma C)]({{ site.baseurl }}/disciplinas/2015s1-cm201/notas-C.pdf)
+
 # [Monitorias]({{ site.baseurl }}/assets/monitorias2015.pdf)
 
 # Ementa
