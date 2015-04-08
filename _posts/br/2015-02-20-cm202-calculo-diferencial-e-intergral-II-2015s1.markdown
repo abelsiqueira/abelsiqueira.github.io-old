@@ -38,6 +38,7 @@ permalink:  cm202-2015s1
 
 # Listas
 
+  - [Livro](http://www.clicmates.com.br/arquivosparadonwloads/Calculo%20Vol%202%20%285%20ed%29%20-%20James%20Stewart%20%28em%20portugues%29.pdf)
   - [Stewart]({{ site.baseurl }}/disciplinas/2015s1-cm202/lista-stewart.pdf):
     - **12.1** 1-8, 11-18, 23-38
     - **12.2** 5-25
