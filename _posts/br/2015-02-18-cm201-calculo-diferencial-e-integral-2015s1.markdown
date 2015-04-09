@@ -21,9 +21,10 @@ permalink:  cm201-2015s1
 
 # Provas
   
-  - Notas - [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/notas-C.pdf)
+  - Notas: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/notas-C.pdf),
+    [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/notas-J.pdf).
   - Prova 1: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova1-C.pdf),
-    [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova-J.pdf)
+    [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova-J.pdf).
 
 # [Monitorias]({{ site.baseurl }}/assets/monitorias2015.pdf)
 
