@@ -19,6 +19,10 @@ permalink:  cm202-2015s1
   | **Prova 3:** | 23/06
   | **Exame:**   | 09/07
 
+# Provas
+
+  - [Notas]({{ site.baseurl }}/disciplinas/2015s1-cm202/notas.pdf)
+
 # [Monitorias]({{ site.baseurl }}/assets/monitorias2015.pdf)
 
 # Ementa
