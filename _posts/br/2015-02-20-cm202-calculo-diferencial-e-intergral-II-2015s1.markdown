@@ -21,6 +21,7 @@ permalink:  cm202-2015s1
 
 # Provas
 
+  - [Prova 1]({{ site.baseurl }}/disciplinas/2015s1-cm202/prova1.pdf)
   - [Notas]({{ site.baseurl }}/disciplinas/2015s1-cm202/notas.pdf)
 
 # [Monitorias]({{ site.baseurl }}/assets/monitorias2015.pdf)
