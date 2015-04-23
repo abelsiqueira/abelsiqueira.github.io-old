@@ -31,7 +31,7 @@ cada programador saiba o que foi feito por quem e quando, mas também pode ser
 utilizado para controle de versões de artigos, teses e apresentações.
 O [modelo de tese do IMECC - UNICAMP](https://github.com/lpoo/modelo_tese_imecc)
 usa o Git, e este site está [armazenado usando o
-git](https://github.com/abelsiqueira/abelsiqueira.github.io).
+Git](https://github.com/abelsiqueira/abelsiqueira.github.io).
 É uma das ferramentas principais para gerenciamento de versões, e [muitos
 projetos importantes o usam](https://git.wiki.kernel.org/index.php/GitProjects).
 O Git pode ser usado apenas em seu computador, mas o uso comum envolve algum
@@ -60,25 +60,36 @@ Windows.
 Softwares que você precisa
 
   - Bash
-    - No GNU/Linux ou OSX, ele já deve estar lá.
+    - No GNU/Linux, o Bash já deve estar instalado.
     Procure pelo `terminal` ou `console` no seu sistema. Quando ele abrir,
     digite
 
           bash --version
 
     Uma mensagem deve aparecer indicando qual versão está instalada.
-    - No Windows existem algumas opções, nenhuma ideal até onde conheço.
-    Uma dela é o [win-bash](http://win-bash.sourceforge.net/), mas você pode
-    procurar outras.
 
-  - Git: Siga as [instruções](http://git-scm.com/downloads). **No Windows**, uma
-    das opções da instalações é sobre o fim de linha (line ending). Escolha
-    a opção de seguir o padrão Unix (ou algo parecido).
-    - Num computador tipo Unix, teste que o git foi instalado fazendo
+    - No OSX, o terminal padrão também é o Bash. Você pode acessar pelo
+    `/Applications/Utilities/`. Dica: coloque o terminal no dock.
+
+    - No Windows existem algumas opções,
+    uma delas é o [Git Bash](http://msysgit.github.io/), que você já usa para o
+    Git também.
+
+  - Git
+    - No Windows, instale o [Git Bash](http://msysgit.github.io/), que falei
+    acima.
+    **Nota**: Uma das opções da instalações é sobre o fim de linha (line
+    ending). Escolha a opção de seguir o padrão Unix (ou algo parecido).
+
+    - No OSX, você pode instalar o Git para Mac baixando um instalador
+    [aqui](http://sourceforge.net/projects/git-osx-installer/files/).
+
+    - Num computador tipo Unix, siga as [instruções](http://git-scm.com/downloads).
+      Teste que o git foi instalado fazendo
 
           git --version
 
-    - Num Windows, procure pelo `Git Bash`.
+      no seu terminal.
 
   - Julia: Siga as [instruções](http://julialang.org/downloads/).
     **Instale uma versão nightly**.
@@ -104,10 +115,10 @@ O evento acontecerá no dia 30 de Maio de 2015, seguindo o cronograma abaixo:
 (*Nota: Mudamos o horário de Julia para melhor acomodar o cronograma*).
 
   - **08:00** : Abertura
-  - **08:30** : Bash
+  - **08:30** : Bash (com Raniere)
   - **09:30** : _Coffee Break_
-  - **10:00** : Julia
+  - **10:00** : Julia (com Abel)
   - **11:30** : Almoço
-  - **13:30** : Git Local
+  - **13:30** : Git Local (com Abel)
   - **15:00** : _Coffee Break_
-  - **15:30** : Git Remote
+  - **15:30** : Git Remoto (com Raniere)
