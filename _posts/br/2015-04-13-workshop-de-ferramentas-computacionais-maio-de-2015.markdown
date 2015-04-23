@@ -4,6 +4,7 @@ title:      Workshop de Ferramentas Computacionais - Maio de 2015
 date:       2015-04-13
 categories: public-utility
 name:       workshop-2015-05-30
+permalink:  workshop-2015-05-30
 ---
 **Este site está sendo construído**
 
@@ -96,3 +97,17 @@ Softwares que você precisa
 
 Acesse [o link](https://pt.surveymonkey.com/s/NZB3LDJ) e preencha o
 questionário.
+
+# Cronograma
+
+O evento acontecerá no dia 30 de Maio de 2015, seguindo o cronograma abaixo:
+(*Nota: Mudamos o horário de Julia para melhor acomodar o cronograma*).
+
+  - **08:00** : Abertura
+  - **08:30** : Bash
+  - **09:30** : _Coffee Break_
+  - **10:00** : Julia
+  - **11:30** : Almoço
+  - **13:30** : Git Local
+  - **15:00** : _Coffee Break_
+  - **15:30** : Git Remote
