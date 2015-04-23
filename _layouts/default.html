@@ -15,21 +15,26 @@
     </div>
 
     {% include footer.html %}
+    {% if page.lang == "br" %}
+      {% assign address = "Endereço" %}
+      {% assign ponto = "ponto" %}
+      {% assign info = "Informações" %}
+    {% elsif page.lang == "en" %}
+      {% assign address = "Address" %}
+      {% assign ponto = "dot" %}
+      {% assign info = "Information" %}
+    {% endif %}
 
     <div class="right-menu">
-      <h1> Informações </h1>
-      <p> E-mail: abelsiqueira at ufpr ponto br </p>
+      <h1> {{ info }} </h1>
+      <p> E-mail: abelsiqueira at ufpr {{ ponto }} br </p>
       <p> Github: <a href="http://github.com/abelsiqueira">
         <img width="36px" src="{{ site.baseurl }}/assets/github.png">
         abelsiqueira</a> </p>
       <p> Gitlab: <a href="http://gitlab.com/abelsiqueira">
         <img width="36px" src="{{ site.baseurl }}/assets/gitlab.png">
         abelsiqueira</a> </p>
-      {% if page.lang == "br" %}
-      <h2> Endereço </h2>
-      {% elsif page.lang == "en" %}
-      <h2> Address </h2>
-      {% endif %}
+      <h2> {{ address }} </h2>
       <p> Universidade Federal do Paraná <br>
         Departamento de Matemática <br>
         C. Politécnico - Jd. das Américas <br>
