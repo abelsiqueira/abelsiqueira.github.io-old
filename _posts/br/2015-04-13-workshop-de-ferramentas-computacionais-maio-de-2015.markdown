@@ -20,8 +20,8 @@ software:
   - Julia
 
 O Bash é o terminal tradicinal dos sistemas GNU/Linux (a tela preta).
-As possibilidades de uso são ilimitadas, mas vamos forcar em conhecer o básico,
-na tentativa de chegar até a criação de um script simples.
+As possibilidades de uso são ilimitadas, mas vamos focar no básico,
+tentando chegar até a criação de um script simples.
 
 O Git é uma ferramenta para controlar versões de softwares e outros arquivos.
 Você consegue guardar versões anteriores dos seus arquivos, assim como versões
@@ -45,6 +45,17 @@ Como é uma linguagem livre, acreditamos ser uma escolha melhor que o Matlab par
 software livre.
 Também é uma boa linguagem inicial por ser prática, e tem muito espaço para
 expansão por nova.
+
+# Ministrantes
+
+  - [Eu]({{ site.baseurl }}/) - Trabalho com GNU/Linux desde minha graduação,
+    e trabalho com software livre. Meus trabalhos individuais são de código
+    aberto, e acredito que esse é o caminho mais correto para o desenvolvimento
+    acadêmico.
+  - [Raniere Gaia](http://rgaiacs.com/) - Estuda matemática aplicada na
+    Universidade Estadual de Campinas, e trabalha em alguns projetos de nível
+    internacional. Faz contribuições para Mozilla, e é um membro mantenedor do
+    Software Carpentry.
 
 # Requerimentos
 
@@ -122,3 +133,7 @@ O evento acontecerá no dia 30 de Maio de 2015, seguindo o cronograma abaixo:
   - **13:30** : Git Local (com Abel)
   - **15:00** : _Coffee Break_
   - **15:30** : Git Remoto (com Raniere)
+
+# Local
+
+A definir.
