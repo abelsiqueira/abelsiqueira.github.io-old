@@ -6,7 +6,6 @@ categories: public-utility
 name:       workshop-2015-05-30
 permalink:  workshop-2015-05-30
 ---
-**Este site está sendo construído**
 
 # Sobre
 
@@ -66,7 +65,10 @@ para o desenvolvimento _na opinião do autor da página_.
 [Veja
 discussões](http://www.quora.com/Is-it-important-for-modern-programmers-to-know-use-Unix-Why).
 Além disso, os instrutores não tem o conhecimento para dar suporte completo no
-Windows.
+Windows (Aceitamos voluntários).
+(Nota: Teremos alguns computadores com sistema operacional Windows disponíveis,
+mas não teremos tempo para testar todos, ou instalar tudo que julgamos
+essencial).
 
 Softwares que você precisa
 
@@ -113,7 +115,8 @@ Softwares que você precisa
     [atom.io](https://atom.io/) é um bom para começar. Se for usá-lo,
     recomendamos buscar pelo pacote `language-julia`.
 
-**Certifique-se de ter essas ferramentas instaladas ANTES do evento**.
+**Certifique-se de ter essas ferramentas instaladas ANTES do evento**. Entre em
+contato em caso de dúvidas.
 
 # Inscrições
 
@@ -136,4 +139,5 @@ O evento acontecerá no dia 30 de Maio de 2015, seguindo o cronograma abaixo:
 
 # Local
 
-A definir.
+Utilizaremos o Laboratório de Matemática e Desenho (LAMADE) no bloco PC, sala
+PC12.
