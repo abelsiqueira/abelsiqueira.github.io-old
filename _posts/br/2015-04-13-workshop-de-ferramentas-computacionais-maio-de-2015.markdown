@@ -105,9 +105,8 @@ Softwares que você precisa
       no seu terminal.
 
   - Julia: Siga as [instruções](http://julialang.org/downloads/).
-    **Instale uma versão nightly**.
     Para testar, verifique que o Julia foi instalado abrindo o terminal de
-    Julia, e verificando que o texto introdutório contém `Version 0.4.0`.
+    Julia, e verificando que o texto introdutório contém `Version 0.x.x`.
 
   - Um editor de texto, preferencialmente com suporte a UTF-8, código colorido
     automaticamente, indentação automática e inclusão de espaços no lugar de
