@@ -44,6 +44,10 @@ permalink:  cm201-2015s1
   - Séries: Séries numéricas.  Critérios de convergência.  Séries de potências.
     Séries de Taylor e Maclaurin.
 
+# Projeto
+
+  - [Projeto de Newton (CM201)]({{ site.baseurl }}/disciplinas/2015s1-cm201/projeto-newton.pdf)
+
 # Listas
 
   - Lista do [Iezzi]({{ site.baseurl }}/disciplinas/2015s1-cm201/lista-iezzi.pdf):
