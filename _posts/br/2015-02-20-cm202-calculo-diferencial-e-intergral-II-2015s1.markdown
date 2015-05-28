@@ -22,7 +22,9 @@ permalink:  cm202-2015s1
 # Provas
 
   - [Prova 1]({{ site.baseurl }}/disciplinas/2015s1-cm202/prova1.pdf)
-  - [Notas]({{ site.baseurl }}/disciplinas/2015s1-cm202/notas.pdf)
+  - [Prova 2]({{ site.baseurl }}/disciplinas/2015s1-cm202/prova2.pdf)
+  - [Notas]({{ site.baseurl }}/disciplinas/2015s1-cm202/notas.pdf) (atualizado
+    dia 28 de Maio)
 
 # [Monitorias]({{ site.baseurl }}/assets/monitorias2015.pdf)
 
