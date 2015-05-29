@@ -119,8 +119,8 @@ contato em caso de dúvidas.
 
 # Inscrições
 
-Acesse [o link](https://pt.surveymonkey.com/s/NZB3LDJ) e preencha o
-questionário.
+As inscrições estão fechadas. Caso tenha interesse em participar, me mande um
+e-mail para confirmar se ainda temos vagas.
 
 # Cronograma
 
