@@ -21,7 +21,7 @@ sobre a oficina.
 Eu utilizei os materiais
 
   - [Slides de Julia]({{site.baseurl}}/assets/2015-05-30-slides-julia.pdf) -
-    [Código](http://github.com/abelsiqueira/pres-julia).
+    [Código](http://gitlab.com/abelsiqueira/pres-julia).
   - [Slides de Git]({{site.baseurl}}/assets/2015-05-30-slides-git.pdf) -
     [Código](http://github.com/abelsiqueira/workshop).
 
