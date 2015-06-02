@@ -51,6 +51,8 @@ permalink:  cm201-2015s1
 # Projeto
 
   - [Projeto de Newton (CM201)]({{ site.baseurl }}/disciplinas/2015s1-cm201/projeto-newton.pdf)
+    (atualizado 01 de Junho)
+  - [avalia.jl]({{site.baseurl}}/disciplinas/2015s1-cm201/avalia.jl)
 
 # Listas
 
