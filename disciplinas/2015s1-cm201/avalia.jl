@@ -10,7 +10,7 @@ passed(m)  = println("\033[0;32m$m\033[0m")
 passed() = passed("Passou")
 
 test_handler(r::Test.Success) = nothing
-test_handler(r::Test.Failure) = error("Teste falhou: $(r.expr):\n$(r.resultexpr)")
+test_handler(r::Test.Failure) = Test.default_handler(r)
 test_handler(r::Test.Error)   = rethrow(r)
 
 eps = 1e-6
@@ -94,16 +94,22 @@ Test.with_handler(test_handler) do
   msg("Testando f(x) = x^2-1 com x0 = 0")
   x, fx, k, ef = newton(x->x^2-1, x->2*x, 0)
   @test ef != 0
-  @test k in [0,1]
+  @test k == 0
   @test abs(x) < 1e-12
   @test abs(fx+1) < 1e-12
   passed()
   msg("Testando f(x) = x^2 com x0 = 0")
   x, fx, k, ef = newton(x->x^2, x->2*x, 0)
   @test ef == 0
-  @test k in [0,1]
+  @test k == 0
   @test abs(x) < 1e-12
   @test abs(fx) < 1e-12
+  passed()
+  msg("Testando f(x) = x^2+1 com x0 = 1+sqrt(2)")
+  x, fx, k, ef = newton(x->x^2+1, x->2*x, 1+sqrt(2))
+  @test ef != 0
+  @test k == 2
+  @test abs(x) < 1e-12
   passed()
 end
 
