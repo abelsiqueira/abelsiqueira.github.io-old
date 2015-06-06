@@ -120,6 +120,8 @@ permalink:  cm201-2015s1
     - 5.4 5-11,17-30
     - 5.5 1-8,10-19,21,31
     - 7.1 1,3-7,9
+    - [Problemas e exercícios
+      selecionados]({{site.baseurl}}/disciplinas/2015s1-cm201/lista-integral.pdf)
 
 # Bibliografia
 
