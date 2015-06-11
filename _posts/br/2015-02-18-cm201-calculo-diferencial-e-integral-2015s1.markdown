@@ -115,13 +115,14 @@ permalink:  cm201-2015s1
     - 4.1 3-5,15-24
     - 4.3 11-14,17-18,20,33-38
     - 4.5 1-8,43-45
-  - Lista para Geologia (Prova 3) - Incompleta
+  - Lista para Geologia (Prova 3)
     - 5.3 7-10,19-25,28-30,40
     - 5.4 5-11,17-30
     - 5.5 1-8,10-19,21,31
     - 7.1 1,3-7,9
     - [Problemas e exercícios
       selecionados]({{site.baseurl}}/disciplinas/2015s1-cm201/lista-integral.pdf)
+      (Atualizada 11/06 com gabarito)
 
 # Bibliografia
 
