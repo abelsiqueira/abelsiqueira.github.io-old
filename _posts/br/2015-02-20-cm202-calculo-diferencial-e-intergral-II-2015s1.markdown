@@ -21,8 +21,9 @@ permalink:  cm202-2015s1
 
 # Provas
 
-  - [Prova 1]({{ site.baseurl }}/disciplinas/2015s1-cm202/prova1.pdf)
-  - [Prova 2]({{ site.baseurl }}/disciplinas/2015s1-cm202/prova2.pdf)
+  - [Prova 1 com gabarito]({{ site.baseurl }}/disciplinas/2015s1-cm202/prova1.pdf)
+  - [Prova 2 com gabarito]({{ site.baseurl }}/disciplinas/2015s1-cm202/prova2.pdf)
+  - [Prova 3 com gabarito]({{ site.baseurl }}/disciplinas/2015s1-cm202/prova3.pdf)
   - [Notas]({{ site.baseurl }}/disciplinas/2015s1-cm202/notas.pdf) (atualizado
     dia 24 de Junho)
 
