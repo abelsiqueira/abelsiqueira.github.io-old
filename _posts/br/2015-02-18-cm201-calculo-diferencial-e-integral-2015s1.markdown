@@ -104,7 +104,10 @@ permalink:  cm201-2015s1
     - 7.2 1-10
     - 7.3 1-27
     - 7.4 1-3,7-26,30-32
-    - 7.8 5-11
+    - 7.8 5-11,27-32
+    - 6.1 5-9,11-16
+    - 6.2 1-7,11-17
+    - 6.3 3-7,9-14
   - Lista para Geologia (Prova 2)
     - 3.1 3-23
     - 3.2 3-9,13-15,23-26
@@ -115,13 +118,14 @@ permalink:  cm201-2015s1
     - 4.1 3-5,15-24
     - 4.3 11-14,17-18,20,33-38
     - 4.5 1-8,43-45
-  - Lista para Geologia (Prova 3) - Incompleta
+  - Lista para Geologia (Prova 3)
     - 5.3 7-10,19-25,28-30,40
     - 5.4 5-11,17-30
     - 5.5 1-8,10-19,21,31
     - 7.1 1,3-7,9
     - [Problemas e exercícios
       selecionados]({{site.baseurl}}/disciplinas/2015s1-cm201/lista-integral.pdf)
+      (Atualizada 11/06 com gabarito)
 
 # Bibliografia
 
