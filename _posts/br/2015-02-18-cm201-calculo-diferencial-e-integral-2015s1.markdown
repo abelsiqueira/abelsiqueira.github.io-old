@@ -29,7 +29,7 @@ permalink:  cm201-2015s1
     [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova2-J.pdf).
   - Prova 2 com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova2-C.pdf),
     [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova2-J.pdf).
-  - Prova 3: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova3-C.pdf),
+  - Prova 3 com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova3-C.pdf),
     [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova3-J.pdf).
 
 # [Monitorias]({{ site.baseurl }}/assets/monitorias2015.pdf)
