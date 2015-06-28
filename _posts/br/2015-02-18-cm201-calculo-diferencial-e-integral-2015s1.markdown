@@ -22,7 +22,7 @@ permalink:  cm201-2015s1
 # Provas
   
   - Notas: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/notas-C.pdf)
-    (atualizado dia 26 de Maio),
+    (atualizado dia 27 de Junho),
     [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/notas-J.pdf)
     (atualizado dia 26 de Junho).
   - Prova 1 com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova1-C.pdf),
