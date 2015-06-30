@@ -19,6 +19,15 @@ permalink:  cm201-2015s1
   | **Prova 3:** | Turma C: 26/06; Turma J: 25/06
   | **Exame:**   | Turma C: 07/07; Turma J: 07/07
 
+# Segunda Chamada
+
+A segunda chamada será na sala de reuniões do terceiro andar do prédio da
+administração, no dia 02 de Julho, às 13h30. A sala é perto da minha sala. Na
+dúvida espero por ali.
+
+Essa prova é apenas para aqueles que perderam alguma das provas e já vieram
+falar comigo.
+
 # Provas
   
 **Atenção TURMA C, um erro na soma das notas dos projetos estava atribuindo

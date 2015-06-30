@@ -19,6 +19,15 @@ permalink:  cm202-2015s1
   | **Prova 3:** | 23/06
   | **Exame:**   | 09/07
 
+# Segunda Chamada
+
+A segunda chamada será na sala de reuniões do terceiro andar do prédio da
+administração, no dia 02 de Julho, às 13h30. A sala é perto da minha sala. Na
+dúvida espero por ali.
+
+Essa prova é apenas para aqueles que perderam alguma das provas e já vieram
+falar comigo.
+
 # Provas
 
   - [Prova 1 com gabarito]({{ site.baseurl }}/disciplinas/2015s1-cm202/prova1.pdf)
