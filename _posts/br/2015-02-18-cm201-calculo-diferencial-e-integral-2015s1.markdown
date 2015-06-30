@@ -21,6 +21,9 @@ permalink:  cm201-2015s1
 
 # Provas
   
+  ** Atenção TURMA C, um erro na soma das notas dos projetos estava atribuindo
+  nota 1.5 para todos que fizeram os projetos. Isso podia ser verificado porque
+  a soma não batia. Ninguém deixou de estar aprovado. **
   - Notas: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/notas-C.pdf)
     (atualizado dia 27 de Junho),
     [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/notas-J.pdf)
