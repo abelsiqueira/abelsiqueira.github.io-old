@@ -45,12 +45,9 @@ a soma não batia. Ninguém deixou de estar aprovado.**
   - Prova 3 com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova3-C.pdf),
     [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova3-J.pdf).
   - Exame com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/exame-C.pdf)
-  - [Convergência do método de Newton]
-    ({{ site.baseurl }}/disciplinas/2015s1-cm201/newton/convergencia.pdf)
-  - [newton.jl]
-    ({{ site.baseurl }}/disciplinas/2015s1-cm201/newton/newton.pdf)
-  - [avalia.jl]
-    ({{ site.baseurl }}/disciplinas/2015s1-cm201/newton/avalia.jl)
+  - [Convergência do método de Newton]({{ site.baseurl }}/disciplinas/2015s1-cm201/newton/convergencia.pdf)
+  - [newton.jl]({{ site.baseurl }}/disciplinas/2015s1-cm201/newton/newton.pdf)
+  - [avalia.jl]({{ site.baseurl }}/disciplinas/2015s1-cm201/newton/avalia.jl)
 
 # [Monitorias]({{ site.baseurl }}/assets/monitorias2015.pdf)
 
