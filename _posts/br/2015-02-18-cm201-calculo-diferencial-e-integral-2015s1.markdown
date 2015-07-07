@@ -45,6 +45,12 @@ a soma não batia. Ninguém deixou de estar aprovado.**
   - Prova 3 com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova3-C.pdf),
     [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova3-J.pdf).
   - Exame com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/exame-C.pdf)
+  - [Convergência do método de Newton]
+    ({{ site.baseurl }}/disciplinas/2015s1-cm201/newton/convergencia.pdf)
+  - [newton.jl]
+    ({{ site.baseurl }}/disciplinas/2015s1-cm201/newton/newton.pdf)
+  - [avalia.jl]
+    ({{ site.baseurl }}/disciplinas/2015s1-cm201/newton/avalia.jl)
 
 # [Monitorias]({{ site.baseurl }}/assets/monitorias2015.pdf)
 
@@ -68,7 +74,7 @@ a soma não batia. Ninguém deixou de estar aprovado.**
 
   - [Projeto de Newton (CM201)]({{ site.baseurl }}/disciplinas/2015s1-cm201/projeto-newton.pdf)
     (atualizado 01 de Junho)
-  - [avalia.jl]({{site.baseurl}}/disciplinas/2015s1-cm201/avalia.jl) (Atualizado
+  - [avalia.jl]({{site.baseurl}}/disciplinas/2015s1-cm201/newton/avalia.jl) (Atualizado
     03 de Junho) - NOTA: Esse arquivo testa se seu programa passa nos meus
     testes. Se não passar, VAI DAR ERRO MESMO. Ele diz as linhas em que dá erro,
     mas a linha 13 de avalia.jl é só a definição do erro. Você tem que buscar a

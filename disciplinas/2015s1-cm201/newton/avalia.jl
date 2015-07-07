@@ -2,19 +2,19 @@
 # Adicione este arquivo à mesma pasta onde está o código,
 # e rode `include("avalia.jl")` a partir do Julia, ou
 # `julia avalia.jl`, se estiver no terminal.
-using Base.Test
 include("newton.jl")
+using Base.Test
 
 msg(m) = println("\033[0;33m$m\033[0m")
 passed(m)  = println("\033[0;32m$m\033[0m")
 passed() = passed("Passou")
+fail(m)  = println("Falha: \033[0;31m$m\033[0m")
 
 test_handler(r::Test.Success) = nothing
-test_handler(r::Test.Failure) = Test.default_handler(r)
+test_handler(r::Test.Failure) = fail(r)
 test_handler(r::Test.Error)   = rethrow(r)
 
-eps = 1e-6
-kmax = 10000
+function avalia(eps = 1e-6, kmax = 10000)
 
 Test.with_handler(test_handler) do
 
@@ -113,3 +113,6 @@ Test.with_handler(test_handler) do
   passed()
 end
 
+end
+
+avalia()
