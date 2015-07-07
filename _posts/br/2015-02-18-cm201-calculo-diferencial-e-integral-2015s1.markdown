@@ -35,7 +35,7 @@ nota 1.5 para todos que fizeram os projetos. Isso podia ser verificado porque
 a soma não batia. Ninguém deixou de estar aprovado.**
 
   - Notas: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/notas-C.pdf)
-    (atualizado dia 30 de Junho),
+    (atualizado dia 07 de Julho),
     [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/notas-J.pdf)
     (atualizado dia 26 de Junho).
   - Prova 1 com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova1-C.pdf),
@@ -44,6 +44,7 @@ a soma não batia. Ninguém deixou de estar aprovado.**
     [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova2-J.pdf).
   - Prova 3 com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova3-C.pdf),
     [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova3-J.pdf).
+  - Exame com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/exame-C.pdf)
 
 # [Monitorias]({{ site.baseurl }}/assets/monitorias2015.pdf)
 
