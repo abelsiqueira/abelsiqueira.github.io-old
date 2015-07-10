@@ -33,8 +33,9 @@ falar comigo.
   - [Prova 1 com gabarito]({{ site.baseurl }}/disciplinas/2015s1-cm202/prova1.pdf)
   - [Prova 2 com gabarito]({{ site.baseurl }}/disciplinas/2015s1-cm202/prova2.pdf)
   - [Prova 3 com gabarito]({{ site.baseurl }}/disciplinas/2015s1-cm202/prova3.pdf)
+  - [Exame com gabarito]({{ site.baseurl }}/disciplinas/2015s1-cm202/exame.pdf)
   - [Notas]({{ site.baseurl }}/disciplinas/2015s1-cm202/notas.pdf) (atualizado
-    dia 24 de Junho)
+    dia 09 de Julho)
 
 # [Monitorias]({{ site.baseurl }}/assets/monitorias2015.pdf)
 

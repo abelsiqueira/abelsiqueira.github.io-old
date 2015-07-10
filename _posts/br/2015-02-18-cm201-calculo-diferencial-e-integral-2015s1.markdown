@@ -37,14 +37,15 @@ a soma não batia. Ninguém deixou de estar aprovado.**
   - Notas: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/notas-C.pdf)
     (atualizado dia 07 de Julho),
     [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/notas-J.pdf)
-    (atualizado dia 07 de Julho).
+    (atualizado dia 09 de Julho).
   - Prova 1 com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova1-C.pdf),
     [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova2-J.pdf).
   - Prova 2 com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova2-C.pdf),
     [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova2-J.pdf).
   - Prova 3 com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova3-C.pdf),
     [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova3-J.pdf).
-  - Exame com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/exame-C.pdf)
+  - Exame com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/exame-C.pdf),
+    [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/exame-J.pdf).
   - [Convergência do método de Newton]({{ site.baseurl }}/disciplinas/2015s1-cm201/newton/convergencia.pdf)
   - [newton.jl]({{ site.baseurl }}/disciplinas/2015s1-cm201/newton/newton.pdf)
   - [avalia.jl]({{ site.baseurl }}/disciplinas/2015s1-cm201/newton/avalia.jl)
