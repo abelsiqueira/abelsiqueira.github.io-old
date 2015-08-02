@@ -9,9 +9,8 @@ permalink:  cm114-2015s2
 
 # Informações
 
-  | **Sigla:**   | CM202
-  | **Nome:**    | Cálculo Diferencial e Integral II
-  | **Turma:**   | [B]({{ site.baseurl }}/disciplinas/2015s1-cm202/cm202.pdf)
+  | **Sigla:**   | CM114
+  | **Nome:**    | Métodos Computacionais de Otimização
   | **Local:**   | PC13 - LAMIND
   | **Horário:** | 19h00 Segunda e Quarta
 
@@ -28,5 +27,10 @@ Estudaremos a linguagem Julia, onde faremos a maior parte de nossos projetos.
 Implementaremos os métodos propostos e faremos comparações deles em vários
 aspectos.
 Utilizaremos a biblioteca CUTEst.
+
+# Avaliação
+
+Faremos vários projetos computacionais, cuja média formará 70% da nota final,
+e um projeto grande valendo 30% da nota.
 
 # Bibliografia
