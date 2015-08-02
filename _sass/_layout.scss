@@ -323,27 +323,102 @@ table {
   border-collapse: collapse;
 }
 
-.right-menu, .left-menu {
+.right-menu {
   background-color: $block-color;
   position: fixed;
-  border: 1px solid black;
-  max-width: 25%;
-  top: 170px;
+  border: 0px;
+  z-index: 200;
+  overflow: hidden;
+  transition: transform 0.3s;
+  display: block;
+  top: 0;
+  right: -20px;
+  height: 100%;
+  padding-left: 20px;
+  transform: translateX(100%);
+}
+
+.right-menu-call {
+  background-color: #fff;
+  opacity: 0.7;
+  position: fixed;
   z-index: 100;
-  padding: 10px 20px;
+  top: 0px;
+  right: 0px;
+  height: 100%;
 }
 
-.right-menu {
-  right: 50px;
+.right-menu-open {
+  background-color: #fff;
+  color: #000;
+  font-size: 20px;
+  width: 30px;
+  height: 100%;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 1400px) {
+.right-menu-close {
+  background-color: #fff;
+  color: #099;
+  font-size: 20px;
+  border: 1px solid #099;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-shadow: none;
+  cursor: pointer;
+  width: 200px;
+}
+
+.vertical-text {
+  transform: rotate(-90deg);
+}
+
+.right-menu-open:focus {
+  outline: none;
+}
+
+@media all and (max-height: 430px) {
   .right-menu {
-    left: 1200px;
-    width: 200px;
+    float: none;
+    overflow-y: scroll;
   }
 }
 
-.left-menu {
-  left: 50px;
+.right-menu.is-active {
+  transform: translateX(0);
+}
+
+.right-menu-open.is-active {
+  transform: translateX(0);
+}
+
+.right-menu-close {
+}
+
+body.has-active-menu {
+}
+
+.menu-mask {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background: #000;
+  opacity: 0;
+  transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
+  display: block;
+}
+
+.menu-mask.is-active {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  transition: opacity 0.3s;
 }

@@ -19,13 +19,23 @@
       {% assign address = "Endereço" %}
       {% assign ponto = "ponto" %}
       {% assign info = "Informações" %}
+      {% assign close = "Fechar" %}
     {% elsif page.lang == "en" %}
       {% assign address = "Address" %}
       {% assign ponto = "dot" %}
       {% assign info = "Information" %}
+      {% assign close = "Close" %}
     {% endif %}
 
-    <div class="right-menu">
+    <nav id="right-menu-call" class="right-menu-call">
+      <button id="right-menu-open" class="right-menu-open">
+        <p class="vertical-text">
+          {{ info }}
+        </p>
+      </button>
+    </nav>
+
+    <nav id="right-menu" class="right-menu">
       <h1> {{ info }} </h1>
       <p> E-mail: abelsiqueira at ufpr {{ ponto }} br </p>
       <p> Github: <a href="http://github.com/abelsiqueira">
@@ -41,13 +51,105 @@
         Caixa Postal 19081 <br>
         81531-980  Curitiba  -  PR <br>
         Brasil </p>
-    </div>
+      <button class="right-menu-close">{{ close }}</button>
+    </nav>
 
+    <div id="menu-mask" class="menu-mask"></div>
   </body>
 
   <script>
-  $(window).scroll(function(){
-    $(".right-menu").css("top", Math.max(0, 170-$(this).scrollTop()));
+  (function(window) {
+    'use strict';
+
+    function extend(a, b) {
+      for(var key in b) {
+        if(b.hasOwnProperty(key)) {
+          a[key] = b[key];
+        }
+      }
+      return a;
+    }
+
+    function each(collection, callback) {
+      for (var i = 0; i < collection.length; i++) {
+        var item = collection[i];
+        callback(item);
+      }
+    }
+
+    function Menu(options) {
+      this.options = extend({}, this.options);
+      extend(this.options, options);
+      this._init();
+    }
+
+    Menu.prototype.options = {
+      wrapper: '#wrapper',
+      menuOpenerClass: '.right-menu-open',
+      maskId: '#menu-mask'
+    };
+
+    Menu.prototype._init = function() {
+      this.body = document.body;
+      this.mask = document.querySelector(this.options.maskId);
+      this.menu = document.querySelector("#right-menu");
+      this.closeBtn = this.menu.querySelector('.right-menu-close');
+      this.menuOpeners = document.querySelectorAll('.right-menu-open');
+      this._initEvents();
+    }
+
+    Menu.prototype._initEvents = function() {
+      this.closeBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.close();
+      }.bind(this));
+
+      this.mask.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.close();
+      }.bind(this));
+    }
+
+    Menu.prototype.open = function() {
+      this.body.classList.add('has-active-menu');
+      this.menu.classList.add('is-active');
+      this.mask.classList.add('is-active');
+      this.disableMenuOpeners();
+    }
+
+    Menu.prototype.close = function() {
+      this.body.classList.remove('has-active-menu');
+      this.menu.classList.remove('is-active');
+      this.mask.classList.remove('is-active');
+      this.enableMenuOpeners();
+    }
+
+    Menu.prototype.disableMenuOpeners = function() {
+      each(this.menuOpeners, function(item) {
+        item.disabled = true;
+      });
+    }
+
+    Menu.prototype.enableMenuOpeners = function() {
+      each(this.menuOpeners, function(item) {
+        item.disabled = false;
+      });
+    }
+
+    window.Menu = Menu;
+
+  })(window);
+
+  var rightMenu = new Menu({
+    wrapper: '#wrapper',
+    menuOpenerClass: '.right-menu-opener',
+    maskId: '#menu-mask'
+  });
+
+  var rightMenuBtn = document.querySelector("#right-menu-open")
+  rightMenuBtn.addEventListener('click', function(e) {
+    e.preventDefault;
+    rightMenu.open();
   });
   </script>
 
