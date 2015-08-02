@@ -1,0 +1,32 @@
+---
+layout:     post
+title:      CM114 - Métodos Computacionais de Otimização
+date:       2015-08-02
+categories: disciplines
+name:       cm114-2015s2
+permalink:  cm114-2015s2
+---
+
+# Informações
+
+  | **Sigla:**   | CM202
+  | **Nome:**    | Cálculo Diferencial e Integral II
+  | **Turma:**   | [B]({{ site.baseurl }}/disciplinas/2015s1-cm202/cm202.pdf)
+  | **Local:**   | PC13 - LAMIND
+  | **Horário:** | 19h00 Segunda e Quarta
+
+# Ementa
+
+Implementação e análise dos seguintes métodos: Gradiente Conjugado, Newton,
+BFGS, Região de Confiança e Lagrangeano Aumentado.
+
+# Programa
+
+Estudaremos alguns aspectos de precisão do computadores e convergência
+computacional.
+Estudaremos a linguagem Julia, onde faremos a maior parte de nossos projetos.
+Implementaremos os métodos propostos e faremos comparações deles em vários
+aspectos.
+Utilizaremos a biblioteca CUTEst.
+
+# Bibliografia
