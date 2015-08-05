@@ -28,6 +28,10 @@ Implementaremos os métodos propostos e faremos comparações deles em vários
 aspectos.
 Utilizaremos a biblioteca CUTEst.
 
+# Exercícios
+
+  - Exercício 1: [teste.jl]({{ site.baseurl }}/disciplinas/2015s2-cm114/ex1/teste.jl)
+
 # Avaliação
 
 Faremos vários projetos computacionais, cuja média formará 70% da nota final,
