@@ -1,10 +1,27 @@
-# Teste para o exercício da exponencial
+# Exercício - Exponencial
 
-# Você precisa criar um arquivo chamado `exponencial.jl`
+#=
+O objetivo deste exercício é calcular o valor de exp(x) utilizando
+a fórmula de Taylor
+
+    exp(x) = 1 + x + x^2/2 + x^3/3! + x^4/4! + ...
+
+O objetivo é conseguir o máximo de precisão possível, então essa expansão deve
+ser utilizada até que o próximo termo não faça diferença na aproximação.
+
+Você deve escrever um arquivo chamado `exponencial.jl` e implementar
+a função exponencial que recebe um valor `x` e retorna a aproximação para `e^x`.
+
+Para verificar que seu código funciona você deve usar o arquivo `teste.jl`.
+Esse arquivo contém alguns valores básicos e comparações do erro obtido.
+O seu programa só será considerado 100% correto se passar em todos os testes.
+
+A entrega deste programa deve ser feita até às 18h da segunda feira
+subsequente.
+=#
+
+## Começo do teste
 include("exponencial.jl")
-
-# Esse arquivo precisa definir uma função chamada exponencial que recebe x e
-# retorna a aproximação para eˣ
 
 using Base.Test
 

@@ -31,6 +31,7 @@ Utilizaremos a biblioteca CUTEst.
 # Exercícios
 
   - Exercício 1: [teste.jl]({{ site.baseurl }}/disciplinas/2015s2-cm114/ex1/teste.jl)
+    (Informações no próprio arquivo)
 
 # Avaliação
 
