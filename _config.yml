@@ -31,12 +31,6 @@ t:
     curriculum:
       title: "Curriculum"
       url:  "/curriculum/"
-    fun:
-      title: "Fun"
-      url:  "/fun/"
-    public-utility:
-      title: "Public Utility"
-      url:  "/public-utility/"
   br:
     backto: "voltar para"
     homeurl:  "/"
@@ -49,9 +43,3 @@ t:
     curriculum:
       title: "Currículo"
       url:  "/curriculo/"
-    fun:
-      title: "Diversão"
-      url:  "/diversao/"
-    public-utility:
-      title: "Utilidade Pública"
-      url:  "/utilidade-publica/"

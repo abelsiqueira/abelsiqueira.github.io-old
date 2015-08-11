@@ -48,7 +48,7 @@ body {
     rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c',
     endColorstr='#131313', GradientType=1 );
-    background-size: 64px;
+    background-size: 36px;
     background-attachment: fixed;
 }
 
@@ -118,7 +118,8 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $link-color;
+    font-weight: bold;
     text-decoration: none;
 
     &:visited {
