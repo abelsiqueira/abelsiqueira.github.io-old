@@ -2,7 +2,7 @@
 layout:     post
 title:      CM202 - Cálculo Diferencial e Integral II - 2015s2
 date:       2015-08-02
-categories: disciplines
+categories: teaching
 name:       cm202-2015s2
 permalink:  cm202-2015s2
 tag:        2015s2

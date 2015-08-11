@@ -33,8 +33,8 @@ Nonlinear Optimization area and had previously worked with C++, which I intended
 to learn. The work was completed by 2008.
 
 In 2008, having interest in the academic path, I decided to "rush" some
-disciplines of the post-graduate level. I rushed two in the first semester, and
-one in the second. The disciplines rushed were "Matrices", which is a discipline
+teaching of the post-graduate level. I rushed two in the first semester, and
+one in the second. The teaching rushed were "Matrices", which is a discipline
 about theoretical properties of matrices, norms, eigenvalues, linear systems,
 and decompositions, with some algorithmic considerations, but no programming.
 The other was "Numerical Methods for Linear Algebra", which is basically the

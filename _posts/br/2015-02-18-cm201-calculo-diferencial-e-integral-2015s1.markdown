@@ -2,7 +2,7 @@
 layout:     post
 title:      CM201 - Cálculo Diferencial e Integral I - 2015s1
 date:       2015-02-18
-categories: disciplines
+categories: teaching
 name:       cm201-2015s1
 permalink:  cm201-2015s1
 tag:        2015s1

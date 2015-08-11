@@ -2,7 +2,7 @@
 layout:     post
 title:      CM114 - Métodos Computacionais de Otimização
 date:       2015-08-02
-categories: disciplines
+categories: teaching
 name:       cm114-2015s2
 permalink:  cm114-2015s2
 tag:        2015s2

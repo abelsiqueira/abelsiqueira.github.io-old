@@ -22,9 +22,9 @@ t:
   en:
     backto: "back to"
     homeurl:  "/home/"
-    disciplines:
-      title: "Disciplines"
-      url:  "/disciplines/"
+    teaching:
+      title: "Teaching"
+      url:  "/teaching/"
     research:
       title: "Research"
       url:  "/research/"
@@ -34,7 +34,7 @@ t:
   br:
     backto: "voltar para"
     homeurl:  "/"
-    disciplines:
+    teaching:
       title: "Disciplinas"
       url:  "/disciplinas/"
     research:
