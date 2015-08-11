@@ -4,17 +4,10 @@ title:     Welcome
 name:      index
 ---
 <p> Welcome to my personal page. </p>
-<p> Latest posts:
-  <div class="col-left">
-  {% assign posts = site.posts | where:"lang", "en" %}
-  {% for post in posts offset: 0 limit: 8 %}
-  {% include excerpt.html %}
-  {% endfor %}
-  </div>
-  <div class="col-right">
-  {% assign posts = site.posts | where:"lang", "br" %}
-  {% for post in posts offset: 0 limit: 8 %}
-  {% include excerpt.html %}
-  {% endfor %}
-  </div>
+<p>
+<ul>
+  <li> <a href="{{ site.baseurl }}/teaching"> Teaching </a> </li>
+  <li> <a href="{{ site.baseurl }}/research"> Research </a> </li>
+  <li> <a href="{{ site.baseurl }}/curriculum"> Curriculum </a> </li>
+</ul>
 </p>
