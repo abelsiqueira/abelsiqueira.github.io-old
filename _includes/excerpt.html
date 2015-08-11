@@ -1,19 +1,9 @@
 {% if post.categories[0] %}
 {% assign cat = post.categories[0] %}
 
-<div class="excerpt-{{post.lang}}">
+<p class="excerpt">
   <strong> &raquo;
     <a href="{{ post.url | prepend: site.baseurl }}"> {{ post.title }}</a>
-    {% if page.name == "index" %}
-    - (<a href="{{ site.t[page.lang][cat].url | prepend: site.baseurl }}">
-      {{site.t[page.lang][cat].title}}
-    </a>)
-    {% endif %}
     <br> </strong>
-  {{ post.excerpt | strip_html | truncatewords: 50 }}
-  <div class="excerpt-date">
-    {% assign date = post.date %}
-    {% include dateformat.html %}
-  </div>
-</div>
+</p>
 {% endif %}

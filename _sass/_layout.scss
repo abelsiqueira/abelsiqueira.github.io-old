@@ -178,6 +178,12 @@
 
 .page-heading {
     font-size: $h1-font-size;
+    text-align: center;
+    font-variant: small-caps;
+    border-style: double solid;
+    border-width: 0px 2px 5px 2px;
+    border-radius: 0px 0px 20px 20px;
+    color: white;
 }
 
 .post-list {
@@ -250,32 +256,47 @@
     list-style-type: none;
 }
 
-.excerpt-en {
-  background-image: linear-gradient(90deg, rgb(220,220,255) 50%,
-    rgb(255,220,220) 50%);
-}
-
-.excerpt-br {
-  background-image: linear-gradient(90deg, rgb(220,255,220) 50%,
-    rgb(255,255,220) 50%);
-}
-
-.excerpt-en, .excerpt-br {
+.excerpt {
   padding: 0px 10px;
   margin: 10px 0px;
-  border-width: 1px 1px 1px 1px;
-  border-style: solid;
-  border-color: $border-color-alt;
   font-size: 0.9em;
 }
 
-.excerpt-en strong, .excerpt-br strong {
+.excerpt strong {
   font-variant: small-caps;
   font-size: 1.1em;
 }
 
-.excerpt-en a, .excerpt-br a, a:hover, a:visited {
+.excerpt a, a:hover, a:visited {
   color: $link-color;
+}
+
+.small-title {
+  border-style: solid double;
+  border-width: 2px 4px 2px 0px;
+  border-radius: 10px;
+  color: #ffffff;
+  display: inline;
+  padding: 5px;
+}
+
+.dark-back-metal {
+  background: rgba(48,48,48,1);
+  background: -moz-linear-gradient(left, rgba(48,48,48,1) 0%, rgba(41,41,41,1)
+  44%, rgba(31,31,31,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%,
+  rgba(48,48,48,1)), color-stop(44%, rgba(41,41,41,1)), color-stop(100%,
+  rgba(31,31,31,1)));
+  background: -webkit-linear-gradient(left, rgba(48,48,48,1) 0%,
+  rgba(41,41,41,1) 44%, rgba(31,31,31,1) 100%);
+  background: -o-linear-gradient(left, rgba(48,48,48,1) 0%, rgba(41,41,41,1)
+  44%, rgba(31,31,31,1) 100%);
+  background: -ms-linear-gradient(left, rgba(48,48,48,1) 0%, rgba(41,41,41,1)
+  44%, rgba(31,31,31,1) 100%);
+  background: linear-gradient(to right, rgba(48,48,48,1) 0%, rgba(41,41,41,1)
+  44%, rgba(31,31,31,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#303030',
+  endColorstr='#1f1f1f', GradientType=1 );
 }
 
 .col-left {

@@ -5,6 +5,7 @@ date:       2015-02-18
 categories: disciplines
 name:       cm201-2015s1
 permalink:  cm201-2015s1
+tag:        2015s1
 ---
 
 # Informações
@@ -29,7 +30,7 @@ Essa prova é apenas para aqueles que perderam alguma das provas e já vieram
 falar comigo.
 
 # Provas
-  
+
 **Atenção TURMA C, um erro na soma das notas dos projetos estava atribuindo
 nota 1.5 para todos que fizeram os projetos. Isso podia ser verificado porque
 a soma não batia. Ninguém deixou de estar aprovado.**

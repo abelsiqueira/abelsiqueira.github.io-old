@@ -5,17 +5,4 @@ name:      index
 permalink: /
 ---
 <p> Bem-vindo à minha página pessoal. </p>
-<p> Últimos posts:
-  <div class="col-left">
-  {% assign posts = site.posts | where:"lang", "br" %}
-  {% for post in posts offset: 0 limit: 8 %}
-  {% include excerpt.html %}
-  {% endfor %}
-  </div>
-  <div class="col-right">
-  {% assign posts = site.posts | where:"lang", "en" %}
-  {% for post in posts offset: 0 limit: 8 %}
-  {% include excerpt.html %}
-  {% endfor %}
-  </div>
-</p>
+

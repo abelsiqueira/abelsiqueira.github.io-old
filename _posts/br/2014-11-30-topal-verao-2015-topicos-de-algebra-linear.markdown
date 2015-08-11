@@ -4,6 +4,7 @@ title:      TopAL - Verão 2015 - Tópicos de Álgebra Linear
 date:       2014-11-30
 categories: disciplines
 name:       topal-summer2014
+tag:        verao2015
 ---
 **Atualizado: 08 de Fevereiro de 2015, 19:28**
 

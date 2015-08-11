@@ -1,7 +1,21 @@
 ---
-layout:     category
+layout:     default
 title:      Disciplinas
 name:       disciplines
+years:
+  - 2015s2
+  - 2015s1
+  - verao2015
 ---
 <p>
+{% for year in page.years %}
+<h3 class="small-title dark-back-metal"> {{ year }} </h3>
+{% for post in site.posts %}
+{% for tag in post.tags %}
+{% if tag == year %}
+{% include excerpt.html %}
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
 </p>
