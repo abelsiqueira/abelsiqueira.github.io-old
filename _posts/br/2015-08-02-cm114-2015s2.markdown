@@ -39,6 +39,8 @@ Lista de exercícios para entregar
   - Exercício 1: [teste.jl]({{ site.baseurl }}/disciplinas/2015s2-cm114/ex1/teste.jl)
     (Informações no próprio arquivo),
     [Solução]({{ site.baseurl }}/disciplinas/2015s2-cm114/ex1/exponencial.jl)
+  - Exercício 2: [teste.jl]({{ site.baseurl }}/disciplinas/2015s2-cm114/ex2/teste.jl)
+    (Informações no próprio arquivo)
 
 # Avaliação
 
