@@ -31,8 +31,14 @@ Utilizaremos a biblioteca CUTEst.
 
 # Exercícios
 
+[Lista de exercícios]({{ site.baseurl }}/disciplinas/2015s2-cm114/lista.pdf).
+Última atualização: 8 de Agosto de 2015, 17:30
+
+Lista de exercícios para entregar
+
   - Exercício 1: [teste.jl]({{ site.baseurl }}/disciplinas/2015s2-cm114/ex1/teste.jl)
-    (Informações no próprio arquivo)
+    (Informações no próprio arquivo),
+    [Solução]({{ site.baseurl }}/disciplinas/2015s2-cm114/ex1/exponencial.jl)
 
 # Avaliação
 
