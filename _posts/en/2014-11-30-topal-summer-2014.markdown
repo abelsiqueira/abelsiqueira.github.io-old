@@ -1,8 +1,0 @@
----
-layout:     post
-title:      TopAL - Summer 2014
-date:       2014-11-30
-categories: teaching
-name:       topal-summer2014
----
-No translation for this page.
