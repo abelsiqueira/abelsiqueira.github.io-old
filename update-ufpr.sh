@@ -25,4 +25,4 @@ lftp -c "set ftp:list-options -a;
 open abelsiqueira@people.ufpr.br;
 lcd _site;
 cd html;
-mirror --reverse --verbose --delete --only-newer"
+mirror --reverse --verbose --only-newer"
