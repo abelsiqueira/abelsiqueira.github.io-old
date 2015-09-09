@@ -3,5 +3,4 @@ layout:     default
 title:      Teaching
 name:       teaching
 ---
-<p> This page has no translation
-</p>
+This page has no translation

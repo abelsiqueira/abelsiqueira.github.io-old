@@ -444,3 +444,10 @@ body.has-active-menu {
   opacity: 0.7;
   transition: opacity 0.3s;
 }
+
+.wrapper h2 {
+  color: $sec-color;
+  font-size: $h1-font-size*0.9;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
