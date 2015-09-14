@@ -8,6 +8,8 @@ permalink:  cm202-2015s2
 tag:        2015s2
 ---
 
+# **ATENÇÃO:** A greve acabou, dia 15, esta terça, teremos aula normalmente.
+
 # Informações
 
   | **Sigla:**   | CM202
@@ -15,10 +17,10 @@ tag:        2015s2
   | **Turma:**   | [F]({{ site.baseurl }}/disciplinas/2015s2-cm202/cm202.pdf)
   | **Local:**   | CT04
   | **Horário:** | 19h00 Terça e quinta.
-  | **Prova 1:** | 17/09
-  | **Prova 2:** | 22/10
-  | **Prova 3:** | 26/11
-  | **Exame:**   | 10/12
+  | **Prova 1:** | - As datas de prova serão revisadas devido à greve.
+  | **Prova 2:** | -
+  | **Prova 3:** | -
+  | **Exame:**   | -
 
 # Provas
 
