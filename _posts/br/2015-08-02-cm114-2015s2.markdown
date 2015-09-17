@@ -29,6 +29,26 @@ Implementaremos os métodos propostos e faremos comparações deles em vários
 aspectos.
 Utilizaremos a biblioteca CUTEst.
 
+# Projetos
+
+Os seguintes assuntos foram selecionados (Última atualização: 17 de Set, 10h23)
+Ordem cronológica de escolha.
+
+  - **Métodos sem derivada (Busca direcional, Nelder-Mead)**
+    André Buhler
+  - **Análise do método do gradiente com busca linear em função dos autovalores
+    da matriz**
+    Jeobara Zacheski
+  - **Quadrados Mínimos não-lineares**
+    Egmara Antunes
+
+Confira também as sugestões de tema:
+
+  - Otimização Global
+  - Programação Quadrática Sequencial
+  - Pontos Interiores
+  - Região de Confiança
+
 # Exercícios
 
 [Lista de exercícios]({{ site.baseurl }}/disciplinas/2015s2-cm114/lista.pdf).
@@ -49,3 +69,17 @@ Faremos vários projetos computacionais, cuja média formará 70% da nota final,
 e um projeto grande valendo 30% da nota.
 
 # Bibliografia
+
+  - **Otimização contínua: aspectos teóricos e computacionais.**
+    *Ademir A. Ribeiro e Elizabeth W. Karas.*.
+    São Paulo: Cengage Learning,
+    2013.
+  - **Numerical Optimization.**
+    *Jorge Nocedal e Stephen J. Wright.*
+    Springer,
+    2006.
+  - **Matrix Computations.**
+    *Gene H. Golub e Charles F. Van Loan.*
+    Johns Hopkins University Press,
+    3a edição,
+    1996
