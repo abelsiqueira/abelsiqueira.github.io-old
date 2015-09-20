@@ -29,6 +29,15 @@ Implementaremos os métodos propostos e faremos comparações deles em vários
 aspectos.
 Utilizaremos a biblioteca CUTEst.
 
+# Notas de aula (em IJulia)
+
+Para ver estas aulas você pode ir online em
+[JuliaBox](https://www.juliabox.org),
+ou instalar o [Jupyter](https://jupyter.org/) e o
+[IJulia](https://github.com/JuliaLang/IJulia.jl).
+
+  - [03-gradiente]({{ site.baseurl }}/disciplinas/2015s2-cm114/03-gradiente.ipynb)
+
 # Projetos
 
 Os seguintes assuntos foram selecionados (Última atualização: 17 de Set, 10h23)
