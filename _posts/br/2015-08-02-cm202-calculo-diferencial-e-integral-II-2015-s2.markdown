@@ -12,7 +12,7 @@ tag:        2015s2
 
   | **Sigla:**   | CM202
   | **Nome:**    | Cálculo Diferencial e Integral II
-  | **Turma:**   | [F]({{ site.baseurl }}/disciplinas/2015s2-cm202/cm202.pdf)
+  | **Turma:**   | [F]({{ site.baseurl }}/disciplinas/cm202/cm202-2015s2.pdf)
   | **Local:**   | CT04
   | **Horário:** | 19h00 Terça e quinta.
   | **Prova 1:** | 08/10
@@ -43,7 +43,8 @@ tag:        2015s2
 
 # Listas
 
-  - [Stewart](http://www.clicmates.com.br/arquivosparadonwloads/Calculo%20Vol%202%20%285%20ed%29%20-%20James%20Stewart%20%28em%20portugues%29.pdf)
+  - [Lista 1]({{ site.baseurl }}/disciplinas/cm202/lista1.pdf)
+  - Lista extra do [Stewart](http://www.clicmates.com.br/arquivosparadonwloads/Calculo%20Vol%202%20%285%20ed%29%20-%20James%20Stewart%20%28em%20portugues%29.pdf)
     - 12.1 1-8, 11-18, 23-38
     - 12.2 5-25
     - 12.3 3-10,23-24

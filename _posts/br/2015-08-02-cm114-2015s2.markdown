@@ -36,7 +36,7 @@ Para ver estas aulas você pode ir online em
 ou instalar o [Jupyter](https://jupyter.org/) e o
 [IJulia](https://github.com/JuliaLang/IJulia.jl).
 
-  - [03-gradiente]({{ site.baseurl }}/disciplinas/2015s2-cm114/03-gradiente.ipynb)
+  - [03-gradiente]({{ site.baseurl }}/disciplinas/cm114/03-gradiente.ipynb)
 
 # Projetos
 
@@ -60,17 +60,17 @@ Confira também as sugestões de tema:
 
 # Exercícios
 
-[Lista de exercícios]({{ site.baseurl }}/disciplinas/2015s2-cm114/lista.pdf).
+[Lista de exercícios]({{ site.baseurl }}/disciplinas/cm114/lista.pdf).
 Última atualização: 8 de Agosto de 2015, 17:30
 
 Lista de exercícios para entregar
 
-  - Exercício 1: [teste.jl]({{ site.baseurl }}/disciplinas/2015s2-cm114/ex1/teste.jl)
+  - Exercício 1: [teste.jl]({{ site.baseurl }}/disciplinas/cm114/ex1/teste.jl)
     (Informações no próprio arquivo),
-    [Solução]({{ site.baseurl }}/disciplinas/2015s2-cm114/ex1/exponencial.jl)
-  - Exercício 2: [teste.jl]({{ site.baseurl }}/disciplinas/2015s2-cm114/ex2/teste.jl)
+    [Solução]({{ site.baseurl }}/disciplinas/cm114/ex1/exponencial.jl)
+  - Exercício 2: [teste.jl]({{ site.baseurl }}/disciplinas/cm114/ex2/teste.jl)
     (Informações no próprio arquivo)
-    [Solução]({{ site.baseurl }}/disciplinas/2015s2-cm114/ex2/ldlt.jl)
+    [Solução]({{ site.baseurl }}/disciplinas/cm114/ex2/ldlt.jl)
 
 # Avaliação
 

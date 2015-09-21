@@ -12,7 +12,7 @@ tag:        2015s1
 
   | **Sigla:**   | CM202
   | **Nome:**    | Cálculo Diferencial e Integral II
-  | **Turma:**   | [B]({{ site.baseurl }}/disciplinas/2015s1-cm202/cm202.pdf)
+  | **Turma:**   | [B]({{ site.baseurl }}/disciplinas/cm202/cm202-2015s1.pdf)
   | **Local:**   | PF06
   | **Horário:** | 19h30 Terça e quinta.
   | **Prova 1:** | 09/04
@@ -31,11 +31,11 @@ falar comigo.
 
 # Provas
 
-  - [Prova 1 com gabarito]({{ site.baseurl }}/disciplinas/2015s1-cm202/prova1.pdf)
-  - [Prova 2 com gabarito]({{ site.baseurl }}/disciplinas/2015s1-cm202/prova2.pdf)
-  - [Prova 3 com gabarito]({{ site.baseurl }}/disciplinas/2015s1-cm202/prova3.pdf)
-  - [Exame com gabarito]({{ site.baseurl }}/disciplinas/2015s1-cm202/exame.pdf)
-  - [Notas]({{ site.baseurl }}/disciplinas/2015s1-cm202/notas.pdf) (atualizado
+  - [Prova 1 com gabarito]({{ site.baseurl }}/disciplinas/cm202/prova1-2015s1.pdf)
+  - [Prova 2 com gabarito]({{ site.baseurl }}/disciplinas/cm202/prova2-2015s1.pdf)
+  - [Prova 3 com gabarito]({{ site.baseurl }}/disciplinas/cm202/prova3-2015s1.pdf)
+  - [Exame com gabarito]({{ site.baseurl }}/disciplinas/cm202/exame-2015s1.pdf)
+  - [Notas]({{ site.baseurl }}/disciplinas/cm202/notas-2015s1.pdf) (atualizado
     dia 09 de Julho)
 
 # [Monitorias]({{ site.baseurl }}/assets/monitorias2015.pdf)
@@ -58,7 +58,7 @@ falar comigo.
 # Listas
 
   - [Livro](http://www.clicmates.com.br/arquivosparadonwloads/Calculo%20Vol%202%20%285%20ed%29%20-%20James%20Stewart%20%28em%20portugues%29.pdf)
-  - [Stewart]({{ site.baseurl }}/disciplinas/2015s1-cm202/lista-stewart.pdf):
+  - [Stewart]({{ site.baseurl }}/disciplinas/cm202/lista-stewart.pdf):
     - 12.1 1-8, 11-18, 23-38
     - 12.2 5-25
     - 12.3 3-10,23-24

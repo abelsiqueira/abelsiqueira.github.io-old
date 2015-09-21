@@ -12,7 +12,7 @@ tag:        2015s1
 
   | **Sigla:**   | CM201
   | **Nome:**    | Cálculo Diferencial e Integral I
-  | **Turmas:**  | [C]({{ site.baseurl }}/disciplinas/2015s1-cm201/cm201-C.pdf) e [J]({{ site.baseurl }}/disciplinas/2015s1-cm201/cm201-J.pdf)
+  | **Turmas:**  | [C]({{ site.baseurl }}/disciplinas/cm201/cm201-2015s1-C.pdf) e [J]({{ site.baseurl }}/disciplinas/cm201/cm201-2015s1-J.pdf)
   | **Horário:** | Turma C: 7h30, Terça e Sexta; Turma J: 17h30, Terça e Quinta
   | **Local:**   | Turma C: PA02 e PA01; Turma J: PH04
   | **Prova 1:** | Turma C: 31/03; Turma J: 07/04
@@ -35,21 +35,21 @@ falar comigo.
 nota 1.5 para todos que fizeram os projetos. Isso podia ser verificado porque
 a soma não batia. Ninguém deixou de estar aprovado.**
 
-  - Notas: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/notas-C.pdf)
+  - Notas: [Turma C]({{ site.baseurl }}/disciplinas/cm201/notas-2015s1-C.pdf)
     (atualizado dia 07 de Julho),
-    [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/notas-J.pdf)
+    [Turma J]({{ site.baseurl }}/disciplinas/cm201/notas-2015s1-J.pdf)
     (atualizado dia 09 de Julho).
-  - Prova 1 com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova1-C.pdf),
-    [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova2-J.pdf).
-  - Prova 2 com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova2-C.pdf),
-    [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova2-J.pdf).
-  - Prova 3 com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova3-C.pdf),
-    [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/prova3-J.pdf).
-  - Exame com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/2015s1-cm201/exame-C.pdf),
-    [Turma J]({{ site.baseurl }}/disciplinas/2015s1-cm201/exame-J.pdf).
-  - [Convergência do método de Newton]({{ site.baseurl }}/disciplinas/2015s1-cm201/newton/convergencia.pdf)
-  - [newton.jl]({{ site.baseurl }}/disciplinas/2015s1-cm201/newton/newton.pdf)
-  - [avalia.jl]({{ site.baseurl }}/disciplinas/2015s1-cm201/newton/avalia.jl)
+  - Prova 1 com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/cm201/prova1-2015s1-C.pdf),
+    [Turma J]({{ site.baseurl }}/disciplinas/cm201/prova2-2015s1-J.pdf).
+  - Prova 2 com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/cm201/prova2-2015s1-C.pdf),
+    [Turma J]({{ site.baseurl }}/disciplinas/cm201/prova2-2015s1-J.pdf).
+  - Prova 3 com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/cm201/prova3-2015s1-C.pdf),
+    [Turma J]({{ site.baseurl }}/disciplinas/cm201/prova3-2015s1-J.pdf).
+  - Exame com gabarito: [Turma C]({{ site.baseurl }}/disciplinas/cm201/exame-2015s1-C.pdf),
+    [Turma J]({{ site.baseurl }}/disciplinas/cm201/exame-2015s1-J.pdf).
+  - [Convergência do método de Newton]({{ site.baseurl }}/disciplinas/cm201/newton/convergencia.pdf)
+  - [newton.jl]({{ site.baseurl }}/disciplinas/cm201/newton/newton.jl)
+  - [avalia.jl]({{ site.baseurl }}/disciplinas/cm201/newton/avalia.jl)
 
 # [Monitorias]({{ site.baseurl }}/assets/monitorias2015.pdf)
 
@@ -71,9 +71,9 @@ a soma não batia. Ninguém deixou de estar aprovado.**
 
 # Projeto
 
-  - [Projeto de Newton (CM201)]({{ site.baseurl }}/disciplinas/2015s1-cm201/projeto-newton.pdf)
+  - [Projeto de Newton (CM201)]({{ site.baseurl }}/disciplinas/cm201/projeto-newton.pdf)
     (atualizado 01 de Junho)
-  - [avalia.jl]({{site.baseurl}}/disciplinas/2015s1-cm201/newton/avalia.jl) (Atualizado
+  - [avalia.jl]({{site.baseurl}}/disciplinas/cm201/newton/avalia.jl) (Atualizado
     03 de Junho) - NOTA: Esse arquivo testa se seu programa passa nos meus
     testes. Se não passar, VAI DAR ERRO MESMO. Ele diz as linhas em que dá erro,
     mas a linha 13 de avalia.jl é só a definição do erro. Você tem que buscar a
@@ -81,11 +81,11 @@ a soma não batia. Ninguém deixou de estar aprovado.**
 
 # Listas
 
-  - Lista do [Iezzi]({{ site.baseurl }}/disciplinas/2015s1-cm201/lista-iezzi.pdf):
+  - Lista do [Iezzi]({{ site.baseurl }}/disciplinas/cm201/lista-iezzi.pdf):
     10-21, 22, 24, 27, 29, 33, 51, 56, 61, 66, 117, 137-142, 144, 145, 153-161,
     164, 165, 167-172, 177, 194, 214-224, 251-265, 268-274, 279-284, 289-296,
     313-318, 325-335
-  - Lista do [Stewart]({{ site.baseurl }}/disciplinas/2015s1-cm201/lista-stewart.pdf):
+  - Lista do [Stewart]({{ site.baseurl }}/disciplinas/cm201/lista-stewart.pdf):
     - 1.1 Os que você achar necessário
     - 1.2 1-4
     - 1.3 1-24, 31-50
@@ -145,7 +145,7 @@ a soma não batia. Ninguém deixou de estar aprovado.**
     - 5.5 1-8,10-19,21,31
     - 7.1 1,3-7,9
     - [Problemas e exercícios
-      selecionados]({{site.baseurl}}/disciplinas/2015s1-cm201/lista-integral.pdf)
+      selecionados]({{site.baseurl}}/disciplinas/cm201/lista-integral.pdf)
       (Atualizada 11/06 com gabarito)
 
 # Bibliografia
