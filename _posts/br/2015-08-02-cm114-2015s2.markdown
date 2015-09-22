@@ -37,6 +37,7 @@ ou instalar o [Jupyter](https://jupyter.org/) e o
 [IJulia](https://github.com/JuliaLang/IJulia.jl).
 
   - [03-gradiente]({{ site.baseurl }}/disciplinas/cm114/03-gradiente.ipynb)
+  - [04-Newton]({{ site.baseurl }}/disciplinas/cm114/04-Newton.ipynb)
 
 # Projetos
 
