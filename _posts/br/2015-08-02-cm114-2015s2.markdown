@@ -72,6 +72,8 @@ Lista de exercícios para entregar
   - Exercício 2: [teste.jl]({{ site.baseurl }}/disciplinas/cm114/ex2/teste.jl)
     (Informações no próprio arquivo)
     [Solução]({{ site.baseurl }}/disciplinas/cm114/ex2/ldlt.jl)
+  - Exercício 3: [teste.jl]({{ site.baseurl }}/disciplinas/cm114/ex3/teste.jl)
+    (Informações no próprio arquivo)
 
 # Avaliação
 
@@ -80,8 +82,8 @@ e um projeto grande valendo 30% da nota.
 
 # Bibliografia
 
-  - **Otimização contínua: aspectos teóricos e computacionais.**
-    *Ademir A. Ribeiro e Elizabeth W. Karas.*.
+  - **Otimização Contínua: Aspectos Teóricos e Computacionais.**
+    *Ademir A. Ribeiro e Elizabeth W. Karas.*
     São Paulo: Cengage Learning,
     2013.
   - **Numerical Optimization.**
@@ -93,3 +95,8 @@ e um projeto grande valendo 30% da nota.
     Johns Hopkins University Press,
     3a edição,
     1996
+  - **Linear and Nonlinear Programming.**
+    *David G. Luenberger e Yinyu Ye.*
+    Springer,
+    3a edição,
+    2008
