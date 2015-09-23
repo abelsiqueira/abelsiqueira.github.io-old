@@ -38,6 +38,7 @@ ou instalar o [Jupyter](https://jupyter.org/) e o
 
   - [03-gradiente]({{ site.baseurl }}/disciplinas/cm114/03-gradiente.ipynb)
   - [04-Newton]({{ site.baseurl }}/disciplinas/cm114/04-Newton.ipynb)
+    **(Havia um erro de conta, corrigi e subi de novo. 23/09)**
 
 # Projetos
 
