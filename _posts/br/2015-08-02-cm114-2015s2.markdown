@@ -52,13 +52,19 @@ Ordem cronológica de escolha.
     Jeobara Zacheski
   - **Quadrados Mínimos não-lineares**
     Egmara Antunes
+  - **Região de confiança**
+    André Vianna
+  - **Gradientes conjugados**
+    Irineu Burda
+  - **Pontos interiores**
+    Adriana Alves
+  - **Problemas multi-objetivo**
+    Allison
 
 Confira também as sugestões de tema:
 
   - Otimização Global
   - Programação Quadrática Sequencial
-  - Pontos Interiores
-  - Região de Confiança
 
 # Exercícios
 
