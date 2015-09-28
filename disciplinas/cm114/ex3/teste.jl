@@ -52,7 +52,6 @@ IMPORTANTE:
 =#
 
 using Base.Test
-using TimeIt
 
 include("bfgs.jl")
 
@@ -147,8 +146,17 @@ function teste(;verbose = false)
     @test norm(∇fx) < ϵ
   end
 
-  f(x) = -dot(x,x)
-  ∇f(x) = -2*x
+  for n = [2 5 10 50 100]
+    @green("Testando bfgs_update! com n = $n")
+    A = rand(n,n)
+    (G,R) = qr(A)
+    Q = G*diagm(linspace(1,100,n))*G'
+    s = rand(n)
+    y = rand(n)
+    C = Q - Q*s*s'*Q'/dot(s,Q*s) + y*y'/dot(y,s)
+    bfgs_update!(Q, s, y)
+    @test norm(Q-C) < ϵ
+  end
 end
 
 @time teste(verbose=true)

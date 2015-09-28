@@ -80,7 +80,7 @@ Lista de exercícios para entregar
     (Informações no próprio arquivo)
     [Solução]({{ site.baseurl }}/disciplinas/cm114/ex2/ldlt.jl)
   - Exercício 3: [teste.jl]({{ site.baseurl }}/disciplinas/cm114/ex3/teste.jl)
-    (Informações no próprio arquivo)
+    (Informações no próprio arquivo. Atualizado 28/09 15:33)
 
 # Avaliação
 
