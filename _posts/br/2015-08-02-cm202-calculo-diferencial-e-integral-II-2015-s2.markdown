@@ -15,7 +15,7 @@ tag:        2015s2
   | **Turma:**   | [F]({{ site.baseurl }}/disciplinas/cm202/cm202-2015s2.pdf)
   | **Local:**   | CT04
   | **Horário:** | 19h00 Terça e quinta.
-  | **Prova 1:** | 08/10
+  | **Prova 1:** | 15/10
   | **Prova 2:** | -
   | **Prova 3:** | -
   | **Exame:**   | -
