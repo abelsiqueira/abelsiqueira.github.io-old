@@ -19,8 +19,8 @@ end
   - A função `bfgs_method` que recebe f, ∇f, x0, e opcionalmente (por keyword)
     tol, max_iter e max_time, e implemente o método de BFGS, a partir da matriz
     B₀ = I, usando a atualização implementada por você e com busca linear usando
-    o critério de Wolfe com backtracking (usando t₀ = 1, e atualizando divindo t
-    por 2). Lembre que o critério de Wolfe é
+    o critério de Wolfe com backtracking (usando t = 1, e multiplicando t por
+    0.9). Lembre-se que o critério de Wolfe é
 
       f(xᵏ+tₖdᵏ) ≦ f(xᵏ) + c₁*tₖ*∇f(xᵏ)ᵀdᵏ
       ∇f(xᵏ+tₖdᵏ)ᵀdᵏ ≧ c₂*∇f(xᵏ)ᵀdᵏ
