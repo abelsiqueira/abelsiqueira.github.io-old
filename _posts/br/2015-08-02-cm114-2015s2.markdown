@@ -65,6 +65,21 @@ Confira também as sugestões de tema:
 
   - Otimização Global
   - Programação Quadrática Sequencial
+  - **On the implementation of an algorithm for large-scale equality constrained
+    optimization**, _Lalee, M.; Nocedal, J.; Plantenga, T..,_ SIAM Journal on
+    Optimization, 8(3), 1998, 682-706.
+  - **Newton's method for large bound-constrained optimization problems**,
+    _Lin, C.-J.; Moré, J.._,
+    SIAM Journal on Optimization, 9(4), 1999, 1100-1127.
+  - **Global optimization based on local searches**,
+    _Locatelli, M.; Schoen, F.._,
+    Journal of Operational Research, 11,
+    2013, 301-321.
+  - **Large-scale active-set box-constrained optimization method with spectral
+    projected gradients**,
+    _Birgin, E. G.; Martínez, J. M.._,
+    Computational Optimization and Applications, 23,
+    2002, 101-125.
 
 # Exercícios
 
