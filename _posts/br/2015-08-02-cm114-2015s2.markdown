@@ -46,20 +46,20 @@ Os seguintes assuntos foram selecionados (Última atualização: 17 de Set, 10h2
 Ordem cronológica de escolha.
 
   - **Métodos sem derivada (Busca direcional, Nelder-Mead)**
-    André Buhler
+    André Andriolli Buhler
   - **Análise do método do gradiente com busca linear em função dos autovalores
     da matriz**
-    Jeobara Zacheski
+    Jeobara Zak Zacheski
   - **Quadrados Mínimos não-lineares**
-    Egmara Antunes
+    Egmara Antunes dos Santos
   - **Região de confiança**
-    André Vianna
+    André Luiz Correa Vianna Filho
   - **Gradientes conjugados**
-    Irineu Burda
+    Irineu Burda Jr.
   - **Pontos interiores**
-    Adriana Alves
+    Adriana Alves Fressato
   - **Problemas multi-objetivo**
-    Allison
+    Allison Segatto de Souza
 
 Confira também as sugestões de tema:
 
