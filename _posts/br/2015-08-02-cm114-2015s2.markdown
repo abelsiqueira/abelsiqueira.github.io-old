@@ -39,6 +39,9 @@ ou instalar o [Jupyter](https://jupyter.org/) e o
   - [03-gradiente]({{ site.baseurl }}/disciplinas/cm114/03-gradiente.ipynb)
   - [04-Newton]({{ site.baseurl }}/disciplinas/cm114/04-Newton.ipynb)
     **(Havia um erro de conta, corrigi e subi de novo. 23/09)**
+  - 05-BFGS (Atrasado)
+  - [06-Wolfe]({{ site.baseurl }}/disciplinas/cm114/06-Wolfe.ipynb)
+  - [07-Trust-Region]({{ site.baseurl }}/disciplinas/cm114/07-Trust-Region.ipynb)
 
 # Projetos
 
