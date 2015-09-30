@@ -100,7 +100,7 @@ Lista de exercícios para entregar
     [Solução]({{ site.baseurl }}/disciplinas/cm114/ex2/ldlt.jl)
   - Exercício 3: [teste.jl]({{ site.baseurl }}/disciplinas/cm114/ex3/teste.jl)
     (Informações no próprio arquivo. Atualizado 29/09 06:31 com a informação
-    para usar t = 0.9*t)
+    para usar t = 0.9*t. Atualizado 30/09 16:16 com critérios de avaliação.)
 
 # Avaliação
 

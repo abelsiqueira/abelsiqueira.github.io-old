@@ -49,6 +49,12 @@ IMPORTANTE:
   - Preste bastante atenção à função `bfgs_update`, ela deve modificar a matriz
     B recebida. Faça testes para verificar que ela está funcionando antes de
     testar o método.
+
+Avaliação:
+  - [7.0] Passar em todos os testes
+  - [1.0] Não criar nenhuma matriz extra
+  - [1.0] Calcular f e ∇f somente quando necessário
+  - [1.0] Resolver sistema usando Cholesky ou LDLᵀ
 =#
 
 using Base.Test
