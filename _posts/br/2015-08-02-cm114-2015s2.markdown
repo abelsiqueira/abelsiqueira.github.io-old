@@ -45,21 +45,25 @@ ou instalar o [Jupyter](https://jupyter.org/) e o
 Os seguintes assuntos foram selecionados (Última atualização: 17 de Set, 10h23)
 Ordem cronológica de escolha.
 
-  - **Métodos sem derivada (Busca direcional, Nelder-Mead)**
+  - **Métodos sem Derivada (Busca direcional, Nelder-Mead)**
     André Andriolli Buhler
-  - **Análise do método do gradiente com busca linear em função dos autovalores
-    da matriz**
+  - **Análise do Método do Gradiente com Busca Linear em Função dos Autovalores
+    da Matriz**
     Jeobara Zak Zacheski
-  - **Quadrados Mínimos não-lineares**
+  - **Quadrados Mínimos Não-Lineares**
     Egmara Antunes dos Santos
-  - **Região de confiança**
+  - **Região de Confiança**
     André Luiz Correa Vianna Filho
-  - **Gradientes conjugados**
+  - **Gradientes Conjugados**
     Irineu Burda Jr.
-  - **Pontos interiores**
+  - **Pontos Interiores**
     Adriana Alves Fressato
-  - **Problemas multi-objetivo**
+  - **Problemas Multi-Objetivo**
     Allison Segatto de Souza
+  - **Região de Confiança - Steihaug**
+    Francine Luise Milian Ribas
+  - **Métodos de Penalidade**
+    Oksana Heringer da Silva
 
 Confira também as sugestões de tema:
 
