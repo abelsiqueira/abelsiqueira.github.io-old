@@ -51,7 +51,8 @@ IMPORTANTE:
     testar o método.
 
 Avaliação:
-  - [7.0] Passar em todos os testes
+  - [6.5] Passar em todos os testes
+  - [0.5] Identação correta (não use TABS, use espaços)
   - [1.0] Não criar nenhuma matriz extra
   - [1.0] Calcular f e ∇f somente quando necessário
   - [1.0] Resolver sistema usando Cholesky ou LDLᵀ
