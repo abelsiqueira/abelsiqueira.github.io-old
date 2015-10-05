@@ -67,26 +67,18 @@ Ordem cronológica de escolha.
     Francine Luise Milian Ribas
   - **Métodos de Penalidade**
     Oksana Heringer da Silva
-
-Confira também as sugestões de tema:
-
-  - Otimização Global
-  - Programação Quadrática Sequencial
   - **On the implementation of an algorithm for large-scale equality constrained
-    optimization**, _Lalee, M.; Nocedal, J.; Plantenga, T..,_ SIAM Journal on
-    Optimization, 8(3), 1998, 682-706.
-  - **Newton's method for large bound-constrained optimization problems**,
-    _Lin, C.-J.; Moré, J.._,
-    SIAM Journal on Optimization, 9(4), 1999, 1100-1127.
-  - **Global optimization based on local searches**,
-    _Locatelli, M.; Schoen, F.._,
-    Journal of Operational Research, 11,
-    2013, 301-321.
+    optimization**
+    Jonivan
+  - **Global optimization based on local searches**
+    Leticia
   - **Large-scale active-set box-constrained optimization method with spectral
-    projected gradients**,
-    _Birgin, E. G.; Martínez, J. M.._,
-    Computational Optimization and Applications, 23,
-    2002, 101-125.
+    projected gradients**
+    Felipe Magalhães
+  - **Newton's method for large bound-constrained optimization problems**
+    ???
+  - **Programação quadrática com restrições de desigualdade**
+    Daniel Cabral
 
 # Exercícios
 
@@ -96,14 +88,13 @@ Confira também as sugestões de tema:
 Lista de exercícios para entregar
 
   - Exercício 1: [teste.jl]({{ site.baseurl }}/disciplinas/cm114/ex1/teste.jl)
-    (Informações no próprio arquivo),
     [Solução]({{ site.baseurl }}/disciplinas/cm114/ex1/exponencial.jl)
   - Exercício 2: [teste.jl]({{ site.baseurl }}/disciplinas/cm114/ex2/teste.jl)
-    (Informações no próprio arquivo)
     [Solução]({{ site.baseurl }}/disciplinas/cm114/ex2/ldlt.jl)
   - Exercício 3: [teste.jl]({{ site.baseurl }}/disciplinas/cm114/ex3/teste.jl)
-    (Informações no próprio arquivo. Atualizado 29/09 06:31 com a informação
+    (Atualizado 29/09 06:31 com a informação
     para usar t = 0.9*t. Atualizado 30/09 18:24 com critérios de avaliação.)
+  - Exercício 4: [teste.jl]({{ site.baseurl }}/disciplinas/cm114/ex4/teste.jl)
 
 # Avaliação
 
