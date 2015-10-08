@@ -95,6 +95,7 @@ Lista de exercícios para entregar
     (Atualizado 29/09 06:31 com a informação
     para usar t = 0.9*t. Atualizado 30/09 18:24 com critérios de avaliação.)
   - Exercício 4: [teste.jl]({{ site.baseurl }}/disciplinas/cm114/ex4/teste.jl)
+    (Atualizado 08/10 13:50 com um novo teste para o tempo.)
 
 # Avaliação
 

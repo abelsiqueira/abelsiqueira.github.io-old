@@ -206,9 +206,10 @@ function teste(;verbose = false)
 
   begin # Problema que falha no tempo
     @green("Problema que falha no tempo")
-    f(x) = dot(x,x)/2
-    ∇f(x) = -x
-    x₀ = [1.0;1.0]
+    Λ(x) = 1:length(x)
+    f(x) = dot(x,Λ(x).*x)/2
+    ∇f(x) = Λ(x).*x
+    x₀ = ones(1000)
     x, fx, ∇fx, ef, iter, el_time = bfgs_trust(f, ∇f, x₀, tol=ϵ,
       max_iter=max_iter, max_time=0.1)
     @verbose("‖∇fx‖ = $(norm(∇fx))")
