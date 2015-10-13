@@ -15,6 +15,11 @@ tag:        2015s2
   | **Local:**   | PC13 - LAMIND
   | **Horário:** | 19h00 Segunda e Quarta
 
+# Notas
+
+  - [Notas]({{ site.baseurl }}/disciplinas/cm114/notas-2015s2.pdf)
+    (Última atualização 13/10 às 14:40)
+
 # Ementa
 
 Implementação e análise dos seguintes métodos: Gradiente Conjugado, Newton,
