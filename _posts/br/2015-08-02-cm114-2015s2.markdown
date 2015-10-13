@@ -99,6 +99,7 @@ Lista de exercícios para entregar
   - Exercício 3: [teste.jl]({{ site.baseurl }}/disciplinas/cm114/ex3/teste.jl)
     (Atualizado 29/09 06:31 com a informação
     para usar t = 0.9*t. Atualizado 30/09 18:24 com critérios de avaliação.)
+    [Solução]({{ site.baseurl }}/disciplinas/cm114/ex3/bfgs.jl)
   - Exercício 4: [teste.jl]({{ site.baseurl }}/disciplinas/cm114/ex4/teste.jl)
     (Atualizado 08/10 13:50 com um novo teste para o tempo.)
 
