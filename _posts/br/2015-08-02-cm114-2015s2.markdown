@@ -20,6 +20,18 @@ tag:        2015s2
   - [Notas]({{ site.baseurl }}/disciplinas/cm114/notas-2015s2.pdf)
     (Última atualização 13/10 às 14:40)
 
+# Mini-TCC
+
+30% da nota da disciplina será do mini-tcc. Posteriormente colocarei o
+cronograma aqui. Por enquanto, segue o modelo. **Não serão aceitos trabalhos
+que não tenham sido feitos em LaTeX.** Na dúvida, use o modelo.
+Você pode subir o modelo para o Sharelatex e trabalhar de lá.
+O arquivo está em .tar.gz, que o 7zip, entre outros, deve conseguir abrir.
+
+  - [Pacote]({{ site.baseurl }}/disciplinas/cm114/mini-tcc/modelo-tcc.tar.gz)
+  - [Projeto]({{ site.baseurl }}/disciplinas/cm114/mini-tcc/projeto.pdf)
+  - [Slides]({{ site.baseurl }}/disciplinas/cm114/mini-tcc/slides.pdf)
+
 # Ementa
 
 Implementação e análise dos seguintes métodos: Gradiente Conjugado, Newton,
