@@ -62,6 +62,7 @@ ou instalar o [Jupyter](https://jupyter.org/) e o
   - 05-BFGS (Atrasado)
   - [06-Wolfe]({{ site.baseurl }}/disciplinas/cm114/06-Wolfe.ipynb)
   - [07-Trust-Region]({{ site.baseurl }}/disciplinas/cm114/07-Trust-Region.ipynb)
+  - [08-Performance-Profile]({{ site.baseurl }}/disciplinas/cm114/08-Performance-Profile.ipynb)
 
 # Projetos
 
