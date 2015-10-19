@@ -118,6 +118,7 @@ Lista de exercícios para entregar
     [Solução]({{ site.baseurl }}/disciplinas/cm114/ex3/bfgs.jl)
   - Exercício 4: [teste.jl]({{ site.baseurl }}/disciplinas/cm114/ex4/teste.jl)
     (Atualizado 08/10 13:50 com um novo teste para o tempo.)
+  - Exercício 5: [ex5.pdf]({{ site.baseurl }}/disciplinas/cm114/ex5/ex5.pdf)
 
 # Avaliação
 
