@@ -66,40 +66,49 @@ ou instalar o [Jupyter](https://jupyter.org/) e o
 
 # Projetos
 
-Os seguintes assuntos foram selecionados (Última atualização: 17 de Set, 10h23)
-Ordem cronológica de escolha.
+## Cronograma:
 
-  - **Métodos sem Derivada (Busca direcional, Nelder-Mead)**
-    André Andriolli Buhler
-  - **Análise do Método do Gradiente com Busca Linear em Função dos Autovalores
-    da Matriz**
-    Jeobara Zak Zacheski
-  - **Quadrados Mínimos Não-Lineares**
-    Egmara Antunes dos Santos
-  - **Região de Confiança**
-    André Luiz Correa Vianna Filho
-  - **Gradientes Conjugados**
-    Irineu Burda Jr.
-  - **Pontos Interiores**
-    Adriana Alves Fressato
-  - **Problemas Multi-Objetivo**
-    Allison Segatto de Souza
-  - **Região de Confiança - Steihaug**
-    Francine Luise Milian Ribas
-  - **Métodos de Penalidade**
-    Oksana Heringer da Silva
-  - **On the implementation of an algorithm for large-scale equality constrained
-    optimization**
-    Jonivan
-  - **Global optimization based on local searches**
-    Leticia
-  - **Large-scale active-set box-constrained optimization method with spectral
-    projected gradients**
-    Felipe Magalhães
-  - **Newton's method for large bound-constrained optimization problems**
-    ???
-  - **Programação quadrática com restrições de desigualdade**
-    Daniel Cabral
+  - 23 de Novembro - Segunda feira - 19h00
+
+      **André Andriolli Buhler** - *Métodos sem derivada*
+
+      **Irineu Burda Jr.** - *Método dos Gradientes Conjugados*
+
+      **Jeobara Zak Zacheski** - *Análise sobre como a distribuição dos autovalores
+      da matriz Hessiana de uma função quadrática interfere na performance do
+      método do gradiente.*
+  - 25 de Novembro - Quarta feira - 19h00
+
+    **Leticia Krebsbach** - *Otimização global baseado em pesquisas locais*
+
+    **Alisson Segatto de Souza** - *Teoria, método e aplicação de otimização
+    multiobjetivo*
+
+    **Francine Luise Milian Ribas** - *Região de confiança - Steihaug*
+  - 30 de Novembro - Segunda feira - 19h00
+
+    **André Luiz Correa Vianna Filho** - *Região de confiança*
+
+    **Egmara Antunes dos Santos** - *Quadrados mínimos não-lineares*
+
+    **Felipe Rodrigues Magalhães** - *Problema de restrição de caixa usando o
+    método do gradiente espectral projetado (SPG)*
+
+  - 02 de Dezembro - Quarta feira - 19h00
+
+    **Oksana Heringer da Silva** - *Métodos de penalidade*
+
+    **Patrick Krezanovsky** - *Métodos de Filtro*
+
+    **Adrean de Oliveira Cebola** - *SNOPT - Programação Quadrática Sequencial
+    (SQP)*
+
+  - 07/12: Adrean, Jonivan
+
+    **Jonivan Carlos de Oliveira** - *A determinar*
+
+    **Adriana Alves Fressato** - *Métodos de Pontos Interiores para o problema
+    não linear*
 
 # Exercícios
 
