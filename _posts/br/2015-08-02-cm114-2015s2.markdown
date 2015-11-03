@@ -23,7 +23,7 @@ tag:        2015s2
     -->
   - Notas (Inacessível por enquanto)
 
-# Mini-TCC
+# Mini-TCC - [Página do Evento](tcc)
 
 30% da nota da disciplina será do mini-tcc. Posteriormente colocarei o
 cronograma aqui. Por enquanto, segue o modelo. **Não serão aceitos trabalhos

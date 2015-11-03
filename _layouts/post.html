@@ -3,13 +3,15 @@ layout: default
 ---
 <div class="post">
 
+  {% assign cat = page.categories[0] %}
+  {% if cat %}
   <header class="post-header">
-    {% assign cat = page.categories[0] %}
     <p class="post-back">
       <a href="{{ site.t[page.lang][cat].url | prepend: site.baseurl }}">
       {{site.t[page.lang].backto}} {{ site.t[page.lang][cat].title }}
     </a> </p>
   </header>
+  {% endif %}
 
   <article class="post-content">
     {{ content }}
