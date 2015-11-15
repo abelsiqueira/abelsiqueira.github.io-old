@@ -8,8 +8,6 @@ permalink:  cm202-2015s2
 tag:        2015s2
 ---
 
-# Esta quinta, 22 de Novembro não teremos aula devido à semana da física.
-
 # Informações
 
   | **Sigla:**   | CM202
