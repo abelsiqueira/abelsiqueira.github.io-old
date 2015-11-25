@@ -28,6 +28,7 @@ tag:        2015s2
 # Provas
 
   - [Prova 1]({{ site.baseurl }}/disciplinas/cm202/prova1-2015s2.pdf)
+  - [Prova 2]({{ site.baseurl }}/disciplinas/cm202/prova2-2015s2.pdf)
 
 # [Monitorias]({{ site.baseurl }}/assets/monitorias2015s2.pdf)
 
