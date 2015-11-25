@@ -18,10 +18,12 @@ tag:        2015s2
   | **Prova 1:** | 15/10
   | **Prova 2:** | 24/11
   | **Prova 3:** | 15/12
-  | **Exame:**   | -
+  | **Exame:**   | 22/12
 
 
 # [Notas]({{ site.baseurl }}/disciplinas/cm202/notas-2015s2.pdf)
+
+  Atualizadas com as notas da prova 2, 25 de Nov, 6h55.
 
 # Provas
 
