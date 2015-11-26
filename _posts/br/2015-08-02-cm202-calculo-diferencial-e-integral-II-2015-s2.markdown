@@ -56,6 +56,7 @@ tag:        2015s2
     Atualizada 02/Out às 10:24, corrigindo a q.8 a adicionando um item na q.3.
   - [Lista 2]({{ site.baseurl }}/disciplinas/cm202/lista2.pdf)
     Atualizada 15/Nov às 01:38, adicionando algumas questões novas.
+  - [Lista 3]({{ site.baseurl }}/disciplinas/cm202/lista3.pdf)
   - Lista extra do [Stewart](http://www.clicmates.com.br/arquivosparadonwloads/Calculo%20Vol%202%20%285%20ed%29%20-%20James%20Stewart%20%28em%20portugues%29.pdf)
     - 12.1 1-8, 11-18, 23-38
     - 12.2 5-25
