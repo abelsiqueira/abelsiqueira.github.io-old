@@ -25,6 +25,14 @@ tag:        2015s2
 
   Atualizadas com as notas da prova 2, 25 de Nov, 6h55.
 
+# Domo
+
+  - Domo criado com o pgfplots:
+    [domo.pdf]({{ site.baseurl }}/disciplinas/cm202/domo.pdf)
+    - Código em LaTeX para servir de base:
+    [exemplo.tex]({{ site.baseurl }}/disciplinas/cm202/exemplo.tex).
+    Você pode abrir esse código no [ShareLatex](http://sharelatex.com/).
+
 # Provas
 
   - [Prova 1]({{ site.baseurl }}/disciplinas/cm202/prova1-2015s2.pdf)
