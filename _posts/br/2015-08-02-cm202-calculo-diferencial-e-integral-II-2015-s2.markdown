@@ -23,9 +23,13 @@ tag:        2015s2
 
 # [Notas]({{ site.baseurl }}/disciplinas/cm202/notas-2015s2.pdf)
 
-  Atualizadas com as notas da prova 2, 25 de Nov, 6h55.
+  Atualizadas com as notas da prova 3, 16 de Dez, 0h32.
 
 # Domo
+
+Lembrando, a entrega do domo foi adiado para 22/Dez/2015, valendo agora 0.5 na
+média.
+**Dica: Na prova tem uma função parecida com a buscada.**
 
   - Domo criado com o pgfplots:
     [domo.pdf]({{ site.baseurl }}/disciplinas/cm202/domo.pdf)
@@ -37,6 +41,7 @@ tag:        2015s2
 
   - [Prova 1]({{ site.baseurl }}/disciplinas/cm202/prova1-2015s2.pdf)
   - [Prova 2]({{ site.baseurl }}/disciplinas/cm202/prova2-2015s2.pdf)
+  - [Prova 3]({{ site.baseurl }}/disciplinas/cm202/prova3-2015s2.pdf)
 
 # [Monitorias]({{ site.baseurl }}/assets/monitorias2015s2.pdf)
 
