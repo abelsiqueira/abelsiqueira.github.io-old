@@ -17,11 +17,8 @@ tag:        2015s2
 
 # Notas
 
-<!--
   - [Notas]({{ site.baseurl }}/disciplinas/cm114/notas-2015s2.pdf)
-    (Última atualização 13/10 às 14:40)
-    -->
-  - Notas (Inacessível por enquanto)
+    (Última atualização 17/12 às 10:22)
 
 # Mini-TCC - [Página do Evento](tcc)
 
