@@ -23,7 +23,7 @@ tag:        2015s2
 
 # [Notas]({{ site.baseurl }}/disciplinas/cm202/notas-2015s2.pdf)
 
-  Atualizadas com as notas da prova 3, 16 de Dez, 0h32.
+  Atualizadas com as notas do exame, 23 de Dez, 0h52.
 
 # Domo
 
