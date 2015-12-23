@@ -42,6 +42,7 @@ média.
   - [Prova 1]({{ site.baseurl }}/disciplinas/cm202/prova1-2015s2.pdf)
   - [Prova 2]({{ site.baseurl }}/disciplinas/cm202/prova2-2015s2.pdf)
   - [Prova 3]({{ site.baseurl }}/disciplinas/cm202/prova3-2015s2.pdf)
+  - [Exame]({{ site.baseurl }}/disciplinas/cm202/exame-2015s2.pdf)
 
 # [Monitorias]({{ site.baseurl }}/assets/monitorias2015s2.pdf)
 
