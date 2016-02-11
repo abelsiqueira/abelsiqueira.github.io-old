@@ -1,45 +1,13 @@
 title: Abel Soares Siqueira
 email: abel.s.siqueira@gmail.com
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: ""
 url: "http://abelsiqueira.github.io" # the base hostname & protocol for your site
 github_username:  abelsiqueira
 markdown: kramdown
-permalink: /:title/
-defaults:
-  -
-    scope:
-      path: _posts/en
-    values:
-      lang: en
-      layout: default
-  -
-    scope:
-      path: _posts/br
-    values:
-      lang: br
-      layout: default
 t:
   en:
     backto: "back to"
     homeurl:  "/home/"
-    teaching:
-      title: "Teaching"
-      url:  "/teaching/"
-    research:
-      title: "Research"
-      url:  "/research/"
-    curriculum:
-      title: "Curriculum"
-      url:  "/curriculum/"
   br:
     backto: "voltar para"
     homeurl:  "/"
-    teaching:
-      title: "Disciplinas"
-      url:  "/disciplinas/"
-    research:
-      title: "Pesquisa"
-      url:  "/pesquisa/"
-    curriculum:
-      title: "Currículo"
-      url:  "/curriculo/"

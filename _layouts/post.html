@@ -1,27 +1,21 @@
 ---
 layout: default
 ---
+<div>
+  <a href="{{ site.baseurl }}/br/teaching/">Voltar para disciplinas</a>
+</div>
+
 <div class="post">
 
-  {% assign cat = page.categories[0] %}
-  {% if cat %}
   <header class="post-header">
-    <p class="post-back">
-      <a href="{{ site.t[page.lang][cat].url | prepend: site.baseurl }}">
-      {{site.t[page.lang].backto}} {{ site.t[page.lang][cat].title }}
-    </a> </p>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%b %d, %Y" }}{% if page.author %}
+    • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif
+    %}</p>
   </header>
-  {% endif %}
 
   <article class="post-content">
     {{ content }}
   </article>
-
-  <footer class="post-footer">
-    {% assign date = page.date %}
-    <p class="post-meta">
-      {% include dateformat.html %}
-    </p>
-  </footer>
 
 </div>
