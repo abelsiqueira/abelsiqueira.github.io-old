@@ -277,6 +277,9 @@
 
     h3 {
         font-size: 26px;
+        text-align: right;
+        border-bottom: 1px solid $grey-color;
+        color: $grey-color;
 
         @include media-query($on-laptop) {
             font-size: 22px;
