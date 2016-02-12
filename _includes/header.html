@@ -22,7 +22,7 @@
         {% if page.lang %}
         {% assign pages = site.pages | sort: 'order' %}
         {% for pg in pages %}
-          {% if pg.title and pg.lang == page.lang %}
+        {% if pg.title and pg.lang == page.lang and pg.order > 0 %}
           <a class="page-link" href="{{ pg.url | prepend: site.baseurl }}">{{ pg.title }}</a>
           {% endif %}
         {% endfor %}
