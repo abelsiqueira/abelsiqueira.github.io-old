@@ -12,9 +12,9 @@ Some topics of my interest:
   - Unconstrained minimization methods;
   - Boxed constrained minimization;
   - Julia language;
-  - Comparison and benchmarking of optimization methods.
+  - Comparison and benchmarking of optimization methods;
   - Reproducible science;
-  - Free open source tools;
+  - Free open source tools.
 
 I have interest in, or am working at, the following projects.
 If you are a student looking for a research topic, this is a good start.

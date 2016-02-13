@@ -46,4 +46,4 @@ permalink:  /en/curriculum/
   - 11th EUROPT Workshop on Advances in Continuous Optimization.
     **Participation**. 2013, Florence, Italy
 
-## [Lattes](http://lattes.cnpq.br/2986958029448752)
+### [Lattes](http://lattes.cnpq.br/2986958029448752)
