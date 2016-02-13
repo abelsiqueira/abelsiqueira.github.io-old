@@ -12,7 +12,9 @@ Alguns assuntos que me interessam:
   - Métodos para minimização irrestrita;
   - Minimização em caixa;
   - Linguagem Julia;
-  - Comparação de métodos de otimização.
+  - Comparação de métodos de otimização;
+  - Ciência Reprodutível;
+  - Ferramentas livres de código aberto.
 
 Eu tenho interesse, ou estou trabalhando, nos seguintes projetos.
 Se você é um estudante procurando por um tópico de pesquisa, este é um bom
