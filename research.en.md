@@ -37,7 +37,6 @@ The data and steps that describe a research should be available to the peers.
 Some easy steps can be taken to improve the reproducibility and availability of
 a research project, and I think believe this should be of greater concern that
 it is.
-
 Furthermore, when dealing with reproducible science, I believe that free
 software should be considered whenever possible.
 The reproducibility of a project is limited when using proprietary software.
@@ -56,3 +55,7 @@ One organization that helps in that endeavor is
 Software Carpentry provides researchers with a short introduction class to
 several of these tools. Whenever possible, instructors are taken from the same
 field as that of the researcher.
+
+Some noteworthy tools are Git, LaTeX, Bash, Python, Julia and Markdown.
+
+ - Keywords: Computational Tools, Software Carpentry
