@@ -1,7 +1,6 @@
 ---
 layout:     post
 title:      TopAL - Verão 2015 - Tópicos de Álgebra Linear
-date:       2014-11-30
 categories: teaching
 tag:        verao2015
 permalink:  /topal-summer2014/
