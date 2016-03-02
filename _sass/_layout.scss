@@ -267,31 +267,28 @@
     margin-bottom: $spacing-unit;
     text-align: justify;
 
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
+    h1 {
+        font-size: $h1-font;
         text-align: right;
         border-bottom: 1px solid $grey-color;
         color: $grey-color;
+    }
 
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
+    h2 {
+        display: inline-block;
+        font-size: $h2-font;
+        border-bottom: 3px double $grey-color;
+        color: $grey-color;
+    }
+
+    h3 {
+        font-size: $h3-font;
+        display: inline-block;
+        color: $grey-color-dark;
     }
 
     h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
+        font-size: $h4-font;
     }
 }
 
@@ -315,4 +312,28 @@
 
 .gray {
   filter: grayscale(100%);
+}
+
+.card {
+  position: relative;
+  box-shadow: 1px 1px 5px $grey-color;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.hideContent {
+  overflow: hidden;
+  height: 100px;
+}
+
+.showContent {
+  height: auto;
+}
+
+.show-more {
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

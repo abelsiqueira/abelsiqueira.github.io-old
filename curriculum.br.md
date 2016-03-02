@@ -7,7 +7,7 @@ order:      3
 permalink:  /br/curriculum/
 ---
 
-## Caminho acadêmico
+# Caminho acadêmico
 
   - 11/2014-presente - Professor na UFPR;
   - 12/2013-11/2014 - Pós-doutorado na UNICAMP;
@@ -16,7 +16,7 @@ permalink:  /br/curriculum/
   "Controle Dinâmico da Infactibilidade para Programação Não-Linear";
   - 03/2005-12/2008 - Bacharel em Matemática Aplicada.
 
-## Publicações
+# Publicações
 
   - **[Feature extraction for NDVI AVHRR/NOAA time series
     classification.](http://dx.doi.org/10.1109/Multi-Temp.2011.6005091)**
@@ -25,7 +25,7 @@ permalink:  /br/curriculum/
     _6th International Workshop on the Analysis of Multitemporal Remote Sensing
     Images (MultiTemp)_, Trento, 2011.
 
-## Eventos
+# Eventos
 
   - Oficina de Ferramentas Computacionais. **Organização**, 05/2015
     UFPR, Curitiba, PR, Brasil
@@ -41,4 +41,4 @@ permalink:  /br/curriculum/
   - 11th EUROPT Workshop on Advances in Continuous Optimization.
     **Participação**. 2013, Florença, Itália
 
-### [Lattes](http://lattes.cnpq.br/2986958029448752)
+## [Lattes](http://lattes.cnpq.br/2986958029448752)

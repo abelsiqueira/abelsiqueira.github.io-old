@@ -20,7 +20,7 @@ Eu tenho interesse, ou estou trabalhando, nos seguintes projetos.
 Se você é um estudante procurando por um tópico de pesquisa, este é um bom
 começo.
 
-### CUTEst.jl
+# CUTEst.jl
 
 [CUTEst.jl](https://github.com/optimizers/CUTEst.jl) é uma interface em Julia
 para o repositório CUTEst.
@@ -29,7 +29,7 @@ permitindo um workflow faça-agora-melhore-depois para otimização não-linear.
 
  - Palavras-chave: CUTEst, Julia, Otimização Não-linear
 
-### Ciência Reprodutível e Software Livre de Código Aberto
+# Ciência Reprodutível e Software Livre de Código Aberto
 
 Quando o próximo "melhor algoritmo de otimização já feito" aparecer, eu quero
 poder verificar a afirmação.
@@ -47,7 +47,7 @@ proprietário.
  - Palavras-chave: Ciência Reprodutível, Ciência Aberta, Código Aberto, Software
    Livre
 
-### Ferramentas Computacionais para Pesquisadores e Software Carpentry
+# Ferramentas Computacionais para Pesquisadores e Software Carpentry
 
 No espírito de ciência boa e reprodutível, algumas ferramentas são bem importante,
 além de úteis, para um pesquisador.

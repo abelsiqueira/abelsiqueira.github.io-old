@@ -7,7 +7,9 @@ order:      3
 permalink:  /en/curriculum/
 ---
 
-## Academic path:
+*Last update: 10/2015*
+
+# Academic path
 
   - 11/2014-now - Teacher at the Federal University of Paraná at Curitiba,
   PR, Brazil;
@@ -19,7 +21,7 @@ permalink:  /en/curriculum/
   Programming";
   - 03/2005 - 12/2008 - Bachelor on applied mathematics.
 
-## Publications
+# Publications
 
   - **[Feature extraction for NDVI AVHRR/NOAA time series
     classification.](http://dx.doi.org/10.1109/Multi-Temp.2011.6005091)**
@@ -28,7 +30,7 @@ permalink:  /en/curriculum/
     _6th International Workshop on the Analysis of Multitemporal Remote Sensing
     Images (MultiTemp)_, Trento, 2011.
 
-## Talks and participation in events
+# Talks and participation in events
 
   - Workshop on Computational Tools (in port: Oficina de Ferramentas
     Computacionais). **Organizer**, 05/2015, UFPR, Curitiba, PR, Brazil
@@ -46,4 +48,4 @@ permalink:  /en/curriculum/
   - 11th EUROPT Workshop on Advances in Continuous Optimization.
     **Participation**. 2013, Florence, Italy
 
-### [Lattes](http://lattes.cnpq.br/2986958029448752)
+## [Lattes](http://lattes.cnpq.br/2986958029448752)

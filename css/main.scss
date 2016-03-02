@@ -11,6 +11,12 @@ $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
+$title-font:  32px;
+$h1-font: $title-font*0.9;
+$h2-font: $h1-font*0.9;
+$h3-font: $h2-font*0.9;
+$h4-font: $h3-font*0.9;
+
 $spacing-unit:     30px;
 
 $text-color:       #303030;

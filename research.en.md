@@ -19,7 +19,7 @@ Some topics of my interest:
 I have interest in, or am working at, the following projects.
 If you are a student looking for a research topic, this is a good start.
 
-### CUTEst.jl
+# CUTEst.jl
 
 [CUTEsj.jl](https://github.com/optimizers/CUTEst.jl) is a Julia interface for
 the CUTEst repository.
@@ -28,7 +28,7 @@ work-now-improve-later workflow for nonlinear optimization.
 
  - Keywords: CUTEst, Julia, Nonlinear Optimization
 
-### Reproducible Science and Free Open Source Software
+# Reproducible Science and Free Open Source Software
 
 When the next "best optimization algorithm ever" comes around, I want to be able
 to verify the claim.
@@ -43,7 +43,7 @@ The reproducibility of a project is limited when using proprietary software.
 
  - Keywords: Reproducible Science, Open Science, Open Source, Free Software
 
-### Computational Tools for Researchers and Software Carpentry
+# Computational Tools for Researchers and Software Carpentry
 
 In the spirit of good and reproducible science, some tools are very important,
 and useful, for a researchers.
