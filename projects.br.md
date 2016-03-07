@@ -1,6 +1,6 @@
 ---
 layout:    page
-title:     Projects
+title:     Projetos
 key:       projects
 lang:      br
 order:     2
