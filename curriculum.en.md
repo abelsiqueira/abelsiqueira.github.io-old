@@ -7,8 +7,6 @@ order:      3
 permalink:  /en/curriculum/
 ---
 
-*Last update: 10/2015*
-
 # Academic path
 
   - 11/2014-now - Professor at the Federal University of Paraná at Curitiba,
@@ -37,6 +35,11 @@ permalink:  /en/curriculum/
 
 # Talks and participation in events
 
+  - [XI Brazilian Workshop on Continuous Optimization.]({{ site.baseurl
+    }}/assets/brazopt-2016.pdf)
+    _Numerical Experience with a Class of Trust-Region Algorithms for
+    Unconstrained Smooth Optimization_.
+    **Talk**. May, 23rd, 2016. UFAM, Manaus, Brazil
   - [2016 Optimization Days.]({{ site.baseurl }}/assets/jopt-2016.pdf)
     _A Workflow for Designing Optimization Methods in the Julia Language_.
     **Talk**. May, 4th, 2016. HEC Montréal, Montreal, Canada.
@@ -52,7 +55,7 @@ permalink:  /en/curriculum/
     _Computational tools for researchers (in port: Ferramentas computacionais
     para pesquisadores)_.
     **Talk**. 2015, UFPR, Curitiba, PR, Brazil
-  - X Brazilian Workshop on Continuos Optimization.
+  - X Brazilian Workshop on Continuous Optimization.
     _Dynamic Control of Infeasibility for Nonlinear Programming_.
     **Talk**. 2014, Florianópolis, SC, Brazil
   - 26th European Conference on Operational Research.

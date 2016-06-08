@@ -32,6 +32,11 @@ permalink:  /br/curriculum/
 
 # Eventos
 
+  - [XI Brazilian Workshop on Continuous Optimization.]({{ site.baseurl
+    }}/assets/brazopt-2016.pdf)
+    _Numerical Experience with a Class of Trust-Region Algorithms for
+    Unconstrained Smooth Optimization_.
+    **Apresentação oral**. 23 de Maio de 2016. UFAM, Manaus, Brazil.
   - [2016 Optimization Days.]({{ site.baseurl }}/assets/jopt-2016.pdf)
     _A Workflow for Designing Optimization Methods in the Julia Language_.
     **Apresentação oral**. 4 de Maio de 2016. HEC Montréal, Montreal, Canadá.
