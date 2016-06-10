@@ -65,3 +65,4 @@ permalink:  /en/curriculum/
     **Participation**. 2013, Florence, Italy
 
 ## [Lattes](http://lattes.cnpq.br/2986958029448752)
+

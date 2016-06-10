@@ -11,6 +11,7 @@ Alguns assuntos que me interessam:
 
   - Métodos para minimização irrestrita;
   - Minimização em caixa;
+  - Métodos para larga escala;
   - Linguagem Julia;
   - Comparação de métodos de otimização;
   - Ciência Reprodutível;
@@ -19,6 +20,11 @@ Alguns assuntos que me interessam:
 Eu tenho interesse, ou estou trabalhando, nos seguintes projetos.
 Se você é um estudante procurando por um tópico de pesquisa, este é um bom
 começo.
+
+# Framework para Otimização Não-Linear em Julia
+
+Este trabalho exige o conhecimento da lingua inglesa.
+Para ler mais, acesse [esta página em inglês]({{ site.baseurl }}/en/research/).
 
 # CUTEst.jl
 

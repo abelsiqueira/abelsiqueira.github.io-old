@@ -112,7 +112,7 @@
 .page-lang-link {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 64;
 
   img {
     width: 32px;
@@ -336,4 +336,12 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.left-info {
+  float: left;
+}
+
+.right-info {
+  float: right;
 }

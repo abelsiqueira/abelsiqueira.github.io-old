@@ -10,7 +10,8 @@ I work with computational mathematics, mostly with nonlinear optimization.
 Some topics of my interest:
 
   - Unconstrained minimization methods;
-  - Boxed constrained minimization;
+  - Box-constrained minimization;
+  - Large-scale methods;
   - Julia language;
   - Comparison and benchmarking of optimization methods;
   - Reproducible science;
@@ -19,12 +20,31 @@ Some topics of my interest:
 I have interest in, or am working at, the following projects.
 If you are a student looking for a research topic, this is a good start.
 
+# Framework for Nonlinear Optimization in Julia
+
+This is a joint work with [Dominique Orban](https://www.gerad.ca/~orban/),
+and is comprised of two main parts:
+
+  - The models to define the problems -
+    [NLPModels.jl](https://github.com/JuliaOptimizers/NLPModels.jl),
+    [CUTEst.jl](https://github.com/JuliaOptimizers/CUTEst.jl), and
+    [AmplNLReader.jl](https://github.com/JuliaOptimizers/AmplNLReader.jl).
+  - The methods to solve these problems -
+    [Optimize.jl](https://github.com/JuliaOptimizers/Optimize.jl)
+
+There is work to be done on all these parts, and we still haven't release a
+stable version.
+
+  - Keywords: Nonlinear Optimization, Julia, Framework, CUTEst
+
 # CUTEst.jl
 
-[CUTEsj.jl](https://github.com/optimizers/CUTEst.jl) is a Julia interface for
+[CUTEst.jl](https://github.com/optimizers/CUTEst.jl) is a Julia interface for
 the CUTEst repository.
 This interface provides many ways to access the CUTEst functions, allowing a
 work-now-improve-later workflow for nonlinear optimization.
+Despite being part of the framework above, CUTEst can be improved independently,
+due to its high usage in the field.
 
  - Keywords: CUTEst, Julia, Nonlinear Optimization
 

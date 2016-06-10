@@ -6,8 +6,16 @@ github_username:  abelsiqueira
 markdown: kramdown
 t:
   en:
-    backto: "back to"
-    homeurl:  "/home/"
+    backto:  "back to"
+    homeurl: "/home/"
+    phd:     "Ph.D."
+    master:  "Master"
+    tcc:     "Term paper"
+    intern:  "Internship"
   br:
     backto: "voltar para"
     homeurl:  "/"
+    phd:     "Doutorado"
+    master:  "Mestrado"
+    tcc:     "TCC"
+    intern:  "Iniciação Científica"
