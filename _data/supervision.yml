@@ -3,27 +3,35 @@
   start: 2015-04-01
   end: 2015-12-1
   type: intern
-  email: brste [at] live [dot] com
+  email:
+    user: brste
+    domain: live [dot] com
   lattes: http://lattes.cnpq.br/3891640754963364
 
 - name: Renan Oclides Domingues
   title: Teoria, Implementação e Comparação de Métodos de Integração Numérica
   start: 2015-03-01
   type: intern
-  email: renan.oclides [at] hotmail [dot] com
+  email:
+    user: renan.oclides
+    domain: hotmail [dot] com
   lattes: http://lattes.cnpq.br/7606523286136630
 
 - name: Francine Luise Milian Ribas
   title: Métodos de Região de Confiança para Minimização Irrestrita
   type: tcc
   start: 2015-07-01
-  email: francineluise [at] hotmail [dot] com
+  email:
+    user: francineluise
+    domain: hotmail [dot] com
 
 - name: Oksana Heringer da Silva
   title: Métodos de Penalidade e Lagrangeano Aumentado
   type: tcc
   start: 2015-08-01
-  email: oksanaheringer [at] gmail [dot] com
+  email:
+    user: oksanaheringer
+    domain: gmail [dot] com
   lattes: http://lattes.cnpq.br/4222576494725838
 
 - name: Patrick Krezanovsky
@@ -35,11 +43,15 @@
   title: Programação Quadrática de Larga Escala
   start: 2016-06-01
   type: tcc
-  email: adreancebola [at] hotmail [dot] com
+  email:
+    user: adreancebola
+    domain: hotmail [dot] com
 
 - name: Carlos Henrique Venturi Ronchi
   title: Quadrados Minimos e Problemas de Classificação
   start: 2016-05-01
   type: tcc
-  email: carloshvronchi [at] gmail [dot] com
+  email:
+    user: carloshvronchi
+    domain: gmail [dot] com
   lattes: http://lattes.cnpq.br/7243878025626015
