@@ -22,7 +22,7 @@ types:
 {% assign user = st.email.user %}
 {% assign domain = st.email.domain %}
 ### {{ st.name }}
-> {% if st.link %} [_{{ st.link }}_]({{ st.title }}).  {% else %} _{{ st.title }}_. {% endif %} <br>
+> {% if st.link %} [_{{ st.title }}_]({{ site.baseurl }}/assets/{{ st.link }}).  {% else %} _{{ st.title }}_. {% endif %} <br>
 > {% if st.end %} From {{ st.start | date: "%m/%Y" }} to {{ st.end | date: "%m/%Y" }}. {% else %} Since {{ st.start | date: "%m/%Y" }}. {% endif %} <br>
 > {% include mail.html %} {% if st.lattes %}<br>[Lattes]({{ st.lattes }}){% endif %}
 {% endfor %}
