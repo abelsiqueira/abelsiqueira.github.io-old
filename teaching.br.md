@@ -4,6 +4,7 @@ title:      Disciplinas
 lang:       br
 key:        teaching
 years:
+  - 2016s2
   - 2016s1
   - 2015s2
   - 2015s1
