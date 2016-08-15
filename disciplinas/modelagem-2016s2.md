@@ -20,10 +20,11 @@ ou instalar o [Jupyter](https://jupyter.org/) e o
 [IJulia](https://github.com/JuliaLang/IJulia.jl).
 
   - [Aula 1 - Programação Linear]({{ site.baseurl }}/disciplinas/modelagem/Aula-1.ipynb)
+  - [Dados para aula 1]({{ site.baseurl }}/disciplinas/modelagem/dados.zip)
 
 # Bibliografia
 
-    - **Linear Programming and Network Flows**,
+  - **Linear Programming and Network Flows**,
     *Mokhtar S. Bazaraa, John J. Jarvis e Hanif D. Sherali*,
     Wiley-Interscience,
     2004.
