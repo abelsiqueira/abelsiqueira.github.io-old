@@ -21,6 +21,7 @@ ou instalar o [Jupyter](https://jupyter.org/) e o
 
   - [Aula 1 - Programação Linear]({{ site.baseurl }}/disciplinas/modelagem/Aula-1.ipynb)
   - [Dados para aula 1]({{ site.baseurl }}/disciplinas/modelagem/dados.zip)
+  - [Aula 2 - Problemas Inteiros]({{ site.baseurl }}/disciplinas/modelagem/Aula-2.ipynb)
 
 # Bibliografia
 
