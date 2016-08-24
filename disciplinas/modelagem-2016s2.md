@@ -22,7 +22,10 @@ ou instalar o [Jupyter](https://jupyter.org/) e o
   - [Aula 1 - Programação Linear]({{ site.baseurl }}/disciplinas/modelagem/Aula-1.ipynb)
   - [Dados para aula 1]({{ site.baseurl }}/disciplinas/modelagem/dados.zip)
   - [Aula 2 - Problemas Inteiros]({{ site.baseurl }}/disciplinas/modelagem/Aula-2.ipynb)
-  - [Aula 3 - Problemas Inteiros]({{ site.baseurl }}/disciplinas/modelagem/Aula-3.ipynb)
+  - [Aula 3 - Problemas de fluxo]({{ site.baseurl }}/disciplinas/modelagem/Aula-3.ipynb)
+  - [Aula 4 - Resolvendo um problema]({{ site.baseurl }}/disciplinas/modelagem/Aula-4.ipynb)
+  - [producao.csv]({{ site.baseurl }}/disciplinas/modelagem/producao.csv)
+  - [info.csv]({{ site.baseurl }}/disciplinas/modelagem/info.csv)
 
 # Bibliografia
 
