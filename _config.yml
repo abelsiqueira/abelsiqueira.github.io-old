@@ -1,8 +1,8 @@
-title: Abel Soares Siqueira
-email: abel.s.siqueira@gmail.com
+title: Alberto Ramos
+email: albertoramos@ufpr.br
 baseurl: ""
-url: "http://abelsiqueira.github.io" # the base hostname & protocol for your site
-github_username:  abelsiqueira
+url: "http://AlbertoRamos.github.io" # the base hostname & protocol for your site
+github_username:  AlbertoRamos
 markdown: kramdown
 t:
   en:
@@ -10,6 +10,7 @@ t:
     homeurl: "/home/"
     phd:     "Ph.D."
     master:  "Master"
+    research: "Research"
     tcc:     "Term paper"
     intern:  "Internship"
   br:
@@ -17,5 +18,6 @@ t:
     homeurl:  "/"
     phd:     "Doutorado"
     master:  "Mestrado"
+    pesquisa: "Pesquisa"
     tcc:     "TCC"
     intern:  "Iniciação Científica"
