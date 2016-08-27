@@ -13,7 +13,7 @@ permalink:  /en/curriculum/
   PR, Brazil;
   - 02/2016 - 07/2016 - Post-doctorate at IMPA, RJ, Brazil;
   - 03/2012 - 01/2016 - PhD at the University of São Paulo on applied
-  mathematics, working with nonlinear optimization. My thesis was titled
+  mathematics, working with nonlinear optimization. PhD thesis:
   (translation) "Topics on Optimality Conditions for Nonlinear
   Programming".
 
