@@ -17,13 +17,22 @@ permalink:  /en/curriculum/
   (translation) "Topics on Optimality Conditions for Nonlinear
   Programming".
 
-# Publications
+# Publications (accepted or appeared)
 
-  - **[Perprof-py: A Python Package for Performance Profile of Mathematical
-    Optimization Software.](http://doi.org/10.5334/jors.81)**
-    Siqueira, A. S., Silva, R. G. C. da, Santos, L.-R.,
-    _Journal of Open Research Software_, 4(1), p.e12, DOI:
-    http://doi.org/10.5334/jors.81
+  - **[A cone-continuity constraint qualification and algorithmic consequences.]
+    (http://dx.doi.org/10.1137/15M1008488)**
+    R. Andreani; J. M. Martinez; A. Ramos; P. J. S. Silva. 
+    _SIAM Journal on Optimization_, v. 26, p. 96-110, 2016. 
+
+  - **[On the constrained error bound condition and the projected Levenberg-Marquardt method]
+    (http://dx.doi.org/10.1080/02331934.2016.1200578)**
+    R. Behling; A. Fisher; G. Haeser; A. Ramos; K. Schonefeld. To appear in  
+    _Optimization_, 2016.
+
+# Publications (submitted)
+
+   -**[Strict Constraint Qualifications and Sequential Optimality Conditions for Constrained Optimization]**
+     R. Andreani; J. M. Martınez; A. Ramos, P. J. S. Silva
   - **[Feature extraction for NDVI AVHRR/NOAA time series
     classification.](http://dx.doi.org/10.1109/Multi-Temp.2011.6005091)**
     da Silva, W. L.; Gonçalves, R. R. V.; Siqueira, A. S.; Zullo, J.; Neto, F.
