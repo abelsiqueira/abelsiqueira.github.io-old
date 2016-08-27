@@ -12,10 +12,11 @@ permalink:  /br/curriculum/
   - 07/2016-presente - Professor adjunto A na UFPR;
   - 02/2016-06/2016 - Pós-doutorado no IMPA;
   - 03/2012-01/2016 - Doutorado na USP em Matemática Aplicada,
-    área Otimização Não-Linear. O título da tese:
+    área Otimização Não-Linear. 
+    Tese:
     "Tópicos em Condições de Otimalidade para Otimização Não Linear";
-  - 03/2009-02/2012 - Mestrado na USP em Estatística. Título da disertação:
-    "Assinaturas dinâmicas de um sistema coerente com aplicações".
+  - 03/2009-02/2012 - Mestrado na USP em Estatística. 
+  Disertação: "Assinaturas dinâmicas de um sistema coerente com aplicações".
 
 # Publicações
 
