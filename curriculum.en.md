@@ -9,15 +9,13 @@ permalink:  /en/curriculum/
 
 # Academic path
 
-  - 11/2014-now - Professor at the Federal University of Paraná at Curitiba,
+  - 07/2016-now - Professor at the Federal University of Paraná at Curitiba,
   PR, Brazil;
-  - 12/2013 - 11/2014 - Post-doctorate at the State University of Campinas at
-  Campinas, SP, Brazil;
-  - 01/2009 - 11/2013 - PhD at the State University of Campinas on applied
+  - 02/2016 - 07/2016 - Post-doctorate at IMPA, RJ, Brazil;
+  - 03/2012 - 01/2016 - PhD at the University of São Paulo on applied
   mathematics, working with nonlinear optimization. My thesis was titled
-  (translation) "Dynamic Control of Infeasibility for Nonlinear
-  Programming";
-  - 03/2005 - 12/2008 - Bachelor on applied mathematics.
+  (translation) "Topics on Optimality Conditions for Nonlinear
+  Programming".
 
 # Publications
 
