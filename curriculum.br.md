@@ -9,12 +9,11 @@ permalink:  /br/curriculum/
 
 # Caminho acadêmico
 
-  - 11/2014-presente - Professor na UFPR;
-  - 12/2013-11/2014 - Pós-doutorado na UNICAMP;
-  - 01/2009-11/2013 - Doutorado na UNICAMP em Matemática Aplicada,
-  trabalhando com Otimização Não-Linear. O título da minha tese é
-  "Controle Dinâmico da Infactibilidade para Programação Não-Linear";
-  - 03/2005-12/2008 - Bacharel em Matemática Aplicada.
+  - 07/2016-presente - Professor adjunto A na UFPR;
+  - 02/2016-06/2016 - Pós-doutorado no IMPA;
+  - 03/2012-01/2016 - Doutorado na USP em Matemática Aplicada,
+    área Otimização Não-Linear. O título da tese:
+    "Tópicos em Condições de Otimalidade para Otimização Não Linear".
 
 # Publicações
 
@@ -57,4 +56,4 @@ permalink:  /br/curriculum/
   - 11th EUROPT Workshop on Advances in Continuous Optimization.
     **Participação**. 2013, Florença, Itália
 
-## [Lattes](http://lattes.cnpq.br/2986958029448752)
+## [Lattes](http://lattes.cnpq.br/3320145045271106)
