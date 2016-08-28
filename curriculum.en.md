@@ -19,24 +19,24 @@ permalink:  /en/curriculum/
 
 # Publications (accepted or appeared)
 
-  1 **[A cone-continuity constraint qualification and algorithmic consequences.]
+  1.**[A cone-continuity constraint qualification and algorithmic consequences.]
     (http://dx.doi.org/10.1137/15M1008488)**
-    
     R. Andreani; J. M. Martinez; A. Ramos; P. J. S. Silva. 
     _SIAM Journal on Optimization_, v. 26, p. 96-110, 2016. 
 
-  2 **[On the constrained error bound condition and the projected Levenberg-Marquardt method]
+  2.**[On the constrained error bound condition and the projected Levenberg-Marquardt method]
     (http://dx.doi.org/10.1080/02331934.2016.1200578)**
-    
     R. Behling; A. Fisher; G. Haeser; A. Ramos; K. Schonefeld. To appear in  
     _Optimization_, 2016.
 
 # Publications (submitted)
 
-   -**[Strict Constraint Qualifications and Sequential Optimality Conditions for Constrained Optimization]**
-     R. Andreani; J. M. Martınez; A. Ramos, P. J. S. Silva
-  - **[Feature extraction for NDVI AVHRR/NOAA time series
-    classification.](http://dx.doi.org/10.1109/Multi-Temp.2011.6005091)**
+  1.**[Strict Constraint Qualifications and Sequential Optimality Conditions for Constrained Optimization]
+    (http://www.optimization-online.org/DB_HTML/2015/11/5197.html)**
+    R. Andreani; J. M. Martınez; A. Ramos, P. J. S. Silva
+  
+  2.**[Feature extraction for NDVI AVHRR/NOAA time series classification.]
+      (http://dx.doi.org/10.1109/Multi-Temp.2011.6005091)**
     da Silva, W. L.; Gonçalves, R. R. V.; Siqueira, A. S.; Zullo, J.; Neto, F.
     A. M. Gomes.,
     _6th International Workshop on the Analysis of Multitemporal Remote Sensing
