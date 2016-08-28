@@ -19,13 +19,15 @@ permalink:  /en/curriculum/
 
 # Publications (accepted or appeared)
 
-  - **[A cone-continuity constraint qualification and algorithmic consequences.]
+  1 **[A cone-continuity constraint qualification and algorithmic consequences.]
     (http://dx.doi.org/10.1137/15M1008488)**
+    
     R. Andreani; J. M. Martinez; A. Ramos; P. J. S. Silva. 
     _SIAM Journal on Optimization_, v. 26, p. 96-110, 2016. 
 
-  - **[On the constrained error bound condition and the projected Levenberg-Marquardt method]
+  2 **[On the constrained error bound condition and the projected Levenberg-Marquardt method]
     (http://dx.doi.org/10.1080/02331934.2016.1200578)**
+    
     R. Behling; A. Fisher; G. Haeser; A. Ramos; K. Schonefeld. To appear in  
     _Optimization_, 2016.
 
