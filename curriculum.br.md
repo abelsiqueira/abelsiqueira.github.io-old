@@ -12,25 +12,15 @@ permalink:  /br/curriculum/
   - 07/2016-presente - Professor adjunto A na UFPR;
   - 02/2016-06/2016 - Pós-doutorado no IMPA;
   - 03/2012-01/2016 - Doutorado na USP em Matemática Aplicada,
-    área Otimização Não-Linear. 
+    área Otimização Não-Linear. <br />
     Tese:
     "Tópicos em Condições de Otimalidade para Otimização Não Linear";
   - 03/2009-02/2012 - Mestrado na USP em Estatística. 
   Disertação: "Assinaturas dinâmicas de um sistema coerente com aplicações".
 
-# Publicações
+# Publicações (aceitos)
 
-  - **[Perprof-py: A Python Package for Performance Profile of Mathematical
-    Optimization Software.](http://doi.org/10.5334/jors.81)**
-    Siqueira, A. S., Silva, R. G. C. da, Santos L.-R.,
-    _Journal of Open Research Software_, 4(1), p.e12, DOI:
-    http://doi.org/10.5334/jors.81
-  - **[Feature extraction for NDVI AVHRR/NOAA time series
-    classification.](http://dx.doi.org/10.1109/Multi-Temp.2011.6005091)**
-    da Silva, W. L.; Gonçalves, R. R. V.; Siqueira, A. S.; Zullo, J.; Neto, F.
-    A. M. Gomes.,
-    _6th International Workshop on the Analysis of Multitemporal Remote Sensing
-    Images (MultiTemp)_, Trento, 2011.
+# Publicações (in revisão)  
 
 # Eventos
 
