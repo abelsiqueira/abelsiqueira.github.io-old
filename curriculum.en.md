@@ -27,8 +27,7 @@ permalink:  /en/curriculum/
   - **[On the constrained error bound condition and the projected Levenberg-Marquardt method]
     (http://dx.doi.org/10.1080/02331934.2016.1200578)** <br />
     R. Behling; A. Fisher; G. Haeser; A. Ramos; K. Schonefeld. <br />
-    To appear in  
-    _Optimization_, 2016.
+    To appear in _Optimization_, 2016.
 
 # Publications (submitted)
 
