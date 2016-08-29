@@ -19,28 +19,34 @@ permalink:  /en/curriculum/
 
 # Publications (accepted or appeared)
 
-  1) **[A cone-continuity constraint qualification and algorithmic consequences.]
+  - **[A cone-continuity constraint qualification and algorithmic consequences.]
     (http://dx.doi.org/10.1137/15M1008488)**
     R. Andreani; J. M. Martinez; A. Ramos; P. J. S. Silva. 
     _SIAM Journal on Optimization_, v. 26, p. 96-110, 2016. 
 
-  2) **[On the constrained error bound condition and the projected Levenberg-Marquardt method]
+  - **[On the constrained error bound condition and the projected Levenberg-Marquardt method]
     (http://dx.doi.org/10.1080/02331934.2016.1200578)**
     R. Behling; A. Fisher; G. Haeser; A. Ramos; K. Schonefeld. To appear in  
     _Optimization_, 2016.
 
 # Publications (submitted)
 
-  1) **[Strict Constraint Qualifications and Sequential Optimality Conditions for Constrained Optimization]
+  - **[On a conjecture in second-order optimality conditions.]
+  (http://www.optimization-online.org/DB_HTML/2016/06/5494.html)**
+  R. Behling; G. Haeser; A. Ramos; D. S. Viana. 
+  On optimization online, June 2016.
+
+ - **[Mathematical Programms with Equilibrium Constraints: A sequential optimality condition, new constraint qualifications and algorithmic consequences.]
+  (http://www.optimization-online.org/DB_HTML/2016/04/5423.html)**
+   A. Ramos. On optimization online, April 2016.
+
+  - **[Strict Constraint Qualifications and Sequential Optimality Conditions for Constrained Optimization.]
     (http://www.optimization-online.org/DB_HTML/2015/11/5197.html)**
-    R. Andreani; J. M. Martınez; A. Ramos, P. J. S. Silva
-  
-  2.**[Feature extraction for NDVI AVHRR/NOAA time series classification.]
-      (http://dx.doi.org/10.1109/Multi-Temp.2011.6005091)**
-    da Silva, W. L.; Gonçalves, R. R. V.; Siqueira, A. S.; Zullo, J.; Neto, F.
-    A. M. Gomes.,
-    _6th International Workshop on the Analysis of Multitemporal Remote Sensing
-    Images (MultiTemp)_, Trento, 2011.
+    R. Andreani; J. M. Martınez; A. Ramos, P. J. S. Silva. On optimization online, November 2015.
+
+  - **[A second-order sequential optimality condition associated to the convergence of optimization algorithms.]
+  (http://www.optimization-online.org/DB_HTML/2015/04/4887.html)**
+    R. Andreani; G. Haeser; A. Ramos, P. J. S. Silva. On optimization online, April 2015.
 
 # Talks and participation in events
 
@@ -74,4 +80,5 @@ permalink:  /en/curriculum/
     **Participation**. 2013, Florence, Italy
 
 ## [Lattes](http://lattes.cnpq.br/3320145045271106)
+## [Google Scholar](http://scholar.google.com.br/citations?hl=pt-BR&user=CwUd6FgAAAAJ)
 
