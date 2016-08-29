@@ -22,7 +22,7 @@ permalink:  /en/curriculum/
   - **[A cone-continuity constraint qualification and algorithmic consequences.]
     (http://dx.doi.org/10.1137/15M1008488)** 
 
-    R. Andreani; J. M. Martinez; A. Ramos; P. J. S. Silva.
+    R. Andreani; J. M. Martinez; A. Ramos; P. J. S. Silva. <br />
     _SIAM Journal on Optimization_, v. 26, p. 96-110, 2016. 
 
   - **[On the constrained error bound condition and the projected Levenberg-Marquardt method]
