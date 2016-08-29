@@ -16,7 +16,7 @@ permalink:  /br/curriculum/
     Tese:
     "Tópicos em Condições de Otimalidade para Otimização Não Linear";
   - 03/2009-02/2012 - Mestrado na USP em Estatística. <br />
-    Disertação: "Assinaturas dinâmicas de um sistema coerente com aplicações".
+    Dissertação: "Assinaturas dinâmicas de um sistema coerente com aplicações".
 
 # Publicações (aceitos)
 
