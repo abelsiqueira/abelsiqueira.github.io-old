@@ -11,7 +11,7 @@ permalink:  /en/curriculum/
 
   - 07/2016-now - Professor at the Federal University of Paraná at Curitiba,
   PR, Brazil;
-  - 02/2016 - 07/2016 - Post-doctorate at IMPA, RJ, Brazil;
+  - 02/2016 - 06/2016 - Post-doctorate at IMPA, RJ, Brazil;
   - 03/2012 - 01/2016 - PhD at the University of São Paulo on applied
   mathematics, working with nonlinear optimization. PhD thesis:
   (translation) "Topics on Optimality Conditions for Nonlinear
@@ -31,12 +31,12 @@ permalink:  /en/curriculum/
 
 # Publications (submitted)
 
-  - **[On a conjecture in second-order optimality conditions.]
-  (http://www.optimization-online.org/DB_HTML/2016/06/5494.html)**
-  R. Behling; G. Haeser; A. Ramos; D. S. Viana. 
-  On optimization online, June 2016.
-
- - **[Mathematical Programms with Equilibrium Constraints: A sequential optimality condition, new constraint qualifications and algorithmic consequences.]
+  - **[On a conjecture in second-order optimality conditions.] (http://www.optimization-online.org/DB_HTML/2016/06/5494.html)**
+    R. Behling; G. Haeser; A. Ramos; D. S. Viana. 
+    On optimization online, June 2016.
+ 
+  - **[Mathematical Programms with Equilibrium Constraints: 
+  A sequential optimality condition, new constraint qualifications and algorithmic consequences.]
   (http://www.optimization-online.org/DB_HTML/2016/04/5423.html)**
    A. Ramos. On optimization online, April 2016.
 
