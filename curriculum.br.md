@@ -100,4 +100,5 @@ permalink:  /br/curriculum/
    _An Inexact PPA for cohypomonotone operators with a practical relative error criterion_.**Contributed Talk**, 2014.
 
 ## [Lattes](http://lattes.cnpq.br/3320145045271106)
+
 ## [Google Scholar](http://scholar.google.com.br/citations?hl=pt-BR&user=CwUd6FgAAAAJ)
