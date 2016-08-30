@@ -81,9 +81,10 @@ permalink:  /en/curriculum/
   - 11th EUROPT Workshop on Advances in Continuous Optimization.
     **Participation**. 2013, Florence, Italy
   -[XI Brazilian workshop on continuous optimization.] 
-   _Optimality conditions and constraint qualifications for mathematicalprogramms with equilibrium constraints_. **Contributed talk** 2016.
+   _Optimality conditions and constraint qualifications for mathematicalprogramms with equilibrium constraints_. 
+   **Contributed talk** 2016.
   -[22nd International symposium on mathematical programming, ISMP 2015.] 
-  _On Second-Order Sequential Optimality Conditions for Nonlinear Optimization and Applications_. **Contributed Talk** 2015.
+   _On Second-Order Sequential Optimality Conditions for Nonlinear Optimization and Applications_. **Contributed Talk** 2015.
   -[30 Colóquio brasileiro de matemática, IMPA.] 
    _Condição sequencial de otimalidade de segunda ordem para otimização não-linear  e aplicações_. **Contributed Talk** 2015.
    -[I Workshop de soluções matemáticas para problemas industriais.] 
