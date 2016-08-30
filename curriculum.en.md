@@ -80,21 +80,22 @@ permalink:  /en/curriculum/
     **Talk**. 2013, Rome, Italy
   - 11th EUROPT Workshop on Advances in Continuous Optimization.
     **Participation**. 2013, Florence, Italy
-  -[XI Brazilian workshop on continuous optimization.] 
+
+  - [XI Brazilian workshop on continuous optimization.] 
    _Optimality conditions and constraint qualifications for mathematicalprogramms with equilibrium constraints_. 
    **Contributed talk** 2016.
-  -[22nd International symposium on mathematical programming, ISMP 2015.] 
+  - [22nd International symposium on mathematical programming, ISMP 2015.] 
    _On Second-Order Sequential Optimality Conditions for Nonlinear Optimization and Applications_. **Contributed Talk** 2015.
-  -[30 Colóquio brasileiro de matemática, IMPA.] 
+  - [30 Colóquio brasileiro de matemática, IMPA.] 
    _Condição sequencial de otimalidade de segunda ordem para otimização não-linear  e aplicações_. **Contributed Talk** 2015.
-   -[I Workshop de soluções matemáticas para problemas industriais.] 
+  - [I Workshop de soluções matemáticas para problemas industriais.] 
    _Análise de Redes Sociais na Detecção de Fraudes_. **Participation**, 2015.
-  -[I Brazilian Congress of Young Researchers in Pure and Applied Mathematics.] 
+  - [I Brazilian Congress of Young Researchers in Pure and Applied Mathematics.] 
    _On sequential second-order optimality conditions, 
    constraint qualifications and applications to mathematical programming_.**Contributed Talk**, 2014.
-  -[X Brazilian Workshop on Continuous Optimization.] 
+  - [X Brazilian Workshop on Continuous Optimization.] 
    _Constraint Qualifications and approximate-KKT sequences_. **Contributed Talk** 2014.
-  -[XI International Symposium on Generalized Convexity and Monotonicity.] 
+  - [XI International Symposium on Generalized Convexity and Monotonicity.] 
    _An Inexact PPA for cohypomonotone operators with a practical relative error criterion_.**Contributed Talk**, 2014.
 
 ## [Lattes](http://lattes.cnpq.br/3320145045271106)
