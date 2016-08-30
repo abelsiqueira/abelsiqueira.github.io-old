@@ -51,31 +51,53 @@ permalink:  /br/curriculum/
   (http://www.optimization-online.org/DB_HTML/2015/04/4887.html)** <br />
     R. Andreani; G. Haeser; A. Ramos, P. J. S. Silva. <br /> On optimization online, April 2015.
 
-# Eventos
+# Talks and participation in events
 
   - [XI Brazilian Workshop on Continuous Optimization.]({{ site.baseurl
     }}/assets/brazopt-2016.pdf)
     _Numerical Experience with a Class of Trust-Region Algorithms for
     Unconstrained Smooth Optimization_.
-    **Apresentação oral**. 23 de Maio de 2016. UFAM, Manaus, Brazil.
+    **Talk**. May, 23rd, 2016. UFAM, Manaus, Brazil
   - [2016 Optimization Days.]({{ site.baseurl }}/assets/jopt-2016.pdf)
     _A Workflow for Designing Optimization Methods in the Julia Language_.
-    **Apresentação oral**. 4 de Maio de 2016. HEC Montréal, Montreal, Canadá.
-  - VIII Simpósio de Análise Numérica e Otimização.
-    _Otimização Não Linear na Linguagem Julia)_.
-    **Minicurso**. 2016, UFPR, Curitiba, PR, Brasil
-  - Oficina de Ferramentas Computacionais. **Organização**, 05/2015
-    UFPR, Curitiba, PR, Brasil
-  - VII Simpósio de Análise Numérica e Otimização.
-    _Ferramentas computacionais para pesquisadores_.
-    **Apresentação oral**. 2015, UFPR, Curitiba, PR, Brasil
-  - X Brazilian Workshop on Continuos Optimization.
+    **Talk**. May, 4th, 2016. HEC Montréal, Montreal, Canada.
+  - VIII Symposium on Numerical Analysis and Optimization (in port: VIII Simpósio
+    de Análise Numérica e Otimização).
+    _Nonlinear Optimization in the Julia Language (in port: Otimização
+    Não-Linear na Linguagem Julia)_.
+    **Tutorial**. 2016, UFPR, Curitiba, PR, Brazil
+  - Workshop on Computational Tools (in port: Oficina de Ferramentas
+    Computacionais). **Organizer**, 05/2015, UFPR, Curitiba, PR, Brazil
+  - VII Symposium on Numerical Analysis and Optimization (in port: VII Simpósio
+    de Análise Numérica e Otimização).
+    _Computational tools for researchers (in port: Ferramentas computacionais
+    para pesquisadores)_.
+    **Talk**. 2015, UFPR, Curitiba, PR, Brazil
+  - X Brazilian Workshop on Continuous Optimization.
     _Dynamic Control of Infeasibility for Nonlinear Programming_.
-    **Apresentação oral**. 2014, Florianópolis, SC, Brasil
+    **Talk**. 2014, Florianópolis, SC, Brazil
   - 26th European Conference on Operational Research.
     _Dynamic Control of Infeasibility for Nonlinear Programming_.
-    **Apresentação oral**. 2013, Roma, Itália
+    **Talk**. 2013, Rome, Italy
   - 11th EUROPT Workshop on Advances in Continuous Optimization.
-    **Participação**. 2013, Florença, Itália
+    **Participation**. 2013, Florence, Italy
+
+  - [XI Brazilian workshop on continuous optimization.] 
+   _Optimality conditions and constraint qualifications for mathematicalprogramms with equilibrium constraints_. 
+   **Contributed talk** 2016.
+  - [22nd International symposium on mathematical programming, ISMP 2015.] 
+   _On Second-Order Sequential Optimality Conditions for Nonlinear Optimization and Applications_. **Contributed Talk** 2015.
+  - [30 Colóquio brasileiro de matemática, IMPA.] 
+   _Condição sequencial de otimalidade de segunda ordem para otimização não-linear  e aplicações_. **Contributed Talk** 2015.
+  - [I Workshop de soluções matemáticas para problemas industriais.] 
+   _Análise de Redes Sociais na Detecção de Fraudes_. **Participation**, 2015.
+  - [I Brazilian Congress of Young Researchers in Pure and Applied Mathematics.] 
+   _On sequential second-order optimality conditions, 
+   constraint qualifications and applications to mathematical programming_.**Contributed Talk**, 2014.
+  - [X Brazilian Workshop on Continuous Optimization.] 
+   _Constraint Qualifications and approximate-KKT sequences_. **Contributed Talk** 2014.
+  - [XI International Symposium on Generalized Convexity and Monotonicity.] 
+   _An Inexact PPA for cohypomonotone operators with a practical relative error criterion_.**Contributed Talk**, 2014.
 
 ## [Lattes](http://lattes.cnpq.br/3320145045271106)
+## [Google Scholar](http://scholar.google.com.br/citations?hl=pt-BR&user=CwUd6FgAAAAJ)
