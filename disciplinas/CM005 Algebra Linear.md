@@ -2,7 +2,7 @@
 layout:     post
 title:      CM005 - Álgebra Linear - 2016-II
 categories: teaching
-permalink:  /CM005 Algebra Linear-2016s2/
+permalink:  /CM005-Algebra-Linear-2016s2/
 tag:        2016-II
 ---
 
