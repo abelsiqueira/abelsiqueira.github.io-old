@@ -19,3 +19,10 @@ Curitiba - PR - Brasil
 
 email: albertoramos@ufpr.br
 
+# Research Interests
+    Applied Mathematics
+    Optimization
+    Probability
+    Information Theory
+    Signal Processing
+    Mathematics of Data Science
