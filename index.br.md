@@ -8,7 +8,9 @@ permalink: /
 ---
 Bem-vindo à minha página pessoal. <br />
 
-# Alberto Ramos
+
+## Alberto Ramos
+
 Professor Adjunto 1
 
 Universidade Federal do Paraná <br />
@@ -20,6 +22,6 @@ Curitiba - PR - Brasil
 email: albertoramos@ufpr.br
 
 # Áreas de interesse
-    Matemática Aplicada
-    Otimização Continua
-    Probabilidade
+  - Matemática Aplicada
+  - Otimização Continua
+  - Probabilidade
