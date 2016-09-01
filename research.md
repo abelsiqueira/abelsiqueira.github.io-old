@@ -4,7 +4,7 @@ title:      Research Articles
 key:        research
 lang:       en
 order:      4
-permalink:  /en/research/
+permalink:  /research/
 ---
 Warning: If you cannot download a technical report please write to 
 albertoramos@ufpr.br. <br />
