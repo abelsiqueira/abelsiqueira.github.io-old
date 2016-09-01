@@ -2,7 +2,7 @@
 layout:     page
 title:      Publicações
 key:        research
-lang:       en
+lang:       br
 order:      4
 permalink:  /br/research/
 ---
