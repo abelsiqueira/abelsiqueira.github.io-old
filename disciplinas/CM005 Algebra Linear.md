@@ -46,11 +46,11 @@ tag:        2016s2
 
 # Provas
 
-  - [Prova 1 com gabarito]({{ site.baseurl }}/disciplinas/cm202/prova1-2015s1.pdf)
-  - [Prova 2 com gabarito]({{ site.baseurl }}/disciplinas/cm202/prova2-2015s1.pdf)
-  - [Prova 3 com gabarito]({{ site.baseurl }}/disciplinas/cm202/prova3-2015s1.pdf)
-  - [Exame com gabarito]({{ site.baseurl }}/disciplinas/cm202/exame-2015s1.pdf)
-  - [Notas]({{ site.baseurl }}/disciplinas/cm202/notas-2015s1.pdf) (atualizado
+  - [ ] [Prova 1 com gabarito]({{ site.baseurl }}/disciplinas/cm202/prova1-2015s1.pdf)
+  - [ ] [Prova 2 com gabarito]({{ site.baseurl }}/disciplinas/cm202/prova2-2015s1.pdf)
+  - [ ] [Prova 3 com gabarito]({{ site.baseurl }}/disciplinas/cm202/prova3-2015s1.pdf)
+  - [ ] [Exame com gabarito]({{ site.baseurl }}/disciplinas/cm202/exame-2015s1.pdf)
+  - [ ] [Notas]({{ site.baseurl }}/disciplinas/cm202/notas-2015s1.pdf) (atualizado
     dia 09 de Julho)
 
 
