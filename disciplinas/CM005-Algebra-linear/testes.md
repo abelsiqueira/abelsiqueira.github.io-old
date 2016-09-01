@@ -4,7 +4,6 @@ layout:     post
 title:      CM005 - Algebra Linear - 2016-II
 categories: teaching
 permalink:  /CM005-Algebra-linear/
-tag:        2016-II
 ---
 
 # Informações
