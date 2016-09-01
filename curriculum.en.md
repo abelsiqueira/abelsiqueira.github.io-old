@@ -16,7 +16,7 @@ permalink:  /en/curriculum/
   PhD thesis (translation): "Topics on Optimality Conditions for Nonlinear
   Programming".
 
-## [Lattes](http://lattes.cnpq.br/3320145045271106)<br />
+# [Lattes](http://lattes.cnpq.br/3320145045271106)<br />
 
-## [Google Scholar](http://scholar.google.com.br/citations?hl=pt-BR&user=CwUd6FgAAAAJ)
+# [Google Scholar](http://scholar.google.com.br/citations?hl=pt-BR&user=CwUd6FgAAAAJ)
 
