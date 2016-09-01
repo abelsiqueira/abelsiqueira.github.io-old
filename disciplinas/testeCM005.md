@@ -1,8 +1,4 @@
----
-title:      CM005 Álgebra Linear 2016s2
-categories: teaching
-tag:        2016s2
----
+
 
 # Informações
 
