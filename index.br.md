@@ -8,11 +8,12 @@ permalink: /
 ---
 Bem-vindo à minha página pessoal.
 
-Endereço:
-Universidade Federal do Paraná
-Departamento de Matemática
-Centro Politécnico - Jd. das Américas
-Caixa Postal 19081 - CEP 81531-980
+Professor Adjunto 1
+
+Universidade Federal do Paraná <br />
+Departamento de Matemática <br />
+Centro Politécnico - Jd. das Américas <br />
+Caixa Postal 19081 - CEP 81531-980 <br />
 Curitiba - PR - Brasil
 
 Email: albertoramos@ufpr.br
