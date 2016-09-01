@@ -6,7 +6,6 @@ lang:       br
 order:      3
 permalink:  /br/curriculum/
 ---
-
 # Caminho acadêmico
 
   - 07/2016-presente - Professor adjunto A na UFPR;
