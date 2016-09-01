@@ -18,17 +18,6 @@ tag:        2016s2
   | **Prova 3:** | 23/06
   | **Exame:**   | 09/07
 
-# Listas
-
-# Provas
-
-  - [Prova 1 com gabarito]({{ site.baseurl }}/disciplinas/cm202/prova1-2015s1.pdf)
-  - [Prova 2 com gabarito]({{ site.baseurl }}/disciplinas/cm202/prova2-2015s1.pdf)
-  - [Prova 3 com gabarito]({{ site.baseurl }}/disciplinas/cm202/prova3-2015s1.pdf)
-  - [Exame com gabarito]({{ site.baseurl }}/disciplinas/cm202/exame-2015s1.pdf)
-  - [Notas]({{ site.baseurl }}/disciplinas/cm202/notas-2015s1.pdf) (atualizado
-    dia 09 de Julho)
-
 # Ementa
  
  - 1. Preliminares. Operações binárias. Sistemas algébricos;
@@ -51,6 +40,19 @@ tag:        2016s2
    Interseção com reta dada por dois pontos. Diâmetro e centro. Eixos. Focos.
  - 9. Quadrâticas. Generalidades. Classificação e equações canônicas. Interseção com reta
    por dois pontos. Planos diametrais, diâmetro, centro e eixos. Planos cíclicos.
+
+# Listas
+
+# Provas
+
+  - [Prova 1 com gabarito]({{ site.baseurl }}/disciplinas/cm202/prova1-2015s1.pdf)
+  - [Prova 2 com gabarito]({{ site.baseurl }}/disciplinas/cm202/prova2-2015s1.pdf)
+  - [Prova 3 com gabarito]({{ site.baseurl }}/disciplinas/cm202/prova3-2015s1.pdf)
+  - [Exame com gabarito]({{ site.baseurl }}/disciplinas/cm202/exame-2015s1.pdf)
+  - [Notas]({{ site.baseurl }}/disciplinas/cm202/notas-2015s1.pdf) (atualizado
+    dia 09 de Julho)
+
+
 
 # Listas
 
