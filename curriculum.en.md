@@ -7,7 +7,7 @@ order:      3
 permalink:  /en/curriculum/
 ---
 
-## [Academic path]
+# Academic path
 
   - 07/2016-now - Professor at the Federal University of Paraná at Curitiba,
   PR, Brazil;
