@@ -43,7 +43,7 @@ tag:        2016s2
    por dois pontos. Planos diametrais, diâmetro, centro e eixos. Planos cíclicos.
 
 # Listas
-
+  - [PaperBazan]({{ site.baseur1}}/disciplinas//alternative theorem KKT bazan Jglobal 2006.pdf)
 # Provas
 
   - [ ] [Prova 1 com gabarito]({{ site.baseurl }}/disciplinas/cm202/prova1-2015s1.pdf)
