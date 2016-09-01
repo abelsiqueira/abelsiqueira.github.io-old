@@ -1,10 +1,10 @@
 ---
 layout:     page
-title:      Research Articles
+title:      Publications 
 key:        research
 lang:       en
 order:      4
-permalink:  /research/
+permalink:  /en/research/
 ---
 Warning: If you cannot download a technical report please write to 
 albertoramos@ufpr.br. <br />
@@ -25,8 +25,7 @@ Differents
 
 # Publications (submitted)
 
-  - **[On a conjecture in second-order optimality conditions.]
-      (http://www.optimization-online.org/DB_HTML/2016/06/5494.html)** <br />
+  - **[On a conjecture in second-order optimality conditions.](http://www.optimization-online.org/DB_HTML/2016/06/5494.html)** <br />
     R. Behling; G. Haeser; A. Ramos; D. S. Viana. <br />
     On optimization online, June 2016.
  
@@ -45,6 +44,6 @@ Differents
     R. Andreani; G. Haeser; A. Ramos, P. J. S. Silva. <br /> On optimization online, April 2015.
 
 
-## [Lattes](http://lattes.cnpq.br/3320145045271106)<br />
+## [Lattes](http://lattes.cnpq.br/3320145045271106) <br />
 
 ## [Google Scholar](http://scholar.google.com.br/citations?hl=pt-BR&user=CwUd6FgAAAAJ)
