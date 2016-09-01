@@ -34,8 +34,9 @@ albertoramos@ufpr.br. <br />
     R. Andreani; J. M. Martinez; A. Ramos; P. J. S. Silva. <br />
     _SIAM Journal on Optimization_, v. 26, p. 96-110, 2016. 
 
-  <h2 style="color: blue">
- - **[On the constrained error bound condition and the projected Levenberg-Marquardt method](http://dx.doi.org/10.1080/02331934.2016.1200578)** </h2> <br />
+ <h2 style="color: blue">
+ - **[On the constrained error bound condition and the projected Levenberg-Marquard method](http://dx.doi.org/10.1080/02331934.2016.1200578)** 
+ </h2> <br />
     R. Behling; A. Fisher; G. Haeser; A. Ramos; K. Schonefeld. <br />
     To appear in _Optimization_, 2016.
 
