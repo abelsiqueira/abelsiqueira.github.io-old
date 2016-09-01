@@ -10,6 +10,7 @@ Warning: If you cannot download a technical report please write to
 albertoramos@ufpr.br. <br />
 
 Differents
+
 # Publications 
 
 ## Submitted, In Press or Preprint
