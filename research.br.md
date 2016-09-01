@@ -6,8 +6,8 @@ lang:       br
 order:      4
 permalink:  /br/research/
 ---
-Warning: If you cannot download a 
-technical report please write to 
+Aviso: Se você não pode fazer download de um 
+relatório técnico por favor escreva para
 albertoramos@ufpr.br. <br />
 
 # Submitted, In Press or Preprint
