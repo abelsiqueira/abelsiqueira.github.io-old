@@ -8,7 +8,7 @@ permalink: /
 ---
 Bem-vindo à minha página pessoal. <br />
 
-_Alberto Ramos_
+*Alberto Ramos* <br />
 Professor Adjunto 1
 
 Universidade Federal do Paraná <br />
