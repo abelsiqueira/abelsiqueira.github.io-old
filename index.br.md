@@ -8,7 +8,6 @@ permalink: /
 ---
 Bem-vindo à minha página pessoal. <br />
 
-
 # Alberto Ramos
 
 Professor Adjunto 1
