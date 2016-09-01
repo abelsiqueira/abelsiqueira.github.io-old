@@ -17,5 +17,5 @@ Centro Politécnico - Jd. das Américas <br />
 Caixa Postal 19081 - CEP 81531-980 <br />
 Curitiba - PR - Brasil
 
-Email: albertoramos@ufpr.br
+email: albertoramos@ufpr.br
 
