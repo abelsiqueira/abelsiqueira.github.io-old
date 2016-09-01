@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      CM005-Algebra Linear-2016-II
+title:      CM005 Álgebra Linear 2016s2
 categories: teaching
 permalink:  /CM005 Algebra Linear/
 tag:        2016s2
@@ -18,14 +18,7 @@ tag:        2016s2
   | **Prova 3:** | 23/06
   | **Exame:**   | 09/07
 
-# Segunda Chamada
-
-#A segunda chamada será na sala de reuniões do terceiro andar do prédio da
-#administração, no dia 02 de Julho, às 13h30. A sala é perto da minha sala. Na
-#dúvida espero por ali.
-
-#Essa prova é apenas para aqueles que perderam alguma das provas e já vieram
-#falar comigo.
+# Listas
 
 # Provas
 
@@ -36,32 +29,28 @@ tag:        2016s2
   - [Notas]({{ site.baseurl }}/disciplinas/cm202/notas-2015s1.pdf) (atualizado
     dia 09 de Julho)
 
-# [Monitorias]({{ site.baseurl }}/assets/monitorias2015.pdf)
-
 # Ementa
-
--1. Preliminares. Operações binárias. Sistemas algébricos;
--2. Matrizes e Equações Lineares. Matrizes e operações com matrizes. Sistemas de equa-
-    ções lineares. Operações com linhas. Equivalência por linhas. Matrizes reducidas por
+ 
+ - 1. Preliminares. Operações binárias. Sistemas algébricos;
+ - 2. Matrizes e Equações Lineares. Matrizes e operações com matrizes. 
+      Sistemas de equações lineares. Operações com linhas. Equivalência por linhas. Matrizes reducidas por
     linhas. Sistema de equações lineares não homogeneas. Matrizes inversíveis. Operações
     com columas. Equivalência.
--3. Espaços vetoriais. Espaço e subespaços vetoriais. Dependência linear. Base e dimensão.
+ - 3. Espaços vetoriais. Espaço e subespaços vetoriais. Dependência linear. Base e dimensão.
    Espaços das linhas e posto de uma matriz. Coordenadas de vetores.
--4. Transformações Lineares. Transformaçaõ linear. Posto e nulidade. Transformação
-inversível. Representação linear de uma transformação linear. Mudança de bases. Seme-
-lhança de matrizes.
-5. Operadores e matrizes diagonalizáveis Vetores e valores característicos. Diagonaliza-
-ção. Polinômio mínimo, Teorema de Cayley-Hamilton.
-6. Espaço com produto interno Produto interno. Espaço com produto interno. Processo
-de diagonalização de Gram-Schmidt. Bases ortonormais.
-7. Operadores sobre espaço com produto interno. Isometrias. Congruência e con-
-juntividade de matrizes. Teorema espectral. Transformações afins de movimento rígidos.
-Formas quadráticas. Polinômios quadráticos.
-8. Cônicas. Generalidades. Classificação de cônicas. Equações canônicas. Interseção com
-reta dada por dois pontos. Diâmetro e centro. Eixos. Focos.
-9. Quadrâticas.
-Generalidades. Classificação e equações canônicas. Interseção com reta
-por dois pontos. Planos diametrais, diâmetro, centro e eixos. Planos cíclicos.
+ - 4. Transformações Lineares. Transformaçaõ linear. Posto e nulidade. Transformação
+   inversível. Representação linear de uma transformação linear. Mudança de bases. Semelhança de matrizes.
+ - 5. Operadores e matrizes diagonalizáveis Vetores e valores característicos. 
+   Diagonalização. Polinômio mínimo, Teorema de Cayley-Hamilton.
+ - 6. Espaço com produto interno Produto interno. Espaço com produto interno. Processo
+   de diagonalização de Gram-Schmidt. Bases ortonormais.
+ - 7. Operadores sobre espaço com produto interno. Isometrias. 
+   Congruência e conjuntividade de matrizes. Teorema espectral. Transformações afins de movimento rígidos.
+   Formas quadráticas. Polinômios quadráticos.
+ - 8. Cônicas. Generalidades. Classificação de cônicas. Equações canônicas. 
+   Interseção com reta dada por dois pontos. Diâmetro e centro. Eixos. Focos.
+ - 9. Quadrâticas. Generalidades. Classificação e equações canônicas. Interseção com reta
+   por dois pontos. Planos diametrais, diâmetro, centro e eixos. Planos cíclicos.
 
 # Listas
 
