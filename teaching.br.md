@@ -5,10 +5,6 @@ lang:       br
 key:        teaching
 years:
   - 2016s2
-  - 2016s1
-  - 2015s2
-  - 2015s1
-  - verao2015
 order:      1
 permalink:  /br/teaching/
 ---
