@@ -23,6 +23,3 @@ email: albertoramos@ufpr.br
     Applied Mathematics
     Optimization
     Probability
-    Information Theory
-    Signal Processing
-    Mathematics of Data Science
