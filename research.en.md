@@ -38,9 +38,3 @@ albertoramos@ufpr.br. <br />
     R. Behling; A. Fisher; G. Haeser; A. Ramos; K. Schonefeld. <br />
     To appear in _Optimization_, 2016.
 
-<h2 style="color: blue">CatPhotoApp</h2>
-
-
-## [Lattes](http://lattes.cnpq.br/3320145045271106) <br />
-
-## [Google Scholar](http://scholar.google.com.br/citations?hl=pt-BR&user=CwUd6FgAAAAJ)
