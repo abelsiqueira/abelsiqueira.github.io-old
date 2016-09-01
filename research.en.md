@@ -6,10 +6,9 @@ lang:       en
 order:      4
 permalink:  /en/research/
 ---
-Warning: If you cannot download a technical report please write to 
+Warning: If you cannot download a 
+technical report please write to 
 albertoramos@ufpr.br. <br />
-
-Differents
 
 # Publications 
 
