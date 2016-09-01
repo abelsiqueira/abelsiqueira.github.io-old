@@ -21,7 +21,7 @@ tag:        2016s2
 
 # Ementa
  
- [ ] 1. Preliminares. Operações binárias. Sistemas algébricos;
+ 1. [ ] Preliminares. Operações binárias. Sistemas algébricos;
  2. [ ] Matrizes e Equações Lineares. Matrizes e operações com matrizes. 
     Sistemas de equações lineares. Operações com linhas. Equivalência por linhas. Matrizes reducidas por
     linhas. Sistema de equações lineares não homogeneas. Matrizes inversíveis. Operações
