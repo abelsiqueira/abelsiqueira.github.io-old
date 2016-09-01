@@ -19,7 +19,7 @@ Curitiba - PR - Brasil
 
 email: albertoramos@ufpr.br
 
-# Research Interests
-    Applied Mathematics
-    Optimization
-    Probability
+# Áreas de interesse
+    Matemática Aplicada
+    Otimização Continua
+    Probabilidade
