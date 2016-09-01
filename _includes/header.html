@@ -26,8 +26,6 @@
           <a class="page-link" href="{{ pg.url | prepend: site.baseurl }}">{{ pg.title }}</a>
           {% endif %}
         {% endfor %}
-        <a class="page-link" href="{{ pg.url | prepend: site.baseurl
-          }}/blog">Blog</a>
         <div class="page-lang-link">
         {% for pg in site.pages %}
           {% if pg.key == page.key %}
