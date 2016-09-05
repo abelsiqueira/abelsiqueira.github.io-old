@@ -3,6 +3,8 @@ layout: post
 title: Resolução de sistema Ax = b com LU feito inplace
 ---
 
+Extrega: 12/Set (Adiado)
+
 Lembre-se que na aula vimos a decomposição LU modificando diretamente $$A$$.
 Note que a única coisa criada a mais foi o vetor $$P$$, com os índices trocados.
 Agora, essa matriz LU desse ser utilizável ainda para multiplicações por vetores
