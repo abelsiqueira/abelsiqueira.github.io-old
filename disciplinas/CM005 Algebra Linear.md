@@ -53,8 +53,8 @@ tag:        2016s2
   - [ ] Prova 3 
  
 # Bibliografia
- 
- ## Principal
+
+## Principal
  
 - LEON, S. L. -Álgebra Linear com aplicações, Livro Técnico e Científicos Editora;
 - STRANG, G. -Álgebra Linear e suas aplicações, Cengage Learning;
