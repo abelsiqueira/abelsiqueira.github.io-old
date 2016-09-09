@@ -44,8 +44,7 @@ tag:        2016s2
 
 # Listas
 
-  - [PaperBazan]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/alternative theorem KKT bazan Jglobal 2006.pdf)
-
+  - [Lista 1]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/lista1_AL.pdf)
 # Provas
 
   - [ ] [Prova 1 com gabarito]({{ site.baseurl }}/disciplinas/cm202/prova1-2015s1.pdf)
