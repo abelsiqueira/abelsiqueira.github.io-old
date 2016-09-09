@@ -48,12 +48,10 @@ tag:        2016s2
 
 # Provas
 
-  - [ ] [Prova 1 com gabarito]
-  - [ ] [Prova 2 com gabarito]
-  - [ ] [Prova 3 com gabarito]
-  - [ ] [Exame com gabarito]
+  - [ ] Prova 1
+  - [ ] Prova 2 
+  - [ ] Prova 3 
  
-
 # Bibliografia
  
  ## Principal
