@@ -55,9 +55,13 @@ tag:        2016s2
  
 
 # Bibliografia
-
-- STRANG, G. -Álgebra Linear e suas aplicações, Cengage Learning;
+ 
+ ## Principal
+ 
 - LEON, S. L. -Álgebra Linear com aplicações, Livro Técnico e Científicos Editora;
+- STRANG, G. -Álgebra Linear e suas aplicações, Cengage Learning;
+
+## Complementar
 
 - DAVID, C. L. - Álgebra Linear e suas aplicações, Livro Técnico e Científicos Editora;
 - STEVEN, J. L. - Álgebra Linear com aplicações. LTC, RJ, 1999;
