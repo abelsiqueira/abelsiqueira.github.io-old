@@ -48,9 +48,9 @@ tag:        2016s2
 
 # Provas
 
-  -[ ] Prova 1
-  -[ ] Prova 2 
-  -[ ] Prova 3 
+  - [ ] Prova 1
+  - [ ] Prova 2 
+  - [ ] Prova 3 
  
 # Bibliografia
 
