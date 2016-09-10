@@ -10,7 +10,7 @@ tag:        2016s2
 
   | **Sigla:**   | CM005
   | **Nome:**    | Álgebra Linear 
-  | **Turma:**   | [B]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista1_AL.pdf)
+  | **Turma:**   | [C]({{ site.baseurl }}/disciplinas/CM005-Algebra-linear/lista1_AL.pdf)
   | **Local:**   | PC04
   | **Horário:** | 7h30 Terça e quinta. Engenharia de Bioprocessos e Biotecnologia
   | **Prova 1:** | 22/09
