@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      CM005 Álgebra Linear 2016s2
+title:      CM005 Álgebra Linear 2016s2 (Eng. Bio.)
 categories: teaching
-permalink:  /CM005 Algebra Linear/
+permalink:  /CM005 Algebra Linear_EB/
 tag:        2016s2
 ---
 
