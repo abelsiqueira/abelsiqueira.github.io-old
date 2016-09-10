@@ -30,8 +30,8 @@ tag:        2016s2
    Espaços das linhas e posto de uma matriz. Coordenadas de vetores.
  4. Transformações Lineares. Transformaçaõ linear. Posto e nulidade. Transformação
    inversível. Representação linear de uma transformação linear. Mudança de bases. Semelhança de matrizes.
- 5. Operadores e matrizes diagonalizáveis Vetores e valores característicos. 
-   Diagonalização. Polinômio mínimo, Teorema de Cayley-Hamilton.
+ 5. Operadores e matrizes diagonalizáveis. Vetores e valores característicos. 
+   Diagonalização. Polinômio mínimo. Teorema de Cayley-Hamilton.
  6. Espaço com produto interno Produto interno. Espaço com produto interno. Processo
    de diagonalização de Gram-Schmidt. Bases ortonormais.
  7. Operadores sobre espaço com produto interno. Isometrias. 
