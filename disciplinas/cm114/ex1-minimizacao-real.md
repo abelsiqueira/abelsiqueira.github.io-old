@@ -22,3 +22,6 @@ esse intervalo.
 de função**.
   - Faça testes diversos e avalie vários casos.
 
+Código de teste para o problema acima:
+[min1d_test]({{ site.baseurl }}/disciplinas/cm114/min1d_test.jl).
+Preste atenção aos nomes dos arquivos e das funções.
