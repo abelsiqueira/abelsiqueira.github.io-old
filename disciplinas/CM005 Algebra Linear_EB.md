@@ -48,7 +48,8 @@ tag:        2016s2
 
 # Provas
 
-  - [ ] Prova 1
+  - [x] Prova 1 
+  - [Notas]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/notas_prova_1_EB.ods)
   - [ ] Prova 2 
   - [ ] Prova 3 
  
