@@ -1,0 +1,409 @@
+\documentclass[11pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage[left=2cm,right=2cm,top=1cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amsfonts}
+\usepackage{multicol}
+%\usepackage{../../../disciplinas}
+\usepackage{tikz}
+\everymath{\displaystyle}
+\def\answers % uncomment to show the answers
+
+\boxedpoints
+\pointname{}
+\qformat{{\bf Questão \thequestion} \dotfill \fbox{\totalpoints} }
+
+\begin{document}
+
+\ifdefined\answers
+\printanswers
+\fi
+
+\addpoints
+
+\begin{center}
+  {\bf \large CM 005 Álgebra Linear: Prova 1 } \\
+  22 de Setembro de 2016
+\end{center}
+
+\ifx\undefined\answers
+\settabletotalpoints{100}
+\cellwidth{0pt}
+\hqword{Q:}
+\hpword{P:}
+\hsword{N:}
+
+\makebox[\textwidth]{
+  Nome: \enspace\hrulefill\quad
+  \gradetable[h][questions]}
+\fi
+
+\begin{center}
+  \begin{tabular}{|l|}
+    \hline
+    {\bf Orientações gerais}\\
+    1) As soluções devem conter o desenvolvimento e ou justificativa. \\
+    \hspace{2.5mm} Questões sem justificativa ou sem raciocínio lógico coerente 
+    não pontuam. \\
+    2) A interpretação das questões é parte importante do processo de avaliação.\\
+    \hspace{2.5mm} Organização e capricho também serão avaliados. \\
+    3) Não é permitido a consulta nem a comunicação entre alunos.\\
+   % 4) A prova pode ser feita com lápis ou caneta. \\
+    \hline 
+  \end{tabular}
+\end{center}
+
+\begin{questions}
+ % \question[20] 
+ % \begin{parts}
+ % \part%[10]
+ % O que significa que uma matriz seja {\it equivalente por linhas} a outra matriz?
+ % \part%[10]
+ % Considere $V$ um espaço vetorial. Seja $W \neq \emptyset$ um subconjunto de $V$. 
+ % Quais propriedades deve satisfazer $W$ para que ele seja um subespaço vetorial de
+ % $V$?  
+ % \part%[10] 
+ % Dada uma matriz $A \in M_{m \times n}(\mathbb{R})$. Escreva o que é o núcleo de $A$.
+ % \end{parts}
+  
+  \question[20]
+  Para o sistema linear dado, encontre o conjunto solução 
+  em função do parâmetro $\alpha \in \mathbb{R}$. 
+       $$
+       \begin{matrix}
+       x_1&+&x_2&+&x_3&=&2\\
+       2x_1&+&3x_2&+&2x_3&=&5\\
+       2x_1&+&3x_2&+&\alpha x_3&=&\alpha^{2}+1.
+       \end{matrix}
+       $$
+     \begin{solution}
+     Usamos o método de eliminação de Gauss, para a matriz aumentada 
+     $$
+       \begin{pmatrix}
+       1& &1& &1&|&2\\
+       2& &3& &2&|&5\\
+       2& &3& &\alpha&|&\alpha^{2}+1.
+       \end{pmatrix}
+       $$
+       Assim, depois de uma série de operações elementares sobre as linhas obtemos 
+        $$
+       \begin{pmatrix}
+       1& &1& &1&|&2\\
+       0& &1& &0&|&1\\
+       0& &0& &\alpha-2&|&\alpha^{2}-4.
+       \end{pmatrix}
+       $$
+       O sistema associado à dita matriz é 
+        $$
+       \begin{matrix}
+       x_1&+&x_2&+&x_3&=&2\\
+          & &x_2& &   &=&1\\
+          & &   & &(\alpha-2)x_3&=&\alpha^{2}-4.
+       \end{matrix}
+       $$
+       Da última linha temos que o valor de $x_3$ vai depender do valor de $\alpha$. Temos os seguintes casos:
+        \begin{enumerate}
+        \item Se $\alpha\neq2$. Nesse caso $x_3=(\alpha^{2}-4)/(\alpha-2)=\alpha+2$. Logo, substituindo temos que $x_{2}=1$ e $x_1=-1-\alpha$. Por tanto o conjunto solução é $\{\bar{x}:=(-1-\alpha \ \ 1 \ \ \alpha+2)^{T}\}$, se $\alpha\neq2$.
+        \item Se $\alpha=2$. Nesse caso, como $\alpha^{2}-4=0$, 
+        qualquer valor para $x_{3}$ serve ($x_3$ é variável livre). Por exemplo para $x_3=\beta \in \mathbb{R}$, temos que 
+        $x_2=1$ e $x_{1}=1-\beta$ (com a escolha de $x_{3}=\beta$). Assim,  temos que o conjunto solução é dado por 
+        $\{\bar{x}:=(1-\beta \ \ 1 \ \ \beta)^{T}: \beta \in \mathbb{R}\}$, 
+        para $\alpha=2$.
+        \end{enumerate}
+     \end{solution}
+  \question
+  \begin{parts}
+   \part[20] Utilize o método de Gauss-Jordan para calcular a inversa de $A$.
+       $$
+       A=
+       \begin{pmatrix}
+       1 & 1 & 1 \\
+       1 & 2 & 2 \\
+       1 & 2 & 3 \\
+       \end{pmatrix}
+       $$ 
+       \begin{solution}
+       Primeiro montamos o matriz aumentada. Assim temos 
+         $$
+       (A|I)=
+       \begin{pmatrix}
+       1 & 1 & 1 &|& 1 & 0 & 0\\
+       1 & 2 & 2 &|& 0 & 1 & 0\\
+       1 & 2 & 3 &|& 0 & 0 & 1\\
+       \end{pmatrix}
+       $$
+       O método de Gauss Jordan é usar operações elementares sobre linhas para a matriz anterior até chegar a uma matriz em {\it forma escada reduzida}. Calculando temos que 
+          $$
+       (I|B)=
+       \begin{pmatrix}
+       1 & 0 & 0 &|& 2 & -1 & 0\\
+       0 & 1 & 0 &|& -1 & 2 & -1\\
+       0 & 0 & 1 &|& 0 & -1 & 1\\
+       \end{pmatrix}
+       $$
+       Logo a inversa de A é a matriz do lado direito de $(I|B)$, i.e., 
+           $$
+       A^{-1}=
+       \begin{pmatrix}
+       2 & -1 & 0\\
+       -1 & 2 & -1\\
+       0 & -1 & 1\\
+       \end{pmatrix}
+       $$
+       \end{solution}
+   \part[5] 
+   Sendo $A$ a matriz do item anterior, ache $\bar{x} \in \mathbb{R}^{3}$ tal 
+   que $A\bar{x}=\bar{b}$ onde 
+  $\bar{b}=(0 \ \ 2 \ \ 1)^{T}$ .    
+      \begin{solution}
+      Como $A\bar{x}=\bar{b}$, temos que $\bar{x}=A^{-1}\bar{b}$.
+      Fazendo a multiplicação, obtemos que 
+      $$ \bar{x}=A^{-1}\bar{b}= 
+      \begin{pmatrix}
+       2 & -1 & 0\\
+       -1 & 2 & -1\\
+       0 & -1 & 1\\
+       \end{pmatrix}
+       \begin{pmatrix}
+       0\\
+       2\\
+       1\\
+       \end{pmatrix}
+       =
+       \begin{pmatrix}
+       -2\\
+       3\\
+       -1\\
+       \end{pmatrix}.$$
+       Outra alternativa é usar o método de Gauss, aplicado à matriz 
+       $(A|\bar{b})$. Ambos métodos fornecem o mesmo resultado.
+      \end{solution}
+  \end{parts}
+  \question%[20]
+  Sejam $A$ e $B$ duas matrizes em $M_{n\times n}(\mathbb{R})$.
+  \begin{parts}
+  \part[20]
+  Verifique que o seguinte conjunto é um {\it subespaço vetorial} de
+   $M_{n\times n}(\mathbb{R})$,
+  $$W_1:= \left\{ X \in M_{n\times n}(\mathbb{R}): AX+XB=\bar{0} \right\}$$
+  onde $\bar{0}$ é a matriz em  $M_{n\times n}(\mathbb{R})$ com todos os seus 
+  componentes iguais a zero. 
+     \begin{solution}
+     Para que o conjunto $W_1\neq \emptyset$ seja um 
+     subespaço vetorial devemos verificar que
+        \begin{enumerate}
+          \item {\it $X+Y \in W_{1}$ para todo $X\in W_1$ e $Y\in W_1$.}
+            
+          Considere $X$ e $Y$ em $W_{1}$. 
+          Vejamos que $X+Y \in W_{1}$, para isso é suficiente mostrar que 
+          $A(X+Y)+(X+Y)B=\bar{0}$.
+          
+          Assim, calculando 
+             $$
+             \begin{array}{lll}
+             A(X+Y)+(X+Y)B&=&(AX+AY)+(XB+YB)=AX+XB+AY+YB \\
+                        &=&(AX+XB)+(AY+YB)=\bar{0}+\bar{0}=\bar{0}
+             \end{array}
+             $$ 
+          Na última linha temos  usado que $AX+XB=\bar{0}$ e
+           $AY+YB=\bar{0}$, já que $X$ e $Y$ pertencem a $W_1$.
+           Portanto, $A(X+Y)+(X+Y)B=\bar{0}$. Logo, $X+Y \in W_{1}$.          
+          \item {\it $\lambda X\in W_{1}$ para todo $X\in W_1$ e
+                 $\lambda \in \mathbb{R}$.} 
+                 
+           Tome $X \in W_1$ e $\lambda \in \mathbb{R}$. Vejamos que 
+           $\lambda X \in W_{1}$. Nessa caso é suficiente verificar que 
+           $A(\lambda X)+(\lambda X)B=\bar{0}$.
+           
+           Calculando temos que
+            $A(\lambda X)+(\lambda X)B=\lambda(AX+XB)=\bar{0}$ 
+            onde na última linha usamos que $AX+XB=\bar{0}$. Logo concluímos  que 
+            $A(\lambda X)+(\lambda X)B=\bar{0}$ e $\lambda X \in W_{1}$.   
+        \end{enumerate}              
+     \end{solution}
+  \part[5] Constate que 
+   $W_2:= \left\{ X \in M_{n\times n}(\mathbb{R}): (A+X)^{2}=X^{2}+A^{2} \right\}$
+   é um subespaço vetorial. {\it Dica:} Use o item anterior. 
+        \begin{solution}
+        Primeiro perceba que $(A+X)^{2}=(A+X)(A+X)=A^{2}+AX+XA+X^{2}$. Assim,
+        $(A+X)^{2}=X^{2}+A^{2}$ vale se e somente se $AX+XA=\bar{0}$. Então, 
+        $W_2$ pode ser escrito como 
+        $$W_2=\left\{ X \in M_{n\times n}(\mathbb{R}): AX+XA=\bar{0} \right\}$$
+        Usando o item anterior, concluímos que $W_2$ é um subespaço vetorial.
+        \end{solution}
+  \end{parts} 
+  \question[20]
+  Encontre o núcleo da matriz $A$ em função dos parâmetros $\alpha$ e $\beta$.  
+       $$
+       A=
+       \begin{pmatrix}
+       2 & 2 & \alpha & \beta \\
+       1 & 0 & \alpha & 0     \\
+       1 & 1 & \alpha & \beta \\
+       1 & 1 & \alpha & 0     
+       \end{pmatrix}
+       $$
+   {\it Dica:} Analise cada caso possível, dependendo do valor de $\alpha$ e $\beta$.    
+      \begin{solution}
+      Primeiro perceba que o núcleo da $A$ é igual ao conjunto solução do sistema linear $A\bar{x}=\bar{0}$, i.e. 
+      $Nuc(A):=\{x \in \mathbb{R}^{4}: A\bar{x}=\bar{0}\}$. Assim, usaremos 
+      o método de Gauss para resolver $A\bar{x}=\bar{0}$. 
+      Fazendo operações elementares temos 
+         $$
+        \begin{pmatrix}
+        1 & 1 & \alpha/2 & \beta/2 &|0 \\
+        0 & 1 & -\alpha/2& \beta/2 &|0\\
+        0 & 0 & \alpha & \beta &|0 \\
+        0 & 0 & 0 & -\beta &|0\\
+        \end{pmatrix}
+       $$ 
+       Logo, o sistema associado é 
+        $$
+       \begin{matrix}
+       x_1&+&x_2&+&(\alpha/2) x_3&+&(\beta/2) x_4&=&0\\
+          & &x_2&+&-(\alpha/2)x_3&+&(\beta/2) x_4&=&0\\
+          & &   & &\alpha x_3 x_3&+&\beta x_4&=&0\\
+          & &   & &              &-&\beta x_4&=&0.
+       \end{matrix}
+       $$
+       Dependendo dos valores de $\alpha$ e $\beta$, o sistema terá diferentes conjuntos solução. Temos o seguintes casos:
+        \begin{enumerate}
+        \item  Se $\alpha=0$ e $\beta=0$. O sistema associado é 
+            $$
+       \begin{matrix}
+       x_1&+&x_2& &              & &             &=&0\\
+          & &x_2& & & & &=&0\\
+         % & &   & & & & &=&0\\
+         % & &   & &              & & &=&0.
+       \end{matrix}
+       $$
+       Assim, $x_1=x_2=0$ com $x_3$, $x_4$ variáveis livres. Então, para qualquer escolha de $x_3$ e $x_4$, por exemplo, $x_3=t \in \mathbb{R}$, $x_4=s \in \mathbb{R}$, o vetor 
+       com componentes $x_1=0$, $x_2=0$, $x_3=t$ e $x_4=s$ é solução.
+       Assim, o conjunto solução ( que é o conjunto formado por todas as soluções) é 
+       $$ 
+       \left\{
+          \begin{pmatrix}
+         0 \\
+         0 \\
+         t \\
+         s
+         \end{pmatrix}
+         : \ \ t \in \mathbb{R}, s \in \mathbb{R}
+       \right\}
+       $$              
+            
+%$$\{ (0 \ \ 0 \ \ t \ \ s )^{T}: x_3=t\in \mathbb{R},\  \ x_4=t \in \mathbb{R}\}$$
+      \item  Se $\alpha=0$ e $\beta\neq0$. O sistema associado é 
+            $$
+       \begin{matrix}
+       x_1&+&x_2&+&   & &(\beta/2) x_4&=&0\\
+          & &x_2&+&   & &(\beta/2) x_4&=&0\\
+          & &   & &   & &\beta x_4&=&0\\
+       \end{matrix}
+       $$
+       Assim, como $\beta\neq0$ temos que $x_4=0$. Substituindo obtemos 
+       que $x_1=x_2=0$ com $x_3$ variável livre.
+       Nesse caso, o conjunto solução é 
+       $$ 
+       \left\{
+          \begin{pmatrix}
+         0 \\
+         0 \\
+         t \\
+         0
+         \end{pmatrix}
+         : \ \ t \in \mathbb{R}
+       \right\}.
+       $$ 
+      % $$\{ (0 \ \ 0 \ \ t \ \ 0 )^{T}: x_3=t\in\mathbb{R}\}$$
+      \item  Se $\alpha\neq 0$ e $\beta=0$. O sistema associado é 
+            $$
+       \begin{matrix}
+       x_1&+&x_2&+&(\alpha/2) x_3&=&0\\
+          & &x_2&+&-(\alpha/2)x_3&=&0\\
+          & &   & &\alpha x_3 &=&0.\\
+       \end{matrix}
+       $$
+       Assim, como $\alpha\neq0$ temos que $x_3=0$. Substituindo obtemos 
+       que $x_1=x_2=0$ com $x_4$ variável livre.
+       Nesse caso, o conjunto solução é 
+        $$ 
+       \left\{
+          \begin{pmatrix}
+         0 \\
+         0 \\
+         0 \\
+         t
+         \end{pmatrix}
+         : \ \ t \in \mathbb{R}
+       \right\}.
+       $$ 
+       %$$\{ (0 \ \ 0 \ \ 0 \ \ t )^{T}: x_4=t\in\mathbb{R}\}$$
+      \item  Se $\alpha\neq 0$ e $\beta\neq0$. O sistema associado é 
+            $$
+       \begin{matrix}
+       x_1&+&x_2&+&(\alpha/2) x_3&+&(\beta/2) x_4&=&0\\
+          & &x_2&+&-(\alpha/2)x_3&+&(\beta/2) x_4&=&0\\
+          & &   & &\alpha x_3    &+&\beta x_4&=&0\\
+          & &   & &              &-&\beta x_4&=&0.
+       \end{matrix}
+       $$
+       Como $\beta\neq0$ temos que $x_4=0$. Substituindo 
+       obtemos $\alpha x_{3}=0$ que implica que $x_3=0$ (já que $\alpha \neq 0$).
+       Finalmente, $x_1=0$ e $x_2=0$. Nesse caso, o conjunto solução é 
+         $$ 
+       \left\{
+          \begin{pmatrix}
+         0 \\
+         0 \\
+         0 \\
+         0
+         \end{pmatrix}
+       \right\}
+       $$ 
+       %$\{ (0 \ \ 0 \ \ 0 \ \ 0 )^{T}\}$.
+        \end{enumerate}
+      \end{solution}
+   \question[20]
+   Seja $A \in M_{n\times n}(\mathbb{R})$ uma matriz invertível tal que $A^{-1}=-A$.
+   Mostre que a matriz $I+A$ é invertível.
+      \begin{solution}
+      Temos duas formas 
+      \begin{enumerate}
+       \item Para mostrar que $I+A$ é invertível, será suficiente
+       mostra que a única solução de $(I+A)\bar{x}=\bar{0}$ é o vetor nulo 
+      $\bar{x}=\bar{0}$. 
+      Seja $\bar{x}$ uma solução de $I+A$. Assim, 
+        \begin{equation}
+        \label{eqn:in}
+        \bar{x}+A\bar{x}=(I+A)\bar{x}=\bar{0}
+        \end{equation}   
+        Multiplicando a equação (\ref{eqn:in}) por $A^{-1}$ temos que
+      $A^{-1}(\bar{x}+A\bar{x})=\bar{0}$ 
+        \begin{eqnarray*}
+        A^{-1}(\bar{x}+A\bar{x})&=&\bar{0} \\
+        A^{-1}\bar{x}+A^{-1}A \bar{x}&=&\bar{0}\\
+        A^{-1}\bar{x}+ \bar{x}&=&\bar{0} \ \ (\text{ aqui usamos $A^{-1}A=I$})\\
+        -A\bar{x}+ \bar{x}&=&\bar{0} \ \ (\text{ aqui usamos $A^{-1}=-A$})\\
+        \end{eqnarray*}
+       Assim, temos que    $\bar{x}+A\bar{x}=\bar{0}$
+       e  $\bar{x}-A\bar{x}=\bar{0}$. Somando ambas equações, 
+       temos que 
+       $\bar{x}=\bar{0}$. Portanto, a matriz $I+A$ é invertível.
+        \item Para mostrar que $I+A$ é invertível, é suficiente achar uma matriz
+        $B \in M_{n \times n}(\mathbb{R})$ tal que $(I+A)B=I$.
+        Observe que 
+        $$I+A=A^{-1}A+A=-A^{2}+A=A(I-A) \ \ 
+        (\text{ temos usamos $A^{-1}A=I$ e $A^{-1}=-A$ })$$
+        Logo, $(I+A)B=A(I-A)B=I$. Multiplicando por a última equação por $A^{-1}$
+        concluímos que $(I-A)B=A^{-1}=-A$.
+        Somando as equações $(I+A)B=I$ e  $(I-A)B=-A$ vemos que 
+        $2B=(I-A)$. Assim, $B=1/2(I-A)$.
+        Como consequência $(I+A)$ é invertível cuja inversa é dada por $1/2(I-A)$.
+      \end{enumerate}
+      \end{solution}
+\end{questions}
+
+\end{document}
+
