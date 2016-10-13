@@ -1,0 +1,673 @@
+% Lista número 2 de algebra linear
+\documentclass{article}
+\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage{tikz}
+\usepackage{verbatim}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{color, colortbl}
+\usepackage{tabularx,colortbl}
+\usepackage{hyperref}
+\usepackage{graphicx}
+%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[portugues,brazilian]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage[left=3cm,top=2.4cm,right=3cm]{geometry}
+
+%\textheight=24cm 
+%\textwidth=16cm 
+\theoremstyle{plain}
+\newtheorem{teo}{Theorem}[section]
+\newtheorem{coro}[teo]{Corollary}
+\newtheorem*{main}{Main~Theorem}
+\newtheorem{lem}[teo]{Lemma}
+
+\newtheorem{propo}[teo]{Proposition}
+\newtheorem{prooof}[teo]{Proof}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\theoremstyle{obs}
+\newtheorem{obs}{Observation}
+\newtheorem{counter}{Counter-Example}
+\numberwithin{equation}{section}
+
+\begin{document}
+\title{ CM005 Álgebra Linear \\
+        Lista 2 }
+
+\begin{centering}    
+\author{ Alberto Ramos }
+\end{centering}
+
+\date{ }
+
+\maketitle
+
+\begin{enumerate}
+  \item Seja $M \in M_{n}(\mathbb{R})$ uma matriz. 
+     Mostre que se $\{v_{1},\dots,v_{p}\} \in \mathbb{R}^{n}$ é linearmente dependente, então $\{Mv_1,\dots, Mv_p\}$ é também linearmente dependente.
+     
+      Agora suponha que $M$ é invertível. Então, se
+      $\{v_{1},\dots,v_{p}\} \in \mathbb{R}^{n}$ é linearmente independente, 
+      então $\{Mv_1,\dots, Mv_p\}$ é linearmente independente.    
+     \item Calcule o posto para cada uma das seguintes matrizes. Também, 
+     encontre bases para $lin(A)$ (espaço-linha de A), 
+     $col(A)$ (espaço-columa) e para $Nuc(A)$ (núcleo de A).
+       $$
+       A=
+       \begin{pmatrix}
+       1 & 1 & -3 \\
+       0 & 2 & 1 \\
+       1 & -1 & -4 \\
+       \end{pmatrix}
+       \  \
+       A=
+       \begin{pmatrix}
+       1 & 1 & 0 & 1  \\
+       0 & 1 & -1 & 1 \\
+       0 & 1 & -1 & -1 \\
+       \end{pmatrix}
+       \ \ 
+       A=
+       \begin{pmatrix}
+       2 & -4 & 0 & 2 & 1 \\
+       -1 & -2 & 1 & 2 & 3 \\
+       1 & -2 & 1 & 4 & 4 \\
+       \end{pmatrix}
+       $$
+       
+       \item Ache todos os valores possíveis para $posto(A)$
+       em função dos valores de $\alpha$. 
+        $$
+       A=
+       \begin{pmatrix}
+       1 & 2 & \alpha \\
+       -2 & 4\alpha & 2 \\
+       \alpha & -2 & 1 \\
+       \end{pmatrix}
+       \ \ 
+       A=
+       \begin{pmatrix}
+       6 & 6 & -4 \\
+       -2 & -1 & \alpha \\
+       \alpha & 2 & -1 \\
+       \end{pmatrix}
+       $$
+ 
+       \item Uma matriz $A \in M_{m\times n}(\mathbb{R})$
+       tem posto 1, se e somente se $A=uv^{T}$ para algum $u \in \mathbb{R}^{m}$, 
+       $v \in \mathbb{R}^{n}$.
+ 
+    \item Em $\mathbb{R}^{2}$, verifique que a matriz que transforma 
+    $(1,0)$ em $(\cos(\theta), \sin(\theta))$ e 
+    $(0,1)$ em $(-\sin(\theta), \cos(\theta))$ é dada por 
+    
+    $$ Q_{\theta}:=
+       \begin{pmatrix}
+       \cos(\theta) & -\sin(\theta)\\
+       \sin(\theta) & \cos(\theta) \\
+       \end{pmatrix}.
+    $$
+    Mostre que $Q_{\theta}Q_{\phi}=Q_{\theta+\phi}$, $Q_{\theta}^{-1}=Q_{-\theta}$. %considere rotação 
+    
+    \item Seja $\bar{a}\neq\bar{0} \in \mathbb{R}^{n}$.
+    Considere a transformação $T:\mathbb{R}^{n}\rightarrow \mathbb{R}^{n}$, 
+    definido como $T(\bar{x})=\bar{x}+\bar{a}$.
+    Esse tipo de transformação é chamada de {\it translação}.
+    Mostre que a translação não é uma transformação linear. Descreve geometricamente
+    o efeito de uma translação. O que acontece se $\bar{a}=\bar{0}$.
+        
+    \item Para as seguintes transformações (de $\mathbb{R}$ a $\mathbb{R}$)
+    responda quais delas são tranformações lineares e  
+    quais são invertíveis. Caso seja possível, calcule a inversa.
+     $(a)\ \  T(x)=x^3$, $(b) \ \ T(x)=x+1$, $(c) \ \ T(x)=exp(x)$, $(d) \ \ T(x)=3x$.    
+    
+    \item {\it verifique se tal coisa acontece}.
+
+    \item Mostre que 
+        \begin{enumerate}
+        \item        
+        As funções 
+        $f_1(x)=\exp(\lambda_1 x)$, 
+        $f_2(x)=\exp(\lambda_2 x)$, 
+        $\dots$,  
+        $f_k(x)=\exp(\lambda_k x)$, onde 
+        $\lambda_1,\dots, \lambda_k \in \mathbb{R}$
+        são linearmente independente se, e somente se, 
+        $\lambda_i \neq \lambda_j$ para todo $i \neq j$.
+        \item   As funções $f_1(x)=x\exp(\lambda x)$, 
+        $f_2(x)=x^2 \exp(\lambda x)$, 
+        $\dots$,  
+        $f_k(x)=x^k \exp(\lambda x)$, com  
+        $\lambda \in \mathbb{R}$ são linearmente independente. 
+        \end{enumerate} 
+        
+    \item Sejam $\bar{u}_1=(1 \ \ 1 \ \ 0)^{T}$,   
+    $\bar{u}_2=(1 \ \ 0 \ \ 1)^{T}$ e 
+    $\bar{u}_3=(0 \ \ 1 \ \ 1)^{T}$.
+    Considere a transformação linear de 
+    $T:\mathbb{R}^{2}\rightarrow\mathbb{R}^{3}$
+    definida como 
+    $$T(x_1, x_2):= x_2 \bar{u}_1+x_1 \bar{u}_2+(x_1-x_2)\bar{u}_3.  $$  
+    Encontre a matriz associada a $T$ em relação ás bases ordenadas
+     $\{e_1,e_2\}$ e 
+     $\{\bar{u}_1, \bar{u}_2, \bar{u}_3\}$.
+         
+   \item Considere as bases ordenadas de $\mathbb{R}^{3}$ e 
+   $\mathbb{R}^{2}$, $\mathcal{B}=\{\bar{v}_1, \bar{v}_2, \bar{v}_3\}$ e 
+   $\mathcal{F}=\{\bar{w}_1, \bar{w}_2\}$, onde 
+    $$
+    \bar{v}_1=(1 \ \ 0 \ \ -1)^{T},\ \    
+    \bar{v}_2=(1 \ \ 2 \ \ 1)^{T}, \ \  
+    \bar{v}_3=(-1 \ \ 1 \ \ 1)^{T}
+    $$
+    e
+    $$
+    \bar{w}_1=(1 \ \ -1)^{T},\ \    
+    \bar{w}_2=(2 \ \ -1)^{T}. 
+    $$
+    Para cada uma das transformações lineares $T:\mathbb{R}^{3}\rightarrow\mathbb{R}^{2}$
+    a seguir, encontre a matriz associada em  relação às bases ordenadas 
+    $\mathcal{B}$ e 
+    $\mathcal{F}$.
+       \begin{enumerate}
+       \item $T(x_1,x_2,x_3)=(x_3 \ \ 2x_1)^{T}$, 
+       \item $T(x_1,x_2,x_3)=(x_1+x_2 \ \ x_1-2x_3)^{T}$, 
+       \item $T(x_1,x_2,x_3)=(2x_2 \ \ -2x_1)^{T}$.
+       \end{enumerate}
+    
+    \item Seja $S=\text{span}\{\exp(x),x\exp(x),x^2\exp(x)\}$. 
+    Seja $D:S \rightarrow S$ o operador $S$, i.e., $D(f)=f^{'}$. 
+    Encontre a matriz associada de $D$
+    em relação à base ordenada $\{\exp(x),x\exp(x),x^2\exp(x)\}$.
+    
+   \item Para cada um dos sistemas de equações lineares, use o método de Gauss para obter um sistema
+ equivalente cuja matriz de coeficientes esteja na forma escada. 
+ Indique se o sistema é consistente ou não (isto é, se o sistema possue solução ou não).
+ Se o sistema for possível e determinado (isto é, sem variáveis livres), use susbtitução para encontrar a única 
+ solução. Se o sistema for possível e indeterminado (isto é, com variáveis livres) coloque-o em forma escada reduzida 
+ por linhas e encontre o conjunto solução.
+ 
+      (a)
+      $
+      \begin{matrix}
+       &x_1& - &2x_2& = &3\\
+       &4x_1& + &x_2& = &8
+       \end{matrix}
+      $
+     \ \ (b)
+      $
+      \begin{matrix}
+        &x_1& + &x_2& = &0\\
+        &2x_1&+&3x_2&=&0 \\
+        &3x_1&-&2x_2&=&0
+       \end{matrix}
+      $
+      
+      (c)
+      $
+      \begin{matrix}
+        3x_1& + &2x_2&-&x_3&= 4\\
+        x_1&-   &2x_2&+&2x_3&=1 \\
+        11x_1&+ &2x_2&+&x_3&=14
+       \end{matrix}
+      $
+      \ \ (d)
+      $
+      \begin{matrix}
+        x_1& - &x_2& + &2x_3&= 4\\
+        2x_1& + &3x_2& - &x_3&=1 \\
+        7x_1&+ &3x_2&+&4x_3&= 7
+       \end{matrix}
+      $
+      \\
+      \newline 
+      
+      (e)
+      $
+      \begin{matrix}
+        x_1& + &x_2& + &x_3&+&x_4&=0\\
+        2x_1& + &3x_2& - &x_3&-&x_4&=2 \\
+        3x_1&+ &6x_2& - &x_3&-&x_4&= 4 \\
+        3x_1&+ &2x_2& + &x_3& + &x_4&= 5 \\
+       \end{matrix}
+      $
+       \ \ (f)
+      $
+      \begin{matrix}
+        x_1& + &x_2& + &x_3&= 0\\
+        x_1& - &x_2& - &x_3&=0 \\
+       \end{matrix}
+      $
+      \newline
+      
+      (g)
+      $
+      \begin{matrix}
+         x_1& + &3x_2& + &x_3& + & x_4&=3\\
+        2x_1& - &2x_2& + &x_3& + &2x_4&=8 \\
+        3x_1& + & x_2& + &2x_3&-&x_4&= -1 
+       \end{matrix}
+      $
+      \\
+      \newline
+      
+      (h)
+      $
+      \begin{matrix}
+        5x_1& - &8x_2& + &2x_3&=5\\
+         x_1& - &3x_2& + &x_3&=1\\
+        2x_1& + &x_2& - &x_3&=2 \\
+         x_1& + &4x_2& - &2x_3&=1  
+       \end{matrix}
+      $
+ 
+ \item Considere o sistema de equações lineares
+       $$
+       \begin{matrix}
+       ax_1 + x_2 = b\\
+       cx_1 + x_2 = d
+       \end{matrix}
+       $$
+     \begin{itemize}
+      \item Prove que o sistema tem uma única solução se e somente se $a\neq c$;
+      \item Se $a=c$. Mostre que o sistema tem solução, se e somente se $b=d$.
+     \end{itemize}
+  
+  \item Dado $\alpha \in \mathbb{R}$ e $\beta \in \mathbb{R}$, considere o sistema de equações cuja matriz aumentada é      
+       $$
+       \begin{pmatrix}
+       2 & 2 & \alpha & \beta & | & 1\\
+       1 & 0 & \alpha & 0     & | & 1\\
+       1 & 1 & \alpha & \beta & | & 1\\
+       1 & 1 & \alpha & 0     & | & 1.
+       \end{pmatrix}
+       $$
+     Para quais valores de $\alpha$ e $\beta$ 
+        \begin{enumerate}
+         \item o sistema não tem solução;
+         \item o sistema tem uma única solução; 
+         \item o sistema tem infinitas soluções.
+        \end{enumerate}
+  
+  \item Utilize a eliminação de Gauss-Jordan para calcular a inversa de $A$
+  \newline
+       $
+       A=
+       \begin{pmatrix}
+       1 & 0 & 0 \\
+       2 & 1 & 3 \\
+       0 & 0 & 1 \\
+       \end{pmatrix}
+       $
+       \ \ 
+       $
+       A=
+       \begin{pmatrix}
+       1 & 1 & 1 \\
+       1 & 2 & 2 \\
+       1 & 2 & 3 \\
+       \end{pmatrix}
+       $
+       \ \ 
+       $
+       A=
+       \begin{pmatrix}
+       1 &-&1& &1& -&1&\\
+       0 & &1&-&1&  &1&\\
+       0 & &0& &1& -&1&\\
+       0 & &0& &0&  &1&\\
+       \end{pmatrix}
+       $
+   
+   \item Sejam as matrizes 
+       $
+       A=
+       \begin{pmatrix}
+       -3 & 2 & 1 \\
+        1 & 2 &-1 \\
+       \end{pmatrix}
+       $
+       \ \ e 
+       \ \
+       $
+       B=
+       \begin{pmatrix}
+       2 &-1 \\
+       2 & 0 \\
+       0 & 3 \\
+       \end{pmatrix}
+       $
+       
+   Escrevendo a matriz $B$ em termos das suas colunas, 
+   $B=[B_{1} \ \ B_2]$, em que 
+   $B_{1}=(2 \ \ 2 \ \ 0)^{T}$
+   e $B_2=(-1 \ \ 0 \ \ 3)^{T}$. Mostre que o produto $AB$ pode ser escrito como 
+   $AB=A[B_1 \ \ B_2]=[AB_1 \ \ AB_2]$. 
+   
+   Generalize para matrizes arbitrárias.
+   Isto é, se $A \in M_{m\times n}(\mathbb{K})$, 
+   $B \in M_{n \times p}(\mathbb{K})$, com $B=[B_1 \ \ \dots \ \ B_{p}]$
+   onde $B_{i}$ é a $i$-ésima coluna de $B$. Então, 
+   $AB=A[B_1 \dots B_p]=[AB_1 \dots AB_p]$.
+    \item Sejam $A$ uma matriz invertível $n\times n$
+ e $B$ uma matriz $n\times p$. Mostre que a forma escada reduzida por linhas 
+ de $(A|B)$ é $(I|C)$ onde $C=A^{-1}B$.
+   
+   \item Considere as matrizes 
+        $
+       A=
+       \begin{pmatrix}
+       5 & 3 \\
+       3 & 2 \\
+       \end{pmatrix}
+       \ \ 
+       B=
+       \begin{pmatrix}
+       6 & 2 \\
+       2 & 4 \\
+       \end{pmatrix}
+       \ \ 
+       C=
+       \begin{pmatrix}
+       4 & -2 \\
+       -6 & 3 \\
+       \end{pmatrix}
+       $
+   Encontre matrizes $X \in M_{2}(\mathbb{R})$ tal que 
+     \begin{itemize}
+     \item $AX+B=C$
+     \item $XA+B=C$
+     \item $AX+B=X$
+     \item $XA+C=X$
+     \end{itemize}
+ \item Prove que se $B$ é equivalente por linhas a $A$
+ se e somente se existe uma matriz invertível $M$
+ tal que $B=MA$.
+    
+   \item 45 Strnag pagiina 56
+   
+   \item Determine os coeficientes $a$, $b$, $c$ e $d$ da função polinomial 
+   $p(x)=a x^3 + bx^2 + cx + d$, cujo gráfico passa pelo pontos
+   $q_{1}=(0,10)$, $q_2=(1,7)$, $q_3=(3,-11)$ e $q_4=(4,-14)$. 
+   {\it Dica:} Escreva um sistema linear associado.
+   \item 
+   Verifique (multiplicando corretamente) que a inversa da matriz $M$
+   está dada por
+     \begin{enumerate}
+      \item $M^{-1}= I+ uv^{T}/(1-v^{T}u)$ se $M=I-uv^{T}$ e $v^{T}u \neq 1$
+      \item $M^{-1}= I+U(I-VU)^{-1}V$ se $M=I-UV$ e $(I-VU)$ é invertível.
+      \item $M^{-1}= A^{-1}+A^{-1}U(W-VA^{-1}U)^{-1}VA^{-1}$ \\
+            se $M=A-UW^{-1}V$ e $W-VA^{-1}U$ é invertível.
+     \end{enumerate}
+   
+   \item Seja $A \in M_{m\times n}(\mathbb{R})$ tal que $n>m$ 
+   (número de incógnitas é maior que o número de equações).
+   Então, o sistema linear homogêneo $A\bar{x}=\bar{0}$, 
+   $\bar{x}\in \mathbb{R}^{n}$, tem solução diferente da solução trivial 
+   (isto é, $\bar{x}=\bar{0}$). \newline
+   {\it Dica: } Use a forma escada reduzida por linhas.
+   
+   \item Se $A$ e $B$ são matrizes quadradas. Mostre que $I-AB$ é invertível se $I-BA$ 
+   for invertível. {\it Dica:} Use $B(I-AB)=(I-BA)B$.
+   
+   \item Quais dos seguintes subconjuntos são sub-espaços vetoriais?. Esboçe
+     \begin{enumerate}
+     \item $W=\{(x,y) \in \mathbb{R}^{2}: x\leq 0, y\leq0\}$
+     \item $W=\{(x,y) \in \mathbb{R}^{2}: xy\leq0\}$
+     \item $W=\{(x,y) \in \mathbb{R}^{2}: y\leq x^{2} \}$
+     \item $W=\{(x,y) \in \mathbb{R}^{2}: y\leq x, x \leq y \}$
+     \end{enumerate}
+     
+   \item Dado dois subespações vetoriais $W_1$ e $W_2$ de $V$. A interseção 
+   $W_{1}\cap W_2$ é um subespaço vetorial? e a união  $W_{1}\cup W_2$?
+    
+   \item Considere os subespaços vetoriais   
+   $$W_1=\{(x_1,x_2,x_3,x_4) \in \mathbb{R}^{4}: 
+   x_1+2x_2+2x_3+3x_4=0, 2x_1+5x_2+4x_3+8x_4=0 \}$$
+   e 
+   $$W_2=\{(x_1,x_2,x_3,x_4) \in \mathbb{R}^{4}: 
+   x_1+3x_2+2x_3+5x_4=0, 2x_2+4x_4=0 \}.$$
+   Calcule o subespaço vetorial $W_{1}\cap W_2$.
+       
+   \item Dado uma matriz $A=(a_{ij}) \in M_{m\times n}(\mathbb{K})$, $i=1,\dots,m$, $j=1,\dots,n$.
+   A trasposta de A, denotada $A^{T} \in M_{ n \times m}(\mathbb{K})$, 
+   é a matriz 
+   definida por $(A^{T})_{ij}=a_{ji}$ para 
+   $i=1,\dots,m$, $j=1,\dots,n$. \newline
+   Mostre:
+      \begin{itemize}
+      \item $(A+B)^{T}=A^{T}+B^{T}$;
+      \item $(AB^{T})^{T}=BA^{T}$;
+      \item Suponha adicionalmente que $n=m$, então 
+      $(AB)^{T}=B^{T}A^{T}$.
+      \end{itemize}
+   \item Usando as seguintes propriedades do determinante $det(A)$: 
+   $(i)\ \ det(AB)=det(A)det(B)$, 
+   $(ii)\ \ det(\alpha A)=\alpha^{n} det(A)$ e 
+   $(iii) \ \ det(I)=1$ para todo
+   $A, B \in M_{n}(\mathbb{K})$.
+   Calcule $det(adj(A))$ e $det(A^{-1})$.  \newline
+   {\it Dica:} Use $adj(A)A=det(A)I$.
+
+   \item Calcule o determinante das matrizes
+       $$
+       A=
+       \begin{pmatrix}
+       2 & 0 & 0 & 1 \\
+       0 & 1 & 0 & 0 \\
+       1 & 6 & 2 & 0 \\
+       1 & 1 & -2 & 3 \\
+       \end{pmatrix}
+       \ \ 
+       B=
+       \begin{pmatrix}
+       2 & 0 & 0 & 1 \\
+       0 & 0 & 0 & 0 \\
+       1 & 0 & 2 & 0 \\
+       1 & 0 & -2 & 3 \\
+       \end{pmatrix}
+       \ \ 
+       C=
+       \begin{pmatrix}
+       2-\alpha & 4 \\
+       3 & 3 - \alpha\\
+       \end{pmatrix}
+       $$
+    Para a matriz $C$, encontre todos os valores de $\alpha$ 
+    para os quais o determinante é igual a zero.
+    
+    \item Para as seguintes matrizes determine se o vetor $\bar{b}$
+    está em $col(A)$ (espaço-coluna de $A$), se 
+    $\bar{w}$ está em $lin(A)$ (espaço-linha de $A$)
+    e se $v \in Nuc(A)$, onde $Nuc(A)$ é o núcleo da matriz $A$.
+     \begin{itemize}
+        \item  
+       $
+       A=
+       \begin{pmatrix}
+       1 & 0 & -1 \\
+       1 & 1 & 1 \\
+       \end{pmatrix}
+       \ \,  
+       \bar{b}=
+       \begin{pmatrix}
+       3 \\
+       2 \\
+       \end{pmatrix}
+       \ \,  
+       \bar{w}=
+       \begin{pmatrix}
+       -1 & 1 & 1\\
+       \end{pmatrix}
+       \ \, 
+       \bar{v}=
+       \begin{pmatrix}
+       -1 \\
+       3 \\
+       -1 \\
+       \end{pmatrix}
+       $
+       \item  
+       $
+       A=
+       \begin{pmatrix}
+       1 & 1 & -3 \\
+       0 & 2 & 1 \\
+       1 & -1 & -4 \\
+       \end{pmatrix}
+       \ \ 
+       \bar{b}=
+       \begin{pmatrix}
+       1 \\
+       1 \\
+       0 \\
+       \end{pmatrix}
+       \ \ 
+       \bar{w}=
+       \begin{pmatrix}
+       -1 & 4 & 1\\
+       \end{pmatrix}
+       \ \, 
+       \bar{v}=
+       \begin{pmatrix}
+       7 \\
+       3 \\
+       -1 \\
+       \end{pmatrix}
+       $
+     \end{itemize} 
+     
+     \item Determine se os seguintes vetores são linearmente independente
+     em $\mathbb{R}^{3}$ e esboçe o correspondente espaço gerado.
+        \begin{itemize}
+        \item  
+       $ 
+       \begin{pmatrix}
+       1  \\
+       0  \\
+       1  \\
+       \end{pmatrix}
+       \  \
+       \begin{pmatrix}
+       1  \\
+       0  \\
+       0  \\
+       \end{pmatrix}
+       \ \ 
+       \begin{pmatrix}
+       2 \\
+       -1 \\
+       1 \\
+       \end{pmatrix}
+       $. 
+        \item  
+       $ 
+       \begin{pmatrix}
+       2  \\
+       1  \\
+       2  \\
+       \end{pmatrix}
+       \  \
+       \begin{pmatrix}
+       -2  \\
+       1 \\
+       2  \\
+       \end{pmatrix}
+       \ \ 
+       \begin{pmatrix}
+       4 \\
+       2 \\
+       -4 \\
+       \end{pmatrix}
+       $.
+          \item  
+       $ 
+       \begin{pmatrix}
+       0  \\
+       4  \\
+       2  \\
+       \end{pmatrix}
+       \  \
+       \begin{pmatrix}
+       8  \\
+       8 \\
+       24  \\
+       \end{pmatrix}
+       $
+        \end{itemize}
+       
+     \item Determine se as seguintes matrizes são linearmente independente
+     em $M_{2}(\mathbb{R})$
+     
+      \begin{itemize}
+       \item
+       $
+       \begin{pmatrix}
+       5 & 3 \\
+       6 & 2 \\
+       \end{pmatrix}
+       \ \ 
+       \begin{pmatrix}
+       6 & 2 \\
+       8 & 2 \\
+       \end{pmatrix}
+       \ \ \,
+       \begin{pmatrix}
+       0 & 0 \\
+       -6 & 3 \\
+       \end{pmatrix}
+       $
+       \item
+       $
+       \begin{pmatrix}
+       1 & 0 \\
+       0 & 2 \\
+       \end{pmatrix}
+       \ \ 
+       \begin{pmatrix}
+       0 & 2 \\
+       0 & 0 \\
+       \end{pmatrix}
+       \ \ \,
+       \begin{pmatrix}
+       2 & 6 \\
+       0 & 3 \\
+       \end{pmatrix}
+       $
+       \item
+       $
+       \begin{pmatrix}
+       1 & 1 \\
+       0 & 1 \\
+       \end{pmatrix}
+       \ \ 
+       \begin{pmatrix}
+       1 & 0 \\
+       1 & 1 \\
+       \end{pmatrix}
+       $
+     \end{itemize} 
+       
+     \item Determine se as seguintes funções são linearmente independente
+     em $C[0,1]$ (conjunto de todas as funções contínuas definidas em $[0,1]$)
+       \begin{itemize}
+       \item $cos(\pi x)$, $sen(\pi x)$
+       \item $e^{x}$, $e^{-x}$, $e^{2x}$
+       \item $cos(x)$, $1$, $sen^{2}(x/2)$
+       \end{itemize}
+     
+    
+\end{enumerate}
+
+
+\section{Aplicações}
+
+
+
+\end{document}
+
+
