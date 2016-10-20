@@ -45,6 +45,7 @@ tag:        2016s2
 # Listas
 
   - [Lista 1]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/lista1_AL.pdf)
+  - [Lista 2]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/lista2_AL.pdf)
 
 # Provas
 
