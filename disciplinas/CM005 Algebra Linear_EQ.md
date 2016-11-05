@@ -45,12 +45,13 @@ tag:        2016s2
 # Listas
 
   - [Lista 1]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/lista1_AL.pdf)
+  
   - [Lista 2]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/lista2_AL.pdf)
 # Provas
   
   - [ ] [Prova 1 com gabarito]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/prova1_AL_EB_A_EQ.pdf), 
     [Notas 1]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/Notas_1_EQ.xls)
-  - [ ] Prova 2, [Notas 2]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/NOTAS_2_EQ.ods) 
+  - [ ] Prova 2, [Notas 2]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/Notas_2_EQ.ods) 
   - [ ] Prova 3 
  
 # Bibliografia
