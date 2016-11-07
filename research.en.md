@@ -10,6 +10,12 @@ Warning: If you cannot download a
 technical report please write to 
 albertoramos@ufpr.br. <br />
 
+# Books and Edited Volumes
+
+ - **[Condições de Otimalidade e Algoritmos em Otimização não Linear.](http://www.optimization-online.org/DB_HTML/2016/06/5494.html)** <br />
+    G. Haeser; A. Ramos. <br />
+    SBMAC, Notas em Matemática Aplicada, vol 83, 2016 (85p.) e-ISBN: 978-85-8215-075-7.
+
 # Submitted, In Press or Preprint
  
   - **[On a conjecture in second-order optimality conditions.](http://www.optimization-online.org/DB_HTML/2016/06/5494.html)** <br />
