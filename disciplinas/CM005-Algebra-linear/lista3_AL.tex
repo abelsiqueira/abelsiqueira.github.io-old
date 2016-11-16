@@ -1,0 +1,1043 @@
+% Lista número 3 de algebra linear
+\documentclass[10pt]{article}
+\usepackage{amssymb,latexsym,amsthm,amsmath}
+\usepackage{tikz}
+\usepackage{verbatim}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{color, colortbl}
+\usepackage{tabularx,colortbl}
+\usepackage{hyperref}
+\usepackage{graphicx}
+%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[portugues,brazilian]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage[left=3cm,top=2.4cm,right=3cm]{geometry}
+%\textheight=24cm
+%\textwidth=16cm
+\theoremstyle{plain}
+\newtheorem{teo}{Theorem}[section]
+\newtheorem{coro}[teo]{Corollary}
+\newtheorem*{main}{Main~Theorem}
+\newtheorem{lem}[teo]{Lemma}
+\newtheorem{propo}[teo]{Proposition}
+\newtheorem{prooof}[teo]{Proof}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\theoremstyle{obs}
+\newtheorem{obs}{Observation}
+\newtheorem{counter}{Counter-Example}
+\numberwithin{equation}{section}
+\begin{document}
+\title{ CM005 Álgebra Linear \\
+Lista 3 }
+\begin{centering}
+\author{ Alberto Ramos }
+\end{centering}
+\date{ }
+\maketitle
+
+ \begin{itemize}
+   \item 
+   Seja $T: V \rightarrow V$ uma transformação linear. Se temos que $Tv=\lambda v$, $v\neq\bar{0}$, para 
+   $\lambda \in \mathbb{K}$. Dizemos  
+   que $\lambda$ é um {\it autovalor} de $T$ e $v$ {\it autovetor} de $T$ associado a $\lambda$.
+   Observe que $\lambda$ é um autovalor se $\lambda$ é raíz do {\it polinômio característico} 
+   $p(\lambda):=det(A-\lambda I)$, onde $A=[T]_{\mathcal{B}}^{\mathcal{B}}$ e 
+   $\mathcal{B}$ é uma base de $V$. 
+   
+   O polinômio característico $p(\lambda)$ independe da escolha da matriz associada 
+   à $T$ e da base $\mathcal{B}$. Como os autovalores são as raízes de $p(\lambda)$, 
+   os autovalores também independente da matriz associada e assim, eles são intrinsecamente 
+   associados à transformação linear $T$.
+   
+   Seja $A$ uma matriz quadrada. Se $v\neq \bar{0}$ satisfaz que $Av=\lambda v$, 
+   dizemos que $v$ é um autovetor de 
+   $A$ associado a $\lambda$ e $\lambda$ autovalor de $A$.
+   
+   \item  Uma matriz quadrada $A \in M_{n \times n}(\mathbb{K})$
+   é {\it diagonalizável} se existe uma matriz $S$ invertível e uma matriz diagonal $D$
+   tal que $A=SDS^{-1}$. Lembre que $D$ é uma matriz diagonal se $D_{ij}=0$ para todo $i\neq j$.
+     \begin{itemize}
+      \item De $A=SDS^{-1}$, temos que $AS=SD$. Fazendo contas vemos que 
+      as colunas de $S$ deve estar formada por os autovetores de $A$ e os elementos 
+      da diagonal de $D$ são os autovalores. 
+     \end{itemize}
+   \item Uma transformação linear 
+   $T: V \rightarrow V$, onde $V$ tem dimensão finita, é {\it diagonalizável}
+   se existe uma base $\mathcal{B}$ de $V$, tal que a matriz $[T]_{\mathcal{B}}^{\mathcal{B}}$
+   é diagonalizável.
+ 
+   \item {\it Teorema:} Uma transformação linear 
+   $T: V \rightarrow V$, com $dim(V)=n$ é diagonalizável
+se, e somente se, ele possui $n$ autovetores linearmente independentes. 
+
+Isto é, {\it $T$ é diagonalizável se, e somente se, o espaço $V$ tem uma base
+formada de autovetores de $T$}.
+
+Para saber se $T$ (ou $A$) é diagonalizável devemos:
+     \begin{itemize}
+     \item Achar todas as raízes do polinômio característico $p(\lambda)$.
+     Lembre que as raízes são os autovalores.
+     \item Calcular para cada $\lambda$ autovalor, uma base de 
+     $Nuc(A-\lambda I)$.
+     \item Junte todas essas bases. Esse novo conjunto é um conjunto l.i.
+     Denotemos esse conjunto por $\mathcal{B}$. Se $\mathcal{B}$ tem $n$ elementos, temos que $T$ (ou $A$) é 
+     diagonalizável. Caso contrário, ele não é diagonalizável.\newline
+     
+     Em outras palavras, se $\lambda_1, \lambda_2, \dots, \lambda_k$ são os autovalores diferentes de $A$, 
+     e $dim (Nuc(A-\lambda_i I))=m_i$, $i=1,\dots, k$. Temos que 
+     $T$ (ou $A$) é diagonalizável se e somente se, 
+     $$ m_1+m_2+\dots + m_k=n.$$
+     \end{itemize}
+ \item Uma condição suficiente para ser diagonalizável é que todos os autovalores
+  de $T$ sejam diferentes.
+  \item Se $Nuc(A-\lambda I)=\{\bar{0}\}$, então $\lambda$ não pode ser um autovalor de $A$.
+  \end{itemize}
+  
+Com essas informações:
+  
+\begin{enumerate}
+   \item Encontre o polinômio característico, autovalores e autovetores das matrizes
+   $$
+\begin{pmatrix}
+1 & -1 \\
+2 & 4 \\
+\end{pmatrix}, \ \ 
+\begin{pmatrix}
+1 & 0 & 0 \\
+-1 & 3 & 0 \\
+3 & 2 & -2 \\
+\end{pmatrix}, \ \
+\begin{pmatrix}
+2 & 2 & 3 \\%\alpha & \beta & | & 1\\
+1 & 2 & 1 \\
+2 & -2 & 1 \\
+\end{pmatrix} 
+$$ 
+ {\it Resposta: }
+ 
+ (a) $p(\lambda)=(\lambda-3)(\lambda-2)$;
+ 
+ $Nuc(A-2I)=\{\alpha(-1,1)^{T}: \alpha \in \mathbb{R}\}$; 
+ $Nuc(A-3I)=\{\alpha(-1,2)^{T}: \alpha \in \mathbb{R}\}$
+ 
+ (b) $p(\lambda)=-(\lambda-3)(\lambda-1)(\lambda+2)$;
+ 
+ $Nuc(A+2I)=\{\alpha(0,0,1)^{T}: \alpha \in \mathbb{R}\}$; 
+ $Nuc(A-1I)=\{\alpha(6,3,8)^{T}: \alpha \in \mathbb{R}\}$;
+ 
+ $Nuc(A-3I)=\{\alpha(0,5,2)^{T}: \alpha \in \mathbb{R}\}$.
+ 
+ (c) $p(\lambda)=-(\lambda-2)(\lambda-4)(\lambda+1)$;
+ 
+ $Nuc(A-2I)=\{\alpha(2,3,-2)^{T}: \alpha \in \mathbb{R}\}$; 
+ 
+ $Nuc(A-4I)=\{\alpha(8,5,2)^{T}: \alpha \in \mathbb{R}\}$;
+ 
+ $Nuc(A+1I)=\{\alpha(-1,0,1)^{T}: \alpha \in \mathbb{R}\}$.
+  
+   \item Verifique quais das matrizes são diagonalizáveis
+$$
+\begin{pmatrix}
+2 & 2 \\
+1 & 0 \\
+\end{pmatrix}, \ \ 
+\begin{pmatrix}
+1 & 1 & -2 \\
+4 & 0 & 4 \\
+1 & -1 & 4 \\
+\end{pmatrix}, \ \
+\begin{pmatrix}
+1 & 2 & 3 \\%\alpha & \beta & | & 1\\
+0 & -1 & 3 \\
+0 & 0 & \alpha \\
+\end{pmatrix} \text{( $\alpha \in \mathbb{R}$)}
+$$   
+ \item Se $v_1=(-4,-4,-1)^{T}$, 
+ $v_2=(5,4,1)^{T}$ e $v_{3}=(5,3,1)^{T}$
+ são autovetores da matriz
+ $$
+ \begin{pmatrix}
+-1/3 & -5/6 & 20/3 \\%\alpha & \beta & | & 1\\
+-2/3 & -1/6 & 16/3 \\
+-1/6 & -1/6 & 11/6 \\
+\end{pmatrix}
+ $$
+ Responda: 
+ \begin{enumerate}
+  \item Sem obter o polinômio característico determine os autovalores
+  que correspondem a estes autovetores;
+  \item A matriz $A$ é diagonalizável? 
+ \end{enumerate}
+ {\it Resposta: } (a) autovalores$=1/2, 1/3$ (b) sim!
+
+ \item Mostre que se $A$ e $B$ são semelhantes, então ambas matrizes tem o mesmo 
+ polinômio característico.
+ 
+ \item Se $A$ é uma matriz triangular superior (inferior), então os autovalores de $A$
+ são os elementos da diagonal principal de $A$ (i.e. os elementos $A_{ii}$).
+ 
+ \item Fatore cada uma das matrizes $A$ em um produto 
+ $A=PDP^{-1}$, onde $D$ é uma matriz diagonal.
+    $$
+\begin{pmatrix}
+0 & 2 \\
+2 & 0 \\
+\end{pmatrix}, \ \ 
+\begin{pmatrix}
+5 & 6 \\
+-2 & -2 \\
+\end{pmatrix}, \ \ 
+\begin{pmatrix}
+2 & 2 & 1 \\
+0 & 1 & 2 \\
+0 & 0 & -1 \\
+\end{pmatrix}, \ \
+\begin{pmatrix}
+1 & 0 & 0 \\%\alpha & \beta & | & 1\\
+-2 & 1 & 3 \\
+1 & 1 & -1 \\
+\end{pmatrix} 
+$$
+ 
+$$
+\begin{pmatrix}
+1 & 1 & 2 \\
+0 & 1 & 0 \\
+0 & 1 & 3 \\
+\end{pmatrix}, \ \
+\begin{pmatrix}
+4 & 3 & 3 \\%\alpha & \beta & | & 1\\
+-2 & 1 & 2 \\
+-1 & -2 & 0 \\
+\end{pmatrix} \ \ 
+\begin{pmatrix}
+1 & 2 & 2 \\
+0 & 1 & 0 \\
+2 & 1 & 2 \\
+\end{pmatrix}, \ \
+\begin{pmatrix}
+3 & -2 & 1 \\%\alpha & \beta & | & 1\\
+0 & 2 & 0 \\
+0 & 0 & 0 \\
+\end{pmatrix} 
+$$
+ {\it Resposta:}
+ 
+ (e) 
+ $ P=\begin{pmatrix}
+1 & 0 & 1 \\
+0 & -2 & 0 \\
+0 & 1 & 1 \\
+\end{pmatrix}, \ \
+D=
+\begin{pmatrix}
+1 & 0 & 0 \\%\alpha & \beta & | & 1\\
+0 & 1 & 0 \\
+0 & 0 & 3 \\
+\end{pmatrix}
+ $
+ 
+ (f) Não é diagonalizável
+ 
+ (g) $ P=\begin{pmatrix}
+-3 & 1 & 1 \\
+0 & -6 & 0 \\
+2 & 4 & 1 \\
+\end{pmatrix}, \ \
+D=
+\begin{pmatrix}
+-1 & 0 & 0 \\%\alpha & \beta & | & 1\\
+0 & 1 & 0 \\
+0 & 0 & 4 \\
+\end{pmatrix}
+ $
+ 
+ (h)
+ $ P=\begin{pmatrix}
+-1& 2 & 1 \\
+0 & 1 & 0 \\
+3 & 0 & 0 \\
+\end{pmatrix}, \ \
+D=
+\begin{pmatrix}
+0 & 0 & 0 \\%\alpha & \beta & | & 1\\
+0 & 2 & 0 \\
+0 & 0 & 3 \\
+\end{pmatrix}
+ $
+ 
+ \item Para as matrizes do item anterior, use a fatoração $SDS^{-1}$ 
+ para calcular $A^{3}$ e para aquelas matrizes invertíveis
+ calcule $A^{-1}$.
+ \item Para cada uma das matrizes a seguir, encontre uma matriz $B$ com $B^{2}=A$.
+    $$
+\begin{pmatrix}
+2 & 1 \\
+-2 & -1 \\
+\end{pmatrix}, \ \ 
+\begin{pmatrix}
+9 & -5 & 3 \\
+0 & 4 & 3 \\
+0 & 0 & 1 \\
+\end{pmatrix}. 
+$$
+ {\it Dica:} Use a fatorização, $A=SDS^{-1}$.
+ \item Seja $A$ matriz diagonalizável cujos autovalores são iguais a $1$ ou a $-1$.
+ Verifique que $A^{-1}=A$.
+ \item Mostre que qualquer matriz da forma
+  $$
+\begin{pmatrix}
+a & 1 & 0 \\
+0 & a & 1 \\
+0 & 0 & b \\
+\end{pmatrix}
+ $$
+não é diagonalizável independente do valor de $a$ ou $b$.
+
+{\it Dica:} Analize $Nuc(A-\lambda I)$, para 
+$\lambda$ sendo um autovalor adequado. 
+ \item Seja uma matriz $A$ de ordem $4\times4$, e seja $\lambda$
+ um autovalor de multiplicidade 3. Se o posto de $A-\lambda I$ é 1.
+ Mostre que $A$ é diagonalizável.
+ \item Encontre os valores de $\alpha$, para os quais a matriz não é diagonalizável ou mostre que 
+ não existe tal valor.
+ $$
+\begin{pmatrix}
+1 & 1 & 0 \\
+1 & 1 & 0 \\
+0 & 0 & \alpha \\
+\end{pmatrix}, \ \
+\begin{pmatrix}
+1 & 1 & 1 \\%\alpha & \beta & | & 1\\
+1 & 1 & 1 \\
+0 & 0 & \alpha \\
+\end{pmatrix}, \ \  
+\begin{pmatrix}
+1 & 2 & 0 \\
+2 & 1 & 0 \\
+2 & -1 & \alpha \\
+\end{pmatrix}, \ \
+\begin{pmatrix}
+4 & 6 & -2 \\%\alpha & \beta & | & 1\\
+-1 & -1 & 1 \\
+0 & 0 & \alpha \\
+\end{pmatrix}.  
+ $$ 
+ {\it Resposta:} (a) não existe; (b) $\alpha=2$; 
+ (c) $\alpha \in \{-1,3\}$; (d) $\alpha=1$.
+ \item Mostre que se $A$ e $B$ são duas matrizes com a mesma matriz
+ diagonalizante $S$, então $AB=BA$. Em outras palavras, $A$ e $B$ comutam
+ entre si.
+ 
+ \item Considere a transformação linear $T:\mathcal{P}_{2}\rightarrow \mathcal{P}_2$
+ definida como 
+ $$T(p)(x)=(3x+2)p'(x)+p(x), \text{ para todo } p \in \mathcal{P}_2.$$
+ Determine todos os autovalores e autovetores de $T$.
+ Para isso:
+   \begin{enumerate}
+    \item Calcule a matriz associada a $T$ em relação à base 
+    $\mathcal{B}=\{1,x,x^{2}\}$.
+    \item Ache todos os autovalor e autovetores de $[T]_{\mathcal{B}}^{\mathcal{B}}$;
+    \item Escreva o elemento correspondente em $\mathcal{P}_2$ para cada autovetores 
+    de $[T]_{\mathcal{B}}^{\mathcal{B}}$.
+   \end{enumerate}
+  {\it Resposta: } 
+  (a)
+  $
+  [T]_{\mathcal{B}}^{\mathcal{B}}=
+  \begin{pmatrix}
+1 & 2 & 0 \\%\alpha & \beta & | & 1\\
+0 & 4 & 4 \\
+0 & 0 & 7 \\
+\end{pmatrix}$; 
+  
+  (b) Autoespaços de $[T]_{\mathcal{B}}^{\mathcal{B}}$: 
+  
+  $\{\alpha(1,0,0):\alpha \in \mathbb{R}\}$, 
+  $\{\alpha(2,3,0):\alpha \in \mathbb{R}\}$ e
+  $\{\alpha(4,12,9):\alpha \in \mathbb{R}\}$.
+  
+  (c) Os autoespaçoes correspondem aos subespaços de $\mathcal{P}_2$: 
+  
+  $\{\alpha :\alpha \in \mathbb{R}\}$, 
+  $\{2\alpha +3\alpha x:\alpha \in \mathbb{R}\}$ e
+  $\{4\alpha+12\alpha x+9\alpha x^{2}:\alpha \in \mathbb{R}\}$.
+ \end{enumerate}
+
+Considere um espaço vetorial $V$ de dimensão finita, munido com um 
+produto interno $\langle \cdot, \cdot \rangle$.
+Usando o produto interno podemos ``medir o tamanho'' de um vetor $v$, como 
+$$\|v\|:=\sqrt{\langle v, v \rangle}.$$ 
+Além disso para $v$ e $w$ em $V$ diferentes de zero, podemos ``medir o ângulo'' 
+entre $v$ e $w$, usando a relação 
+$$\text{cos}(\theta)=\frac{\langle v, w\rangle}{\|v\|\|w\|}.$$
+Quando $\theta=90^{\circ}$ dizemos que $v$ e $w$ são ortogonais, em outras palavras, 
+$v$ e $w$ são ortogonais se e somente se, $\langle v, w \rangle=0$.
+Usamos a notação $v \perp w$ quando $\langle v, w \rangle=0$. 
+
+Dado um subespaço $X$ de $V$, $X^{\perp}:=\{ v \in V: \langle v, x \rangle=0 \ \ \forall x \in X\}$.
+$X^{\perp}$ é chamado de {\it espaço ortogonal} (ou {\it complemento ortogonal}) de $X$. 
+Observe que sempre temos que $X^{\perp}$ é um subespaço vetorial e 
+ \begin{itemize}
+  \item $X \cap X^{\perp}=\{\bar{0}\}$. Isto é, o único elemento de $V$
+  que está em $X$ e $X^{\perp}$ simultaneamente é o elemento zero.
+  \item $V=X\oplus X^{\perp}$. Assim, todo elemento $v$ de $V$ pode ser escrito 
+  (de forma única) como 
+  $v=x+y$, onde $x$ está em $X$ e $y$ está em $X^{\perp}$.
+  \item $(X^{\perp})^{\perp}=X$, i.e., o espaço ortogonal de $X^{\perp}$
+  é o próprio $X$.
+  \item Temos que $\{\bar{0}\}^{\perp}=V$ e $V^{\perp}=\{\bar{0}\}$.
+  \item Se $X$ tem uma base $\{x_1,x_2,\dots,x_r\}$. Para verificar que $v$ está em $X^{\perp}$
+  é suficiente verificar que $\langle v, x_i \rangle=0$, para todo $i=1,\dots,r$.
+ \end{itemize}
+
+Em $\mathbb{R}^{n}$, existe um produto interno natural, 
+$\langle \bar{x}, \bar{y} \rangle=x_1y_1+\dots+x_ny_n$, chamado também de produto escalar.
+Agora, seja $A \in M_{m \times n}(\mathbb{R})$. Associada a essa matriz temos 
+quatro espaços fundamentais: $Nuc(A)$, $col(A)$, $Nuc(A^{T})$ e $col(A^{T})(=lin(A))$, 
+onde $A^{T}$ é a transposta de $A$. É fácil ver que 
+$$ \langle \bar{y}, A \bar{x} \rangle= \langle A^{T}\bar{y}, \bar{x} \rangle=0, \ \ 
+\text{ para todo } \bar{x} \in \mathbb{R}^{n}, \bar{y} \in \mathbb{R}^{m}.$$
+Podemos relacionar os quatros espaços fundamentais, usando a ideia 
+de complemento ortogonal. De fato, temos que: 
+$$ Nuc(A)=col(A^{T})^{\perp} \ \ \text{e} \ \ Nuc(A^{T})=col(A)^{\perp}$$
+e como consequência 
+$$ Nuc(A)^{\perp}=col(A^{T}) \ \ \text{e} \ \ Nuc(A^{T})^{\perp}=col(A).$$
+Usando essas informações responda e/ou calcule:
+ \begin{enumerate}
+ \setcounter{enumi}{14}
+ \item Para cada uma das matrizes a seguir 
+ determine uma base para 
+ $col(A^{T})$, $Nuc(A)$, $col(A)$ e $Nuc(A^{T})$.
+ $$
+\begin{pmatrix}
+3 & 4 \\
+6 & 8 \\
+\end{pmatrix}, \ \
+\begin{pmatrix}
+1 & 3 & 1 \\%\alpha & \beta & | & 1\\
+2 & 4 & 0 \\
+\end{pmatrix}, \ \  
+\begin{pmatrix}
+4 & -2  \\
+1 & 3 \\
+2 & 1 \\
+3 & 4 \\
+\end{pmatrix}, \ \
+\begin{pmatrix}
+1 & 0 & 0 & 0 \\%\alpha & \beta & | & 1\\
+0 & 1 & 1 & 1 \\
+0 & 0 & 1 & 1 \\
+1 & 1 & 2 & 2 \\
+\end{pmatrix}.  
+ $$ 
+ {\it Resposta:} 
+ 
+ (a) 
+ Para $col(A^{T})$ uma base é $\{(3,4)^{T}\}$;
+ 
+ Para $Nuc(A)$ uma base é $\{(-4,3)^{T}\}$;
+ 
+ Para $col(A)$ uma base é $\{(1,2)^{T}\}$;
+     
+ Para $Nuc(A^{T})$ uma base é $\{(-2,1)^{T}\}$.
+    
+ (d) Para $col(A^{T})$ uma base é 
+    $\{(1,0,0,0)^{T}, (0,1,0,0)^{T}, (0,0,1,1)^{T}\}$;
+     
+     Para $Nuc(A)$ uma base é $\{(0,0,-1,1)^{T}\}$;
+     
+     Para $Nuc(A^{T})$ uma base é 
+     $\{(1,1,1,-1)^{T}\}$.
+     
+     Para $col(A)$ uma base é 
+     $\{(1,0,0,1)^{T}, (0,1,0,1)^{T}, (0,0,1,1)^{T}\}$.
+     
+ \item Seja $X$ o subespaço de $\mathbb{R}^{3}$ gerado por $\bar{x}=(2,-2,2)^{T}$.
+    \begin{enumerate}
+     \item Encontre uma base para $X^{\perp}$.    
+     \item Descreva geometricamente $X$ e $X^{\perp}$.
+     \end{enumerate}
+ {\it Resposta:} Uma base é 
+ $\{(1,1,0)^{T},(-1,0,1)^{T}\}$.
+ \item Seja $X$ o subespaço de $\mathbb{R}^{4}$ gerado por $\bar{x}_1=(2,0,-4,2)^{T}$, 
+  $\bar{x}_2=(0,1,3,-2)^{T}$. Encontre uma base para $X^{\perp}$.    
+  
+  {\it Resposta:} 
+  
+  Uma base é $\{(-1,2,0,1)^{T},(2,-3,1,0)^{T}\}$.
+  
+  \item Seja $\langle \cdot, \cdot \rangle$ um produto interno de $V$. 
+  Verifique as seguintes identidades
+    \begin{itemize}
+     \item {\it Identidade polar: }
+     $\langle v, w\rangle=\frac{1}{4}(\|v+w\|^{2}-\|v-w\|^{2})$.
+     \item {\it Lei do paralelogramo: }
+     $\|v\|^{2}+\|w\|^{2}=\frac{1}{2}(\|v+w\|^{2}+\|v-w\|^{2})$.
+    \end{itemize}
+
+  \item Sejam $X$, $Y$ subespaços de $\mathbb{R}^{n}$.
+  Mostre que (a) $(X+Y)^{\perp}=X^{\perp}\cap Y^{\perp}$; 
+  (b) $(X\cap Y)^{\perp}=X^{\perp}+Y^{\perp}$; (c) se $X \subset Y$, então 
+  $Y^{\perp} \subset X^{\perp}$.
+  
+  \item Seja $P=A(A^{T}A)^{-1}A^{T}$, onde $A$ é uma matriz $m\times n$ 
+  de posto $r$.
+    \begin{enumerate}
+     \item Verifique de $P \bar{b}=\bar{b}$ para todo $\bar{b} \in col(A)$.
+     \item Se $\bar{b} \in col(A)^{\perp}$, então $P(\bar{b})=\bar{0}$.
+     \item Se $r=n$, mostre que $P^{2}=P$.
+     \item Se $r=n$, verifique que $P$ é simétrica. 
+     
+     {\it Dica:} Use a propriedade 
+     $(B^{-1})^{T}=(B^{T})^{-1}$ para toda matriz $B$ invertível.
+    \end{enumerate}
+
+  \end{enumerate}
+
+Em muitos casos certas bases são melhores que outras, entre elas, as bases ortogonais
+têm um lugar relevante.
+Seja $\mathcal{B}=\{v_1, v_2, \dots, v_n\}$ uma base de $V$. 
+
+Dizemos que $\mathcal{B}$ é uma {\it base ortogonal}, se 
+$\mathcal{B}$ é uma base e $\langle v_{j},v_{i} \rangle=0$ 
+para $i\neq j$. A grosso modo, $\mathcal{B}$ é uma base ortogonal se $\mathcal{B}$
+é uma base onde o vetor 
+$v_{j}$ não influência ou é influenciada 
+por $v_{i}$ para $i\neq j$.
+Se adicionalmente pedimos que $\|v_{i}\|=1$ para todo $i=1,\dots,n$, dizemos que 
+$\mathcal{B}$ é uma {\it base ortonormal}.
+
+Uma base ortogonal possuem propriedades interessantes
+  \begin{itemize}
+   \item Seja $\mathcal{B}=\{v_1, v_2, \dots, v_n\}$ uma {\it base ortonormal}. Então, 
+   sempre temos que 
+   %se $v=\alpha_1v_1+\alpha_2v_2+\dots+\alpha_nv_n$ temos que 
+   $$ \|\alpha_1v_1+\alpha_2v_2+\dots+\alpha_nv_n\|^{2}=\alpha_{1}^{2}+\alpha_{2}^{2}+\dots+\alpha_{n}^{n}.$$
+   A última expressão é chamado de {\it fórmula de Parseval}.
+   \item Seja $\mathcal{B}=\{v_1, v_2, \dots, v_n\}$ uma base ortonormal. 
+   Se  $v=\alpha_1v_1+\alpha_2v_2+\dots+\alpha_nv_n$
+   e  $w=\beta_1v_1+\beta_2v_2+\dots+\beta_nv_n$, então:
+   $\langle v,w \rangle= \alpha_1\beta_1+\dots+\alpha_n\beta_n$.
+   \item Seja $X \subset V$ um subespaço vetorial. Considere uma base ortogonal
+   $\mathcal{B}_{X}=\{v_1, v_2, \dots, v_n\}$ de $X$. Então, a {\it projeção ortogonal} 
+   de $v$ sobre $X$, $\text{proj}_{X}(v)$,  é dada por
+   $$ \text{proj}_{X}(v)= \frac{\langle v, v_1 \rangle}{\|v_1\|^2} v_{1}+
+                          \frac{\langle v, v_2 \rangle}{\|v_2\|^2} v_{2}+
+                          \dots+
+                          \frac{\langle v, v_n \rangle}{\|v_n\|^2} v_{n}. $$  
+   Lembre que a projeção ortogonal de $v$ sobre $X$, $\text{proj}_{X}(v)$, é o único elemento de 
+   $X$ tal que $v-\text{proj}_{X}(v) \in X^{\perp}$.
+   
+   Os números $\langle v, v_1 \rangle/\|v_1\|^2, \dots, \langle v, v_n \rangle/\|v_n\|^2$
+   são chamados {\it coeficientes de Fourier} de $v$ em relação a $\{v_1, v_2, \dots, v_n\}$. 
+   
+   As vezes denotemos $\text{proj}_{X}(v)$ por $\text{proj}(v;X)$.
+  \end{itemize}
+
+Sabemos que todo espaço vetorial tem base, mas será que ele admite uma base ortogonal? 
+A resposta é sim. O processo de Gram-Schmidt é o processo pelo qual apartir 
+de uma base qualquer chegamos a outra base que é ortogonal.
+ 
+ Seja $\mathcal{B}=\{v_1, v_2, \dots, v_n\}$ uma base de $V$.
+ Defina de forma recursiva os vetores $\{u_1, u_2, \dots, u_n\}$ 
+ 
+ \begin{eqnarray*}
+  \begin{array}{llll}
+  & &u_{1}:=v_1  &\\
+  & &u_{2}:=v_{2}-\frac{\langle v_2,u_1\rangle}{\|u_1\|^{2}}u_{1} &(=v_{2}-\text{proj}(v_2;Span\{u_1\}))\\
+  & &u_{3}:=v_{3}-\frac{\langle v_3,u_1\rangle}{\|u_1\|^{2}}u_{1}-\frac{\langle v_3,u_2\rangle}{\|u_2\|^{2}}u_{2}
+  & (=v_{3}-\text{proj}(v_3;Span\{u_1,u_2\}))\\
+  & & \dots \\ 
+  & &u_{n}:=v_{n}-\sum_{i=1}^{n-1}\frac{\langle v_n,u_i\rangle}{\|u_i\|^{2}}u_{i}
+  & (=v_{n}-\text{proj}(v_n;Span\{u_1,u_2,\dots,u_{n-1}\}))\\
+  \end{array}
+ \end{eqnarray*}
+
+ \begin{itemize}
+  \item 
+ O conjunto $\mathcal{U}=\{u_1, u_2, \dots, u_n\}$ é uma base ortogonal de $V$ obtido pelo processo 
+ de Gram-Schmidt. {\it Para que  $\mathcal{U}$ 
+ seja uma base ortonormal basta dividir cada elemento por sua respectiva norma}.
+ \item
+ Uma possível alternativa para achar uma base ortogonal para um subespaço $X \subset \mathbb{R}^{m}$, é
+ escrever $X$ como $col(A)$ para certa matriz $A \in M_{m \times n}(\mathbb{R})$, achar uma base para $col(A)$ 
+ e logo fazer o processo de Gram-Schmidt
+ para essa base.
+ \end{itemize}
+  
+ Com essas informações responda
+ 
+ \begin{enumerate}
+ \setcounter{enumi}{20}
+ \item Para cada matriz, use o processo de 
+ Gram-Schmidt para encontrar uma base ortogonal para 
+ $col(A)$.
+ $$
+\begin{pmatrix}
+-1 & 3 \\
+1 & 5 \\
+\end{pmatrix}, \ \
+\begin{pmatrix}
+2 & 5 \\%\alpha & \beta & | & 1\\
+1 & 10 \\
+\end{pmatrix} 
+ $$ 
+ 
+ {\it Resposta:}
+ 
+ (a)$\{(-1/\sqrt{2},1/\sqrt{2})^{T},
+       (1/\sqrt{2},1/\sqrt{2},2)^{T}\}$;
+ 
+ (b)$\{(2/\sqrt{5},1\sqrt{5})^{T},
+       (-1/\sqrt{5},2/\sqrt{5})^{T}\}$.
+ \item Dada a base 
+ $\{(1,2,-2)^{T},(4,3,2)^{T},(1,2,1)^{T}\}$ 
+ em $\mathbb{R}^{3}$.
+ Use o processo de Gram-Schmidt para encontrar uma base 
+ ortogonal. 
+ 
+ {\it Resposta:} 
+ $\{(1/3,2/3,-2/3)^{T},(2/3,1/3,2/3)^{T},(-2/3,2/3,1/3)^{T}\}$.
+ \item Considere o espaço vetorial $C[-1,1]$ munido do produto 
+ interno 
+ $$ \langle f, g \rangle := \int_{-1}^{1} f(x)g(x)dx. $$
+ Encontre uma base ortonormal para o subespaço gerado por 
+ $\{1,x,x^2\}$.
+ 
+ {\it Resposta:} 
+ 
+ Uma escolha de base é $\{u_1(x),u_2(x), u_3(x)\}$, onde 
+ $u_{1}(x)=1/\sqrt{2}$; $u_{2}(x)=(\sqrt{6}/2)x$; $u_{3}(x)=(3\sqrt{10}/4)(x^2-1/3)$.
+ 
+ \item Encontre uma base ortonormal para o subespaço de $\mathbb{R}^{3}$ 
+ formado por todos os vetores $(a,b,c)$ tais que $a+b+c=0$.
+ 
+ {\it Resposta:} Uma base é $\{(-1,0,1)^{T}, (-1,1,0)^{T}\}$.
+ 
+ \item Procure uma base ortonormal para $X=\{(a,b,c,d)^{T}: a-b-2c+d=0\}$. 
+ 
+ {\it Resposta:} Uma possível escolha é 
+ $\{(-1,0,0,1)^{T}, (2,0,1,0)^{T}, (1,1,0,0)^{T}\}$.
+
+ \item Considere os vetores 
+ $\bar{x}_1=(1/2)(1,1,1,-1)^{T}$
+ e $\bar{x}_2=(1/6)(1,1,3,5)^{T}$.
+ Os vetores $\bar{x}_1$ e $\bar{x}_2$ formam um conjunto ortonormal de 
+ $\mathbb{R}^{4}$. Estenda esse conjunto a uma base ortonormal de $\mathbb{R}^{4}$, 
+ isto é, encontre $\bar{x}_3$ e $\bar{x}_4$ tal que 
+ $\{\bar{x}_1,\bar{x}_2,\bar{x}_3, \bar{x}_4\}$
+ seja uma base ortonormal, encontrando uma base ortogonal para o núcleo
+ $$
+ \begin{pmatrix}
+1 & 1 & 1 & -1 \\%\alpha & \beta & | & 1\\
+1 & 1 & 3 & 5 \\
+\end{pmatrix}.  
+ $$ 
+ \end{enumerate}
+
+ Considere uma matriz $Q \in M_{n \times n}(\mathbb{R})$ 
+ cujas {\it colunas formam um conjunto ortonormal} de $\mathbb{R}^{n}$. 
+ Dita matriz é chamada de {\it matriz ortogonal} e possue as seguintes propriedades:
+  \begin{itemize}
+   \item $Q^{T}Q=I$, equivalentemente $Q^{T}=Q^{-1}$
+   \item $\langle Q\bar{x},Q\bar{y} \rangle=\langle \bar{x},\bar{y} \rangle$, para todo 
+   $\bar{x},\bar{y} \in \mathbb{R}^{n}$, ``{\it $Q$ preserva o produto interno}''.
+   \item $\| Q\bar{x}\|=\|\bar{x}\|$, para todo 
+   $\bar{x}\in \mathbb{R}^{n}$, ``{\it $Q$ preserva a norma}''.
+  \end{itemize}
+  Exemplo de matriz ortonormal é 
+   $$
+   Q_{\theta}=
+ \begin{pmatrix}
+\cos\theta  & -\text{sen}\theta  \\%\alpha & \beta & | & 1\\
+\text{sen}\theta  & \text{cos}\theta \\
+\end{pmatrix}.  
+ $$ 
+ Matrizes ortogonais servem para levar bases ortogonais em bases ortogonais. 
+ \begin{enumerate}
+  \setcounter{enumi}{26}
+  \item Verifique: 
+  
+  (a) Se $Q$ é uma matriz ortogonal então 
+  $|\lambda|=1$ para todo autovalor de $Q$; 
+  
+  (b)
+  Se $Q$ é uma matriz simétrica, então 
+  $\lambda\geq 0$ para todo autovalor de $Q$.
+  \item Ache as coordenadas do ponto $\bar{p}$
+  em relação ao sistema de coordenadas $\mathcal{B}$, nos seguintes casos:
+    \begin{enumerate}
+     \item $\mathcal{B}=\{(1/\sqrt{2},-1/\sqrt{2})^{T},(1/\sqrt{2},1/\sqrt{2})^{T} \}$ e $\bar{p}=(1,3)^{T}$
+     \item $\mathcal{B}=\{(1/\sqrt{2},-1/\sqrt{2}, 0)^{T},(0,0,1)^{T}, (1/\sqrt{2},1/\sqrt{2},0)^{T} \}$ e 
+     $\bar{p}=(2,-1,2)^{T}$
+    \end{enumerate}
+  {\it Rpta: } As novas coordenadas de $\bar{p}$ são (a) $(-\sqrt{2}, 2\sqrt{2})^{T}$; 
+  (b) $(3\sqrt{2}/2,2,\sqrt{2}/2)$.
+ \end{enumerate}
+
+ Algumas propriedades de $A \in M_{n \times n}(\mathbb{R})$ quando $A$ é simétrica.
+ \begin{itemize}
+  \item Se $A$ é simétrica e $\lambda$ e $\mu$ são autovalores diferentes com autovetores $v$ e $w$, 
+  então $\langle v, w\rangle=0$. 
+  Em outras palavras, 
+  $Nuc(A-\lambda I) \perp Nuc(A-\mu I)$, se $\lambda$ e $\mu$ são autovalores diferentes.
+  
+  \item {\it Teorema espectral para matrizes simétricas}
+  
+  Toda matriz $A$ simétrica pode ser escrita como $QDQ^{T}$, onde $Q$
+  é uma matriz ortogonal ($Q^{T}=Q^{-1}$) e $D$ uma matriz diagonal. \newline
+   
+  Para calcular $Q$ observe que: 
+   \begin{itemize}
+    \item 
+  Como os autovetores associados a diferentes autovalores já são ortogonais, 
+  para diagonalizar a matriz simétrica $A$ através de uma matriz ortogonal $Q$, 
+  só precisamos encontrar, para cada autovalor, uma base de autovetores ortonormais associados a eles. 
+  Aqui podemos podemos aplicar o processo de Gram-Schmidt a cada conjunto de autovetores l.i. associados a cada um 
+  dos autovalores.
+   \end{itemize}
+ \end{itemize}
+ 
+\begin{enumerate}
+ \setcounter{enumi}{28}
+ \item Para cada uma das seguintes matrizes simétricas, 
+ ache uma matriz ortogonal $Q$ e uma matriz diagonal $D$
+ tal que $Q^{T}AQ=D$.
+ $$
+ \begin{pmatrix}
+2 & 2 \\
+2 & 2  \\
+\end{pmatrix}, \ \
+\begin{pmatrix}
+0 & 0 & 1 \\
+0 & 0 & 0 \\
+1 & 0 & 0 \\
+\end{pmatrix}, \ \
+\begin{pmatrix}
+0 & 0 & 0 \\%\alpha & \beta & | & 1\\
+0 & 2 & 2 \\
+0 & 2 & 2 \\
+\end{pmatrix}, \ \  
+\begin{pmatrix}
+1 & 1 & 0 \\
+1 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{pmatrix}, \ \
+\begin{pmatrix}
+2 & 1 & 1 \\%\alpha & \beta & | & 1\\
+1 & 2 & 1 \\
+1 & 1 & 2 \\
+\end{pmatrix}.  
+ $$ 
+ 
+ {\it Resposta:}
+
+ (a) 
+$
+Q=
+\begin{pmatrix}
+-1/\sqrt{2} & 1/\sqrt{2} \\
+1/\sqrt{2} & 1/\sqrt{2}  \\
+\end{pmatrix}, \ \
+D=
+\begin{pmatrix}
+0 & 0 \\
+0 & 4  \\
+\end{pmatrix}
+$;
+
+(b)
+$
+Q=
+\begin{pmatrix}
+0 & -1/\sqrt{2} & 1/\sqrt{2} \\
+1 & 0 & 0 \\
+0 & 1/\sqrt{2} & 1/\sqrt{2} \\
+\end{pmatrix}, \ \
+D=
+\begin{pmatrix}
+0 & 0 & 0 \\%\alpha & \beta & | & 1\\
+0 & -1 & 0 \\
+0 & 0 & 1 \\
+\end{pmatrix}.
+$
+
+(c)
+$
+Q=
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & -1/\sqrt{2} & 1/\sqrt{2} \\
+0 & 1/\sqrt{2} & 1/\sqrt{2} \\
+\end{pmatrix}, \ \
+D=
+\begin{pmatrix}
+0 & 0 & 0 \\%\alpha & \beta & | & 1\\
+0 & 0 & 0 \\
+0 & 0 & 4 \\
+\end{pmatrix}.
+$
+
+
+(d)
+$
+Q=
+\begin{pmatrix}
+-1/\sqrt{2} & 0 & 1/\sqrt{2} \\
+ 1/\sqrt{2} & 0 & 1/\sqrt{2} \\
+ 0 & 1 & 0 \\
+\end{pmatrix}, \ \
+D=
+\begin{pmatrix}
+0 & 0 & 0 \\%\alpha & \beta & | & 1\\
+0 & 1 & 0 \\
+0 & 0 & 2 \\
+\end{pmatrix}.
+$
+
+(e)
+$
+Q=
+\begin{pmatrix}
+-\sqrt{2}/2 & -\sqrt{6}/6 & \sqrt{3}/3 \\
+\sqrt{2}/2 & -\sqrt{6}/6 & \sqrt{3}/3 \\
+0 & \sqrt{6}/6 & \sqrt{3}/3 \\
+\end{pmatrix}, \ \
+D=
+\begin{pmatrix}
+1 & 0 & 0 \\%\alpha & \beta & | & 1\\
+0 & 1 & 0 \\
+0 & 0 & 4 \\
+\end{pmatrix}.
+$
+\end{enumerate}
+ 
+
+%Aqui algumas aplicações:
+
+{\it Problemas de mínimos quadráticos.} 
+(a) Seja $A \in M_{m\times n}(\mathbb{K})$. Dado $\bar{b} \in \mathbb{R}^{m}$
+queremos achar o ``melhor'' $\bar{x} \in \mathbb{R}^{n}$
+tal que $\bar{b}-A\bar{x}$ tenha o menor erro de aproximação possível, i.e. 
+$\|\bar{b}-A\bar{x}\|\leq \|\bar{b}-Ax\|$ para todo $x \in \mathbb{R}^{n}$.
+ \begin{itemize}
+  \item O conjunto dos $\bar{x}\in \mathbb{R}^{n}$
+ que possuem o menor erro possível é dado pelo conjunto solução do sistema linear 
+ $$ A^{T}A \bar{x}=A^{T}\bar{b}.$$
+ Dita equação é chamada de {\it equação normal}. 
+ O melhor valor que aproxima $\bar{b}$ é $A\bar{x}$. Se $A^{T}A$ fosse invertível,
+ temos que $\bar{x}=(A^{T}A)^{-1}A^{T}\bar{b}$.
+ \end{itemize}
+ 
+ (b) Dado $\bar{b} \in \mathbb{R}^{m}$ e um subespaço vetorial $Y$ de $\mathbb{R}^{m}$, 
+queremos achar o ``melhor'' $\bar{y} \in Y$
+tal que $\bar{b}-\bar{y}$ tenha o menor erro de aproximação possível, i.e. 
+$\|\bar{b}-\bar{y}\|\leq \|\bar{b}-y\|$ para todo $y \in Y$. Para isso, encontre 
+uma matriz $A \in M_{m\times n}(\mathbb{K})$, 
+tal que $Y=\{A x: x \in \mathbb{R}^{n}\}$ e logo use o item (a).
+Melhores matrizes são aquelas com $n$ pequeno.
+ \begin{enumerate}
+ \setcounter{enumi}{29}
+ \item Projete o vetor $\bar{b}=(b_1, \dots, b_m)$ na reta que passa por 
+ $\bar{a}=(1,\dots,1)$. Resolva esse problema revolvendo 
+ $m$ equações $\bar{a}\bar{x}=\bar{b}$ em um incógnita (por meio 
+ dos mínimos quadrados)
+    \begin{enumerate}
+     \item Resolva $\bar{a}^{t}\bar{a}\bar{x}=\bar{a}^{T}\bar{b}$, para mostrar
+     que a solução $\hat{x}$ é a {\it média aritmétrica} dos $b's$ 
+     \item Encontre $e:=\bar{b}-\bar{a}^{T}\hat{x}$,
+     calcule $\|e\|^{2}$ ({\it a variância}) e $\|e\|$ ({\it desvio padrão}).
+    \end{enumerate}
+
+ \item 
+ Encontre a solução de mínimos quadráticos
+ para cada um dos sistemas a seguir
+ $$
+(a) \ \ 
+\left \{
+\begin{matrix}
+x_1 &+&2x_2 &=& 3 \\%\alpha & \beta & | & 1\\
+2x_1 &+& 4x_2&=&2  \\
+-x_1 &-& 2x_2 &=&1 \\
+\end{matrix}
+\right. \ \ 
+(b) \ \ 
+\left \{
+\begin{matrix}
+-x_1 &+&x_2 &=& 10 \\%\alpha & \beta & | & 1\\
+2x_1 &+& x_2&=&5  \\
+x_1 &-& 2x_2 &=&20 \\
+\end{matrix} \right.
+$$
+e 
+$$
+(c) \ \ 
+\left \{
+\begin{matrix}
+x_1  &+& x_2 &+&x_3&=& 4 \\%\alpha & \beta & | & 1\\
+-x_1 &+& x_2 &+&x_3&=& 2 \\
+     &-& x_2 &+&x_3&=& 1 \\%\alpha & \beta & | & 1\\
+ x_1 & &     &+&x_3&=& 2 \\
+\end{matrix}\right.
+$$ 
+ {\it Resposta: } 
+ 
+ (a) $\{(1,0)^{T}+\beta(-2,1): \beta \in \mathbb{R}\}$;
+ 
+ (b) $\{(19/7,-26/7)^{T}\}$; (c) $\{(11/15, 16/15, 9/15)^{T}\}$.
+ 
+ \item Para cada um dos sistemas $A\bar{x}=\bar{b}$ a seguir, 
+ encontre todas a soluções de mínimos quadráticos
+ $$
+(a) \ \ 
+A
+=\begin{pmatrix}
+1 & 2  \\%\alpha & \beta & | & 1\\
+2 & 4  \\
+-1 & -2 \\
+\end{pmatrix}, \ \ 
+\bar{b}=
+\begin{pmatrix}
+3 \\
+2 \\
+1 \\
+\end{pmatrix}$$
+$$
+(b) \ \ 
+A=
+\begin{pmatrix}
+1 & 1 & 3 \\%\alpha & \beta & | & 1\\
+-1 & 3 & 1 \\
+1 & 2 & 4 \\
+\end{pmatrix}, \ \ 
+\bar{b}=\begin{pmatrix}
+-2 \\
+0 \\
+8 \\
+\end{pmatrix}.
+ $$ 
+ {\it Resposta: } 
+ 
+ (a) $\{(1-2\beta, \beta)^{T}: \beta \in \mathbb{R}\}$; 
+ (b) $\{(2-2\beta, 1-\beta, \beta)^{T}: \beta \in \mathbb{R}\}$;
+ \end{enumerate}
+ 
+ {\it Aplicações na identificação de Cônicas:}
+ Uma equação quadrática nas variáveis $x$ e $y$
+ tem a seguinte forma:
+ $ ax^{2}+bxy+cy^{2}+dx+ey+f=0$,
+ onde $a,b,c,d,e,f \in \mathbb{R}$ é $a$, $b$ e $c$ não são todos nulos.
+ Usando matrizes podemos escrever essa equação como:
+ $$
+ (x \ \ y)^{T}
+ \begin{pmatrix}
+a & b/2  \\%\alpha & \beta & | & 1\\
+b/2 & c \\
+\end{pmatrix}
+\begin{pmatrix}
+x \\
+y \\
+\end{pmatrix}+
+(d \ \ e)^{T}
+\begin{pmatrix}
+x \\
+y \\
+\end{pmatrix}+f=0,$$
+Agora, encontre uma matriz $Q$ ortonormal (i.e. $Q^{-1}=Q^{T}$)  e  $D$ diagonal, talque
+$$ \begin{pmatrix}
+a & b/2  \\%\alpha & \beta & | & 1\\
+b/2 & c \\
+\end{pmatrix}=Q^{-1}DQ, \text{ onde } 
+D=
+\begin{pmatrix}
+\lambda_1 & 0  \\%\alpha & \beta & | & 1\\
+0 & \lambda_2 \\
+\end{pmatrix}.$$
+Se isso for possível, escolha como novas coordenadas $x'$ e $y'$ 
+definidas por 
+$$
+ \begin{pmatrix}
+x' \\%\alpha & \beta & | & 1\\
+y' \\
+\end{pmatrix}=Q
+\begin{pmatrix}
+x \\
+y \\
+\end{pmatrix}.$$
+Logo usamos as novas coordenadas $x'$ e $y'$, para re-escrever 
+$ ax^{2}+bxy+cy^{2}+dx+ey+f=0$ como 
+$$
+ (x' \ \ y')^{T}
+ \begin{pmatrix}
+\lambda_1 & 0  \\%\alpha & \beta & | & 1\\
+0 & \lambda_2 \\
+\end{pmatrix}
+\begin{pmatrix}
+x' \\
+y' \\
+\end{pmatrix}+
+(d \ \ e)^{T}
+Q^{T}
+\begin{pmatrix}
+x' \\
+y' \\
+\end{pmatrix}+f=0.$$
+Apartir da última equação é fácil saber se é uma elipse, 
+parábola ou hipérbole.
+\begin{enumerate}
+ \setcounter{enumi}{32}
+ \item Para cada uns das equações a seguir, 
+ encontre uma mudança apropriada de coordenadas 
+ (isto é, uma rotação e/ou translação), 
+ de modo que a cônica resultante esteja em forma canônica, 
+ identifique a curva e esboçe seu grafico:
+     \begin{enumerate}
+      \item $x^{2}+xy+y^{2}=6$
+      \item $3x^{2}+8xy+3y^{2}+28=0$
+      \item $x^{2}+2xy+y^{2}+3x+y-1=0$
+     \end{enumerate}
+  {\it Resposta:}
+  
+  (a) $Q=\frac{1}{\sqrt{2}}\begin{pmatrix}
+                   1 & 1  \\
+                   1 & -1 \\
+                   \end{pmatrix}, 
+      (x')^2/4+(y')^2/12=1; \text{elipse}$.
+       
+ (c) $Q=\frac{1}{\sqrt{2}}\begin{pmatrix}
+                   1 & 1  \\
+                   -1 & 1 \\
+                   \end{pmatrix}, 
+      (y'+\frac{\sqrt{2}}{2})^{2}=-\frac{\sqrt{2}}{2}(x'-\sqrt{2}) \text{ ou } 
+      (y'')^{2}=-\frac{\sqrt{2}}{2}x''; \text{parábola}$. 
+  %\item Encontre a melhor aproximação de mínimos quadráticos de $e^{x}$
+  %em $[-1,1]$ em relação ao produto interno
+  %$\langle f,g \rangle=\int_{-1}^{1} f(x)g(x)dx$.
+  
+  %{\it Resposta:} 
+  %$p(x)=senh1 P_{0}(x)+(3/e)P_{1}(x)+5(senh1-3/e)P_{2}(x)$, 
+  %aproximadamente, $p(x)\approx 0.9963 +1.1036 x+0.5367x^2$.
+ \end{enumerate}
+ 
+\end{document}
+
+    Contact GitHub
+    API
+    Training
+    Shop
+    Blog
+    About
+
+    © 2016 GitHub, Inc.
+    Terms
+    Privacy
+    Security
+    Status
+    Help
+
