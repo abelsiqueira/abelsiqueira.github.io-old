@@ -42,11 +42,15 @@ permalink:  /br/curriculum/
 
 # Eventos
 
+  - [I Simpósio de Métodos Numéricos em
+    Engenharia](https://github.com/abelsiqueira/smne-2016-julia)
+    _Introdução à linguagem Julia_.
+    **Minicurso**. 30 de Novembro à 01 de Dezembro de 2016. UFPR, Curitiba, Brasil.
   - [XI Brazilian Workshop on Continuous Optimization.]({{ site.baseurl
     }}/assets/brazopt-2016.pdf)
     _Numerical Experience with a Class of Trust-Region Algorithms for
     Unconstrained Smooth Optimization_.
-    **Apresentação oral**. 23 de Maio de 2016. UFAM, Manaus, Brazil.
+    **Apresentação oral**. 23 de Maio de 2016. UFAM, Manaus, Brasil.
   - [2016 Optimization Days.]({{ site.baseurl }}/assets/jopt-2016.pdf)
     _A Workflow for Designing Optimization Methods in the Julia Language_.
     **Apresentação oral**. 4 de Maio de 2016. HEC Montréal, Montreal, Canadá.
