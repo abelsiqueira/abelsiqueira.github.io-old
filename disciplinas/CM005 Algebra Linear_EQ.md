@@ -17,7 +17,7 @@ tag:        2016s2
   | **Prova 2:** | 27/10
   | **Prova 3:** | 01/12
   | **2da chamada**| 06/12
-  | **Exame:**   | 34/43
+  | **Exame:**   | 15/12
 
 # Ementa
  
@@ -53,7 +53,7 @@ tag:        2016s2
   - [ ] [Prova 1 com gabarito]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/prova1_AL_EB_A_EQ.pdf), 
     [Notas 1]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/Notas_1_EQ.xls)
   - [ ] [Prova 2 com gabarito]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/prova2_AL_EB_A.pdf), [Notas 2]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/Notas_2_EQ.ods) 
-  - [ ] Prova 3 
+  - [ ] [Prova 3 com gabarito]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/prova3_AL.pdf), [Notas 3]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/Notas_3_EQ.ods)  
  
 # Bibliografia
 
