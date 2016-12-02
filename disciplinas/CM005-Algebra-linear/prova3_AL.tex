@@ -1,0 +1,336 @@
+\documentclass[11pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=2cm,right=2cm,top=1cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amsfonts}
+\usepackage{multicol}
+%\usepackage{../../../disciplinas}
+\usepackage{tikz}
+\everymath{\displaystyle}
+\def\answers % uncomment to show the answers
+
+\boxedpoints
+\pointname{}
+\qformat{{\bf Questão \thequestion} \dotfill \fbox{\totalpoints} }
+
+\begin{document}
+
+\ifdefined\answers
+\printanswers
+\fi
+
+\addpoints
+
+\begin{center}
+  {\bf \large CM 005 Álgebra Linear: Prova 3 } \\
+  1 de Dezembro de 2016
+\end{center}
+
+\ifx\undefined\answers
+\settabletotalpoints{100}
+\cellwidth{0pt}
+\hqword{Q:}
+\hpword{P:}
+\hsword{N:}
+
+\makebox[\textwidth]{
+  Nome: \enspace\hrulefill\quad
+  \gradetable[h][questions]}
+\fi
+
+\begin{center}
+  \begin{tabular}{|l|}
+    \hline
+    {\bf Orientações gerais}\\
+    1) As soluções devem conter o desenvolvimento e ou justificativa. \\
+    \hspace{2.5mm} Questões sem justificativa ou sem raciocínio lógico coerente 
+    não pontuam. \\
+    2) A interpretação das questões é parte importante do processo de avaliação.\\
+    \hspace{2.5mm} Organização e capricho também serão avaliados. \\
+    3) Não é permitido a consulta nem a comunicação entre alunos.\\
+   % 4) A prova pode ser feita com lápis ou caneta. \\
+    \hline 
+  \end{tabular}
+\end{center}
+
+\begin{questions}
+ % \question[20] 
+ % \begin{parts}
+ % \part%[10]
+ % O que significa que uma matriz seja {\it equivalente por linhas} a outra matriz?
+ % \part%[10]
+ % Considere $V$ um espaço vetorial. Seja $W \neq \emptyset$ um subconjunto de $V$. 
+ % Quais propriedades deve satisfazer $W$ para que ele seja um subespaço vetorial de
+ % $V$?  
+ % \part%[10] 
+ % Dada uma matriz $A \in M_{m \times n}(\mathbb{R})$. Escreva o que é o núcleo de $A$.
+ % \end{parts}
+  
+  \question
+  Em $\mathbb{R}^{4}$, considere o subespaço vetorial 
+  $$X=\left\{
+        \begin{pmatrix}
+         a \\
+         b \\
+         c \\
+         d 
+        \end{pmatrix} \in \mathbb{R}^{4}
+        : \ \
+        \begin{matrix}
+          a&-b&-c&+d&=&0 \\
+         2a&-b&-c&  &=&0
+        \end{matrix}
+        \right\}.$$   
+     \begin{parts}
+      \part[15] Encontre uma base para $X$;
+        \begin{solution}
+         Vamos escrever o subespaço $X$ de um jeito mais fácil de trabalhar. Então, perceba que 
+         $$
+         X= Nuc (A) \text{ onde } A=\begin{pmatrix}
+                                       1&-1&-1&1 \\
+                                       2&-1&-1&0
+                                      \end{pmatrix}
+        $$
+        Agora, calculando o $Nuc(A)$,  usando o método de Gauss, obtemos que
+        $$Nuc(A)=\text{span} \{(1, 2, 0, 1)^{T}, (0, 1, -1, 0)^{T}\}.$$
+        Como $\{(1, 0, 2, 1)^{T}, (0, 1, -1, 0)^{T}\}$ é linearmente independente e ele trivialmente gera 
+        o $Nuc(A)$, concluímos que
+        $\{(1, 0, 2, 1)^{T}, (0, 1, -1, 0)^{T}\}$ é uma base para o $Nuc(A)=X$. 
+        \end{solution}
+      \part[15] Ache uma base para $X^{\perp}$;
+        \begin{solution}
+         Primeiro calculemos $X^{\perp}$. Como  $X= Nuc (A)$, temos que
+         $$X^{\perp}=col(A^{T})=\text{span}\{(2, -1, -1, 0)^{T}, (1, -1, -1, 1)^{T}\}.$$
+         Observe que $\{(2, -1, -1, 0)^{T}, (1, -1, -1, 1)^{T}\}$
+         é linearmente independente e ele trivialmente gera 
+        o $col(A)$, portanto concluímos que
+        $\{(2, -1, -1, 0)^{T}, (1, -1, -1, 1)^{T}\}$ é uma base para o $col(A^{T})=X^{\perp}$.
+        \end{solution}
+
+      \part[10] Seja $\bar{y} \in \mathbb{R}^{4}$ um vetor definido como  
+      $\bar{y}=(1 , 0, 0, 0)^{T}$.
+      
+      Encontre a projeção ortogonal de 
+      $\bar{y}$ sobre o subespaço $X$ (isto é, $\text{proj}_{X}(\bar{y})$) e 
+      a projeção ortogonal de $\bar{y}$ sobre $X^{\perp}$
+      (ou seja, $\text{proj}_{X^{\perp}}(\bar{y})$).
+         \begin{solution}
+          Existem muitas formas de calcular $\text{proj}_{X}(\bar{y})$:
+            \begin{enumerate}
+             \item Calcule uma base ortogonal de $X$, $\{v_1, \dots, v_{r}\}$
+             e logo use a fórmula da projeção ortogonal para calcular $\text{proj}_{X}(\bar{y})$
+              $$ \text{proj}_{X}(\bar{y})= \frac{\langle v, v_1 \rangle}{\|v_1\|^2} v_{1}+
+                          \frac{\langle v, v_2 \rangle}{\|v_2\|^2} v_{2}+
+                          \dots+
+                          \frac{\langle v, v_r \rangle}{\|v_r\|^2} v_{r}. $$ 
+             {\it Essa fórmula só vale se $\{v_1, \dots, v_{r}\}$ é um conjunto ortogonal}.
+             \item Se $X=\text{span}\{v_1,\dots,v_r\}$ com $\{v_1, \dots, v_{r}\}$
+             {\it não necessariamente ortogonal}. Defina $\text{proj}_{X}(\bar{y})=\sum_{i=1}^{r} \alpha_{i} v_{i}$
+             onde os $\alpha_i$ são desconhecidos. Para encontrar os $\alpha_i$, 
+             usamos que $\bar{y}-\text{proj}_{X}(\bar{y}) \perp X$. 
+             Assim, 
+             $ \langle \bar{y}-\text{proj}_{X}(\bar{y}), v_{i}\rangle=
+               \langle \bar{y}-\sum_{j=1}^{r} \alpha_{j} v_{j}, v_{i}\rangle=0, \forall i$
+               forma um sistema linear onde as incognitas são os $\alpha_i$. Uma vez achado os $\alpha_i$
+               obtemos a projeção ortogonal $\text{proj}_{X}(\bar{y})$.
+             \item Se $X=col(A)$. Use mínimos quadrados para achar o $\bar{x}$ tal que $A\bar{x}$ seja igual à
+            projeção ortogonal $\text{proj}_{X}(\bar{y})$.
+            \end{enumerate}
+         Nosotros usaremos o item (2), porque $X=\text{span} \{(1, 0, 2, 1)^{T}, (0, 1, -1, 0)^{T}\}$. Assim, obtemos o sistema
+         $$
+         \begin{matrix}
+           \langle \bar{y}, v_1 \rangle&=& \alpha_1 \langle v_1, v_1 \rangle &+& \alpha_2 \langle v_2, v_1 \rangle \\
+           \langle \bar{y}, v_1 \rangle&=& \alpha_1 \langle v_1, v_2 \rangle &+& \alpha_2 \langle v_2, v_2 \rangle
+         \end{matrix}
+         $$
+         onde $v_1=(1, 0, 2, 1)^{T}$, $v_2=(0, 1, -1, 0)^{T}$.
+         Como $\bar{y}=(1,0,0,0)^{T}$, o sistema se reduz a 
+         $1=6\alpha_1-2\alpha_2$, $0=-2\alpha_1+2\alpha_2$. Assim, $\alpha_1=\alpha_2=1/4$
+         e $$\text{proj}_{X}(\bar{y})=\alpha_1v_1+\alpha_2v_2=(1/4, 1/4, 1/4, 1/4)^{T}.$$
+         Para calcular $\text{proj}_{X^{\perp}}(\bar{y})$, perceba que 
+         $\text{proj}_{X^{\perp}}(\bar{y})=\bar{y}-\text{proj}_{X}(\bar{y})$ sempre vale. Assim, 
+         $$\text{proj}_{X^{\perp}}(\bar{y})=\bar{y}-\text{proj}_{X}(\bar{y})=
+         (1,0, 0,0)^{T}-(1/4, 1/4, 1/4, 1/4)^{T}=(3/4, -1/4, -1/4, -1/4)^{T}.$$
+         \end{solution}
+     \end{parts}   
+  \question
+  Seja $T:\mathbb{R}^{2}\rightarrow \mathbb{R}^{2}$
+  uma transformação linear tal que 
+  $v_{1}=(1, 1)^{T}$ e $v_{2}=(3, 4)^{T}$ são os autovetores associados 
+  a $\lambda_{1}=-1$ e $\lambda_2=2$ (isto é, $T(v_1)=\lambda_1 v_1$ 
+  e $T(v_2)=\lambda_2 v_2$). Com essa informação:
+    \begin{parts}
+     \part[5] Verifique que $\{v_{1}, v_{2}\}$ formam uma base de $\mathbb{R}^{2}$
+     \begin{solution}
+      Um critério para verificar se $\{v_{1}, v_{2}\}$ são l.i, é calcular o determinante da matriz cujas columas são 
+      $v_1$ e $v_2$. Como essa matriz tem determinante diferente de zero, temos que $\{v_{1}, v_{2}\}$ são l.i. em um 
+      espaço vetorial de dimensão 2. Logo,  $\{v_{1}, v_{2}\}$  formam uma base de $\mathbb{R}^{2}$. 
+     \end{solution}
+     \part[5] Calcule $T(v)$ onde $v=(5, 6)^{T}$.
+       \begin{solution}
+       Como só sabemos como $T$ age em $v_{1}$ e em $v_{2}$, para calcular $T((5, 6)^{T})$ devemos
+       escrever $(5, 6)^{T}$ como combinação linear de $v_{1}=(1, 1)^{T}$ e de $v_{2}=(3, 4)^{T}$. É fácil, ver que  
+       $(5, 6)^{T}=2(1,1)^{T}+1(3, 4)^{T}$. Assim temos que 
+       $$
+       T \begin{pmatrix}
+          5 \\
+          6
+         \end{pmatrix}
+       =
+       T
+       \left(
+         2
+          \begin{pmatrix}
+          1 \\
+          1
+         \end{pmatrix}
+         +
+         \begin{pmatrix}
+          3 \\
+          4
+         \end{pmatrix}
+       \right)  
+       =2 
+         T \begin{pmatrix}
+          1 \\
+          1
+         \end{pmatrix}
+         +
+          T \begin{pmatrix}
+          3 \\
+          4
+         \end{pmatrix}
+       =
+       2 
+        \lambda_1
+        \begin{pmatrix}
+          1 \\
+          1
+        \end{pmatrix}+
+        \lambda_2
+        \begin{pmatrix}
+          3 \\
+          4
+         \end{pmatrix}
+       =
+          \begin{pmatrix}
+          4 \\
+          6
+         \end{pmatrix}.
+       $$
+       \end{solution}
+    \end{parts}
+    
+  \question Dados  $a$, $b$ e $c$ $\in \mathbb{R}$ com $c>0$, considere a matriz quadrada
+       $$
+       A=
+       \begin{pmatrix}
+       a & 0 & 0\\
+       0 & b & c\\
+       0 & c & b\\
+       \end{pmatrix}
+       $$
+    \begin{parts}
+     \part[10] Mostre que os autovalores de $A$ 
+     são $\lambda_1=a$, $\lambda_2=b+c$ e $\lambda_3=b-c$
+       \begin{solution}
+        Procedemos a calcular o polinômio característico $p(\lambda)$.
+        $$p(\lambda)=\text{det}(A-\lambda I)=(a-\lambda)[(b-\lambda)^{2}-c^{2}]=(a-\lambda)(b-\lambda+c)(b-\lambda-c)=0.$$
+        Assim, obtemos que $\lambda_{1}=a$, $\lambda_2=b+c$ e $\lambda_3=b-c$ são os autovalores de $A$.
+       \end{solution}
+
+     \part[20] Se $a=1$, $b=2$ e $c=3$, então mostre que $A$ é diagonalizável, encontrando
+     uma matriz $D$ diagonal e uma matrix $S$ invertível tal que $S^{-1}AS=D$. 
+     ({\it Não é necessário verificar $S^{-1}AS=D$})
+      \begin{solution}
+       Se $a=1$, $b=2$ e $c=3$, temos que $\lambda_{1}=1$, $\lambda_2=5$ e $\lambda_3=-1$.
+       Como os autovalores são todos diferentes, a matriz $A$ é diagonalizável (vc tbm pode usar o teorema espectral para matrizes 
+       simétricas para concluir que $A$ é diagonalizável). Procedemos a construir a matrix $S$ tal que $S^{-1}AS$ é uma matriz 
+       diagonal.
+       
+       Para $\lambda_{1}=1$, temos que 
+       $$
+       Nuc(A-\lambda_1I)=Nuc \begin{pmatrix}
+                              0 & 0 &0 \\
+                              0 & 1 & 3 \\
+                              0 & 3 & 1
+                             \end{pmatrix}=\text{span}\{(1, 0, 0)^{T}\}.
+       $$
+       Para $\lambda_{2}=5$, temos que 
+       $$
+       Nuc(A-\lambda_2I)=Nuc \begin{pmatrix}
+                              -4 & 0 &0 \\
+                              0 & -3 & 3 \\
+                              0 & 3 & -3
+                             \end{pmatrix}=\text{span}\{(0, 1, 1)^{T}\}.                           
+       $$
+       Para $\lambda_{3}=-1$, temos que 
+       $$
+       Nuc(A-\lambda_3I)=Nuc \begin{pmatrix}
+                              2 & 0 &0 \\
+                              0 & 3 & 3 \\
+                              0 & 3 & 3
+                             \end{pmatrix}=\text{span}\{(0, 1, -1)^{T}\}.                           
+       $$
+       Portanto, uma matrix $S$ tal que $S^{-1}AS=D$ é uma matriz diagonal é dado por 
+       $$
+       S=
+       \begin{pmatrix}
+       1 & 0 &  0 \\
+       0 & 1 &  1 \\
+       0 & 1 & -1
+       \end{pmatrix} \ \ \text{e} \ \ 
+       D=
+       \begin{pmatrix}
+       1 & 0 & 0 \\
+       0 & 5 & 0 \\
+       0 & 0 & -1
+       \end{pmatrix}.                   
+       $$
+      \end{solution}
+    \end{parts}
+  
+  \question[20] 
+  Dada a base 
+ $\{(1,2,-2)^{T},(4,3,2)^{T},(1,2,1)^{T}\}$ 
+ em $\mathbb{R}^{3}$.
+ Use o processo de Gram-Schmidt para encontrar uma base 
+ ortonormal. 
+    \begin{solution}
+     Usaremos o processo de Gram-Schmidt. Para simplificar as contas primeiro
+     usamos o processo de Gram-Schmidt para ortogonalizar e logo dividimos cada uns dos vetores encontrados 
+     pelas suas respectivas normas.
+     
+     Assim, se $v_1=(1,2,-2)^{T}$, $v_2=(4,3,2)^{T}$ e $v_3=(1,2,1)^{T}$. Então, por Gram-Schmidt temos que 
+     $u_1=(1/3,2/3,-2/3)^{T}$, $u_2=(2/3,1/3,2/3)^{T}$ e $u_3=(-2/3,2/3,1/3)^{T}$ formam uma base ortonormal
+     de $\mathbb{R}^{3}$.
+    \end{solution}
+
+  \question[10]
+  Seja $A \in M_{n\times n}(\mathbb{R})$ tal que $A=U \Sigma V^{T}$, onde 
+  $U$, $V$ e $\Sigma$ $\in M_{n\times n}(\mathbb{R})$, $U^{T}U=I$, $V^{T}V=I$ e 
+  $\Sigma$ é uma matrix diagonal cujos elementos são não-negativos. 
+  
+  Mostre que os elementos na diagonal de $\Sigma$ são as
+  raízes quadradas dos autovalores de $A^{T}A$. Esse tipo de decomposição é chamada de 
+  decomposição SVD.
+    \begin{solution}
+     Devido a que $\Sigma$ é uma matriz diagonal temos que $\Sigma^{T}=\Sigma$ e que 
+     $\Sigma^{2}$ é também uma matriz diagonal. Além disso, já que 
+     $U^{T}U=I$ e $V^{T}V=I$, concluímos que $U^{-1}=U^{T}$ e $V^{-1}=V^{T}$.
+     
+     O problema pede para mostrar que os elementos na diagonal de $\Sigma$ são as
+  raízes quadradas dos autovalores de $A^{T}A$. Assim, primeiro calculamos $A^{T}A$.
+    $$A^{T}A=(U \Sigma V^{T})^{T}U \Sigma V^{T}=V\Sigma^{T}U^{T}U\Sigma V^{T}=V \Sigma^{2} V^{T} 
+    (\text{ temos usado que } U^{T}U=I, \Sigma^{T}=\Sigma).$$
+    Da expressão obtemos que $V^{-1}(A^{T}A)V=\Sigma^{2}$. Em otras palavras, $A^{T}A$ é uma matriz diagonalizável, 
+    cuja matriz diagonalizante é $V$ e com $\Sigma^{2}$ como matriz diagonal associada.
+    Portanto os elementos da diagonal de $\Sigma^{2}$ são os autovalores de $A^{T}A$
+    e como consequência os elementos da diagonal de $\Sigma$ são as raízes quadradas dos autovalores 
+    da matriz $A^{T}A$ (aqui temos usado que os elementos de $\Sigma$ são não-negativos).
+    \end{solution}
+
+\end{questions}
+
+\end{document}
+
