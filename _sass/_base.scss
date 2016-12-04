@@ -88,17 +88,17 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $link-color;
     font-weight: bold;
     text-decoration: none;
     font-variant: small-caps;
 
     &:visited {
-        color: lighten($brand-color, 15%);
+        color: $link-visited-color;
     }
 
     &:hover {
-        color: $text-color;
+        color: $link-hover-color;
         text-decoration: underline;
     }
 }
