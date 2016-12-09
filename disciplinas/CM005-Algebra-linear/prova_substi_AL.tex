@@ -1,0 +1,254 @@
+\documentclass[11pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=2cm,right=2cm,top=1cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amsfonts}
+\usepackage{multicol}
+%\usepackage{../../../disciplinas}
+\usepackage{tikz}
+%\everymath{\displaystyle}
+%\def\answers % uncomment to show the answers
+
+\boxedpoints
+\pointname{}
+\qformat{{\bf Questão \thequestion} \dotfill \fbox{\totalpoints} }
+
+\begin{document}
+
+%\ifdefined\answers
+%\printanswers
+%\fi
+
+%\addpoints
+
+\begin{center}
+  {\bf \large CM 005 Álgebra Linear: Prova Substitutiva } \\
+  06 de Dezembro de 2016
+\end{center}
+
+%\ifx\undefined\answers
+%\settabletotalpoints{100}
+%\cellwidth{0pt}
+%\hqword{Q:}
+%\hpword{P:}
+%\hsword{N:}
+
+\makebox[\textwidth]{
+  Nome: \enspace\hrulefill\quad
+  \gradetable[h][questions]}
+%\fi
+
+\begin{center}
+  \begin{tabular}{|l|}
+    \hline
+   % {\bf Orientações gerais}\\
+   % A interpretação das questões é parte importante do processo de avaliação.\\
+    %\hspace{2.5mm} 
+   % Organização e capricho também serão avaliados. \\
+%{\it Responda:} Qual prova vai ser substituída?
+%\begin{tabular}{ |c|c|c|c|c|c| } 
+% \hline
+% P1 &  & P2 &  & P3 & \\ 
+% \hline
+%\end{tabular}
+%\newline
+{\it Responda:} Qual prova vai ser substituída? 
+\begin{oneparcheckboxes}
+\choice P1
+\choice P2
+\choice P3
+%\CorrectChoice Socrates
+\end{oneparcheckboxes}
+     \end{tabular}
+  \end{center}
+
+  \begin{center}
+  \begin{tabular}{|l|}
+    \hline
+    {\bf Questões relativas à Prova 1} \\
+    \hline
+     \end{tabular}
+  \end{center}
+  
+\begin{questions}
+  \question
+  Ache os possíveis valores para $a$ e $b$ para que o sistema de equações cuja matriz aumentada 
+       $$
+       \begin{pmatrix}
+       1 & 0 & a & 0 &|& 1\\
+       2 & 2 & a & b &|& 1\\
+       1 & 1 & a & 0 &|& 1\\
+       1 & 1 & a & b &|& 1
+       \end{pmatrix}
+       $$
+   satisfaça uma das seguintes condições:    
+    \begin{parts}
+     \part[10] o sistema tem uma única solução;
+     \part[10] o sistema tem infinitas soluções;
+     \part[10] o sistema não tem solução.
+    \end{parts}
+    
+   {\it Dica:} Analise cada caso possível dependendo dos valores de $a$ e $b$.    
+  
+  \question
+  \begin{parts}
+   \part[20] Utilize o método de Gauss-Jordan para calcular a inversa de $A$.
+       $$
+       A=
+       \begin{pmatrix}
+       1 & 1 & 1 \\
+       1 & 2 & 3 \\
+       1 & 2 & 2 \\
+       \end{pmatrix}
+       $$ 
+   \part[10]  
+   Ache $\bar{x} \in \mathbb{R}^{3}$ tal que $A\bar{x}=\bar{b}$ onde 
+  $\bar{b}=(2, 0, 2)^{T}$ e $A$ é a matriz do item anterior.    
+  \end{parts}
+ 
+  \question
+   {\bf [20]} Mostre que $W=\{f \in C[-1,1] : f(0)= \int_{-1}^{1} f(x)dx \}$
+   é um subespaço vetorial de $C[-1,1]$. 
+   \question 
+   {\bf [10]} Considere os subespaço vetoriais $W_1=\{(x_1,x_2,x_3): x_1+2x_2+2x_3=0, x_1+x_2+x_3=0\}$
+   e $W_2=\{(x_1,x_2,x_3): x_1+2x_2+3x_3=0 \}$. Calcule $W_1\cap W_2$.
+   \question
+   {\bf [10]}
+   Se $A, B \in M_{n\times n}(\mathbb{R})$. Mostre
+   que $I-AB$ é invertível se $I-BA$ é invertível.
+\end{questions}
+
+   \begin{center}
+  \begin{tabular}{|l|}
+    \hline
+    {\bf Questões relativas à Prova 2} \\
+    \hline
+     \end{tabular}
+  \end{center}
+  
+\begin{questions}
+ % \question[20] 
+ % \begin{parts}
+ % \part%[10]
+ % O que significa que uma matriz seja {\it equivalente por linhas} a outra matriz?
+ % \part%[10]
+ % Considere $V$ um espaço vetorial. Seja $W \neq \emptyset$ um subconjunto de $V$. 
+ % Quais propriedades deve satisfazer $W$ para que ele seja um subespaço vetorial de
+ % $V$?  
+ % \part%[10] 
+ % Dada uma matriz $A \in M_{m \times n}(\mathbb{R})$. Escreva o que é o núcleo de $A$.
+ % \end{parts} 
+  \question
+  Para cada $a \in \mathbb{R}$, considere a matriz
+     $$ A_{a}= 
+        \begin{pmatrix}
+         1 & 1 & 1\\
+         2 & 3 & 2\\
+         2 & 3 & a\\ 
+        \end{pmatrix}  
+     $$
+     \begin{parts}
+     \part[10] Qual é o posto da matriz $A_{a}$?; 
+     \part[10] Qual é a dimensão de $Nuc(A_a)$?
+     \part[10] Encontre uma base para o espaço coluna $col(A_a)$
+     e o espaço linha $lin(A_a)$
+     \end{parts}  
+     
+  \question {\bf [10]} Denote por $M_{ m \times n}(\mathbb{K})$ o conjunto de todas as matrizes de ordem 
+  $m \times n$. Considere duas matrizes $A \in M_{m \times m}(\mathbb{K})$ e $B \in M_{n \times n}(\mathbb{K})$.
+  Verifique que a função $T:M_{ m \times n}(\mathbb{K}) \rightarrow M_{ m \times n}(\mathbb{K})$, 
+  definido como  $$T(X)=AX+XB \text{ para todo }  X \in M_{m\times n}(\mathbb{K}) \text{ é uma transformação linear}.$$
+  \question {\bf [10]} Verifique que os polinômios $p_1(x)=x^{2}-x$, $p_{2}=x^{3}-x^2$ e $p_{3}=2x^{3}+x$
+  são l.i.
+  \question
+  Seja $T:\mathbb{R}^{4}\rightarrow \mathbb{R}^{3}$
+  uma transformação linear tal que
+  $$T(\bar{v}_1)=(1, 0, 0)^{T}, \ \ T(\bar{v}_2)=(1, 1, 0)^{T} \ \ \text{e}\ \ T(\bar{v}_3)=(1, -1, 1)^{T}, $$ 
+  onde $\bar{v}_{1}=(1, 1, 1, 0)^{T}$, $\bar{v}_{2}=(0, -1, 1, 0)^{T}$ e $\bar{v}_3=(2, 0, -2, 0)^{T}$.
+  Com essa informação:
+    \begin{parts}
+    \part[10] Calcule $T(\bar{v})$ onde $\bar{v}=(4, 0, 6, 0)^{T}$. %\alpha=2,2,2
+    \part[10] Por quê não é possível, com essas informações, conhecer o valor 
+    de $T(\bar{w})$ se $\bar{w}=(0, 0, 0, 1)^{T}$?
+    \end{parts}
+ 
+ \question
+  Seja $\mathcal{P}_2$ o conjunto de todos os polinômios de grau menor ou igual a $2$. 
+  Considere a transformação linear $T:\mathcal{P}_{2}\rightarrow \mathcal{P}_2$
+  tal que para cada polinômio $p(x) \in \mathcal{P}_2$, 
+  $T(p)$ é um novo polinômio definido como 
+  $$T(p)(x)=(3x+2)p'(x)+p(x)$$ %, \text{ para todo } p \in \mathcal{P}_2.$$
+   \begin{parts}
+    \part[10] Calcule a matriz associada a $T$ em relação à base 
+    $\mathcal{B}=\{1, x^{2}, x\}$.
+    \part[10] Mostre que $T$ é uma transformação linear injetora, 
+    provando que $Ker(T)=\{\bar{0}\}$. %{\it Dica:} $Nuc ( [T]_{\mathcal{B}}^{\mathcal{B}})=\{(0,0,0)^{T}\}$.
+    \part[10] Qual é a dimensão de $Im(T)$? {\it Dica:} Lembre que $dim(\mathcal{P}_2)=3$.
+   \end{parts}
+ 
+  \end{questions}
+   
+   
+   \begin{center}
+  \begin{tabular}{|l|}
+    \hline
+    {\bf Questões relativas à Prova 3} \\
+    \hline
+     \end{tabular}
+  \end{center}
+
+\begin{questions}
+  \question
+  Em $\mathbb{R}^{4}$, considere o subespaço vetorial 
+  $$X=\left\{
+        (x_1, x_2, x_3, x_4)^{T} \in \mathbb{R}^{4}
+        : \ \
+        \begin{matrix}
+          x_1&-x_2&-x_3&+x_4&=&0 \\
+         2x_1&-x_2&-x_3&+2x_4&=&0
+        \end{matrix}
+        \right\}.$$   
+     \begin{parts}
+      \part[10] Encontre uma base para $X$; 
+      \part[10] Ache uma base para $X^{\perp}$;
+      \part[10] Encontre $\text{proj}_{X}(\bar{y})$) e $\text{proj}_{X^{\perp}}(\bar{y})$, 
+      onde $\bar{y}=(0, 0, 0, 1)^{T}$.
+      \end{parts}   
+  \question
+   Considere o sistema de equações: $ x_1+x_2=3, \ \ 2x_1-3x_2=-1 \ \ \text{e} -2x_1+x_2=-2$.
+   \begin{parts}
+    \part[10] Mostre que o sistema não tem solução
+    \part[10] Ache a melhor aproximação da solução usando mínimos quadráticos
+   \end{parts}
+
+  \question Dados  $a$ e $b$ $\in \mathbb{R}$, considere a matriz quadrada
+       $$
+       A=
+       \begin{pmatrix}
+       a & 0 \\
+       b & 2 \\
+       \end{pmatrix}
+       $$
+     \begin{parts}
+     \part[10] Determine todos os valores de $a$ e $b$, para que a matriz $A$
+     seja diagonalizável.  
+     \part[20] Para os casos em que $A$ é diagonalizável, calcule 
+     uma matriz $D$ diagonal e uma matrix $S$ invertível tal que $S^{-1}AS=D$. 
+     ({\it Não é necessário verificar $S^{-1}AS=D$})
+     \end{parts}
+  
+  \question
+  {\bf [10]} 
+  Dada a base 
+ $\{(1,2,-2)^{T},(4,3,2)^{T},(1,2,1)^{T}\}$ 
+ em $\mathbb{R}^{3}$.
+ Use o processo de Gram-Schmidt para encontrar uma base 
+ ortonormal. 
+
+  \question {\bf [10]} Seja $\{u_1,u_2, u_3\}$ um conjunto {\it ortonormal} de um espação $V$. % munido com um produto interno.
+  Suponha que $v= \alpha u_1+\beta u_2+\gamma u_3$ é tal que $\|v\|=3$, $\langle u_3, v \rangle=2$ 
+  e $v \perp (u_1+u_2)$. Então, quais são os possíveis valores de $\alpha$, $\beta$ e $\gamma$? 
+  \end{questions}
+ 
+\end{document}
+
