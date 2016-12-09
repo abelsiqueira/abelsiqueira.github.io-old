@@ -54,7 +54,8 @@ tag:        2016s2
     [Notas 1]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/Notas_1_EQ.xls)
   - [x] [Prova 2 com gabarito]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/prova2_AL_EB_A.pdf), [Notas 2]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/Notas_2_EQ.ods) 
   - [x] [Prova 3 com gabarito]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/prova3_AL.pdf), [Notas 3]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/Notas_3_EQ.ods)  
-  - [x] [Prova substitutiva]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/prova_substi_AL.pdf), [Notas]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/Notas_3_s_EQ.ods)
+  - [x] [Prova substitutiva]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/prova_substi_AL.pdf),
+  [Notas]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/Notas_3_s_EQ.pdf)
  
 # Bibliografia
 
