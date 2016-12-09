@@ -50,10 +50,11 @@ tag:        2016s2
 
 # Provas
 
-  - [ ] [Prova 1 com gabarito]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/prova1_AL_EB_A.pdf), 
+  - [x] [Prova 1 com gabarito]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/prova1_AL_EB_A.pdf), 
       [Notas 1]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/notas_prova_1_EB.ods)
-  - [ ] [Prova 2 com gabarito]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/prova2_AL_EB_A.pdf), [Notas 2]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/notas_prova_1_2_EB.ods)
-  - [ ] [Prova 3 com gabarito]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/prova3_AL.pdf), [Notas 3]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/notas_prova_1_2_3_EB.ods)
+  - [x] [Prova 2 com gabarito]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/prova2_AL_EB_A.pdf), [Notas 2]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/notas_prova_1_2_EB.ods)
+  - [x] [Prova 3 com gabarito]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/prova3_AL.pdf), [Notas 3]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/notas_prova_1_2_3_EB.ods)
+  - [x] [Prova substitutiva]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/prova_substi_AL.pdf), [Notas]({{ site.baseur1}}/disciplinas/CM005-Algebra-linear/notas_prova_1_2_3_s_EB.ods)
  
 # Bibliografia
 
