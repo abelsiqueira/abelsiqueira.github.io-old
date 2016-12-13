@@ -18,7 +18,7 @@ albertoramos@ufpr.br. <br />
 
 # Submitted, In Press or Preprint
   
- - **[Augmented Lagrangians with constrained subproblems and convergence to second-order stationary points.](http://www.optimization-online.org/DB_HTML/2016/12/5758.html)** <br />
+  - **[Augmented Lagrangians with constrained subproblems and convergence to second-order stationary points.](http://www.optimization-online.org/DB_HTML/2016/12/5758.html)** <br />
     E. G. Birgin; G. Haeser; A. Ramos. <br />
     On optimization online, December 2016.
     
