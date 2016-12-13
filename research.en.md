@@ -17,7 +17,11 @@ albertoramos@ufpr.br. <br />
     SBMAC, Notas em Matemática Aplicada, vol 83, 2016 (85p.) e-ISBN: 978-85-8215-075-7.
 
 # Submitted, In Press or Preprint
- 
+  
+ - **[Augmented Lagrangians with constrained subproblems and convergence to second-order stationary points.](http://www.optimization-online.org/DB_HTML/2016/12/5758.html)** <br />
+    E. G. Birgin; G. Haeser; A. Ramos. <br />
+    On optimization online, December 2016.
+    
   - **[On a conjecture in second-order optimality conditions.](http://www.optimization-online.org/DB_HTML/2016/06/5494.html)** <br />
     R. Behling; G. Haeser; A. Ramos; D. S. Viana. <br />
     On optimization online, June 2016.
