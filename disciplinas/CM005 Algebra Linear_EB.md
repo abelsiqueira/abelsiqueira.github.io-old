@@ -68,4 +68,5 @@ tag:        2016s2
 - DAVID, C. L. - Álgebra Linear e suas aplicações, Livro Técnico e Científicos Editora;
 - STEVEN, J. L. - Álgebra Linear com aplicações. LTC, RJ, 1999;
 - LIMA, E. L. - Álgebra Linear. Coleção Matemática Universitária, IMPA, CNPq, RJ, 1996;
-- SANTOS, R. J. - Introdução ao Álgebra Linear, http://www.mat.ufmg.br/~regi
+- SANTOS, R. J. - Introdução ao Álgebra Linear, (http://www.mat.ufmg.br/~regi)
+- TAO, T. - Notes on linear algebra (http://www.math.ucla.edu/~tao/resource/general/115a.3.02f/)
