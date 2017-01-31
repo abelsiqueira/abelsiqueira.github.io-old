@@ -25,7 +25,6 @@
     width: 400px;
     text-align: center;
     display: inline-block;
-    font-size: 26px;
     line-height: 56px;
     letter-spacing: 1px;
     font-weight: bold;
@@ -35,77 +34,6 @@
       &, &:visited {
         color: #345;
       }
-    }
-}
-
-.site-nav {
-    line-height: 56px;
-    text-align: center;
-    border-bottom: 1px solid $grey-color;
-    position: relative;
-
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-        font-size: 1.2em;
-
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-            overflow: auto;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-        }
-
-        .page-lang-link {
-          position: relative;
-        }
     }
 }
 

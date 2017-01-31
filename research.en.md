@@ -4,6 +4,7 @@ title:     Research
 key:       research
 lang:      en
 order:     2
+icon:      search
 permalink: /en/research/
 ---
 I work with computational mathematics, mostly with nonlinear optimization.

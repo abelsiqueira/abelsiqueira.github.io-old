@@ -1,205 +1,117 @@
-/**
- * Reset some basic elements
- */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
-}
+.header-title {
+  font-size: 4vw;
+  font-family: 'Cinzel Decorative', cursive;
 
-
-
-/**
- * Basic styling
- */
-body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
-}
-
-
-
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
-}
-
-
-
-/**
- * Images
- */
-img {
-    max-width: 100%;
-    vertical-align: middle;
-}
-
-
-
-/**
- * Figures
- */
-figure > img {
-    display: block;
-}
-
-figcaption {
-    font-size: $small-font-size;
-}
-
-
-
-/**
- * Lists
- */
-ul, ol {
-    margin-left: $spacing-unit;
-}
-
-li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
+  a {
+    &, &:visited {
+      color: #030303;
     }
-}
-
-
-
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
-}
-
-
-/**
- * Links
- */
-a {
-    color: $link-color;
-    font-weight: bold;
-    text-decoration: none;
-    font-variant: small-caps;
-
-    &:visited {
-        color: $link-visited-color;
-    }
-
     &:hover {
-        color: $link-hover-color;
-        text-decoration: underline;
+      color: #272829;
+      text-decoration: none;
     }
+  }
 }
 
+.content {
+  background: #f6f6f6;
+  border: 1px #e0e0e0 solid;
 
-
-/**
- * Blockquotes
- */
-blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
-
-    > :last-child {
-        margin-bottom: 0;
+  a {
+    &, &:visited {
+      color: #000;
+      font-weight: bold;
     }
-}
-
-
-
-/**
- * Code formatting
- */
-pre,
-code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
-}
-
-code {
-    padding: 1px 5px;
-}
-
-pre {
-    padding: 8px 12px;
-    overflow-x: scroll;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
+    &:hover {
+      color: #234;
+      text-decoration: underline;
     }
+  }
 }
 
-
-
-/**
- * Wrapper
- */
-.wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
+.post-title {
+  font-size: 4em;
 }
 
-
-
-/**
- * Clearfix
- */
-%clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+.project {
+  border-left: 5px #d0d2d4 solid;
+  border-radius: 5px;
+  margin: 3px;
+  padding-left: 5px;
+  h1 {
+    border-bottom: 2px #333 solid;
+    font-variant: small-caps;
+  }
 }
 
-
-
-/**
- * Icons
- */
-.icon {
-
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-
-        path {
-            fill: $grey-color;
-        }
+.sidebar {
+  background: black;
+  border: 1px #333 solid;
+  font-size: 1.2em;
+  a {
+    &, &:hover, &:visited {
+      color: white;
+      text-decoration: none;
     }
+  }
+  ul {
+    list-style-type: none;
+  }
+}
+
+.sidebar-link {
+  font-size: 1.5em;
+  text-decoration: none;
+  &, &:hover, &:visited {
+    border-bottom: 1px #333 solid;
+  }
+  & {
+    background-color: black;
+    color: white;
+  }
+  &:hover {
+    background-image: linear-gradient(#111, #333);
+  }
+}
+
+.menu-table {
+  float: left;
+  width: 100%;
+}
+
+.menu-table-cell {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2vw;
+  display: inline-block;
+  padding: 1vw;
+}
+
+.page-lang-link {
+  position: absolute;
+  right: 0;
+  top: 64;
+
+  img {
+    width: 32px;
+  }
+}
+
+footer {
+  margin: 2px;
+  border-top: 1px black solid;
+  background-image: linear-gradient(#fff, #fcfcfc);
+}
+
+.gray {
+  filter: grayscale(100%);
+}
+
+.students {
+  border-top: 1px black solid;
+}
+
+.student {
+  color: black;
+  padding: 5px;
 }

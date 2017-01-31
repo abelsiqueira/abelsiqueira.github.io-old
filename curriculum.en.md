@@ -4,6 +4,7 @@ title:      Curriculum
 key:        curriculum
 lang:       en
 order:      3
+icon:       id-card
 permalink:  /en/curriculum/
 ---
 

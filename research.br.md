@@ -4,6 +4,7 @@ title:     Pesquisa
 key:       research
 lang:      br
 order:     2
+icon:      search
 permalink: /br/research/
 ---
 Trabalho com matemática computacional, principalmente na área de otimização.

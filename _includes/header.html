@@ -1,48 +1,42 @@
 <header class="site-header">
 
-  <div class="header-image"
-    style="background-image: url('{{ site.baseurl }}/img/background.jpg');">
-    <h1 class="header-title">
+  <div class="container-fluid">
+    <div class="row">
+    <span class="header-title col-xs-12 text-center">
       <a href="{{ site.baseurl }}/">{{ site.title }}</a>
-    </h1>
-  </div>
+    </span>
+    </div>
 
-  <div class="wrapper">
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
+    <div class="menu-table visible-xs-inline text-center">
+      {% if page.lang %}
+        {% assign thislang = page.lang %}
+      {% else %}
+        {% assign thislang = "br" %}
+      {% endif %}
+      {% assign pages = site.pages | sort: 'order' %}
+      {% for pg in pages %}
+      {% if pg.title and pg.lang == thislang and pg.order > 0 %}
+      <div class="menu-table-cell">
+      <a href="{{ pg.url | prepend: site.baseurl }}">
+        <i class="fa fa-{{ pg.icon }}" aria-hidden="true"></i><br>
+        <span>{{ pg.title }}</span>
       </a>
-
-      <div class="trigger">
-        {% if page.lang %}
-        {% assign pages = site.pages | sort: 'order' %}
-        {% for pg in pages %}
-        {% if pg.title and pg.lang == page.lang and pg.order > 0 %}
-          <a class="page-link" href="{{ pg.url | prepend: site.baseurl }}">{{ pg.title }}</a>
-          {% endif %}
-        {% endfor %}
-        <a class="page-link" href="{{ pg.url | prepend: site.baseurl
-          }}/blog">Blog</a>
-        <div class="page-lang-link">
-        {% for pg in site.pages %}
-          {% if pg.key == page.key %}
-            {% if pg.lang != page.lang %}
-              <a href="{{ pg.url | prepend: Site.baseurl }}">
-                <img src="{{ site.baseurl }}/assets/{{ pg.lang }}.png"></a>
-            {% else %}
-              <img class="gray" src="{{ site.baseurl }}/assets/{{ pg.lang }}.png">
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-        {% endif %}
-        </div>
       </div>
-    </nav>
+      {% endif %}
+      {% endfor %}
+      <div class="menu-table-cell">
+      <a href="https://abelsiqueira.github.io/blog/">
+        <i class="fa fa-pencil" aria-hidden="true"></i><br>
+        <span>Blog</span>
+      </a>
+    </div>
+
+    <div class="visible-xs-block">
+      <span>
+        abelsiqueira<i class="fa fa-at" aria-hidden="true"></i>ufpr.br
+        <i class="fa fa-fw fa-envelope" aria-hidden="true"></i></span>
+      </span>
+    </div>
 
   </div>
 

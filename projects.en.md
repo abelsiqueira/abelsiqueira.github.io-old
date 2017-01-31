@@ -4,6 +4,7 @@ title:     Projects
 key:       projects
 lang:      en
 order:     2
+icon:      flask
 permalink: /en/projects/
 ---
 Here are some projects that I'm interested in.
@@ -15,14 +16,8 @@ and maybe some are material for a Master's Degree.
 A doctorate is usually more complex.
 
 {% for pj in site.data.projects %}
-<div class="card">
-<div id="{{ pj.name }}" class="content hideContent">
+<div id="{{ pj.name }}" class="project">
 {% capture this %} {% include_relative _projects/{{ pj.name }}.md %} {% endcapture %}
 {{ this | markdownify }}
 </div>
-<div class="show-more">
-  <a>more</a>
-</div>
-</div>
 {% endfor %}
-

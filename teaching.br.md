@@ -2,6 +2,7 @@
 layout:     page
 title:      Disciplinas
 lang:       br
+icon:       book
 key:        teaching
 years:
   - 2016s2

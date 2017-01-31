@@ -4,6 +4,7 @@ title:     Projetos
 key:       projects
 lang:      br
 order:     2
+icon:      flask
 permalink: /br/projects/
 ---
 Esta é a página de projetos para alunos de Iniciação Científica, TCC, Mestrado,
