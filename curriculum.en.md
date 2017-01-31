@@ -4,12 +4,13 @@ title:      Curriculum
 key:        curriculum
 lang:       en
 order:      3
+icon:       id-card
 permalink:  /en/curriculum/
 ---
 
 # Academic path
 
-  - 11/2014-now - Professor at the Federal University of Paraná at Curitiba,
+  - 11/2014 - now - Professor at the Federal University of Paraná at Curitiba,
   PR, Brazil;
   - 12/2013 - 11/2014 - Post-doctorate at the State University of Campinas at
   Campinas, SP, Brazil;

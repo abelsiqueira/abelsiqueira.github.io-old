@@ -3,16 +3,14 @@
 ---
 @charset "utf-8";
 
-
-
 // Our variables
 $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$link-color:         #103baf;
-$link-visited-color: darken($link-color, 10%);
+$link-color:         #309b30;
+$link-visited-color: $link-color;
 $link-hover-color:   lighten($link-color, 25%);
 
 $title-font:  32px;
@@ -23,20 +21,12 @@ $h4-font: $h3-font*0.9;
 
 $spacing-unit:     30px;
 
-$text-color:       #303030;
-$background-color: #fefefe;
-$brand-color:      #303030;
-
 $grey-color:       #909090;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
+$on-palm:          768px;
+$on-laptop:        992px;
 
 
 // Using media queries with like this:
@@ -52,11 +42,7 @@ $on-laptop:        800px;
     }
 }
 
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "syntax-highlighting"
+        "base"
 ;
