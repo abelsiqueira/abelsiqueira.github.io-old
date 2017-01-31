@@ -4,7 +4,7 @@ title:     Pesquisa
 key:       research
 lang:      br
 order:     2
-icon:      search
+icon:      flask
 permalink: /br/research/
 ---
 Trabalho com matemática computacional, principalmente na área de otimização.
@@ -13,6 +13,8 @@ Alguns assuntos que me interessam:
   - Métodos para minimização irrestrita;
   - Minimização em caixa;
   - Métodos para larga escala;
+  - Otimização sem Matrizes (Matrix-Free);
+  - Programação Linear e Inteira;
   - Linguagem Julia;
   - Comparação de métodos de otimização;
   - Ciência Reprodutível;
@@ -24,17 +26,20 @@ começo.
 
 # Framework para Otimização Não-Linear em Julia
 
-Este trabalho exige o conhecimento da lingua inglesa.
-Para ler mais, acesse [esta página em inglês]({{ site.baseurl }}/en/research/).
+Este é um trabalho conjunto com [Dominique
+Orban](https://dpo.github.io), onde nós estamos criando um ambiente
+de desenvolvimento de métodos para programação não-linear em Julia.
+Esse trabalho inclui:
 
-# CUTEst.jl
+- Criação e uso de modelos com interface unificada;
+- Acesso ao CUTEst no Julia;
+- Operador lineares eficientes;
+- Métodos de Krylov;
+- Ferramentas para comparação de métodos de otimização.
 
-[CUTEst.jl](https://github.com/optimizers/CUTEst.jl) é uma interface em Julia
-para o repositório CUTEst.
-Essa interface permite muitas maneiras de acessar as funções do CUTEst,
-permitindo um workflow faça-agora-melhore-depois para otimização não-linear.
+Para conhecer mais, veja [esta página em inglês]({{ site.baseurl }}/en/research/), ou vá ao site do [JuliaSmoothOptimizers](https://juliasmoothoptimizers.github.io).
 
- - Palavras-chave: CUTEst, Julia, Otimização Não-linear
+- Palavras-chave: Otimização Não-Linear, Julia, CUTEst
 
 # Ciência Reprodutível e Software Livre de Código Aberto
 

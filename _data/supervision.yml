@@ -10,7 +10,7 @@
   link: relatorio-ic-bruno-steinmetz.pdf
 
 - name: Renan Oclides Domingues
-  title: Teoria, Implementação e Comparação de Métodos de Integração Numérica
+  theme: Teoria, Implementação e Comparação de Métodos de Integração Numérica. Método das Diferenças Finitas.
   start: 2015-03-01
   type: intern
   email:
@@ -19,7 +19,7 @@
   lattes: http://lattes.cnpq.br/7606523286136630
 
 - name: Francine Luise Milian Ribas
-  title: Métodos de Região de Confiança para Minimização Irrestrita
+  theme: Métodos de Região de Confiança para Minimização Irrestrita
   type: tcc
   start: 2015-07-01
   email:
@@ -27,7 +27,7 @@
     domain: hotmail [dot] com
 
 - name: Oksana Heringer da Silva
-  title: Métodos de Penalidade e Lagrangeano Aumentado
+  theme: Métodos de Penalidade e Lagrangeano Aumentado
   type: tcc
   start: 2015-08-01
   email:
@@ -35,13 +35,8 @@
     domain: gmail [dot] com
   lattes: http://lattes.cnpq.br/4222576494725838
 
-- name: Patrick Krezanovsky
-  title: O Fractal de Newton
-  start: 2015-10-01
-  type: tcc
-
 - name: Adrean Cebola
-  title: Programação Quadrática de Larga Escala
+  theme: Programação Quadrática de Larga Escala
   start: 2016-06-01
   type: tcc
   email:
@@ -49,10 +44,20 @@
     domain: hotmail [dot] com
 
 - name: Carlos Henrique Venturi Ronchi
-  title: Quadrados Minimos e Problemas de Classificação
+  theme: Quadrados Minimos e Problemas de Classificação
   start: 2016-05-01
   type: tcc
   email:
     user: carloshvronchi
     domain: gmail [dot] com
   lattes: http://lattes.cnpq.br/7243878025626015
+
+- name: Thaiza Rievrs
+  theme: Branch and Bound
+  start: 2017-01-20
+  type: tcc
+
+- name: Aline Xavier
+  theme: Perfil de Desempenho
+  start: 2017-01-20
+  type: intern

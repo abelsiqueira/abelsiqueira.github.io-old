@@ -3,7 +3,14 @@
   <div class="container-fluid">
     <div class="row">
     <span class="header-title col-xs-12 text-center">
-      <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+      <a href="{{ site.baseurl }}/">Abel Soares Siqueira</a>
+    </span>
+    <span class="header-subtitle col-xs-12 text-right">
+      {% if page.lang == "en" %}
+        Applied Mathematician
+      {% else %}
+        Matemático Aplicado
+      {% endif %}
     </span>
     </div>
 

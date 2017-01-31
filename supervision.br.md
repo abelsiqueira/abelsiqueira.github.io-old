@@ -22,22 +22,36 @@ types:
 
     {% endif %}
     {% for st in data %}
-      {% assign user = st.email.user %}
-      {% assign domain = st.email.domain %}
+      {% if st.email %}
+        {% assign user = st.email.user %}
+        {% assign domain = st.email.domain %}
+      {% endif %}
+
 <div class="col-md-6 col-sm-12 student">
 <strong> {{ st.name }} </strong> <br>
 <span>
+{% if st.title %}
 {% if st.link %} <a href="{{ site.baseurl }}/assets/{{ st.link }}"> {% endif %}
   {{ st.title }}
 {% if st.link %} </a> {% endif %}
+{% elsif st.theme %}
+sobre o tema <em>"{{ st.theme }}".</em>
+{% endif %}
 </span><br>
 <span>
-{% if st.end %} From {{ st.start | date: "%m/%Y" }} to {{ st.end | date:
-  "%m/%Y" }}. {% else %} Since {{ st.start | date: "%m/%Y" }}. {% endif %}
-  </span> <br>
+{{ st.start | date: "%m/%Y" }} - 
+{% if st.end %}
+{{ st.end | date: "%m/%Y" }}.
+{% else %}
+...
+{% endif %}
+</span>
+{% if st.email %}
+  <br>
   <span>
 {% include mail.html %}
 </span>
+{% endif %}
     {% if st.lattes %}
 <br>
 <span>
