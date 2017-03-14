@@ -1,3 +1,10 @@
+.curriculum a {
+  &, &:visited, &:hover {
+    color: #000;
+    text-decoration: underline;
+    font-weight: normal;
+  }
+}
 .header-title {
   font-size: 4vw;
   font-family: 'Gravitas One', sans-serif;
@@ -18,20 +25,21 @@
   font-family: 'Cinzel Decorative', cursive;
 }
 
+a {
+  &, &:visited {
+    color: #000;
+    font-weight: bold;
+  }
+  &:hover {
+    color: #234;
+    text-decoration: underline;
+  }
+}
+
 .content {
   background: #f6f6f6;
   border: 1px #e0e0e0 solid;
 
-  a {
-    &, &:visited {
-      color: #000;
-      font-weight: bold;
-    }
-    &:hover {
-      color: #234;
-      text-decoration: underline;
-    }
-  }
 }
 
 .post-title {
@@ -57,6 +65,7 @@
     &, &:hover, &:visited {
       color: white;
       text-decoration: none;
+      font-weight: normal;
     }
   }
   ul {
