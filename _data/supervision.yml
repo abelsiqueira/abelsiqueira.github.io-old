@@ -1,5 +1,5 @@
 - name: Bruno Cezar Steinmetz
-  title: Cônicas e Suas Relações com Autovalores
+  theme: Cônicas e Suas Relações com Autovalores
   start: 2015-04-01
   end: 2015-12-1
   type: intern
@@ -10,13 +10,36 @@
   link: relatorio-ic-bruno-steinmetz.pdf
 
 - name: Renan Oclides Domingues
-  theme: Teoria, Implementação e Comparação de Métodos de Integração Numérica. Método das Diferenças Finitas.
-  start: 2015-03-01
+  theme: Programação Não-Linear
+  start: 2017-02-01
   type: intern
   email:
     user: renan.oclides
     domain: hotmail [dot] com
   lattes: http://lattes.cnpq.br/7606523286136630
+
+- name: Renan Oclides Domingues
+  coadvisor: Roberto Ribeiro Santos Júnior
+  theme: Método das Diferenças Finitas.
+  start: 2016-04-01
+  end: 2017-01-31
+  type: intern
+  email:
+    user: renan.oclides
+    domain: hotmail [dot] com
+  lattes: http://lattes.cnpq.br/7606523286136630
+  link: renan-mdf.pdf
+
+- name: Renan Oclides Domingues
+  theme: Teoria, Implementação e Comparação de Métodos de Integração Numérica.
+  start: 2015-03-01
+  end: 2016-03-31
+  type: intern
+  email:
+    user: renan.oclides
+    domain: hotmail [dot] com
+  lattes: http://lattes.cnpq.br/7606523286136630
+  link: renan-integral.pdf
 
 - name: Francine Luise Milian Ribas
   theme: Métodos de Região de Confiança para Minimização Irrestrita
@@ -60,4 +83,8 @@
 - name: Aline Xavier
   theme: Perfil de Desempenho
   start: 2017-01-20
+  type: intern
+
+- name: Ian Stempczinski do Prado
+  start: 2017-02-16
   type: intern

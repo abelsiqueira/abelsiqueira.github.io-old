@@ -15,54 +15,33 @@ types:
 
 {% for t in page.types %}
   {% assign data = (site.data.supervision | where: "type", t | sort: "start" | reverse) %}
-    {% if data.size != 0 %}
 
+{% if data.size != 0 %}
 ## {{ site.t[page.lang][t] }}
 <div class="row students">
 
-    {% endif %}
-    {% for st in data %}
-      {% if st.email %}
-        {% assign user = st.email.user %}
-        {% assign domain = st.email.domain %}
-      {% endif %}
-
-<div class="col-md-6 col-sm-12 student">
-<strong> {{ st.name }} </strong> <br>
-<span>
-{% if st.title %}
-{% if st.link %} <a href="{{ site.baseurl }}/assets/{{ st.link }}"> {% endif %}
-  {{ st.title }}
-{% if st.link %} </a> {% endif %}
-{% elsif st.theme %}
-sobre o tema <em>"{{ st.theme }}".</em>
-{% endif %}
-</span><br>
-<span>
-{{ st.start | date: "%m/%Y" }} - 
+{% for st in data %}
+<div class="col-md-4 col-sm-12 student">
 {% if st.end %}
-{{ st.end | date: "%m/%Y" }}.
+<span class="student-done"> {{st.name}}<br>
+{% if st.coadvisor %}
+<em>Co-orientador: {{st.coadvisor}}</em><br>
+{% endif %}
+<small>{{ st.start | date:"%m/%Y" }} - {{ st.end | date:"%m/%Y" }} <br>
+<a href="{{site.baseurl}}/assets/{{st.link}}">
+{{st.theme}}
+</a>
+</small></span>
 {% else %}
-...
+<span class="student-active"> {{st.name}}<br>
+{% if st.coadvisor %}
+<em>Co-orientador: {{st.coadvisor}}</em><br>
 {% endif %}
-</span>
-{% if st.email %}
-  <br>
-  <span>
-{% include mail.html %}
-</span>
+<small>Desde {{ st.start | data:"%m/%Y" }}</small> </span>
 {% endif %}
-    {% if st.lattes %}
-<br>
-<span>
-<a href="{{ st.lattes }}">Lattes</a>
-</span>
-    {% endif %}
-</div>
-  {% endfor %}
-  {% if data.size != 0 %}
-</div>
-  {% endif %}
+</div> <!-- student column -->
 {% endfor %}
 
-
+</div>
+{% endif %}
+{% endfor %}

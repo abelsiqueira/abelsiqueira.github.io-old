@@ -1,6 +1,6 @@
 .header-title {
   font-size: 4vw;
-  font-family: 'Cinzel Decorative', cursive;
+  font-family: 'Gravitas One', sans-serif;
 
   a {
     &, &:visited {
@@ -103,7 +103,7 @@
 }
 
 footer {
-  margin: 2px;
+  margin: 20px;
   border-top: 1px black solid;
   background-image: linear-gradient(#fff, #fcfcfc);
 }
@@ -119,4 +119,23 @@ footer {
 .student {
   color: black;
   padding: 5px;
+  border-radius: 0px 5px;
+  border-top: 1px #ddd solid;
+  border-right: 1px #ddd solid;
+}
+
+.student-active {
+  color: #223;
+  font-weight: bold;
+}
+
+.student-done {
+  color: #444;
+  a {
+    &, &:visited, &:hover {
+      color: #444;
+      text-decoration: underline;
+      font-weight: normal;
+    }
+  }
 }
