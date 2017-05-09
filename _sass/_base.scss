@@ -6,12 +6,12 @@
   }
 }
 .header-title {
-  font-size: 4vw;
+  font-size: 3vw;
   font-family: 'Gravitas One', sans-serif;
 
   a {
     &, &:visited {
-      color: #030303;
+      color: #303;
     }
     &:hover {
       color: #272829;
@@ -23,6 +23,19 @@
 .header-subtitle {
   font-size: 1vw;
   font-family: 'Cinzel Decorative', cursive;
+}
+
+.post-content {
+  a {
+    &, &:visited {
+      color: #066;
+      font-weight: bold;
+    }
+    &:hover {
+      color: #234;
+      text-decoration: underline;
+    }
+  }
 }
 
 a {
