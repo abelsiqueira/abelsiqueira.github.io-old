@@ -35,6 +35,8 @@ Aprofundando do que o que está no Golub. Por exemplo, **MINRES, SIMMLQ, LSQR, L
 
 - **Matrix Computations.**, capítulo 11.4. Gene H. Golub, Charles F. Van Loan, 4a edição. JHU
   Press, 2013.
+- Michael Saunders reference page for *Large-Scale Numerical Optimization* class. See section
+  **Sparse Matrix Methods**. (http://stanford.edu/class/msande318/references.html)
 
 ### Aplicações que caem em matrizes grandes
 
