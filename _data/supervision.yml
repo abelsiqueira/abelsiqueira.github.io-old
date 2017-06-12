@@ -67,13 +67,15 @@
     domain: hotmail [dot] com
 
 - name: Carlos Henrique Venturi Ronchi
-  theme: Quadrados Minimos e Problemas de Classificação
+  theme: Estudo Matemático de Reconhecimento de Caracteres
   start: 2016-05-01
+  end: 2017-05-16
   type: tcc
   email:
     user: carloshvronchi
     domain: gmail [dot] com
   lattes: http://lattes.cnpq.br/7243878025626015
+  link: tcc-2017-carlos-ronchi.pdf
 
 - name: Thaiza Rievrs
   theme: Branch and Bound
