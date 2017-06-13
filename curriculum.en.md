@@ -25,8 +25,8 @@ permalink:  /en/curriculum/
   - [Perprof-py: A Python Package for Performance Profile of Mathematical
     Optimization Software.](http://doi.org/10.5334/jors.81)
     Siqueira, A. S., Silva, R. G. C. da, Santos, L.-R.,
-    _Journal of Open Research Software_, 4(1), p.e12, DOI:
-    http://doi.org/10.5334/jors.81
+    _Journal of Open Research Software_, 4(1), p.e12, 2016,
+    DOI: http://doi.org/10.5334/jors.81
   - [Feature extraction for NDVI AVHRR/NOAA time series
     classification.](http://dx.doi.org/10.1109/Multi-Temp.2011.6005091)
     da Silva, W. L.; Gonçalves, R. R. V.; Siqueira, A. S.; Zullo, J.; Neto, F.
