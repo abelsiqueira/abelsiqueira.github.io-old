@@ -45,26 +45,32 @@
   theme: Métodos de Região de Confiança para Minimização Irrestrita
   type: tcc
   start: 2015-07-01
+  end: 2017-07-04
   email:
     user: francineluise
     domain: hotmail [dot] com
+  link: tcc-2017-francine-milian.pdf
 
 - name: Oksana Heringer da Silva
-  theme: Métodos de Penalidade e Lagrangeano Aumentado
+  theme: Métodos de Penalidade e o Lagrangiano Aumentado
   type: tcc
   start: 2015-08-01
+  end: 2017-07-03
   email:
     user: oksanaheringer
     domain: gmail [dot] com
   lattes: http://lattes.cnpq.br/4222576494725838
+  link: tcc-2017-oksana-heringer.pdf
 
 - name: Adrean Cebola
-  theme: Programação Quadrática de Larga Escala
+  theme: Resolução de Programas Lineares com Método de Pontos Interiores
   start: 2016-06-01
+  end: 2017-06-27
   type: tcc
   email:
     user: adreancebola
     domain: hotmail [dot] com
+  link: tcc-2017-adrean-cebola.pdf
 
 - name: Carlos Henrique Venturi Ronchi
   theme: Estudo Matemático de Reconhecimento de Caracteres
