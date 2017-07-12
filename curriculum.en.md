@@ -46,6 +46,9 @@ permalink:  /en/curriculum/
 
 # Talks and participation in events
 
+  - [15th EUROPT Workshop on Advances in Continuous Optimization]({{ site.baseurl }}/assets/2017-07-12-europt2017.pdf)
+    _Parameter Optimization in the Nonlinear Stepsize Control Framework for Trust-Region Methods_.
+    **Talk**. July 12, 2017. Montréal, Canada.
   - [IX Symposium on Numerical Analysis and Optimization (in port: IX Simpósio de Análise Numérica e Otimização).](https://github.com/abelsiqueira/julia-simposio2017)
     _Introdução à linguagem Julia_.
     **Tutorial**. February 20 to 22, 2017. UFPR, Curitiba, Brazil.
