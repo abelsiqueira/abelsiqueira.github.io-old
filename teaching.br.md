@@ -5,6 +5,7 @@ lang:       br
 icon:       book
 key:        teaching
 years:
+  - 2017s2
   - 2017s1
   - 2016s2
   - 2016s1
