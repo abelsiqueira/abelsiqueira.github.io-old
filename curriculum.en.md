@@ -34,6 +34,24 @@ permalink:  /en/curriculum/
     _6th International Workshop on the Analysis of Multitemporal Remote Sensing
     Images (MultiTemp)_, Trento, 2011.
 
+# Softwares
+
+  - Inside the [JuliaSmoothOptimizers](https://juliasmoothoptimizers.github.io)
+    organization, I'm a main developer of the following packages.
+    - [CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl):
+      Access to the **Constrained and Unconstrained Testing Environment with
+      safe Threads** from Julia.
+    - [NLPModels.jl](https://github.com/JuliaSmoothOptimizers/NLPModels.jl):
+      Defines data structures for nonlinear optimization models.
+    - [Optimize.jl](https://github.com/JuliaSmoothOptimizers/Optimize.jl):
+      Optimization algorithms in pure Julia, and auxiliary tools for
+      benchmarking, profiling and creating your own solver.
+  - [Perprof-py - Mathematical Performance Profile in
+    Python](https://ufpr-opt.github.io/perprof-py):
+    A Python module and command line tool to create Performance Profiles.
+  - [dcicpp](https://github.com/abelsiqueira/dcicpp):
+    Implementation of a Dynamic Control of Infeasibility method in C++.
+
 # Technical Reports
 
   - [Numerical experience with a class of trust-region algorithms for
