@@ -15,6 +15,7 @@ Some topics of my interest:
   - Large-scale methods;
   - Matrix-Free Optimization;
   - Integer and Linear Programming;
+  - Computational Linear Algebra;
   - Julia language;
   - Comparison and benchmarking of optimization methods;
   - Reproducible science;
@@ -22,6 +23,20 @@ Some topics of my interest:
 
 I have interest in, or am working at, the following projects.
 If you are a student looking for a research topic, this is a good start.
+
+# Simplex Implementation in Julia
+
+The objective of this project is implement an efficient Simplex algorithm
+in Julia.
+There are many steps in this project, a few are listed below:
+
+- Basic Simplex;
+- Bounded Simplex;
+- Dual Simplex;
+- JuMP integration;
+- Basis factorization update;
+- Pre-processing;
+- Integer problem implementation.
 
 # Framework for Nonlinear Optimization in Julia
 

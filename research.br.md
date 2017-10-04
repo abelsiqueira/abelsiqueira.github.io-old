@@ -15,6 +15,7 @@ Alguns assuntos que me interessam:
   - Métodos para larga escala;
   - Otimização sem Matrizes (Matrix-Free);
   - Programação Linear e Inteira;
+  - Álgebra Linear Computacional;
   - Linguagem Julia;
   - Comparação de métodos de otimização;
   - Ciência Reprodutível;
@@ -23,6 +24,19 @@ Alguns assuntos que me interessam:
 Eu tenho interesse, ou estou trabalhando, nos seguintes projetos.
 Se você é um estudante procurando por um tópico de pesquisa, este é um bom
 começo.
+
+# Implementação do Simplex em Julia
+
+O objetivo seria implementar o Simplex eficiente em Julia.
+Este projeto tem diversas etapas, algumas sendo:
+
+- Simplex básico;
+- Simplex canalizado;
+- Simplex dual;
+- Integração com o JuMP;
+- Atualização da fatoração da base;
+- Pré-processamento;
+- Implementação para problemas inteiros.
 
 # Framework para Otimização Não-Linear em Julia
 
