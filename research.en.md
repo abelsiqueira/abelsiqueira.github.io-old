@@ -24,6 +24,14 @@ Some topics of my interest:
 I have interest in, or am working at, the following projects.
 If you are a student looking for a research topic, this is a good start.
 
+# Perprof-py: A Python tool for generating Performance Profiles
+
+Follow up to [this work](http://dx.doi.org/10.5334/jors.81).
+Some topics:
+
+- Web interface;
+- [v2.0](https://github.com/ufpr-opt/perprof-py/issues).
+
 # Simplex Implementation in Julia
 
 The objective of this project is implement an efficient Simplex algorithm

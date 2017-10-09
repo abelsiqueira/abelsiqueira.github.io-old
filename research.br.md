@@ -25,6 +25,14 @@ Eu tenho interesse, ou estou trabalhando, nos seguintes projetos.
 Se você é um estudante procurando por um tópico de pesquisa, este é um bom
 começo.
 
+# Perprof-py: Uma ferramenta para geração de Perfil de Desempenho em Python
+
+Continuação [deste trabalho](http://dx.doi.org/10.5334/jors.81).
+Alguns pontos:
+
+- Interface web;
+- [Versão 2.0](https://github.com/ufpr-opt/perprof-py/issues).
+
 # Implementação do Simplex em Julia
 
 O objetivo seria implementar o Simplex eficiente em Julia.
