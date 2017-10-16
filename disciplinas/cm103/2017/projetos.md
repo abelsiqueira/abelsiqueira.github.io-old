@@ -3,6 +3,8 @@ layout: post
 ---
 # Projeto para CM103 - 2017s2
 
+Entrega: 13 de Novembro
+
 O projeto de CM103 tem o objetivo de estender o estudo dos métodos da
 disciplina.
 O aluno deve preparar um relatório sobre algum método além dos vistos nesta
