@@ -11,7 +11,9 @@ O aluno deve preparar um relatório sobre algum método além dos vistos nesta
 disciplina.
 
 O relatório deve ser feito em LaTeX, contendo introdução, desenvolvimento,
-experimentos numéricos e conclusão.
+experimentos numéricos, conclusão e referências.
+[Aqui](https://www.overleaf.com/latex/templates/simposio-brasileiro-de-pesquisa-operacional/rjzrdqnfmzwx)
+está o modelo recomendado. Não precisa de **abstract**.
 
 Seu projeto deve incluir a implementação do método, que deve ser entregue junto
 com o mesmo.
