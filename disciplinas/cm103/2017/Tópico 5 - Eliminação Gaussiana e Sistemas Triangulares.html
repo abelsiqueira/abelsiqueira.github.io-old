@@ -11726,7 +11726,9 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}@media print {
+}
+
+@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11747,7 +11749,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11771,7 +11773,8 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11782,7 +11785,8 @@ Estudaremos aqui, no entanto, a maneira mais geral de resolvê-los. Estudos mais
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11790,7 +11794,8 @@ Estudaremos aqui, no entanto, a maneira mais geral de resolvê-los. Estudos mais
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11819,9 +11824,7 @@ Estudaremos aqui, no entanto, a maneira mais geral de resolvê-los. Estudos mais
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[1]:</div>
-
 
 
 
@@ -11838,7 +11841,8 @@ Estudaremos aqui, no entanto, a maneira mais geral de resolvê-los. Estudos mais
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11847,13 +11851,14 @@ Estudaremos aqui, no entanto, a maneira mais geral de resolvê-los. Estudos mais
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Elimina&#231;&#227;o-Gaussiana">Elimina&#231;&#227;o Gaussiana<a class="anchor-link" href="#Elimina&#231;&#227;o-Gaussiana">&#182;</a></h2><p>O método mais simples de resolução de sistemas lineares é o equivalente ao chamado escalonamento.</p>
 <p>Relembrando. Dado uma matriz $A$ e um vetor $b$, o escalonamento da matriz aumentada
-$\left[\begin{array}{cc} A &amp; b \end{array}\right]$ é o processo de transformar essa matriz em uma matriz com vários zeros montando um tipo de escada. Com mais detalhes, é uma matriz tal que</p>
+$\left[\begin{array}{cc} A & b \end{array}\right]$ é o processo de transformar essa matriz em uma matriz com vários zeros montando um tipo de escada. Com mais detalhes, é uma matriz tal que</p>
 <ul>
 <li>Todas as linhas começam com um ou mais zeros que a linha de cima, a não que seja toda nula;</li>
 <li>Todas as linhas nulas estão abaixo de qualquer linha não toda nula.</li>
@@ -11862,7 +11867,8 @@ $\left[\begin{array}{cc} A &amp; b \end{array}\right]$ é o processo de transfor
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11876,15 +11882,16 @@ $\left[\begin{array}{cc} A &amp; b \end{array}\right]$ é o processo de transfor
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Se $A$ é uma matriz quadrada e inversível, então é garantido que a matriz aumentada escalonada será da forma
-$\left[\begin{array}{cc}U &amp; c
+$\left[\begin{array}{cc}U & c
 \end{array}\right]$,
 onde $C$ é uma matriz triangular superior com diagonal não nula, isto é
-$c_{i,j} = 0$ se $i &gt; j$, e $c_{i,i} \neq 0$. Em outras palavras, a primeira linha é não nula, e cada linha abaixo tem um zero a mais que a anterior.</p>
+$c_{i,j} = 0$ se $i > j$, e $c_{i,i} \neq 0$. Em outras palavras, a primeira linha é não nula, e cada linha abaixo tem um zero a mais que a anterior.</p>
 
 </div>
 </div>
@@ -11907,24 +11914,22 @@ $c_{i,j} = 0$ se $i &gt; j$, e $c_{i,i} \neq 0$. Em outras palavras, a primeira 
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[2]:</div>
-
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>10×10 Array{Float64,2}:
- 0.425  0.679  0.013  0.161  0.215  0.944  0.344  0.341  0.619  0.192
- 0.0    0.835  0.621  0.174  0.391  0.985  0.549  0.804  0.861  0.855
- 0.0    0.0    0.309  0.249  0.236  0.877  0.467  0.338  0.163  0.382
- 0.0    0.0    0.0    0.502  0.321  0.004  0.946  0.401  0.285  0.137
- 0.0    0.0    0.0    0.0    0.201  0.449  0.067  0.446  0.511  0.628
- 0.0    0.0    0.0    0.0    0.0    0.1    0.588  0.954  0.351  0.872
- 0.0    0.0    0.0    0.0    0.0    0.0    0.539  0.662  0.537  0.788
- 0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.627  0.848  0.571
- 0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.955  0.014
- 0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.251</pre>
+ 0.742  0.022  0.08   0.638  0.638  0.556  0.828  0.66   0.661  0.675
+ 0.0    0.312  0.252  0.764  0.708  0.852  0.461  0.106  0.151  0.437
+ 0.0    0.0    0.094  0.136  0.06   0.186  0.154  0.73   0.327  0.872
+ 0.0    0.0    0.0    0.392  0.162  0.267  0.806  0.244  0.679  0.734
+ 0.0    0.0    0.0    0.0    0.948  0.019  0.155  0.716  0.155  0.189
+ 0.0    0.0    0.0    0.0    0.0    0.042  0.233  0.245  0.743  0.427
+ 0.0    0.0    0.0    0.0    0.0    0.0    0.759  0.348  0.274  0.919
+ 0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.659  0.328  0.853
+ 0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.844  0.628
+ 0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.69 </pre>
 </div>
 
 </div>
@@ -11933,7 +11938,8 @@ $c_{i,j} = 0$ se $i &gt; j$, e $c_{i,i} \neq 0$. Em outras palavras, a primeira 
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11944,19 +11950,20 @@ Computacionalmente, teremos outros objetivos, e só faremos a mudança de linhas
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Portanto, nossa operação principal será a adição de um múltiplo de outra linha a linha atual.
 Nossa notação será</p>
-<p>$$ L_j \leftarrow L_j + \alpha L_i, $$</p>
-<p>para dizer que multiplicamos a linha $i$ por $\alpha$, somamos à linha $j$ e substituímos na linha $j$.</p>
+$$ L_j \leftarrow L_j + \alpha L_i, $$<p>para dizer que multiplicamos a linha $i$ por $\alpha$, somamos à linha $j$ e substituímos na linha $j$.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11982,9 +11989,7 @@ Nossa notação será</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[3]:</div>
-
 
 
 
@@ -12018,9 +12023,7 @@ Nossa notação será</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[4]:</div>
-
 
 
 
@@ -12054,9 +12057,7 @@ Nossa notação será</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[5]:</div>
-
 
 
 
@@ -12090,9 +12091,7 @@ Nossa notação será</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[6]:</div>
-
 
 
 
@@ -12106,7 +12105,8 @@ Nossa notação será</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12132,9 +12132,7 @@ Nossa notação será</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[7]:</div>
-
 
 
 
@@ -12171,9 +12169,7 @@ Nossa notação será</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[8]:</div>
-
 
 
 
@@ -12204,9 +12200,7 @@ Nossa notação será</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[9]:</div>
-
 
 
 
@@ -12243,9 +12237,7 @@ Nossa notação será</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[10]:</div>
-
 
 
 
@@ -12276,9 +12268,7 @@ Nossa notação será</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[11]:</div>
-
 
 
 
@@ -12295,7 +12285,8 @@ Nossa notação será</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12305,20 +12296,21 @@ Note que, tirando o erro numérico em <code>A[3,2]</code>, temos</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>\begin{align}
-a_{11} x_1 + a_{12} x_2 + a_{13} &amp; = b_1 \\
-a_{22} x_2 + a_{23} x_3 &amp; = b_2 \\
-a_{33} x_3 &amp; = b_3.
-\end{align}</p>
-
+\begin{align}
+a_{11} x_1 + a_{12} x_2 + a_{13} & = b_1 \\
+a_{22} x_2 + a_{23} x_3 & = b_2 \\
+a_{33} x_3 & = b_3.
+\end{align}
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12327,16 +12319,16 @@ a_{33} x_3 &amp; = b_3.
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>\begin{align}
-x_3 &amp; = \frac{b_3}{a_{33}} \\
-x_2 &amp; = \frac{b_2 - a_{23}x_3}{a_{22}} \\
-x_1 &amp; = \frac{b_1 - a_{13}x_3 - a_{12}x_2}{a_{11}}.
-\end{align}</p>
-
+\begin{align}
+x_3 & = \frac{b_3}{a_{33}} \\
+x_2 & = \frac{b_2 - a_{23}x_3}{a_{22}} \\
+x_1 & = \frac{b_1 - a_{13}x_3 - a_{12}x_2}{a_{11}}.
+\end{align}
 </div>
 </div>
 </div>
@@ -12361,9 +12353,7 @@ x_1 &amp; = \frac{b_1 - a_{13}x_3 - a_{12}x_2}{a_{11}}.
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[12]:</div>
-
 
 
 
@@ -12380,7 +12370,8 @@ x_1 &amp; = \frac{b_1 - a_{13}x_3 - a_{12}x_2}{a_{11}}.
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12393,7 +12384,8 @@ x_1 &amp; = \frac{b_1 - a_{13}x_3 - a_{12}x_2}{a_{11}}.
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12424,7 +12416,8 @@ x_1 &amp; = \frac{b_1 - a_{13}x_3 - a_{12}x_2}{a_{11}}.
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12434,7 +12427,8 @@ Em Julia seria a matriz <code>A[1:k,1:k]</code>.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12444,7 +12438,8 @@ Se, além disso, $\det(A) \neq 0$, então a diagonal é não-nula. Caso contrár
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12480,9 +12475,7 @@ Se, além disso, $\det(A) \neq 0$, então a diagonal é não-nula. Caso contrár
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[14]:</div>
-
 
 
 
@@ -12515,9 +12508,7 @@ Se, além disso, $\det(A) \neq 0$, então a diagonal é não-nula. Caso contrár
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[15]:</div>
-
 
 
 
@@ -12531,7 +12522,8 @@ Se, além disso, $\det(A) \neq 0$, então a diagonal é não-nula. Caso contrár
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12583,9 +12575,7 @@ Se, além disso, $\det(A) \neq 0$, então a diagonal é não-nula. Caso contrár
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[17]:</div>
-
 
 
 
@@ -12615,7 +12605,8 @@ Se, além disso, $\det(A) \neq 0$, então a diagonal é não-nula. Caso contrár
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12648,7 +12639,8 @@ $L_i \leftarrow L_i - m_{i,j}L_j$ tem um gasto de memória desnecessário.<ul>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12689,9 +12681,7 @@ $L_i \leftarrow L_i - m_{i,j}L_j$ tem um gasto de memória desnecessário.<ul>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[19]:</div>
-
 
 
 
@@ -12725,9 +12715,7 @@ $L_i \leftarrow L_i - m_{i,j}L_j$ tem um gasto de memória desnecessário.<ul>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[20]:</div>
-
 
 
 
@@ -12744,7 +12732,8 @@ $L_i \leftarrow L_i - m_{i,j}L_j$ tem um gasto de memória desnecessário.<ul>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12752,7 +12741,8 @@ $L_i \leftarrow L_i - m_{i,j}L_j$ tem um gasto de memória desnecessário.<ul>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12763,7 +12753,8 @@ eliminação Gaussiana com pivoteamento parcial.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12789,9 +12780,7 @@ eliminação Gaussiana com pivoteamento parcial.</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[21]:</div>
-
 
 
 
@@ -12807,7 +12796,8 @@ eliminação Gaussiana com pivoteamento parcial.</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12838,9 +12828,7 @@ Além disso, existem outros problemas.</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[22]:</div>
-
 
 
 
@@ -12872,9 +12860,7 @@ Além disso, existem outros problemas.</p>
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_text output_error">
 <pre>
@@ -12915,9 +12901,7 @@ Stacktrace:
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_text output_error">
 <pre>
@@ -12937,14 +12921,15 @@ Stacktrace:
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A matriz $A$ no exemplo acima
 $$ A = \left[\begin{array}{cc}
-\epsilon &amp; 100 \\
-1 &amp; \epsilon
+\epsilon & 100 \\
+1 & \epsilon
 \end{array}\right],$$
 introduz um problema durante a eliminação Gaussiana.
 O elemento $a_{22}$ deve ser substituído por
@@ -12955,7 +12940,8 @@ por $-\dfrac{100}{\epsilon}$.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12967,7 +12953,8 @@ $\left[\begin{array}{c} 100 + \epsilon \\ 1 + \epsilon - \dfrac{100 + \epsilon}{
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12977,7 +12964,8 @@ $$ 1 + \epsilon - \frac{100 + \epsilon}{\epsilon} = \epsilon - \frac{100}{\epsil
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12986,7 +12974,8 @@ $$ 1 + \epsilon - \frac{100 + \epsilon}{\epsilon} = \epsilon - \frac{100}{\epsil
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12997,7 +12986,8 @@ A subtração tem um erro pequeno, mas quando dividido por $\epsilon$, fica cons
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13006,13 +12996,14 @@ A subtração tem um erro pequeno, mas quando dividido por $\epsilon$, fica cons
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>$$ A = \left[\begin{array}{cc}
-1 &amp; \epsilon \\
-\epsilon &amp; 100
+$$ A = \left[\begin{array}{cc}
+1 & \epsilon \\
+\epsilon & 100
 \end{array}\right]
 \qquad
 \mbox{e}
@@ -13021,12 +13012,12 @@ b = \left[\begin{array}{c}
 1 + \epsilon \\
 100 + \epsilon
 \end{array}\right]
-.$$</p>
-
+.$$
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13039,7 +13030,8 @@ $$ b_2 \leftarrow (100 + \epsilon) - \epsilon (1 + \epsilon) \approx 100. $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13050,7 +13042,8 @@ Novamente o erro na subtração é grande, porém a divisão não aumenta esse e
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13060,7 +13053,8 @@ Outro motivo para o pivoteamento está abaixo.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13069,7 +13063,8 @@ Outro motivo para o pivoteamento está abaixo.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13078,16 +13073,18 @@ Outro motivo para o pivoteamento está abaixo.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Em geral, o limite para se considerar uma matriz esparsa não é estabelecido, principalmente por depender da dimensão $n$ de $A$. Em geral, uma matriz com 1% de elementos não nulos é considerada esparsa. Uma com 10% às vezes será considerada esparsa. Uma matriz diagonal, por exemplo, é a matriz mais esparsa possível que pode ser não-singular (permutações da matriz diagonal também). O número de elementos não-nulos da matriz diagonal é $n$, e seu número de elementos é $n^2$. Portanto, sua densidade é $1/n$. Se $n &gt; 1000$, então a densidade será menor que $0.001$.</p>
+<p>Em geral, o limite para se considerar uma matriz esparsa não é estabelecido, principalmente por depender da dimensão $n$ de $A$. Em geral, uma matriz com 1% de elementos não nulos é considerada esparsa. Uma com 10% às vezes será considerada esparsa. Uma matriz diagonal, por exemplo, é a matriz mais esparsa possível que pode ser não-singular (permutações da matriz diagonal também). O número de elementos não-nulos da matriz diagonal é $n$, e seu número de elementos é $n^2$. Portanto, sua densidade é $1/n$. Se $n > 1000$, então a densidade será menor que $0.001$.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13096,7 +13093,8 @@ Outro motivo para o pivoteamento está abaixo.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13106,7 +13104,8 @@ elementos. Uma matriz com $n = 1000$ e $k = 50$, terá esparsidade $\approx 0.1$
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13117,7 +13116,8 @@ Por outro lado, algumas operações na matriz fazem com que sua densidade aument
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13148,9 +13148,7 @@ Por outro lado, algumas operações na matriz fazem com que sua densidade aument
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[25]:</div>
-
 
 
 
@@ -13193,9 +13191,7 @@ Por outro lado, algumas operações na matriz fazem com que sua densidade aument
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[26]:</div>
-
 
 
 
@@ -13219,7 +13215,8 @@ Por outro lado, algumas operações na matriz fazem com que sua densidade aument
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13252,9 +13249,7 @@ No entanto, uma simples mudança de linhas resolveria o problema.</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[27]:</div>
-
 
 
 
@@ -13296,9 +13291,7 @@ No entanto, uma simples mudança de linhas resolveria o problema.</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[28]:</div>
-
 
 
 
@@ -13322,7 +13315,8 @@ No entanto, uma simples mudança de linhas resolveria o problema.</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13331,7 +13325,8 @@ No entanto, uma simples mudança de linhas resolveria o problema.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13342,7 +13337,8 @@ Desse modo, iremos focar nesse tipo de pivoteamento.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13378,7 +13374,8 @@ Desse modo, iremos focar nesse tipo de pivoteamento.</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13406,16 +13403,14 @@ Desse modo, iremos focar nesse tipo de pivoteamento.</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[30]:</div>
-
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>2×5 Array{Float64,2}:
- 0.917908  0.262372  0.565862  0.477504  0.398566
- 0.176515  0.270038  0.33932   0.91767   0.158029</pre>
+ 0.648119  0.987081  0.371325  0.0272896  0.99652 
+ 0.406576  0.400086  0.448086  0.759541   0.229895</pre>
 </div>
 
 </div>
@@ -13457,9 +13452,7 @@ Desse modo, iremos focar nesse tipo de pivoteamento.</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[31]:</div>
-
 
 
 
@@ -13473,7 +13466,8 @@ Desse modo, iremos focar nesse tipo de pivoteamento.</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13483,7 +13477,8 @@ Em outras palavras, se $A$ é inversível, então a eliminação Gaussiana com p
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13492,7 +13487,8 @@ Em outras palavras, se $A$ é inversível, então a eliminação Gaussiana com p
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13500,7 +13496,8 @@ Em outras palavras, se $A$ é inversível, então a eliminação Gaussiana com p
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13536,7 +13533,8 @@ Em outras palavras, se $A$ é inversível, então a eliminação Gaussiana com p
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13552,7 +13550,8 @@ Em outras palavras, se $A$ é inversível, então a eliminação Gaussiana com p
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13563,7 +13562,8 @@ $[2(n-j)+3](n-j) = 2(n-j)^2 + 3(n-j)$ operações para cada $j$.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13572,21 +13572,22 @@ $[2(n-j)+3](n-j) = 2(n-j)^2 + 3(n-j)$ operações para cada $j$.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>\begin{align}
+\begin{align}
 \sum_{j=1}^{n-1}[2(n-j)^2 + 3(n-j)]
-&amp; = \sum_{j=1}^{n-1}(2j^2 + 3j) \\
-&amp; = 2\frac{(n-1)n(2n-1)}{6} + 3\frac{(n-1)n}{2} \\
-&amp; = \frac{2}{3}n^3 + \frac{1}{2}n^2 - \frac{7}{6}n.
-\end{align}</p>
-
+& = \sum_{j=1}^{n-1}(2j^2 + 3j) \\
+& = 2\frac{(n-1)n(2n-1)}{6} + 3\frac{(n-1)n}{2} \\
+& = \frac{2}{3}n^3 + \frac{1}{2}n^2 - \frac{7}{6}n.
+\end{align}
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13619,7 +13620,8 @@ $[2(n-j)+3](n-j) = 2(n-j)^2 + 3(n-j)$ operações para cada $j$.</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13630,21 +13632,22 @@ Logo, temos</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>\begin{align}
+\begin{align}
 \sum_{j=1}^n [2(n-j) + 1]
-&amp; = \sum_{j=0}^{n-1}[2j + 1] \\
-&amp; = 2\sum_{j=0}^{n-1}j + n \\
-&amp; = (n-1)n + n = n^2.
-\end{align}</p>
-
+& = \sum_{j=0}^{n-1}[2j + 1] \\
+& = 2\sum_{j=0}^{n-1}j + n \\
+& = (n-1)n + n = n^2.
+\end{align}
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13655,7 +13658,8 @@ $$ \frac{2}{3}n^3 + \frac{3}{2}n^2 - \frac{7}{6}n. $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13664,7 +13668,8 @@ $$ \frac{2}{3}n^3 + \frac{3}{2}n^2 - \frac{7}{6}n. $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13673,7 +13678,8 @@ $$ \frac{2}{3}n^3 + \frac{3}{2}n^2 - \frac{7}{6}n. $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13681,7 +13687,8 @@ $$ \frac{2}{3}n^3 + \frac{3}{2}n^2 - \frac{7}{6}n. $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13692,7 +13699,8 @@ mais de um sistema linear, e não tivermos todas os vetores do lado direito de i
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13701,7 +13709,8 @@ mais de um sistema linear, e não tivermos todas os vetores do lado direito de i
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13713,7 +13722,8 @@ apenas no vetor do lado direito.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13725,7 +13735,8 @@ Sendo assim, podemos <strong>utilizar a própria matriz $A$ para guardar $m_{ij}
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13766,9 +13777,7 @@ Por enquanto, para facilitar o entendimento, vamos considerar a eliminação sem
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[34]:</div>
-
 
 
 
@@ -13782,7 +13791,8 @@ Por enquanto, para facilitar o entendimento, vamos considerar a eliminação sem
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13802,7 +13812,8 @@ Note que a aplicação dos $m_{ij}$ modifica o vetor $b$, e além disso criamos 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13812,7 +13823,8 @@ Note que a aplicação dos $m_{ij}$ modifica o vetor $b$, e além disso criamos 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13882,9 +13894,7 @@ Note que a aplicação dos $m_{ij}$ modifica o vetor $b$, e além disso criamos 
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[36]:</div>
-
 
 
 
@@ -13919,9 +13929,7 @@ Note que a aplicação dos $m_{ij}$ modifica o vetor $b$, e além disso criamos 
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[37]:</div>
-
 
 
 
@@ -13938,7 +13946,8 @@ Note que a aplicação dos $m_{ij}$ modifica o vetor $b$, e além disso criamos 
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13970,7 +13979,8 @@ Note que a aplicação dos $m_{ij}$ modifica o vetor $b$, e além disso criamos 
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13979,21 +13989,22 @@ Note que a aplicação dos $m_{ij}$ modifica o vetor $b$, e além disso criamos 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>\begin{align}\left\{\begin{array}{rcl}
-x_1 &amp; = &amp; b_1 \\
-x_2 &amp; = &amp; b_2 - m_{21} x_1 \\
-x_3 &amp; = &amp; b_3 - m_{31} x_1 - m_{32} x_2.
+\begin{align}\left\{\begin{array}{rcl}
+x_1 & = & b_1 \\
+x_2 & = & b_2 - m_{21} x_1 \\
+x_3 & = & b_3 - m_{31} x_1 - m_{32} x_2.
 \end{array}\right.
-\end{align}</p>
-
+\end{align}
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14002,22 +14013,23 @@ x_3 &amp; = &amp; b_3 - m_{31} x_1 - m_{32} x_2.
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>\begin{align}\left\{
+\begin{align}\left\{
 \begin{array}{rcrcrcl}
-      x_1 &amp; &amp;           &amp; &amp;     &amp; = &amp; b_1 \\
-m_{21}x_1 &amp;+&amp;       x_2 &amp; &amp;     &amp; = &amp; b_2 \\
-m_{31}x_1 &amp;+&amp; m_{32}x_2 &amp;+&amp; x_3 &amp; = &amp; b_3
+      x_1 & &           & &     & = & b_1 \\
+m_{21}x_1 &+&       x_2 & &     & = & b_2 \\
+m_{31}x_1 &+& m_{32}x_2 &+& x_3 & = & b_3
 \end{array}\right.
-\end{align}</p>
-
+\end{align}
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14026,29 +14038,31 @@ m_{31}x_1 &amp;+&amp; m_{32}x_2 &amp;+&amp; x_3 &amp; = &amp; b_3
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>$$\left[\begin{array}{ccc}
-1 &amp; 0 &amp; 0 \\
-m_{21} &amp; 1 &amp; 0 \\
-m_{31} &amp; m_{32} &amp; 1
-\end{array}\right].$$</p>
+$$\left[\begin{array}{ccc}
+1 & 0 & 0 \\
+m_{21} & 1 & 0 \\
+m_{31} & m_{32} & 1
+\end{array}\right].$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Isso quer dizer que fazer eliminação Gaussiana em $\left[\begin{array}{cc}A & b\end{array}\right]$ é equivalente a fazer eliminação Gaussiana apenas em $A$, guardar $m_{ij}$ em $L$ e calcular $L^{-1}b$. Note que $\det(L) = 1$ e por isso sempre existe a inversa.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Isso quer dizer que fazer eliminação Gaussiana em $\left[\begin{array}{cc}A &amp; b\end{array}\right]$ é equivalente a fazer eliminação Gaussiana apenas em $A$, guardar $m_{ij}$ em $L$ e calcular $L^{-1}b$. Note que $\det(L) = 1$ e por isso sempre existe a inversa.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14060,7 +14074,8 @@ $$ Ux = L^{-1}b. $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14070,7 +14085,8 @@ $$ LUx = b. $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14098,19 +14114,17 @@ $$ LUx = b. $$</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[39]:</div>
-
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>5×5 Array{Float64,2}:
- 0.460624   0.982056   0.131722   0.761447    0.143639
- 1.15977   -0.164407   0.310202  -0.618326    0.524453
- 0.814343  -0.293935   0.265688   0.0136406   0.633328
- 0.678402   4.01917   -2.56535    2.02607    -0.092565
- 1.91953    9.72372   -8.5499     2.78058     1.00731 </pre>
+ 0.599315   0.85099    0.0642117   0.604383    0.808887
+ 0.871213  -0.285928   0.925411    0.453643   -0.655348
+ 0.902958   0.569256  -0.248697   -0.0526953   0.424409
+ 0.390481  -2.21698   -9.208       0.582997    2.36679 
+ 0.109571  -0.35391   -4.82953    -0.11486     2.70556 </pre>
 </div>
 
 </div>
@@ -14136,19 +14150,17 @@ $$ LUx = b. $$</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[40]:</div>
-
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>5×5 Array{Float64,2}:
- 1.0        0.0        0.0      0.0      0.0
- 1.15977    1.0        0.0      0.0      0.0
- 0.814343  -0.293935   1.0      0.0      0.0
- 0.678402   4.01917   -2.56535  1.0      0.0
- 1.91953    9.72372   -8.5499   2.78058  1.0</pre>
+ 1.0        0.0        0.0       0.0      0.0
+ 0.871213   1.0        0.0       0.0      0.0
+ 0.902958   0.569256   1.0       0.0      0.0
+ 0.390481  -2.21698   -9.208     1.0      0.0
+ 0.109571  -0.35391   -4.82953  -0.11486  1.0</pre>
 </div>
 
 </div>
@@ -14174,19 +14186,17 @@ $$ LUx = b. $$</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[41]:</div>
-
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>5×5 Array{Float64,2}:
- 0.460624   0.982056  0.131722   0.761447    0.143639
- 0.0       -0.164407  0.310202  -0.618326    0.524453
- 0.0        0.0       0.265688   0.0136406   0.633328
- 0.0        0.0       0.0        2.02607    -0.092565
- 0.0        0.0       0.0        0.0         1.00731 </pre>
+ 0.599315   0.85099    0.0642117   0.604383    0.808887
+ 0.0       -0.285928   0.925411    0.453643   -0.655348
+ 0.0        0.0       -0.248697   -0.0526953   0.424409
+ 0.0        0.0        0.0         0.582997    2.36679 
+ 0.0        0.0        0.0         0.0         2.70556 </pre>
 </div>
 
 </div>
@@ -14212,19 +14222,17 @@ $$ LUx = b. $$</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[42]:</div>
-
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>5×5 Array{Float64,2}:
- 0.460624  0.982056    0.131722  0.761447   0.143639
- 0.534216  0.974548    0.462968  0.264774   0.691041
- 0.375106  0.848055    0.281775  0.815466   0.596144
- 0.312488  0.00544875  0.654532  0.0224852  0.48804 
- 0.884181  0.286435    0.997556  0.966216   0.71039 </pre>
+ 0.599315   0.85099   0.0642117  0.604383   0.808887 
+ 0.522132   0.455466  0.981353   0.980189   0.0493658
+ 0.541156   0.605642  0.33608    0.751276   0.78174  
+ 0.234021   0.966193  0.263454   0.298499   0.227578 
+ 0.0656678  0.194437  0.880611   0.0932051  0.70458  </pre>
 </div>
 
 </div>
@@ -14250,19 +14258,17 @@ $$ LUx = b. $$</p>
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[43]:</div>
-
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>5×5 Array{Float64,2}:
- 0.0   0.0           0.0          0.0          0.0        
- 0.0   0.0           0.0          0.0          0.0        
- 0.0   0.0           0.0          0.0          0.0        
- 0.0   1.82146e-17   2.22045e-16  2.22045e-16  2.22045e-16
- 0.0  -5.55112e-17  -1.11022e-16  2.22045e-16  8.88178e-16</pre>
+ 0.0  0.0   0.0           0.0          0.0
+ 0.0  0.0   0.0           0.0          0.0
+ 0.0  0.0   5.55112e-17   0.0          0.0
+ 0.0  0.0  -4.44089e-16  -1.11022e-16  0.0
+ 0.0  0.0   0.0           2.77556e-17  0.0</pre>
 </div>
 
 </div>
@@ -14271,7 +14277,8 @@ $$ LUx = b. $$</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14280,7 +14287,8 @@ $$ LUx = b. $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14289,7 +14297,8 @@ $$ LUx = b. $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14298,14 +14307,15 @@ $$ LUx = b. $$</p>
 $$ LUx = b. $$
 Para resolver esse sistema, fazemos $Ux = y$, obtendo
 $$ \left\{\begin{array}{rcl}
-Ly &amp; = &amp; b \\
-Ux &amp; = &amp; y.
+Ly & = & b \\
+Ux & = & y.
 \end{array}\right. $$</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14314,23 +14324,25 @@ Ux &amp; = &amp; y.
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Para resolver o sistema triangular $Ly = b$, veja que
 $$\left\{\begin{array}{rcl}
-y_1 &amp; = &amp; b_1 \\
-y_2 &amp; = &amp; b_2 - m_{21}y_1 \\
-y_3 &amp; = &amp; b_3 - m_{31}y_1 - m_{32}y_2 \\
-\vdots &amp; &amp; \vdots \\
-y_n &amp; = &amp; b_n - \sum_{j=1}^{n-1} m_{nj} y_j.
+y_1 & = & b_1 \\
+y_2 & = & b_2 - m_{21}y_1 \\
+y_3 & = & b_3 - m_{31}y_1 - m_{32}y_2 \\
+\vdots & & \vdots \\
+y_n & = & b_n - \sum_{j=1}^{n-1} m_{nj} y_j.
 \end{array}\right.$$</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14340,7 +14352,8 @@ $$ y_i = b_i - \sum_{j = 1}^{i - 1}m_{ij} y_j, \qquad i = 1,\dots,n. $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14349,7 +14362,8 @@ $$ y_i = b_i - \sum_{j = 1}^{i - 1}m_{ij} y_j, \qquad i = 1,\dots,n. $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14377,7 +14391,8 @@ $$ y_i = b_i - \sum_{j = 1}^{i - 1}m_{ij} y_j, \qquad i = 1,\dots,n. $$</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14403,7 +14418,8 @@ $$ y_i = b_i - \sum_{j = 1}^{i - 1}m_{ij} y_j, \qquad i = 1,\dots,n. $$</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14412,7 +14428,8 @@ $$ y_i = b_i - \sum_{j = 1}^{i - 1}m_{ij} y_j, \qquad i = 1,\dots,n. $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14420,7 +14437,8 @@ $$ y_i = b_i - \sum_{j = 1}^{i - 1}m_{ij} y_j, \qquad i = 1,\dots,n. $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14429,7 +14447,8 @@ $$ y_i = b_i - \sum_{j = 1}^{i - 1}m_{ij} y_j, \qquad i = 1,\dots,n. $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14438,20 +14457,638 @@ $$ y_i = b_i - \sum_{j = 1}^{i - 1}m_{ij} y_j, \qquad i = 1,\dots,n. $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span>  <span class="mi">3</span>  <span class="mi">0</span>  <span class="mi">1</span><span class="p">;</span>
+      <span class="mi">2</span>  <span class="mi">1</span>  <span class="mi">1</span>  <span class="mi">1</span><span class="p">;</span>
+     <span class="o">-</span><span class="mi">3</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">3</span><span class="p">;</span>
+     <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">0</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">]</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">copy</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[46]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4×4 Array{Float64,2}:
+  1.0   3.0   0.0   1.0
+  2.0   1.0   1.0   1.0
+ -3.0  -1.0  -1.0  -3.0
+ -1.0  -1.0   0.0  -1.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">;</span><span class="mi">2</span><span class="p">;</span><span class="mi">3</span><span class="p">;</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[47]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4-element Array{Int64,1}:
+ 1
+ 2
+ 3
+ 4</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="c"># pivô: a₃₁, L₁ ↔ L₃</span>
+<span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="o">:</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="o">:</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="o">:</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="o">:</span><span class="p">]</span>
+<span class="n">A</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[48]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4×4 Array{Float64,2}:
+ -3.0  -1.0  -1.0  -3.0
+  2.0   1.0   1.0   1.0
+  1.0   3.0   0.0   1.0
+ -1.0  -1.0   0.0  -1.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">m</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="o">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">-=</span> <span class="n">m</span> <span class="o">*</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="o">:</span><span class="mi">4</span><span class="p">]</span><span class="o">&#39;</span>
+<span class="n">A</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[49]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4×4 Array{Float64,2}:
+ -3.0       -1.0       -1.0       -3.0
+ -0.666667   0.333333   0.333333  -1.0
+ -0.333333   2.66667   -0.333333   0.0
+  0.333333  -0.666667   0.333333   0.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="c"># pivô: a₃₂, L₂ ↔ L₃</span>
+<span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="o">:</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="o">:</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="o">:</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="o">:</span><span class="p">]</span>
+<span class="n">A</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[50]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4×4 Array{Float64,2}:
+ -3.0       -1.0       -1.0       -3.0
+ -0.333333   2.66667   -0.333333   0.0
+ -0.666667   0.333333   0.333333  -1.0
+  0.333333  -0.666667   0.333333   0.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">/</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">m</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="o">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">-=</span> <span class="n">m</span> <span class="o">*</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">:</span><span class="mi">4</span><span class="p">]</span><span class="o">&#39;</span>
+<span class="n">A</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[51]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4×4 Array{Float64,2}:
+ -3.0       -1.0      -1.0       -3.0
+ -0.333333   2.66667  -0.333333   0.0
+ -0.666667   0.125     0.375     -1.0
+  0.333333  -0.25      0.25       0.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="c"># pivô: a₃₃, não há troca</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">/</span> <span class="n">A</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">m</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="o">-=</span> <span class="n">m</span> <span class="o">*</span> <span class="n">A</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">A</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[53]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4×4 Array{Float64,2}:
+ -3.0       -1.0      -1.0       -3.0     
+ -0.333333   2.66667  -0.333333   0.0     
+ -0.666667   0.125     0.375     -1.0     
+  0.333333  -0.25      0.666667   0.666667</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="n">tril</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">eye</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[54]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4×4 Array{Float64,2}:
+  1.0        0.0    0.0       0.0
+ -0.333333   1.0    0.0       0.0
+ -0.666667   0.125  1.0       0.0
+  0.333333  -0.25   0.666667  1.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">U</span> <span class="o">=</span> <span class="n">triu</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[55]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4×4 Array{Float64,2}:
+ -3.0  -1.0      -1.0       -3.0     
+  0.0   2.66667  -0.333333   0.0     
+  0.0   0.0       0.375     -1.0     
+  0.0   0.0       0.0        0.666667</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">P</span> <span class="o">=</span> <span class="n">eye</span><span class="p">(</span><span class="mi">4</span><span class="p">)[</span><span class="n">p</span><span class="p">,</span><span class="o">:</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[56]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4×4 Array{Float64,2}:
+ 0.0  0.0  1.0  0.0
+ 1.0  0.0  0.0  0.0
+ 0.0  1.0  0.0  0.0
+ 0.0  0.0  0.0  1.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Inicialmente, vamos apenas apresentar o algoritmo com pivoteamento.
-Nesse algoritmo precisaremos criar um <strong>vetor</strong> para guardar a permutação das linhas.
-Esse vetor será um vetor com a ordem que as linhas ficou no fim. Ele começa sendo um vetor $p_i = i$.</p>
+<p>O vetor $p$ corresponde à uma <strong>matriz de permutação</strong> $P$. Uma matriz de permutação é uma matriz obtida a partir de permutações de linhas e permutações de colunas na matriz identidade.</p>
+<ul>
+<li>Se a matriz $P$ é obtida a partir de uma sequência de permutações nas <strong>linhas</strong> da matriz identidade, então a matriz $PA$ é a matriz resultante das mesmas permutações nas linhas de $A$. Nesse caso, dizemos que $P$ é uma <strong>matriz de permutação de linhas</strong>.</li>
+<li>Análogo para colunas, e para a matriz $AP$.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>O vetor $p$ tem os índices dessas linhas. Inicialmente, $p$ é um vetor com $p_i = i$, que significa que $P$ é a identidade. Cada modificação no passo XXX modifica elementos de $p$ e as linhas correspondentes de $P$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Uma matriz de permutação de linhas também é uma matriz de permutação de colunas, mas com outras permutações (a priori indetermidanas).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Exercício:</strong> Mostre que se $P$ é uma matriz de permutação de linhas, então $P^T$ é uma matriz de permutação de colunas.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Uma parte não trivial do processo da fatoração LU com pivoteamento é descobrir a relação entre $A$, $L$, $U$ e $P$. Como não dispomos do tempo, vamos simplesmente enunciar essa relação.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Teo.:</strong> Se $A$ é não-singular, o algoritmo de fatoração LU com pivoteamento parcial da matriz $A$ retorna matrizes $L$, $U$ e $P$ tais que
+$$ PA = LU. $$</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">P</span> <span class="o">*</span> <span class="n">B</span> <span class="o">-</span> <span class="n">L</span> <span class="o">*</span> <span class="n">U</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[57]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4×4 Array{Float64,2}:
+ 0.0  0.0   0.0          0.0
+ 0.0  0.0   0.0          0.0
+ 0.0  0.0   0.0          0.0
+ 0.0  0.0  -9.25186e-18  0.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">B</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="o">:</span><span class="p">]</span> <span class="o">-</span> <span class="n">L</span> <span class="o">*</span> <span class="n">U</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[58]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4×4 Array{Float64,2}:
+ 0.0  0.0   0.0          0.0
+ 0.0  0.0   0.0          0.0
+ 0.0  0.0   0.0          0.0
+ 0.0  0.0  -9.25186e-18  0.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+\begin{align}
+Ax & = b \\
+PAx & = Pb \\
+LUx & = Pb.
+\end{align}
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Daí, temos
+$$\left\{
+\begin{array}{rcl}
+c & = & Pb \\
+Ly & = & c \\
+Ux & = & y
+\end{array}
+\right.$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">B</span> <span class="o">*</span> <span class="n">ones</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[59]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4-element Array{Float64,1}:
+  5.0
+  5.0
+ -8.0
+ -3.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="n">p</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">L</span> <span class="o">\</span> <span class="n">c</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">U</span> <span class="o">\</span> <span class="n">y</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[60]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4-element Array{Float64,1}:
+ 1.0
+ 1.0
+ 1.0
+ 1.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A implementação do algoritmo está abaixo.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">function</span> <span class="n">declupivot</span><span class="p">(</span><span class="n">A</span><span class="o">::</span><span class="kt">Matrix</span><span class="p">;</span> <span class="n">diagtol</span> <span class="o">=</span> <span class="mf">1e-12</span><span class="p">)</span>
@@ -14493,9 +15130,7 @@ Esse vetor será um vetor com a ordem que as linhas ficou no fim. Ele começa se
 
 
 <div class="output_area">
-
-<div class="prompt output_prompt">Out[46]:</div>
-
+<div class="prompt output_prompt">Out[61]:</div>
 
 
 
@@ -14509,76 +15144,17 @@ Esse vetor será um vetor com a ordem que as linhas ficou no fim. Ele começa se
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>O vetor $p$ corresponde à uma <strong>matriz de permutação</strong> $P$. Uma matriz de permutação é uma matriz obtida a partir de permutações de linhas e permutações de colunas na matriz identidade.</p>
-<ul>
-<li>Se a matriz $P$ é obtida a partir de uma sequência de permutações nas <strong>linhas</strong> da matriz identidade, então a matriz $PA$ é a matriz resultante das mesmas permutações nas linhas de $A$. Nesse caso, dizemos que $P$ é uma <strong>matriz de permutação de linhas</strong>.</li>
-<li>Análogo para colunas, e para a matriz $AP$.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>O vetor $p$ tem os índices dessas linhas. Inicialmente, $p$ é um vetor com $p_i = i$, que significa que $P$ é a identidade. Cada modificação no passo XXX modifica elementos de $p$ e as linhas correspondentes de $P$.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Uma matriz de permutação de linhas também é uma matriz de permutação de colunas, mas com outras permutações (a priori indetermidanas).</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Exercício:</strong> Mostre que se $P$ é uma matriz de permutação de linhas, então $P^T$ é uma matriz de permutação de colunas.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Uma parte não trivial do processo da fatoração LU com pivoteamento é descobrir a relação entre $A$, $L$, $U$ e $P$. Como não dispomos do tempo, vamos simplesmente enunciar essa relação.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Teo.:</strong> O algoritmo de fatoração LU com pivoteamento parcial da matriz $A$ retorna matrizes $L$, $U$ e $P$ tais que
-$$ PA = LU. $$</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">copy</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span>  <span class="mi">3</span>  <span class="mi">0</span>  <span class="mi">1</span><span class="p">;</span>
+      <span class="mi">2</span>  <span class="mi">1</span>  <span class="mi">1</span>  <span class="mi">1</span><span class="p">;</span>
+     <span class="o">-</span><span class="mi">3</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">3</span><span class="p">;</span>
+     <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">0</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">]</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">declupivot</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="n">L</span> <span class="o">=</span> <span class="n">tril</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">eye</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">U</span> <span class="o">=</span> <span class="n">triu</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="n">L</span> <span class="o">*</span> <span class="n">U</span> <span class="o">-</span> <span class="n">B</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="o">:</span><span class="p">]</span>
+<span class="n">A</span>
 </pre></div>
 
 </div>
@@ -14590,19 +15166,16 @@ $$ PA = LU. $$</p>
 
 
 <div class="output_area">
-
-<div class="prompt output_prompt">Out[47]:</div>
-
+<div class="prompt output_prompt">Out[62]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>5×5 Array{Float64,2}:
-  0.0          0.0  0.0          0.0  0.0
-  0.0          0.0  0.0          0.0  0.0
-  0.0          0.0  0.0          0.0  0.0
-  0.0          0.0  1.38778e-17  0.0  0.0
- -5.55112e-17  0.0  0.0          0.0  0.0</pre>
+<pre>4×4 Array{Float64,2}:
+ -3.0       -1.0      -1.0       -3.0     
+ -0.333333   2.66667  -0.333333   0.0     
+ -0.666667   0.125     0.375     -1.0     
+  0.333333  -0.25      0.666667   0.666667</pre>
 </div>
 
 </div>
@@ -14611,16 +15184,8 @@ $$ PA = LU. $$</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Note ainda, que por um teorema anterior, a fatoração LU de uma matriz quadrada sempre existe. Se $A$ for singular, então $U$ terá um zero no último elemento.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14628,11 +15193,39 @@ $$ PA = LU. $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Exercícios do capítulo 3 do livro Cálculo Numérico de Ruggiero e Lopes, com exceção daqueles que não competem ao assunto.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Sabendo que $P^TP = I$, mostre como resolver o sistema linear $A^T\lambda = c$ usando a fatoração LU.</li>
+<li>Quando a matriz $A$ é sobrescrita pela fatoração $LU$, nada é perdido. Faça um algoritmo que descreve como calcular o produto $Ax$ pra um vetor $x$ quando a matriz $A$ foi sobrescrita. Compare o número de operações nesse produto com o número de operações no produto com $A$ na forma original.</li>
+<li>Escreva um algoritmo de fatoração LU e resolução de sistema para matrizes tridiagonais, usando como entrada apenas 3 vetores, correspondentes às diagonais existentes da matriz.</li>
+<li>Uma matriz singular pode não ter fatoração $LU$ da maneira que vimos. No entanto, é possível estender a fatoração para continuar o processo, mesmo se encontrarmos um zero na diagonal. Estude como fazer isso. Teste com matrizes cuja primeira coluna é nula. Compare com o <code>lu</code> já implementado no Julia.</li>
+<li>Uma matriz não quadrada também pode ter fatoração LU, estendo o conceito da questão anterior. Estude como fazer isso.</li>
+<li>*Uma matriz de banda é uma extensão da matriz tridiagonal. Uma matriz com bandas $a \geq 0$ e $b \geq 0$ é uma matriz $A$ com $a$ diagonais abaixo da diagonal e $b$ diagonais acima da diagonal. Se $a = b = 1$, a matriz é tridiagonal. Para representar uma matriz de banda $A \in \mathbb{R}^{n\times n}$, costuma-se usar uma matriz $D \in \mathbb{R}^{1+a+b}\times n$, onde cada linha corresponde à uma diagonal de $A$.
+Escreva um algoritmo que faz a fatoração LU dessa matriz de banda e resolve um sistema linear usando essa fatoração. Descreva a posição dos elementos de $A$ na matriz $D$.</li>
+<li>*O pivoteamento da fatoração LU é feito sempre que algum elemento da coluna abaixo da diagonal é maior que o elemento da diagonal. Porém, trocar linhas também é custoso, então podemos fazer um compromisso entre melhorar a estabilidade e diminuir a troca de linhas usando a condição a seguir:
+$$ \mbox{se existe $i > j$ tal que } \qquad
+|a_{ij}| > \alpha |a_{jj}|,
+\qquad \mbox{ então faça a troca}. $$
+A constante $\alpha \geq 1$ define o nível do compromisso. Se $\alpha = 1$ temos o pivotamento visto acima.
+Se $\alpha \rightarrow \infty$, então a troca só é feita se $a_{jj} = 0$.
+Faça um algoritmo que implementa essa mudança, com $\alpha$ sendo um parâmetro opcional de entrada.</li>
+<li>*O pivoteamento de linhas para diminuição da esparsidade pode ser feito buscando a linha que tem a maior quantidade de zeros. Deve-se apenas tomar cuidado para que não se piore demais a estabilidade do método.
+Modificando a condição acima, escreva e implemente o algoritmo que faz um pivoteamento buscando a esparsidade.</li>
+</ol>
 
 </div>
 </div>
