@@ -64,6 +64,10 @@ permalink:  /br/curriculum/
 
 # Eventos
 
+  - [Seminários de Análise Convexa e Otimização.]({{ site.baseurl }}/assets/2017-12-01-ufsc.pdf)
+    _Otimização Não-Linear na Linguagem Julia_.
+    **Apresentação oral**. 01 de Dezembro de 2017. UFSC,
+    Florianópolis/SC, Brasil.
   - [Semana Acadêmica da Matemática Industrial.]({{ site.baseurl }}/assets/2017-10-04-otim.pdf)
     _Introdução à Otimização_.
     **Apresentação oral**. 04 de Outubro de 2017. UFPR, Curitiba, Brasil.

@@ -64,6 +64,9 @@ permalink:  /en/curriculum/
 
 # Talks and participation in events
 
+  - [Seminars on Convex Analysis and Optimization.]({{ site.baseurl }}/assets/2017-12-01-ufsc.pdf)
+    _Otimização Não-Linear na Linguagem Julia_.
+    **Apresentação oral**. December 01, 2017. UFSC, Florianópolis/SC, Brazil.
   - [15th EUROPT Workshop on Advances in Continuous Optimization]({{ site.baseurl }}/assets/2017-07-12-europt2017.pdf)
     _Parameter Optimization in the Nonlinear Stepsize Control Framework for Trust-Region Methods_.
     **Talk**. July 12, 2017. Montréal, Canada.
