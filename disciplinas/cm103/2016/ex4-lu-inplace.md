@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: disciplina
 title: Resolução de sistema Ax = b com LU feito inplace
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: disciplina
 title: Implementação do Método de Newton para SNL
 ---
 

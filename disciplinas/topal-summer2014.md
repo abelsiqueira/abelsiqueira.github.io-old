@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout: disciplina
 title:      TopAL - Verão 2015 - Tópicos de Álgebra Linear
 categories: teaching
 tag:        verao2015

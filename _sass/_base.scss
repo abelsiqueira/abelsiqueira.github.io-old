@@ -1,21 +1,15 @@
-.curriculum a {
-  &, &:visited, &:hover {
-    color: #000;
-    text-decoration: underline;
-    font-weight: normal;
-  }
-}
 .header-title {
   font-size: 4em;
   font-family: 'Montserrat', sans-serif;
-  background: #B71C1C;
+  background: $main-color;
+  color: $light-text-color;
 
   a {
     &, &:visited {
-      color: white;
+      color: $light-text-color;
     }
     &:hover {
-      color: #eee;
+      color: $sec-light-text-color;
       text-decoration: none;
     }
   }
@@ -24,54 +18,35 @@
 .header-subtitle {
   font-size: 1.5em;
   font-family: 'Montserrat', sans-serif;
-  background: #B71C1C;
-  color: white;
+  background: darken($main-color, 10%);
+  color: $light-text-color;
   margin-bottom: 1em;
 }
 
-.post-content {
+.post-link-prev {
+  float: right;
+}
+
+.post-content, .post-link-prev {
   a {
     &, &:visited {
-      color: #B71C1C;
+      color: $link-color;
       font-weight: bold;
     }
-    &:hover {
-      color: #FF6F00;
+    &:hover, &:focus {
+      color: $link-hover-color;
       text-decoration: underline;
     }
   }
 }
 
-a {
-  &, &:visited {
-    color: #000;
-    font-weight: bold;
-  }
-  &:hover {
-    color: #234;
-    text-decoration: underline;
-  }
-}
-
-.content {
-  background: #f6f6f6;
-  border: 1px #e0e0e0 solid;
-
+.content, .address {
+  background: $content-color;
+  border: 1px $light-mark-color solid;
 }
 
 .post-title {
   font-size: 4em;
-}
-
-.project {
-  border-left: 5px #d0d2d4 solid;
-  border-radius: 5px;
-  margin: 3px;
-  padding-left: 5px;
-  h1 {
-    border-bottom: 2px #333 solid;
-    font-variant: small-caps;
-  }
 }
 
 .sidebar {
@@ -98,14 +73,13 @@ a {
   margin-bottom: 0.3em;
   padding: 0.1em;
   border-radius: 5px;
-  border: 2px #a60000 solid;
-  background: #B71C1C;
+  border: 2px $mark-color solid;
+  background: $main-color;
   & {
     color: white;
   }
   &:hover {
-    background: #FF6F00;
-    border-color: #b05d00;
+    background: $sec-color;
   }
 }
 
@@ -133,9 +107,11 @@ a {
 }
 
 footer {
-  margin: 20px;
-  border-top: 1px black solid;
-  background-image: linear-gradient(#fff, #fcfcfc);
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px $mark-color solid;
+  background: $main-color;
+  color: $light-text-color;
 }
 
 .gray {

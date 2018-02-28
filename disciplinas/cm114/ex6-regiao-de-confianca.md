@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: disciplina
 title: Implementação de métodos de região de confiança
 ---
 

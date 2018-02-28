@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: disciplina
 ---
 # Projeto para CM103 - 2017s2
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: disciplina
 title: Efeito Maratos e Correção de Segunda Ordem
 ---
 

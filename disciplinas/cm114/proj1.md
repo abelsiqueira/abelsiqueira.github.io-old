@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: disciplina
 title: Projeto 1 - Um método para minimização com restrições de igualdade
 ---
 

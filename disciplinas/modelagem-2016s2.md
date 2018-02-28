@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout: disciplina
 title:      Modelagem - 2016s2
 categories: teaching
 permalink:  /modelagem-2016s2/
