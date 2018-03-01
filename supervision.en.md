@@ -13,35 +13,42 @@ types:
   - intern
 ---
 
-{% for t in page.types %}
-  {% assign data = (site.data.supervision | where: "type", t | sort: "start" | reverse) %}
+## Ongoing
 
-{% if data.size != 0 %}
-## {{ site.t[page.lang][t] }}
-<div class="row students">
-
-{% for st in data %}
-<div class="col-md-4 col-sm-12 student">
-{% if st.end %}
-<span class="student-done"> {{st.name}}<br>
-{% if st.coadvisor %}
-<em>Co-advisor: {{st.coadvisor}}</em><br>
-{% endif %}
-<small>{{ st.start | date:"%m/%Y" }} - {{ st.end | date:"%m/%Y" }} <br>
-<a href="{{site.baseurl}}/assets/{{st.link}}">
-{{st.theme}}
-</a>
-</small></span>
-{% else %}
-<span class="student-active"> {{st.name}}<br>
-{% if st.coadvisor %}
-<em>Co-advisor: {{st.coadvisor}}</em><br>
-{% endif %}
-<small>Since {{ st.start | data:"%m/%Y" }}</small> </span>
-{% endif %}
-</div> <!-- student column -->
+<div class="row students"> <div class="col-xs-12">
+{% assign data = site.data.supervision | sort: "start" | reverse %}
+{% for student in data %}
+{% if student.end %} {% continue %} {% endif %}
+<p class="student">
+  {% if st.coadvisor %}
+  Co-advised por {{ st.coadvisor }}. <br>
+  {% endif %}
+  <strong> {{ student.name }}</strong>, &nbsp;
+  <em style="font-variant: small-caps"> {{ student.theme }}</em>, &nbsp;
+  <strong>{{ site.t[page.lang][student.type] }}</strong>, &nbsp;
+  since {{ student.start | date:"%m/%Y" }}.
+</p>
 {% endfor %}
+</div> </div>
 
-</div>
-{% endif %}
+## Complete
+
+<div class="row students"> <div class="col-xs-12">
+{% assign data = site.data.supervision | sort: "end" %}
+{% for student in data %}
+{% if student.end == nil %} {% continue %} {% endif %}
+<p class="student">
+  {% if st.coadvisor %}
+  Co-advised por {{ st.coadvisor }}. <br>
+  {% endif %}
+  <strong> {{ student.name }}</strong>, &nbsp;
+  <em style="font-variant: small-caps"> {{ student.theme }}</em>, &nbsp;
+  <strong>{{ site.t[page.lang][student.type] }}</strong>, &nbsp;
+  {{ student.start | date:"%m/%Y" }} - {{ student.end | date:"%m/%Y" }}.
+  {% if student.link %}
+  &nbsp;
+  <a href="{{ site.baseurl }}/assets/{{ student.link }}">Download</a>
+  {% endif %}
+</p>
 {% endfor %}
+</div> </div>

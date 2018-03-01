@@ -8,7 +8,7 @@ icon:       id-card
 permalink:  /br/curriculum/
 ---
 
-# Caminho acadêmico
+## Caminho acadêmico
 
   - 11/2014 - presente - Professor na UFPR;
   - 12/2013 - 11/2014 - Pós-doutorado na UNICAMP;
@@ -17,7 +17,7 @@ permalink:  /br/curriculum/
   "Controle Dinâmico da Infactibilidade para Programação Não-Linear";
   - 03/2005 - 12/2008 - Bacharel em Matemática Aplicada.
 
-# Publicações
+## Publicações
 
   - [Perprof-py: A Python Package for Performance Profile of Mathematical
     Optimization Software.](http://doi.org/10.5334/jors.81)
@@ -31,7 +31,7 @@ permalink:  /br/curriculum/
     _6th International Workshop on the Analysis of Multitemporal Remote Sensing
     Images (MultiTemp)_, Trento, 2011.
 
-# Softwares
+## Softwares
 
   - Dentra da organização [JuliaSmoothOptimizers](https://juliasmoothoptimizers.github.io),
     sou um dos desenvolvedores principais dos seguintes pacotes.
@@ -52,7 +52,7 @@ permalink:  /br/curriculum/
     Implementação de um método de Controle Dinâmico de Factibilidade
     Implementation of a Dynamic Control of Infeasibility method in C++.
 
-# Relatórios Técnicos
+## Relatórios Técnicos
 
   - [Numerical experience with a class of trust-region algorithms for
     unconstrained smooth
@@ -62,7 +62,7 @@ permalink:  /br/curriculum/
     programming.](http://www.ime.unicamp.br/sites/default/files/rp11-16.pdf)
     Siqueira, A. S., Gomes, F. A. M, Jun/2016.
 
-# Eventos
+## Eventos
 
   - [Seminários de Análise Convexa e Otimização.]({{ site.baseurl }}/assets/2017-12-01-ufsc.pdf)
     _Otimização Não-Linear na Linguagem Julia_.
@@ -109,4 +109,4 @@ permalink:  /br/curriculum/
   - 11th EUROPT Workshop on Advances in Continuous Optimization.
     **Participação**. 2013, Florença, Itália
 
-## [Lattes](http://lattes.cnpq.br/2986958029448752)
+### [Lattes](http://lattes.cnpq.br/2986958029448752)

@@ -178,17 +178,6 @@
 .post-header {
     position: relative;
     margin-bottom: $spacing-unit;
-    font-variant: small-caps;
-}
-
-.post-title {
-    font-size: 36px;
-    letter-spacing: 1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
 }
 
 .post-content, .post-header {
@@ -200,6 +189,7 @@
         text-align: right;
         border-bottom: 1px solid $grey-color;
         color: $grey-color;
+        font-family: $title-font-family;
     }
 
     h2 {

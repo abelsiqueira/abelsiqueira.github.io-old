@@ -8,7 +8,7 @@ icon:       id-card
 permalink:  /en/curriculum/
 ---
 
-# Academic path
+## Academic path
 
   - 11/2014 - now - Professor at the Federal University of Paraná at Curitiba,
   PR, Brazil;
@@ -20,7 +20,7 @@ permalink:  /en/curriculum/
   Programming";
   - 03/2005 - 12/2008 - Bachelor on applied mathematics.
 
-# Publications
+## Publications
 
   - [Perprof-py: A Python Package for Performance Profile of Mathematical
     Optimization Software.](http://doi.org/10.5334/jors.81)
@@ -34,7 +34,7 @@ permalink:  /en/curriculum/
     _6th International Workshop on the Analysis of Multitemporal Remote Sensing
     Images (MultiTemp)_, Trento, 2011.
 
-# Softwares
+## Softwares
 
   - Inside the [JuliaSmoothOptimizers](https://juliasmoothoptimizers.github.io)
     organization, I'm a main developer of the following packages.
@@ -52,7 +52,7 @@ permalink:  /en/curriculum/
   - [dcicpp](https://github.com/abelsiqueira/dcicpp):
     Implementation of a Dynamic Control of Infeasibility method in C++.
 
-# Technical Reports
+## Technical Reports
 
   - [Numerical experience with a class of trust-region algorithms for
     unconstrained smooth
@@ -62,7 +62,7 @@ permalink:  /en/curriculum/
     programming.](http://www.ime.unicamp.br/sites/default/files/rp11-16.pdf)
     Siqueira, A. S., Gomes, F. A. M, Jun/2016.
 
-# Talks and participation in events
+## Talks and participation in events
 
   - [Seminars on Convex Analysis and Optimization.]({{ site.baseurl }}/assets/2017-12-01-ufsc.pdf)
     _Otimização Não-Linear na Linguagem Julia_.
@@ -106,5 +106,5 @@ permalink:  /en/curriculum/
   - 11th EUROPT Workshop on Advances in Continuous Optimization.
     **Participation**. 2013, Florence, Italy
 
-## [Lattes](http://lattes.cnpq.br/2986958029448752)
+### [Lattes](http://lattes.cnpq.br/2986958029448752)
 
