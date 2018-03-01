@@ -42,11 +42,13 @@
 
 .content, .address {
   background: $content-color;
-  border: 1px $light-mark-color solid;
+  border: 2px $light-mark-color solid;
+  border-left: 10px $sec-color solid;
 }
 
 .address {
-  padding: 10px 0px;
+  padding: 10px 5px;
+  border: 1px $light-mark-color solid;
 }
 
 .post-title {
@@ -75,15 +77,16 @@
   font-size: 1.5em;
   text-decoration: none;
   margin-bottom: 0.3em;
-  padding: 0.1em;
-  border-radius: 5px;
+  padding: 0.0em;
+  padding-top: 0.2em;
+  border-radius: 0px;
   border: 2px $mark-color solid;
-  background: $main-color;
+  background: linear-gradient(to right, lighten($main-color, 10%), $main-color);
   & {
     color: white;
   }
   &:hover {
-    background: $sec-color;
+    background: linear-gradient(to right, lighten($main-color, 10%), $sec-color);
   }
 }
 
