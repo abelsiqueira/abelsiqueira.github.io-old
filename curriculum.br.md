@@ -17,13 +17,22 @@ permalink:  /br/curriculum/
   "Controle Dinâmico da Infactibilidade para Programação Não-Linear";
   - 03/2005 - 12/2008 - Bacharel em Matemática Aplicada.
 
-## Publicações
+## Publicações em Periódicos
 
   - [Perprof-py: A Python Package for Performance Profile of Mathematical
     Optimization Software.](http://doi.org/10.5334/jors.81)
     Siqueira, A. S., Silva, R. G. C. da, Santos L.-R.,
     _Journal of Open Research Software_, 4(1), p.e12, 2016,
     DOI: http://doi.org/10.5334/jors.81
+
+## Publicações em Conferências
+
+  - [Alternative Integer Linear and Quadratic Programming Formulations
+    for HA-Assignment Problems.](https://doi.org/10.5540/03.2018.006.01.0311)
+    Urdaneta, H. L., Yuan, J., Siqueira, A. S.,
+    _Proceeding Series of the Brazilian Society of Computational and
+    Applied Mathematics._
+    Conferência: XXXVII CNMAC, S. J. dos Campos/SP, Brasil, 2017.
   - [Feature extraction for NDVI AVHRR/NOAA time series
     classification.](http://dx.doi.org/10.1109/Multi-Temp.2011.6005091)
     da Silva, W. L.; Gonçalves, R. R. V.; Siqueira, A. S.; Zullo, J.; Neto, F.
@@ -36,6 +45,7 @@ permalink:  /br/curriculum/
   - Dentra da organização [JuliaSmoothOptimizers](https://juliasmoothoptimizers.github.io),
     sou um dos desenvolvedores principais dos seguintes pacotes.
     - [CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl):
+      [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1188852.svg)](https://doi.org/10.5281/zenodo.1188852)
       Acesso à biblioteca de testes **Constrained and Unconstrained Testing
       Environment with safe Threads** de dentro do Julia.
     - [NLPModels.jl](https://github.com/JuliaSmoothOptimizers/NLPModels.jl):
@@ -64,6 +74,10 @@ permalink:  /br/curriculum/
 
 ## Eventos
 
+  - CODATA-RDA School of Research Data Science.
+    _The Unix Shell_.
+    **Apresentação oral**. 04 de Dezembro de 2017. ICPT-SAIFR/NCC-UNESP,
+    São Paulo/SP, Brasil.
   - [Seminários de Análise Convexa e Otimização.]({{ site.baseurl }}/assets/2017-12-01-ufsc.pdf)
     _Otimização Não-Linear na Linguagem Julia_.
     **Apresentação oral**. 01 de Dezembro de 2017. UFSC,

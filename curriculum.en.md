@@ -20,13 +20,22 @@ permalink:  /en/curriculum/
   Programming";
   - 03/2005 - 12/2008 - Bachelor on applied mathematics.
 
-## Publications
+## Journal Articles
 
   - [Perprof-py: A Python Package for Performance Profile of Mathematical
     Optimization Software.](http://doi.org/10.5334/jors.81)
     Siqueira, A. S., Silva, R. G. C. da, Santos, L.-R.,
     _Journal of Open Research Software_, 4(1), p.e12, 2016,
     DOI: http://doi.org/10.5334/jors.81
+
+## Conference Articles
+
+  - [Alternative Integer Linear and Quadratic Programming Formulations
+    for HA-Assignment Problems.](https://doi.org/10.5540/03.2018.006.01.0311)
+    Urdaneta, H. L., Yuan, J., Siqueira, A. S.,
+    _Proceeding Series of the Brazilian Society of Computational and
+    Applied Mathematics._
+    Conference: XXXVII CNMAC, S. J. dos Campos/SP, Brazil, 2017.
   - [Feature extraction for NDVI AVHRR/NOAA time series
     classification.](http://dx.doi.org/10.1109/Multi-Temp.2011.6005091)
     da Silva, W. L.; Gonçalves, R. R. V.; Siqueira, A. S.; Zullo, J.; Neto, F.
@@ -39,6 +48,7 @@ permalink:  /en/curriculum/
   - Inside the [JuliaSmoothOptimizers](https://juliasmoothoptimizers.github.io)
     organization, I'm a main developer of the following packages.
     - [CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl):
+      [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1188852.svg)](https://doi.org/10.5281/zenodo.1188852)
       Access to the **Constrained and Unconstrained Testing Environment with
       safe Threads** from Julia.
     - [NLPModels.jl](https://github.com/JuliaSmoothOptimizers/NLPModels.jl):
@@ -64,9 +74,13 @@ permalink:  /en/curriculum/
 
 ## Talks and participation in events
 
+  - CODATA-RDA School of Research Data Science.
+    _The Unix Shell_.
+    **Tutorial**. December 04, 2017. ICPT-SAIFR/NCC-UNESP,
+    São Paulo/SP, Brasil.
   - [Seminars on Convex Analysis and Optimization.]({{ site.baseurl }}/assets/2017-12-01-ufsc.pdf)
     _Otimização Não-Linear na Linguagem Julia_.
-    **Apresentação oral**. December 01, 2017. UFSC, Florianópolis/SC, Brazil.
+    **Talk**. December 01, 2017. UFSC, Florianópolis/SC, Brazil.
   - [15th EUROPT Workshop on Advances in Continuous Optimization]({{ site.baseurl }}/assets/2017-07-12-europt2017.pdf)
     _Parameter Optimization in the Nonlinear Stepsize Control Framework for Trust-Region Methods_.
     **Talk**. July 12, 2017. Montréal, Canada.
