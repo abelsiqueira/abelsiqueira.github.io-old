@@ -1,3 +1,11 @@
+- name: Thaiza Rafaele dos Santos Rievrs
+  theme: Roteamento de Estoque
+  start: 2018-03-16
+  type: intern
+  email:
+    user: thaizarievrs
+    domain: hotmail [dot] com
+
 - name: Bruno Cezar Steinmetz
   theme: Cônicas e Suas Relações com Autovalores
   start: 2015-04-01
@@ -10,8 +18,18 @@
   link: relatorio-ic-bruno-steinmetz.pdf
 
 - name: Renan Oclides Domingues
+  theme: Atualização LU no método Simplex
+  start: 2018-01-01
+  type: intern
+  email:
+    user: renan.oclides
+    domain: hotmail [dot] com
+  lattes: http://lattes.cnpq.br/7606523286136630
+
+- name: Renan Oclides Domingues
   theme: Programação Não-Linear
   start: 2017-02-01
+  end: 2017-12-31
   type: intern
   email:
     user: renan.oclides
