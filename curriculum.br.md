@@ -64,10 +64,6 @@ permalink:  /br/curriculum/
 
 ## Relatórios Técnicos
 
-  - [Numerical experience with a class of trust-region algorithms for
-    unconstrained smooth
-    optimization.](http://www.optimization-online.org/DB_HTML/2016/11/5721.html)
-    Siqueira, A. S., Grapiglia, G. N., Nov/2016.
   - [Dynamic control of infeasibility for nonlinear
     programming.](http://www.ime.unicamp.br/sites/default/files/rp11-16.pdf)
     Siqueira, A. S., Gomes, F. A. M, Jun/2016.
