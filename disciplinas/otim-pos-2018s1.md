@@ -8,7 +8,7 @@ tag:        2018s1
 
 # Informações
 
-A pedido da Professor Elizabeth Karas, o curso de Otimização I da PPGM
+A pedido da Professora Elizabeth Karas, o curso de Otimização I da PPGM
 terá algumas aulas computacionais. Colocarei aqui o material usado e
 links relevantes. 
 
