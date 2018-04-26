@@ -17,8 +17,8 @@ links relevantes.
 - Introdução ao Julia
   [ipynb]({{site.baseurl}}/disciplinas/otim-pos/2018s1/Auxiliar 1 - Linguagem de Programação Matemática.ipynb)
   [html]({{site.baseurl}}/disciplinas/otim-pos/2018s1/Auxiliar 1 - Linguagem de Programação Matemática.html)
-
-[comment]: <> ( Introdução à Métodos Computacionais de Otimização [ipynb]({{site.baseurl}}/disciplinas/otim-pos/2018s1/Introdução à Métodos Computacionais de Otimização.ipynb) [html]({{site.baseurl}}/disciplinas/otim-pos/2018s1/Introdução à Métodos Computacionais de Otimização.html) )
+- Introdução à Métodos Computacionais de Otimização
+  [ipynb]({{site.baseurl}}/disciplinas/otim-pos/2018s1/Introdução à Métodos Computacionais de Otimização.ipynb)
 
 # Links Relevantes
 
