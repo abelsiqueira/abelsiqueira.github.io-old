@@ -19,6 +19,7 @@ links relevantes.
   [html]({{site.baseurl}}/disciplinas/otim-pos/2018s1/Auxiliar 1 - Linguagem de Programação Matemática.html)
 - Introdução à Métodos Computacionais de Otimização
   [ipynb]({{site.baseurl}}/disciplinas/otim-pos/2018s1/Introdução à Métodos Computacionais de Otimização.ipynb)
+  [pós-aula]({{site.baseurl}}/disciplinas/otim-pos/2018s1/Introdução à Métodos Computacionais de Otimização - Pós Aula.ipynb)
 
 # Links Relevantes
 
