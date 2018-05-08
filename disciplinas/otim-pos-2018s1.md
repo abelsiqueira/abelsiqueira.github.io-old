@@ -20,6 +20,7 @@ links relevantes.
 - Introdução à Métodos Computacionais de Otimização
   [ipynb]({{site.baseurl}}/disciplinas/otim-pos/2018s1/Introdução à Métodos Computacionais de Otimização.ipynb)
   [pós-aula]({{site.baseurl}}/disciplinas/otim-pos/2018s1/Introdução à Métodos Computacionais de Otimização - Pós Aula.ipynb)
+  [solução]({{site.baseurl}}/disciplinas/otim-pos/2018s1/Introdução à Métodos Computacionais de Otimização - Solução.ipynb)
 
 # Links Relevantes
 
