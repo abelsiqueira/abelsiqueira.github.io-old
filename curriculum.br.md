@@ -42,7 +42,7 @@ permalink:  /br/curriculum/
 
 ## Softwares
 
-  - Dentra da organização [JuliaSmoothOptimizers](https://juliasmoothoptimizers.github.io),
+  - Dentro da organização [JuliaSmoothOptimizers](https://juliasmoothoptimizers.github.io),
     sou um dos desenvolvedores principais dos seguintes pacotes.
     - [CUTEst.jl](https://github.com/JuliaSmoothOptimizers/CUTEst.jl):
       [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1188852.svg)](https://doi.org/10.5281/zenodo.1188852)
