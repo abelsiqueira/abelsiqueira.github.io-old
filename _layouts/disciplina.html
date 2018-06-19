@@ -3,7 +3,17 @@ layout: default
 ---
 <div class="post">
   <div class="post-link-prev">
+    {% if page.parent %}
+    <a href="{{ site.baseurl }}/{{ page.parent }}/">
+      {% for pg in site.pages %}
+      {% if pg.key == page.parent %}
+      Voltar para {{ pg.title }}
+      {% endif %}
+      {% endfor %}
+    </a>
+    {% else %}
     <a href="{{ site.baseurl }}/br/teaching/">Voltar para disciplinas</a>
+    {% endif %}
   </div>
 
   <header class="post-header">
