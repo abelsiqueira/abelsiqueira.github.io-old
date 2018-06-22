@@ -5,9 +5,11 @@ parent: cm042-2018s1
 # Cai e não cai
 
 Não caem:
-- 13.3, 13.4
+- 13.3 - Comprimento de arco e curvatura
+- 13.4 - Movimento no espaço
 - Limites em duas variáveis que existem (14.2)
-- 15.5
+- 15.4 - Aplicações de integrais duplas
+- 15.5 - Área de superfície
 
 Caem com certeza:
 - Mostrar que um limite não existe
