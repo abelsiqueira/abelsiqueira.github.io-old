@@ -70,6 +70,10 @@ permalink:  /en/curriculum/
 
 ## Talks and participation in events
 
+  - [Second Annual JuMP-dev Workshop]({{ site.baseurl }}/assets/2018-06-28-jump-dev.pdf)
+    _Developing new optimization methods with packages from the JuliaSmoothOptimzers
+    organization_.
+    **Talk**. June 28, 2018. Université de Bordeaux, Bordeaux, France.
   - CODATA-RDA School of Research Data Science.
     _The Unix Shell_.
     **Tutorial**. December 04, 2017. ICPT-SAIFR/NCC-UNESP,
