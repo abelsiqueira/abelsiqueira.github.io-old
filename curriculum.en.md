@@ -70,6 +70,10 @@ permalink:  /en/curriculum/
 
 ## Talks and participation in events
 
+  - [XII Brazilian Workshop on Continuous Optimization.]({{ site.baseurl
+    }}/assets/2018-07-23-xiibrazopt.pdf)
+    _A Regularized Interior-Point Method for Constrained Nonlinear Least Squares_.
+    **Talk**. July 23, 2018. Foz do Iguaçu/PR, Brasil.
   - [Second Annual JuMP-dev Workshop]({{ site.baseurl }}/assets/2018-06-28-jump-dev.pdf)
     _Developing new optimization methods with packages from the JuliaSmoothOptimzers
     organization_.
