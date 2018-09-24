@@ -24,17 +24,17 @@ $grey-color-dark:  darken($grey-color, 25%);
 $on-palm:          768px;
 $on-laptop:        992px;
 
-$main-color: #39a830;
+$main-color: #0097A7;
 $mark-color: darken($main-color, 10%);
-$sec-color:  saturate($main-color, 55%);
+$sec-color: lighten(adjust-hue($main-color, 30deg), 30%);
 
 $text-color:     #000;
-$sec-text-color: mix($text-color, $main-color, 70%);
+$sec-text-color: lighten(mix($text-color, $main-color, 80%), 10%);
 
 $light-text-color:     #fff;
 $sec-light-text-color: mix($light-text-color, $main-color, 80%);
 
-$content-color:    lighten($main-color, 50%);
+$content-color:    lighten($main-color, 65%);
 $light-mark-color: darken($content-color, 10%);
 
 $link-color:       darken(saturate($main-color, 30%), 5%);
