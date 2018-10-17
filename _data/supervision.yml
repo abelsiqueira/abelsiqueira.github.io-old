@@ -1,7 +1,31 @@
+- name: Leonardo Ferreira Luciano
+  theme: A definir
+  start: 2018-10-01
+  type: intern
+  email:
+    user:
+    domain:
+
+- name: Sanara Restier
+  theme: A definir
+  start: 2018-10-01
+  type: intern
+  email:
+    user:
+    domain:
+
+- name: Fillipe Rafael Bianek Pierin
+  theme: Newton Modificado
+  start: 2018-03-01
+  type: intern
+  email:
+    user:
+    domain:
+
 - name: Thaiza Rafaele dos Santos Rievrs
   theme: Roteamento de Estoque
   start: 2018-03-16
-  type: intern
+  type: tcc
   email:
     user: thaizarievrs
     domain: hotmail [dot] com
