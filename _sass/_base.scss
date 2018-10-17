@@ -3,12 +3,8 @@ html {
 }
 
 body {
-  background-image:
-    linear-gradient(0deg, transparentize($aux-color, .88) 50%, transparent 50%),
-    linear-gradient(0deg, transparentize($sec-color, .77) 50%, transparent 50%),
-    linear-gradient(0deg, transparent 50%, transparentize($aux-color, .88) 50%),
-    linear-gradient(0deg, transparent 50%, transparentize($sec-color, .90) 50%);
-  background-size: 10px, 15px, 20px, 30px;
+  background-color: black;
+  background-image: url('/assets/dirty-grunge-texture-6-1.jpg');
   height: 100%;
 }
 
@@ -16,14 +12,18 @@ body {
   font-size: 4em;
   font-family: $title-font-family;
   background: $main-color;
-  color: $light-text-color;
 
   a {
+    transition: color 2.5s, filter 2.5s;
     &, &:visited {
+      filter: blur(1px);
       color: $light-text-color;
+      color: red;
     }
     &:hover {
+      filter: blur(4px);
       color: $sec-light-text-color;
+      color: darkred;
       text-decoration: none;
     }
   }
@@ -73,7 +73,7 @@ body {
   font-size: 1.2em;
   a {
     &, &:hover, &:visited {
-      color: white;
+      color: red;
       text-decoration: none;
       font-weight: normal;
     }
@@ -98,11 +98,12 @@ body {
   padding-top: 0.1em;
   border-radius: 0px;
   background: $main-color;
-  transition: border 0.1s;
+  transition: background-color 2.5s, color 2.5s;
   &:hover {
-    background: lighten(adjust-hue($main-color, 40deg), 30%);
-    border-width: 0px 5px 0px 0px;
-    border-color: darken($main-color, 10%);
+    background: red;
+    color: black;
+    border-width: 0px 0px 0px 0px;
+    border-color: red;
     border-style: solid;
   }
 }
@@ -148,7 +149,7 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 50px;
+  height: 75px;
   padding: 5px;
   border-top: 1px $mark-color solid;
   background: $main-color;
