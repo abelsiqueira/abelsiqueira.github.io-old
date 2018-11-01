@@ -3,8 +3,11 @@ html {
 }
 
 body {
-  background-color: black;
-  background-image: url('/assets/dirty-grunge-texture-6-1.jpg');
+  background-image:
+    linear-gradient(90deg, lighten($bk-color, 70), transparent),
+    linear-gradient(90deg, lighten($bk-color, 60), transparent),
+    linear-gradient(90deg, lighten($bk-color, 50), transparent);
+    background-size: 11px, 23px, 47px;
   height: 100%;
 }
 
@@ -12,18 +15,13 @@ body {
   font-size: 4em;
   font-family: $title-font-family;
   background: $main-color;
-
+  color: $light-text-color;
   a {
-    transition: color 2.5s, filter 2.5s;
     &, &:visited {
-      filter: blur(1px);
       color: $light-text-color;
-      color: red;
     }
     &:hover {
-      filter: blur(4px);
       color: $sec-light-text-color;
-      color: darkred;
       text-decoration: none;
     }
   }
@@ -73,7 +71,7 @@ body {
   font-size: 1.2em;
   a {
     &, &:hover, &:visited {
-      color: red;
+      color: white;
       text-decoration: none;
       font-weight: normal;
     }
@@ -98,12 +96,11 @@ body {
   padding-top: 0.1em;
   border-radius: 0px;
   background: $main-color;
-  transition: background-color 2.5s, color 2.5s;
+  transition: border 0.1s;
   &:hover {
-    background: red;
-    color: black;
-    border-width: 0px 0px 0px 0px;
-    border-color: red;
+    background: lighten(adjust-hue($main-color, 40deg), 30%);
+    border-width: 0px 5px 0px 0px;
+    border-color: darken($main-color, 10%);
     border-style: solid;
   }
 }
