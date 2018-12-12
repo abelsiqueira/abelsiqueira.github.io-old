@@ -20,3 +20,6 @@ t:
     master:  "Mestrado"
     tcc:     "TCC"
     intern:  "Iniciação Científica"
+
+plugins:
+  - jekyll-seo-tag
