@@ -8,7 +8,7 @@ icon:       id-card
 permalink:  /en/curriculum/
 ---
 
-## Academic path
+<h2> Academic path </h2>
 
   - 11/2014 - now - Professor at the Federal University of Paraná at Curitiba,
   PR, Brazil;
@@ -20,7 +20,75 @@ permalink:  /en/curriculum/
   Programming";
   - 03/2005 - 12/2008 - Bachelor on applied mathematics.
 
-## Journal Articles
+<bibtex src="/abel.bib"></bibtex>
+
+<div class="bibtex_structure">
+<div class="sections bibtextypekey">
+
+  <div class="section @article">
+  <h2> Journal Articles </h2>
+
+  <div class="sort year" extra="DESC number">
+  <div class="templates"></div>
+  </div>
+  </div>
+
+  <div class="section @inproceedings">
+  <h2> Conference Articles </h2>
+
+  <div class="sort year" extra="DESC number">
+  <div class="templates"></div>
+  </div>
+  </div>
+
+  <div class="section @techreport">
+  <h2> Technical Reports </h2>
+
+  <div class="sort year" extra="DESC number">
+  <div class="templates"></div>
+  </div>
+  </div>
+
+</div>
+</div>
+
+<div id="bibtex_display">
+<div class="bibtex_template">
+  <ul><li>
+  <div class="if author">
+    <span class="author"></span>,
+    <span class="if year"> (<span class="year"></span>) </span>.
+    <strong><span class="title"></span></strong>.
+    <span class="if journal">
+        <span class="journal"></span>,
+        <span class="if volume">
+            <span class="if number">
+                <span class="volume"></span>(<span class="number"></span>).
+            </span>
+            <span class="if !number">
+                <span class="volume"></span>.
+            </span>
+        </span>
+        <span class="if pages"><span class="pages"></span>.</span>
+    </span>
+    <span class="if institution">
+        <span class="institution"></span>.
+    </span>
+    <span class="if booktitle">
+        In <span class="booktitle"></span>.
+    </span>
+    <span class="if doi">
+        <a class="url"><span class="doi"></span></a>.
+    </span>
+    <span class="if !doi"><span class="if url">
+        <a class="url">[link]</a>.
+    </span></span>
+  </div>
+  </li></ul>
+</div>
+</div>
+
+<h2> Journal Articles </h2>
 
   - [Perprof-py: A Python Package for Performance Profile of Mathematical
     Optimization Software.](http://doi.org/10.5334/jors.81)
@@ -28,7 +96,7 @@ permalink:  /en/curriculum/
     _Journal of Open Research Software_, 4(1), p.e12, 2016,
     DOI: http://doi.org/10.5334/jors.81
 
-## Conference Articles
+<h2> Conference Articles </h2>
 
   - [Alternative Integer Linear and Quadratic Programming Formulations
     for HA-Assignment Problems.](https://doi.org/10.5540/03.2018.006.01.0311)
@@ -43,7 +111,7 @@ permalink:  /en/curriculum/
     _6th International Workshop on the Analysis of Multitemporal Remote Sensing
     Images (MultiTemp)_, Trento, 2011.
 
-## Softwares
+<h2> Softwares </h2>
 
   - Inside the [JuliaSmoothOptimizers](https://juliasmoothoptimizers.github.io)
     organization, I'm a main developer of the following packages.
@@ -62,13 +130,13 @@ permalink:  /en/curriculum/
   - [dcicpp](https://github.com/abelsiqueira/dcicpp):
     Implementation of a Dynamic Control of Infeasibility method in C++.
 
-## Technical Reports
+<h2> Technical Reports </h2>
 
   - [Dynamic control of infeasibility for nonlinear
     programming.](http://www.ime.unicamp.br/sites/default/files/rp11-16.pdf)
     Siqueira, A. S., Gomes, F. A. M, Jun/2016.
 
-## Talks and participation in events
+<h2> Talks and participation in events </h2>
 
   - [XII Brazilian Workshop on Continuous Optimization.]({{ site.baseurl
     }}/assets/2018-07-23-xiibrazopt.pdf)
@@ -124,5 +192,5 @@ permalink:  /en/curriculum/
   - 11th EUROPT Workshop on Advances in Continuous Optimization.
     **Participation**. 2013, Florence, Italy
 
-### [Lattes](http://lattes.cnpq.br/2986958029448752)
+<h2> <a href="http://lattes.cnpq.br/2986958029448752">Lattes</a> </h2>
 

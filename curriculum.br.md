@@ -8,39 +8,86 @@ icon:       id-card
 permalink:  /br/curriculum/
 ---
 
-## Caminho acadêmico
+<h2> Caminho acadêmico </h2>
 
-  - 11/2014 - presente - Professor na UFPR;
-  - 12/2013 - 11/2014 - Pós-doutorado na UNICAMP;
-  - 01/2009 - 11/2013 - Doutorado na UNICAMP em Matemática Aplicada,
+<ul>
+  <li> 11/2014 - presente - Professor Adjunto na UFPR; </li>
+  <li> 12/2013 - 11/2014 - Pós-doutorado na UNICAMP; </li>
+  <li> 01/2009 - 11/2013 - Doutorado na UNICAMP em Matemática Aplicada,
   trabalhando com Otimização Não-Linear. O título da minha tese é
-  "Controle Dinâmico da Infactibilidade para Programação Não-Linear";
-  - 03/2005 - 12/2008 - Bacharel em Matemática Aplicada.
+  "Controle Dinâmico da Infactibilidade para Programação Não-Linear"; </li>
+  <li> 03/2005 - 12/2008 - Bacharel em Matemática Aplicada. </li>
+</ul>
 
-## Publicações em Periódicos
+<bibtex src="/abel.bib"></bibtex>
 
-  - [Perprof-py: A Python Package for Performance Profile of Mathematical
-    Optimization Software.](http://doi.org/10.5334/jors.81)
-    Siqueira, A. S., Silva, R. G. C. da, Santos L.-R.,
-    _Journal of Open Research Software_, 4(1), p.e12, 2016,
-    DOI: http://doi.org/10.5334/jors.81
+<div class="bibtex_structure">
+<div class="sections bibtextypekey">
 
-## Publicações em Conferências
+  <div class="section @article">
+  <h2> Publicações em Periódicos </h2>
 
-  - [Alternative Integer Linear and Quadratic Programming Formulations
-    for HA-Assignment Problems.](https://doi.org/10.5540/03.2018.006.01.0311)
-    Urdaneta, H. L., Yuan, J., Siqueira, A. S.,
-    _Proceeding Series of the Brazilian Society of Computational and
-    Applied Mathematics._
-    Conferência: XXXVII CNMAC, S. J. dos Campos/SP, Brasil, 2017.
-  - [Feature extraction for NDVI AVHRR/NOAA time series
-    classification.](http://dx.doi.org/10.1109/Multi-Temp.2011.6005091)
-    da Silva, W. L.; Gonçalves, R. R. V.; Siqueira, A. S.; Zullo, J.; Neto, F.
-    A. M. Gomes.,
-    _6th International Workshop on the Analysis of Multitemporal Remote Sensing
-    Images (MultiTemp)_, Trento, 2011.
+  <div class="sort year" extra="DESC number">
+  <div class="templates"></div>
+  </div>
+  </div>
 
-## Softwares
+  <div class="section @inproceedings">
+  <h2> Publicações em Conferências </h2>
+
+  <div class="sort year" extra="DESC number">
+  <div class="templates"></div>
+  </div>
+  </div>
+
+  <div class="section @techreport">
+  <h2> Relatórios Técnicos </h2>
+
+  <div class="sort year" extra="DESC number">
+  <div class="templates"></div>
+  </div>
+  </div>
+
+</div>
+</div>
+
+<div id="bibtex_display">
+<div class="bibtex_template">
+  <ul><li>
+  <div class="if author">
+    <span class="author"></span>,
+    <span class="if year"> (<span class="year"></span>) </span>.
+    <strong><span class="title"></span></strong>.
+    <span class="if journal">
+        <span class="journal"></span>,
+        <span class="if volume">
+            <span class="if number">
+                <span class="volume"></span>(<span class="number"></span>).
+            </span>
+            <span class="if !number">
+                <span class="volume"></span>.
+            </span>
+        </span>
+        <span class="if pages"><span class="pages"></span>.</span>
+    </span>
+    <span class="if institution">
+        <span class="institution"></span>.
+    </span>
+    <span class="if booktitle">
+        In <span class="booktitle"></span>.
+    </span>
+    <span class="if doi">
+        <a class="url"><span class="doi"></span></a>.
+    </span>
+    <span class="if !doi"><span class="if url">
+        <a class="url">[link]</a>.
+    </span></span>
+  </div>
+  </li></ul>
+</div>
+</div>
+
+<h2> Softwares </h2>
 
   - Dentro da organização [JuliaSmoothOptimizers](https://juliasmoothoptimizers.github.io),
     sou um dos desenvolvedores principais dos seguintes pacotes.
@@ -62,13 +109,7 @@ permalink:  /br/curriculum/
     Implementação de um método de Controle Dinâmico de Factibilidade
     Implementation of a Dynamic Control of Infeasibility method in C++.
 
-## Relatórios Técnicos
-
-  - [Dynamic control of infeasibility for nonlinear
-    programming.](http://www.ime.unicamp.br/sites/default/files/rp11-16.pdf)
-    Siqueira, A. S., Gomes, F. A. M, Jun/2016.
-
-## Eventos
+<h2> Eventos </h2>
 
   - [XII Brazilian Workshop on Continuous Optimization.]({{ site.baseurl
     }}/assets/2018-07-23-xiibrazopt.pdf)
@@ -128,4 +169,4 @@ permalink:  /br/curriculum/
   - 11th EUROPT Workshop on Advances in Continuous Optimization.
     **Participação**. 2013, Florença, Itália
 
-### [Lattes](http://lattes.cnpq.br/2986958029448752)
+<h2> <a href="http://lattes.cnpq.br/2986958029448752">Lattes</a> </h2>
