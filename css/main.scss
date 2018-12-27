@@ -24,9 +24,9 @@ $grey-color-dark:  darken($grey-color, 25%);
 $on-palm:          768px;
 $on-laptop:        992px;
 
-$main-color: #CC231E;
-$mark-color: #0F8A5F;
-$sec-color: #0F8A5F;
+$main-color: #0057b3;
+$sec-color:  #1098b2;
+$mark-color: #00BCD4;
 
 $text-color:     #000;
 $sec-text-color: lighten(mix($text-color, $main-color, 80%), 10%);
@@ -35,10 +35,10 @@ $light-text-color:     #fff;
 $sec-light-text-color: #fff;
 
 $content-color:    lighten($main-color, 65%);
-$light-mark-color: darken($content-color, 10%);
+$light-mark-color: lighten($content-color, 10%);
 
-$link-color:       #CC231E;
-$link-hover-color: #0F8A5F;
+$link-color:       $main-color;
+$link-hover-color: $sec-color;
 
 $title-font-family: 'Josefin Sans';
 
