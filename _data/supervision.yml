@@ -1,3 +1,28 @@
+- name: João Luís Ribeiro Okimoto
+  theme: a definir
+  start: 2019-02-01
+  type: intern
+
+- name: Davi Álefe da Costa Carneiro
+  theme: a definir
+  start: 2019-02-01
+  type: intern
+
+- name: Egmara Antunes
+  theme: a definir
+  start: 2018-10-01
+  type: master
+
+- name: Letícia do Rocio Oliveira
+  theme: Quadrados Mínimos
+  start: 2019-01-01
+  type: intern
+
+- name: Jaqueline de Souza Ortiz
+  theme: Métodos numéricos para integração múltipla em regiões não retangulares
+  start: 2018-10-31
+  type: intern
+
 - name: Altamiro Antonio Basiewics
   theme: Reconhecimento de Caracteres Matemáticos
   start: 2018-11-23
@@ -11,24 +36,18 @@
     user:
     domain:
 
-- name: Sanara Restier
-  theme: A definir
-  start: 2018-10-01
-  type: intern
-  email:
-    user:
-    domain:
-
 - name: Fillipe Rafael Bianek Pierin
   theme: Newton Modificado
   start: 2018-03-01
+  end: 2018-12-01
   type: intern
   email:
     user:
     domain:
+  link: alunos/2018/fillipe-pierin.pdf
 
 - name: Thaiza Rafaele dos Santos Rievrs
-  theme: Roteamento de Estoque
+  theme: Problema de Estoque e Roteirização com Transbordo
   start: 2018-03-16
   type: tcc
   email:
@@ -44,7 +63,7 @@
     user: brste
     domain: live [dot] com
   lattes: http://lattes.cnpq.br/3891640754963364
-  link: relatorio-ic-bruno-steinmetz.pdf
+  link: alunos/2015/bruno-steinmetz.pdf
 
 - name: Renan Oclides Domingues
   theme: Atualização LU no método Simplex
@@ -75,7 +94,7 @@
     user: renan.oclides
     domain: hotmail [dot] com
   lattes: http://lattes.cnpq.br/7606523286136630
-  link: renan-mdf.pdf
+  link: alunos/2016/renan-oclides.pdf
 
 - name: Renan Oclides Domingues
   theme: Teoria, Implementação e Comparação de Métodos de Integração Numérica.
@@ -86,7 +105,7 @@
     user: renan.oclides
     domain: hotmail [dot] com
   lattes: http://lattes.cnpq.br/7606523286136630
-  link: renan-integral.pdf
+  link: alunos/2015/renan-oclides.pdf
 
 - name: Francine Luise Milian Ribas
   theme: Métodos de Região de Confiança para Minimização Irrestrita
@@ -96,7 +115,7 @@
   email:
     user: francineluise
     domain: hotmail [dot] com
-  link: tcc-2017-francine-milian.pdf
+  link: alunos/2017/francine-milian.pdf
 
 - name: Oksana Heringer da Silva
   theme: Métodos de Penalidade e o Lagrangiano Aumentado
@@ -107,7 +126,7 @@
     user: oksanaheringer
     domain: gmail [dot] com
   lattes: http://lattes.cnpq.br/4222576494725838
-  link: tcc-2017-oksana-heringer.pdf
+  link: alunos/2017/oksana-heringer.pdf
 
 - name: Adrean Cebola
   theme: Resolução de Programas Lineares com Método de Pontos Interiores
@@ -117,7 +136,7 @@
   email:
     user: adreancebola
     domain: hotmail [dot] com
-  link: tcc-2017-adrean-cebola.pdf
+  link: alunos/2017/adrean-cebola.pdf
 
 - name: Carlos Henrique Venturi Ronchi
   theme: Estudo Matemático de Reconhecimento de Caracteres
@@ -128,4 +147,4 @@
     user: carloshvronchi
     domain: gmail [dot] com
   lattes: http://lattes.cnpq.br/7243878025626015
-  link: tcc-2017-carlos-ronchi.pdf
+  link: alunos/2017/carlos-ronchi.pdf
