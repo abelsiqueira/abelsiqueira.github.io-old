@@ -138,6 +138,10 @@ permalink:  /en/curriculum/
 
 <h2> Talks and participation in events </h2>
 
+  - [Modeling and optimization tools in Julia: An introduction to JuMP and JSO.]({{
+    site.baseurl }}/assets/2019-02-07-GERAD.tar.gz)
+    _JuliaSmoothOptimizers_.
+    **Talk**. February 7, 2019. Montreal, Canada.
   - [XII Brazilian Workshop on Continuous Optimization.]({{ site.baseurl
     }}/assets/2018-07-23-xiibrazopt.pdf)
     _A Regularized Interior-Point Method for Constrained Nonlinear Least Squares_.
