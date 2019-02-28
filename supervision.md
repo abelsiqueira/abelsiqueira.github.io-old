@@ -1,11 +1,11 @@
 ---
 layout:    page
-title:     Supervision
+title:     Orientações
 key:       supervision
-lang:      en
+lang:      br
 order:     2
 icon:      graduation-cap
-permalink: /en/supervision/
+permalink: /supervision/
 types:
   - phd
   - master
@@ -13,7 +13,7 @@ types:
   - intern
 ---
 
-## Ongoing
+## Em andamento
 
 <div class="row students"> <div class="col-xs-12">
 {% assign data = site.data.supervision | sort: "start" | reverse %}
@@ -22,16 +22,16 @@ types:
 <p class="student">
   <strong> {{ student.name }}</strong>, &nbsp;
   <em style="font-variant: small-caps"> {{ student.theme }}</em>, &nbsp;
-  <strong>{{ site.t[page.lang][student.type] }}</strong>, &nbsp;
-  since {{ student.start | date:"%m/%Y" }}.
+  <strong>{{ site.t[student.type] }}</strong>, &nbsp;
+  desde {{ student.start | date:"%m/%Y" }}.
   {% if student.coadvisor %}
-  <br>Co-advised por {{ student.coadvisor }}.
+  <br>Co-orientado por <strong>{{ student.coadvisor }}</strong>.
   {% endif %}
 </p>
 {% endfor %}
 </div> </div>
 
-## Complete
+## Concluídas
 
 <div class="row students"> <div class="col-xs-12">
 {% assign data = site.data.supervision | sort: "end" | reverse %}
@@ -40,7 +40,7 @@ types:
 <p class="student">
   <strong> {{ student.name }}</strong>, &nbsp;
   <em style="font-variant: small-caps"> {{ student.theme }}</em>, &nbsp;
-  <strong>{{ site.t[page.lang][student.type] }}</strong>, &nbsp;
+  <strong>{{ site.t[student.type] }}</strong>, &nbsp;
   {{ student.start | date:"%m/%Y" }} -
   {{ student.end | date:"%m" }}/<strong>{{ student.end | date:"%Y" }}</strong>.
   {% if student.link %}
@@ -48,7 +48,7 @@ types:
   <a href="{{ site.baseurl }}/assets/{{ student.link }}">Download</a>
   {% endif %}
   {% if student.coadvisor %}
-  <br>Co-advised por {{ student.coadvisor }}.
+  <br>Co-orientado por <strong>{{ student.coadvisor }}</strong>.
   {% endif %}
 </p>
 {% endfor %}

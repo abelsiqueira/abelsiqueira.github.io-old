@@ -5,7 +5,7 @@ key:       research
 lang:      en
 order:     2
 icon:      flask
-permalink: /en/research/
+permalink: /research/
 ---
 I work with computational mathematics, mostly with nonlinear optimization.
 Some topics of my interest:

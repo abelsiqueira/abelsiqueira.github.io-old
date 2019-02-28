@@ -1,25 +1,32 @@
-{% if page.lang %}
-  {% assign thislang = page.lang %}
-{% else %}
-  {% assign thislang = "br" %}
-{% endif %}
-{% if page.lang == "all" %}
-  {% assign thislang = "en" %}
-{% endif %}
-
 <div class="container-fluid text-right sidebar">
   <div class="row">
-    {% assign pages = site.pages | sort: 'order' %}
-    {% for pg in pages %}
-    {% if pg.title and (pg.lang == thislang or pg.lang == "all") and pg.order > 0 %}
-    <a class="sidebar-link col-xs-12" href="{{ pg.url | prepend: site.baseurl }}">
-      {{ pg.title }}
-      <i class="fa fa-fw fa-{{ pg.icon }}" aria-hidden="true"></i>
+    <a class="sidebar-link col-xs-12" href="/">
+      Home <i class="fa fa-fw fa-home" aria-hidden="true"></i>
     </a>
-    {% endif %}
-    {% endfor %}
+    <a class="sidebar-link col-xs-12" href="/disciplinas/">
+      Disciplinas <i class="fa fa-fw fa-book" aria-hidden="true"></i>
+    </a>
+    <a class="sidebar-link col-xs-12" href="/pesquisa/">
+      Pesquisa <i class="fa fa-fw fa-flask" aria-hidden="true"></i>
+    </a>
   </div>
+
   <br>
+
+  <div class="row">
+    <a class="sidebar-link col-xs-12" href="/research/">
+      Research <i class="fa fa-fw fa-flask" aria-hidden="true"></i>
+    </a>
+    <a class="sidebar-link col-xs-12" href="/supervision/">
+      Supervision <i class="fa fa-fw fa-graduation-cap" aria-hidden="true"></i>
+    </a>
+    <a class="sidebar-link col-xs-12" href="/curriculum/">
+      Curriculum <i class="fa fa-fw fa-id-card" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <br>
+
   <div class="row">
     <a class="sidebar-link col-xs-12" href="https://opt.ufpr.br">
       Opt UFPR
@@ -60,13 +67,7 @@
       abelsiqueira<i class="fa fa-at" aria-hidden="true"></i>ufpr.br
       <i class="fa fa-fw fa-envelope" aria-hidden="true"></i><br>
       Sala 308 - PA<br>
-      <h3>
-      {% if thislang == "br" %}
-      Endereço
-      {% else if thislang == "en" %}
-      Address
-      {% endif %}
-      </h3>
+      <h3> Endereço/Address </h3>
       Centro Politécnico da UFPR<br>
       Setor de Ciências Exatas - 3º Andar <br>
       R. Cel. Francisco H. dos Santos, 100<br>

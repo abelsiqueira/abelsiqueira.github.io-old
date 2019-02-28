@@ -6,20 +6,10 @@ description: "Abel Soares Siqueira"
 github_username: abelsiqueira
 markdown: kramdown
 t:
-  en:
-    backto:  "back to"
-    homeurl: "/home/"
-    phd:     "Ph.D."
-    master:  "Master"
-    tcc:     "Term paper"
-    intern:  "Internship"
-  br:
-    backto: "voltar para"
-    homeurl:  "/"
-    phd:     "Doutorado"
-    master:  "Mestrado"
-    tcc:     "TCC"
-    intern:  "Iniciação Científica"
+  phd:     "Ph.D. / Doutorado"
+  master:  "Master / Mestrado"
+  tcc:     "Term paper / TCC"
+  intern:  "Internship / Iniciação Científica"
 
 plugins:
   - jekyll-seo-tag

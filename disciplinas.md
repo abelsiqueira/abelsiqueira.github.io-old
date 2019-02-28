@@ -16,7 +16,7 @@ years:
   - 2015s1
   - verao2015
 order:      1
-permalink:  /br/teaching/
+permalink:  /disciplinas/
 ---
 <p>
 {% for year in page.years %}

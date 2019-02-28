@@ -5,7 +5,7 @@ key:       research
 lang:      br
 order:     2
 icon:      flask
-permalink: /br/research/
+permalink: /pesquisa/
 ---
 Trabalho com matemática computacional, principalmente na área de otimização.
 Alguns assuntos que me interessam:
