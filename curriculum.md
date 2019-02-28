@@ -2,10 +2,10 @@
 layout:     curriculum
 title:      Curriculum
 key:        curriculum
-lang:       en
+lang:       all
 order:      3
 icon:       id-card
-permalink:  /en/curriculum/
+permalink:  /curriculum/
 ---
 
 <h2> Academic path </h2>
@@ -72,6 +72,9 @@ permalink:  /en/curriculum/
         <span class="if pages"><span class="pages"></span>.</span>
     </span>
     <span class="if institution">
+        (<span class="type"></span>
+        <span class="number"></span>)
+        <span class="address"></span>,
         <span class="institution"></span>.
     </span>
     <span class="if booktitle">
@@ -88,29 +91,6 @@ permalink:  /en/curriculum/
 </div>
 </div>
 
-<h2> Journal Articles </h2>
-
-  - [Perprof-py: A Python Package for Performance Profile of Mathematical
-    Optimization Software.](http://doi.org/10.5334/jors.81)
-    Siqueira, A. S., Silva, R. G. C. da, Santos, L.-R.,
-    _Journal of Open Research Software_, 4(1), p.e12, 2016,
-    DOI: http://doi.org/10.5334/jors.81
-
-<h2> Conference Articles </h2>
-
-  - [Alternative Integer Linear and Quadratic Programming Formulations
-    for HA-Assignment Problems.](https://doi.org/10.5540/03.2018.006.01.0311)
-    Urdaneta, H. L., Yuan, J., Siqueira, A. S.,
-    _Proceeding Series of the Brazilian Society of Computational and
-    Applied Mathematics._
-    Conference: XXXVII CNMAC, S. J. dos Campos/SP, Brazil, 2017.
-  - [Feature extraction for NDVI AVHRR/NOAA time series
-    classification.](http://dx.doi.org/10.1109/Multi-Temp.2011.6005091)
-    da Silva, W. L.; Gonçalves, R. R. V.; Siqueira, A. S.; Zullo, J.; Neto, F.
-    A. M. Gomes.,
-    _6th International Workshop on the Analysis of Multitemporal Remote Sensing
-    Images (MultiTemp)_, Trento, 2011.
-
 <h2> Softwares </h2>
 
   - Inside the [JuliaSmoothOptimizers](https://juliasmoothoptimizers.github.io)
@@ -120,6 +100,7 @@ permalink:  /en/curriculum/
       Access to the **Constrained and Unconstrained Testing Environment with
       safe Threads** from Julia.
     - [NLPModels.jl](https://github.com/JuliaSmoothOptimizers/NLPModels.jl):
+      [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2558627.svg)](https://doi.org/10.5281/zenodo.2558627)
       Defines data structures for nonlinear optimization models.
     - [Optimize.jl](https://github.com/JuliaSmoothOptimizers/Optimize.jl):
       Optimization algorithms in pure Julia, and auxiliary tools for
@@ -130,16 +111,19 @@ permalink:  /en/curriculum/
   - [dcicpp](https://github.com/abelsiqueira/dcicpp):
     Implementation of a Dynamic Control of Infeasibility method in C++.
 
-<h2> Technical Reports </h2>
+<h2> Reviewer </h2>
 
-  - [Dynamic control of infeasibility for nonlinear
-    programming.](http://www.ime.unicamp.br/sites/default/files/rp11-16.pdf)
-    Siqueira, A. S., Gomes, F. A. M, Jun/2016.
+  - Optimization Methods and Software - 2018
+  - Trends in Applied and Computational Mathematics - 2017-2018
+  - Journal of the Operational Research Society of India - 2016-2017
+  - Operations Research Letter - 2016-2017
 
 <h2> Talks and participation in events </h2>
 
-  - [Modeling and optimization tools in Julia: An introduction to JuMP and JSO.]({{
-    site.baseurl }}/assets/2019-02-07-GERAD.tar.gz)
+  - [Invited talk at Université de Sherbrooke]({{ site.baseurl }}/assets/2019-02-07-GERAD.tar.gz)
+    _Developing optimization software with JuliaSmoothOptimizers_.
+    **Talk**. February 15, 2019. Sherbrooke/QC, Canada.
+  - [Modeling and optimization tools in Julia: An introduction to JuMP and JSO.]({{ site.baseurl }}/assets/2019-02-07-GERAD.tar.gz)
     _JuliaSmoothOptimizers_.
     **Talk**. February 7, 2019. Montreal, Canada.
   - [XII Brazilian Workshop on Continuous Optimization.]({{ site.baseurl

@@ -3,12 +3,15 @@
 {% else %}
   {% assign thislang = "br" %}
 {% endif %}
+{% if page.lang == "all" %}
+  {% assign thislang = "en" %}
+{% endif %}
 
 <div class="container-fluid text-right sidebar">
   <div class="row">
     {% assign pages = site.pages | sort: 'order' %}
     {% for pg in pages %}
-    {% if pg.title and pg.lang == thislang and pg.order > 0 %}
+    {% if pg.title and (pg.lang == thislang or pg.lang == "all") and pg.order > 0 %}
     <a class="sidebar-link col-xs-12" href="{{ pg.url | prepend: site.baseurl }}">
       {{ pg.title }}
       <i class="fa fa-fw fa-{{ pg.icon }}" aria-hidden="true"></i>
@@ -52,7 +55,7 @@
 
 <hr>
 
-<div class="address">
+<div class="workaddress">
     <div class="text-right">
       abelsiqueira<i class="fa fa-at" aria-hidden="true"></i>ufpr.br
       <i class="fa fa-fw fa-envelope" aria-hidden="true"></i><br>

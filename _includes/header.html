@@ -7,7 +7,7 @@
     </span>
     <span class="header-subtitle col-xs-12 text-right">
       <div class="container">
-        {% if page.lang == "en" %}
+        {% if page.lang == "en" or page.lang == "all" %}
           Applied Mathematician
         {% else %}
           Matemático Aplicado
@@ -24,7 +24,7 @@
       {% endif %}
       {% assign pages = site.pages | sort: 'order' %}
       {% for pg in pages %}
-      {% if pg.title and pg.lang == thislang and pg.order > 0 %}
+      {% if pg.title and (pg.lang == thislang or pg.lang == "all") and pg.order > 0 %}
       <div class="menu-table-cell">
       <a href="{{ pg.url | prepend: site.baseurl }}">
         <i class="fa fa-{{ pg.icon }}" aria-hidden="true"></i><br>

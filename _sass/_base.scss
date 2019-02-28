@@ -48,13 +48,13 @@ body {
   }
 }
 
-.content, .address {
+.content, .workaddress {
   background: $content-color;
   border: 2px $mark-color solid;
   border-left: 10px $sec-color solid;
 }
 
-.address {
+.workaddress {
   padding: 10px 5px;
   border: 1px $light-mark-color solid;
 }
