@@ -11,6 +11,11 @@ types:
   - master
   - tcc
   - intern
+years:
+  - "2018"
+  - "2017"
+  - "2016"
+  - "2015"
 ---
 
 ## Em andamento
@@ -35,8 +40,12 @@ types:
 
 <div class="row students"> <div class="col-xs-12">
 {% assign data = site.data.supervision | sort: "end" | reverse %}
+{% for year in page.years %}
+<h3> {{ year }} </h3>
 {% for student in data %}
 {% if student.end == nil %} {% continue %} {% endif %}
+{% capture thisyear %}{{ student.end | date:"%Y" }}{% endcapture %}
+{% if year != thisyear %} {% continue %} {% endif %}
 <p class="student">
   <strong> {{ student.name }}</strong>, &nbsp;
   <em style="font-variant: small-caps"> {{ student.theme }}</em>, &nbsp;
@@ -51,5 +60,6 @@ types:
   <br>Co-orientado por <strong>{{ student.coadvisor }}</strong>.
   {% endif %}
 </p>
+{% endfor %}
 {% endfor %}
 </div> </div>
