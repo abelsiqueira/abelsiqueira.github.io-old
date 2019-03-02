@@ -49,6 +49,14 @@ permalink:  /curriculum/
   </div>
   </div>
 
+  <div class="section @unpublished">
+  <h2> Supervisions </h2>
+
+  <div class="sort year" extra="DESC number">
+  <div class="templates"></div>
+  </div>
+  </div>
+
 </div>
 </div>
 
