@@ -3,6 +3,8 @@ layout: disciplina
 ---
 # Projeto de Cálculo Numérico
 
+**Entrega até 15:00 de 29/05**
+
 O objetivo do projeto pode ser:
 - estudar um método avançado relacionado aos estudados na disciplina;
 - estudar um método para problemas novos, não vistos na disciplina;
