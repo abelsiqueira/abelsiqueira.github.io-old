@@ -128,6 +128,9 @@ permalink:  /curriculum/
 
 <h2> Talks and participation in events </h2>
 
+  - [Talk at PPGM - UFPR]({{ site.baseurl }}/assets/2019-05-31-PPGM.ipynb)
+    _JuliaSmoothOptimizers_.
+    **Talk**. May 31, 2019. Curitiba/PR, Brazil.
   - [Invited talk at Université de Sherbrooke]({{ site.baseurl }}/assets/2019-02-07-GERAD.tar.gz)
     _Developing optimization software with JuliaSmoothOptimizers_.
     **Talk**. February 15, 2019. Sherbrooke/QC, Canada.
