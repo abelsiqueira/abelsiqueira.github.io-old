@@ -128,6 +128,9 @@ permalink:  /curriculum/
 
 <h2> Talks and participation in events </h2>
 
+  - [Congresso Internacional de Biomassa - 4° Expo Biomassa](https://docs.google.com/presentation/d/e/2PACX-1vTExSw03IXqsEOOjWeFvvC0FLodFUw5RpIQJLNUALql9jWPjS6GG4fyVeRn3BqehrT5AmfpWYvR4Tpo/pub?start=true&loop=false&delayms=5000&slide=id.g5c57578bdc_0_1264)
+    _Otimização na Linguagem Julia_.
+    **Palestra**. 26 de Junho de 2019. Curitiba/PR, Brazil.
   - [Talk at PPGM - UFPR]({{ site.baseurl }}/assets/2019-05-31-PPGM.ipynb)
     _JuliaSmoothOptimizers_.
     **Talk**. May 31, 2019. Curitiba/PR, Brazil.
