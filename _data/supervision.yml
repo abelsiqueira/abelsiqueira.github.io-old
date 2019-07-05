@@ -1,15 +1,20 @@
-- name: João Luís Ribeiro Okimoto
-  theme: a definir
-  start: 2019-02-01
+- name: Renan Oclides Domingues
+  theme: Otimização Não Linear
+  start: 2019-01-01
   type: intern
 
-- name: Davi Álefe da Costa Carneiro
-  theme: a definir
+- name: Rodrigo Souza Garcia Redondo
+  theme: Otimização Não Linear
+  start: 2019-05-30
+  type: tcc
+
+- name: João Luís Ribeiro Okimoto
+  theme: Cache de avaliações em métodos de otimização sem derivadas
   start: 2019-02-01
   type: intern
 
 - name: Egmara Antunes
-  theme: a definir
+  theme: Otimização Não Linear
   start: 2018-10-01
   type: master
 
@@ -23,14 +28,10 @@
   start: 2018-10-31
   type: intern
 
-- name: Altamiro Antonio Basiewics
-  theme: Reconhecimento de Caracteres Matemáticos
-  start: 2018-11-23
-  type: intern
-
 - name: Leonardo Ferreira Luciano
   theme: Estudo de decomposições matriciais e suas relações com os subespaços da matriz
   start: 2018-10-01
+  end: 2018-12-31
   type: intern
   email:
     user:
@@ -70,6 +71,7 @@
 - name: Renan Oclides Domingues
   theme: Atualização LU no método Simplex
   start: 2018-01-01
+  end: 2018-12-31
   type: intern
   email:
     user: renan.oclides
