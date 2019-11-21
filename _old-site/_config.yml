@@ -1,0 +1,15 @@
+title: Abel Soares Siqueira
+email: abel.s.siqueira@gmail.com
+baseurl: ""
+url: "http://abelsiqueira.github.io" # the base hostname & protocol for your site
+description: "Abel Soares Siqueira"
+github_username: abelsiqueira
+markdown: kramdown
+t:
+  phd:     "Ph.D. / Doutorado"
+  master:  "Master / Mestrado"
+  tcc:     "Term paper / TCC"
+  intern:  "Internship / Iniciação Científica"
+
+plugins:
+  - jekyll-seo-tag

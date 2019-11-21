@@ -1,15 +1,41 @@
 title: Abel Soares Siqueira
+author: Abel Soares Siqueira
 email: abel.s.siqueira@gmail.com
+description: > # this means to ignore newlines until "show_exerpts:"
+  Personal site of Abel Soares Siqueira.
+show_excerpts: true # set to true to show excerpts on the homepage
 baseurl: ""
-url: "http://abelsiqueira.github.io" # the base hostname & protocol for your site
-description: "Abel Soares Siqueira"
-github_username: abelsiqueira
-markdown: kramdown
-t:
-  phd:     "Ph.D. / Doutorado"
-  master:  "Master / Mestrado"
-  tcc:     "Term paper / TCC"
-  intern:  "Internship / Iniciação Científica"
+
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+sass:
+  sass_dir: _sass
+
+permalink: /posts/:title/
+texture:
+  title: Abel Soares Siqueira
+  tagline: Assistant Professor at Federal University of Paraná
+  date_format: "%Y-%b-%-d"
+  style: purple
+  showNav: true
+  showPicker: true
+
+  # generate social links in footer
+  social_links:
+    twitter: abel_siqueira
+    github:  abelsiqueira
+    linkedIn: in/abel-siqueira/
+    rss: rss
+
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.md
+
+# Build settings
+# theme: texture
 
 plugins:
   - jekyll-seo-tag
+#  - jekyll-feed
