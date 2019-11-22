@@ -1,0 +1,154 @@
+- name: Renan Oclides Domingues
+  theme: Otimização Não Linear
+  start: 2019-01-01
+  type: intern
+
+- name: Rodrigo Souza Garcia Redondo
+  theme: Otimização Não Linear
+  start: 2019-05-30
+  type: tcc
+
+- name: João Luís Ribeiro Okimoto
+  theme: Cache de avaliações em métodos de otimização sem derivadas
+  start: 2019-02-01
+  type: intern
+
+- name: Egmara Antunes
+  theme: Otimização Não Linear
+  start: 2018-10-01
+  type: master
+
+- name: Letícia do Rocio Oliveira
+  theme: Quadrados Mínimos
+  start: 2019-01-01
+  type: intern
+
+- name: Jaqueline de Souza Ortiz
+  theme: Métodos numéricos para integração múltipla em regiões não retangulares
+  start: 2018-10-31
+  type: intern
+
+- name: Leonardo Ferreira Luciano
+  theme: Estudo de decomposições matriciais e suas relações com os subespaços da matriz
+  start: 2018-10-01
+  end: 2018-12-31
+  type: intern
+  email:
+    user:
+    domain:
+
+- name: Fillipe Rafael Bianek Pierin
+  theme: Newton Modificado
+  start: 2018-03-01
+  end: 2018-12-01
+  type: intern
+  email:
+    user:
+    domain:
+  link: alunos/2018/fillipe-pierin.pdf
+
+- name: Thaiza Rafaele dos Santos Rievrs
+  theme: Problema de Estoque e Roteirização com Transbordo
+  start: 2018-03-16
+  end: 2018-12-13
+  type: tcc
+  email:
+    user: thaizarievrs
+    domain: hotmail [dot] com
+  link: alunos/2018/thaiza-rievrs.pdf
+
+- name: Bruno Cezar Steinmetz
+  theme: Cônicas e Suas Relações com Autovalores
+  start: 2015-04-01
+  end: 2015-12-01
+  type: intern
+  email:
+    user: brste
+    domain: live [dot] com
+  lattes: http://lattes.cnpq.br/3891640754963364
+  link: alunos/2015/bruno-steinmetz.pdf
+
+- name: Renan Oclides Domingues
+  theme: Atualização LU no método Simplex
+  start: 2018-01-01
+  end: 2018-12-31
+  type: intern
+  email:
+    user: renan.oclides
+    domain: hotmail [dot] com
+  lattes: http://lattes.cnpq.br/7606523286136630
+
+- name: Renan Oclides Domingues
+  theme: Programação Não-Linear
+  start: 2017-02-01
+  end: 2017-12-31
+  type: intern
+  email:
+    user: renan.oclides
+    domain: hotmail [dot] com
+  lattes: http://lattes.cnpq.br/7606523286136630
+
+- name: Renan Oclides Domingues
+  coadvisor: Roberto Ribeiro
+  theme: Método das Diferenças Finitas.
+  start: 2016-04-01
+  end: 2017-01-31
+  type: intern
+  email:
+    user: renan.oclides
+    domain: hotmail [dot] com
+  lattes: http://lattes.cnpq.br/7606523286136630
+  link: alunos/2016/renan-oclides.pdf
+
+- name: Renan Oclides Domingues
+  theme: Teoria, Implementação e Comparação de Métodos de Integração Numérica.
+  start: 2015-03-01
+  end: 2016-03-31
+  type: intern
+  email:
+    user: renan.oclides
+    domain: hotmail [dot] com
+  lattes: http://lattes.cnpq.br/7606523286136630
+  link: alunos/2015/renan-oclides.pdf
+
+- name: Francine Luise Milian Ribas
+  theme: Métodos de Região de Confiança para Minimização Irrestrita
+  type: tcc
+  start: 2015-07-01
+  end: 2017-07-04
+  email:
+    user: francineluise
+    domain: hotmail [dot] com
+  link: alunos/2017/francine-milian.pdf
+
+- name: Oksana Heringer da Silva
+  theme: Métodos de Penalidade e o Lagrangiano Aumentado
+  type: tcc
+  start: 2015-08-01
+  end: 2017-07-03
+  email:
+    user: oksanaheringer
+    domain: gmail [dot] com
+  lattes: http://lattes.cnpq.br/4222576494725838
+  link: alunos/2017/oksana-heringer.pdf
+
+- name: Adrean Cebola
+  theme: Resolução de Programas Lineares com Método de Pontos Interiores
+  start: 2016-06-01
+  end: 2017-06-27
+  type: tcc
+  email:
+    user: adreancebola
+    domain: hotmail [dot] com
+  link: alunos/2017/adrean-cebola.pdf
+
+- name: Carlos Henrique Venturi Ronchi
+  theme: Estudo Matemático de Reconhecimento de Caracteres
+  start: 2016-05-01
+  end: 2017-05-16
+  type: tcc
+  email:
+    user: carloshvronchi
+    domain: gmail [dot] com
+  lattes: http://lattes.cnpq.br/7243878025626015
+  link: alunos/2017/carlos-ronchi.pdf

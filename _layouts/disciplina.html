@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{%- include head.html -%}
+</head>
+<body>
+	<header class="disciplina texture-{{ site.texture.style }}">
+		<div class="container">
+			{%- include nav.html -%}
+		</div>
+    <div class="container">
+      <h2> {{ page.title }} </h2>
+      <a href="/disciplinas/">Voltar</a>
+    </div>
+	</header>
+	<main>
+		<div class="container">
+			{{ content }}
+		</div>
+	</main>
+	{%- include footer.html -%}
+</body>
+</html>

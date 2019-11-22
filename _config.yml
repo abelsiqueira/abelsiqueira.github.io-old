@@ -16,9 +16,9 @@ texture:
   title: Abel Soares Siqueira
   tagline: Assistant Professor at Federal University of Paraná
   date_format: "%Y-%b-%-d"
-  style: purple
-  showNav: true
-  showPicker: true
+  style: blue
+  showNav: false
+  showPicker: false
 
   # generate social links in footer
   social_links:
@@ -26,6 +26,12 @@ texture:
     github:  abelsiqueira
     linkedIn: in/abel-siqueira/
     rss: rss
+
+t:
+  phd:    "Doutorado / Ph.D."
+  master: "Mestrado / Master"
+  tcc:    "TCC / Term paper"
+  intern: "Iniciação Científica / Internship"
 
 
 # If you want to link only specific pages in your header, uncomment

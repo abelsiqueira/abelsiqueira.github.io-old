@@ -1,0 +1,119 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage[top=2cm,bottom=2cm,left=1cm,right=1cm]{geometry}
+\usepackage{amsmath, amsfonts, amsthm}
+
+\newtheorem{teorema}{Teorema}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\newcommand{\K}{\mathbb{K}}
+
+\title{Gabarito do exercício do dia 6 de Janeiro de 2015}
+\author{Abel Soares Siqueira}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{teorema}
+  Sejam $V$ e $W$ espaços vetoriais e $T \in
+  \mathcal{L}(V,W)$ um isomorfismo. Seja $S\subset V$.
+  Então,
+  \begin{enumerate}
+    \item Se $S$ gera $V$, então $T(S)$ gera $W$.
+    \item Se $S$ é linearmente independente em $V$,
+      então, $T(S)$ é linearmente independente em $W$.
+    \item Se $S$ é base de $V$, então $T(S)$ é base de
+      $W$.
+  \end{enumerate}
+\end{teorema}
+\begin{proof}
+  Note que $T$ isomorfismo quer dizer que $T$ é injetora e sobrejetora.
+  Note também que $S$ não necessariamente é finito, nem que $V$ necessariamente
+  tem dimensão finita.
+  \begin{enumerate}
+    \item
+    \begin{description}
+      \item[$(\Rightarrow)$]
+        Tome $w\in W$.
+        Como $T$ é sobrejetora, existe $v\in V$ tal que $Tv=w$.
+        Daí, como $S$ gera $V$, existem $v_1,\dots,v_n\in S$ e
+        $\alpha_1,\dots,\alpha_n\in\K$ tal que
+        $$ v = \alpha_1v_1 + \dots + \alpha_nv_n. $$
+        Daí
+        \begin{align*}
+          w & = Tv \\
+            & = T(\alpha_1v_1 + \dots + \alpha_nv_n) \\
+            & = \alpha_1Tv_1 + \dots + \alpha_nTv_n.
+        \end{align*}
+        Como $Tv_j\in T(S), j = 1,\dots,n$, então $w\in T(S)$.
+        Como $w\in W$ foi arbitrário, temos $W\subset T(S)$.
+
+      \item[$(\Leftarrow)$]
+        Tome $v\in V$. Seja $w=Tv$. Como
+        $Tv\in W=[T(S)]$, existem $w_1,\dots,w_n\in T(S)$ e
+        $\alpha_1,\dots,\alpha_n\in\K$ tais que
+        \begin{align*}
+          Tv & = \alpha_1w_1+\dots+\alpha_nw_n.
+        \end{align*}
+        Como $w_j\in T(S)$, existem $v_j\in S$ tais que
+        $Tv_j = w_j$, daí
+        \begin{align*}
+          Tv & = \alpha_1Tv_1+\dots+\alpha_nTv_n \\
+          & = T(\alpha_1v_1+\dots+\alpha_nv_n).
+        \end{align*}
+        Como $T$ é injetora, temos
+        $$ v = \alpha_1v_1 + \dots + \alpha_nv_n, $$
+        isto é, $v\in [S]$. Como $v\in V$ foi arbitrário, temos
+        $V\subset[S]$.
+    \end{description}
+    \item
+    \begin{description}
+      \item[$(\Rightarrow)$]
+        Tome $w_1,\dots,w_n \in T(S)$ distintos, e sejam
+        $\alpha_1,\dots,\alpha_n\in\K$ tais que
+        $$ \alpha_1w_1 + \dots + \alpha_nw_n = 0.$$
+        Para cada $w_j$ existe $v_j\in S$ tal que $w_j = Tv_j$.
+        $$ \alpha_1Tv_1 + \dots + \alpha_nTv_n = 0.$$
+        Logo,
+        $$ T(\alpha_1v_1 + \dots + \alpha_nv_n) = 0.$$
+        Como $T$ é injetora e $T(0) = 0$, temos
+        $$ \alpha_1v_1 + \dots + \alpha_nv_n = 0. $$
+        Como $T$ é injetora, e $w_j\neq w_i, j\neq i$, então
+        $v_j\neq v_i, j\neq i$. Logo, $v_1,\dots,v_n$ são distintos.
+        Como $v_j\in S$, e por hipótese, $S$ é linearmente independente,
+        então toda combinação linear nula de elemtos de $S$ deve
+        ter os coeficientes nulos, ou seja,
+        $\alpha_1 = \cdots = \alpha_n = 0$.
+        Portanto, os vetores $w_1,\dots,w_n$ são linearmente independentes.
+        Como a escolha desses vetores foi arbitrária, toda escolha finita de
+        vetores de $T(S)$ é linearmente independente, de modo que $T(S)$ é
+        linearmente independente.
+
+      \item[$(\Leftarrow)$]
+        Tome $v_1,\dots,v_n \in S$ distintos, e sejam
+        $\alpha_1,\dots,\alpha_n\in\K$ tais que
+        $$ \alpha_1v_1 + \dots + \alpha_nv_n = 0.$$
+        Daí,
+        $$ T(\alpha_1v_1 + \dots + \alpha_nv_n) = T(0) = 0,$$
+        isto é,
+        $$ \alpha_1Tv_1 + \dots + \alpha_nTv_n = 0,$$
+        e como $T$ é injetora, $Tv_1,\dots,Tv_n$ são distintos.
+        Mas $Tv_j\in T(S), j=1,\dots,n$, e por hipótese, $T(S)$ é linearmente
+        independente,
+        de modo que toda combinação linear nula deve
+        ter os coeficientes nulos, ou seja,
+        $\alpha_1 = \cdots = \alpha_n = 0$.
+        Portanto, os vetores $v_1,\dots,v_n$ são linearmente independentes.
+        Como a escolha desses vetores foi arbitrária, toda escolha finita de
+        vetores de $S$ é linearmente independente, de modo que $S$ é
+        linearmente independente.
+    \end{description}
+    \item Um conjunto é base se gera o espaço e é linearmente independente,
+      então o resultado segue diretamente de (i) e (ii).
+  \end{enumerate}
+\end{proof}
+
+\end{document}

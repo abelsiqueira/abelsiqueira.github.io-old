@@ -1,0 +1,8 @@
+Produtos,Demanda,CustoEstoque,PrecoNaDemanda,PrecoSemDemanda
+Mesa,30,12.0,150.0,30.0
+Cadeira,150,3.0,25.0,15.0
+Cama,5,20.0,300.0,40.0
+Brinque,7,1.0,15.0,5.0
+Banco,5,1.0,12.0,7.0
+Armario,20,15.0,700.0,0.0
+GuardRp,20,15.0,600.0,0.0

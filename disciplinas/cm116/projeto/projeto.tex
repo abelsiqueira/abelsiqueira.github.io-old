@@ -1,0 +1,172 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage[portuguese]{babel}
+\usepackage{algorithm,algorithmic}
+\usepackage{amsmath,amsfonts,amsthm}
+
+% Esses padrões não se adequam na ABNT
+\usepackage[left=2cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage[style=ieee,backend=bibtex,sorting=none]{biblatex}
+\DefineBibliographyStrings{portuguese}{
+  references = {Bibliografia},
+}
+\addbibresource{refs.bib}
+
+% Um pacote de comandos auxiliares
+\usepackage{auxiliares}
+
+\title{Modelo e explicação do projeto}
+\author{Abel Soares Siqueira}
+\date{Dia do mês do ano}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  Aqui vai um pequeno resumo do trabalho.
+  O resumo deve ter no máximo 15 linhas, sendo que menos é melhor.
+
+  O trabalho inteiro deve ter ao menos 5 páginas e no máximo 10.
+\end{abstract}
+
+\section{Introdução}
+
+Uma pequena introdução. O que significa o modelo; de onde vem; como chega nele;
+etc. O que for pertinente e factível.
+
+\section{Discretizações/Aplicação dos métodos}
+
+Explique as discretizações, ou as aplicações dos métodos, como ficaram no
+problema específico, como foram resolvidos, etc.
+
+\subsection{Cronograma dos projetos}
+
+\begin{itemize}
+  \item Primeira parte (13 de Abril)
+    \begin{itemize}
+      \item Modelo PVI;
+      \item Métodos Euler (Explícito e implícito), Runge-Kuttas, Outros;
+      \item Desenhos;
+    \end{itemize}
+  \item Segunda parte (11 de Maio)
+    \begin{itemize}
+      \item Modelo PVC;
+      \item Diferenças finitas de ordem 1 e 2;
+      \item Desenhos;
+      \item Notebook;
+    \end{itemize}
+  \item Terceira parte (29 de Junho)
+    \begin{itemize}
+      \item Modelo para EDP;
+      \item Várias opções. Crank-Nicholson;
+      \item Desenhos;
+      \item Animações.
+    \end{itemize}
+\end{itemize}
+
+Exemplos de PVI:
+\begin{itemize}
+  \item Equações Presa-Predador;
+  \item Pendûlos;
+\item Aceleração com atrito do ar.
+\end{itemize}
+
+Exemplos de PVC:
+\begin{itemize}
+  \item Equação do calor escionária com geração interna de calor;
+  \item Flexão de uma Viga;
+  \item Equação de Laplace bidimensional.
+\end{itemize}
+
+Exemplos de EDP:
+\begin{itemize}
+  \item Equação do calor em duas dimensões com geração interna;
+  \item Equações de águas rasas;
+  \item Equação de Black-Scholes;
+  \item Alguma aplicação da equação de Fisher-Kolmogorov;
+\end{itemize}
+
+\section{Explicando LaTeX}
+
+Existem dois tipos de código matemático: inline ou display.
+O inline é junto com o texto, como $f(x) = x^2$, e o display aparece
+centralizada separado do texto, como $$f(x) = x^2.$$
+É importante notar que as regras de português continuam valendo mesmo com código
+matemático em display (veja a pontuação e parágrafo).
+
+Para o display, existem três formas de colocar o código. O
+\begin{verbatim}
+$$ f(x) = x^2 $$
+\end{verbatim}
+o
+\begin{verbatim}
+\begin{equation}
+  codigo
+\end{equation}
+\end{verbatim}
+e o
+\begin{verbatim}
+\begin{align}
+  codigo
+\end{align}
+\end{verbatim}
+O primeiro e o segundo fazem a mesma coisa, sendo que o primeiro é melhor para
+códigos curtos. O terceiro deixa você colocar códigos multi-linhas, e o segundo
+e o terceiro colocam numeração para as equações.
+Você pode remover essa numeração colocando um * depois de \verb+equation+ ou
+de \verb+align+.
+Numere apenas as equações que for referenciar. Veja exemplos no código.
+
+\subsection{Exemplos de código}
+\begin{equation}
+  ax^2 + bx + c = 0, \qquad a \neq 0 \label{eq:quadratica}
+\end{equation}
+A Equação \eqref{eq:quadratica} é a equação de Bháskara.
+Para resolver, completamos quadrados
+\begin{align}
+  ax^2 + bx + c & = a\bigg(x^2 + \frac{b}{a}x\bigg) + c \nonumber \\
+                & = a\bigg[\bigg(x + \frac{b}{2a}\bigg)^2 -
+\frac{b^2}{4a^2}\bigg] + c = 0. \label{eq:comp.quad}
+\end{align}
+Isolando a parte quadrática na Equação \eqref{eq:comp.quad} temos
+\begin{equation*}
+  \bigg(x + \frac{b}{2a}\bigg)^2 = \frac{b^2}{4a^2} - \frac{c}{a},
+\end{equation*}
+que pode ser escrito como
+\begin{equation}
+  \bigg(x + \frac{b}{2a}\bigg)^2 = \frac{b^2 - 4ac}{4a^2}.
+  \label{eq:isolado}
+\end{equation}
+Se $b^2 - 4ac > 0$ na Equação \eqref{eq:isolado}, essa equação tem duas
+soluções, que podemos escrever como
+\begin{align*}
+  x & = -\frac{b}{2a} \pm \sqrt{\frac{b^2 - 4ac}{4a^2}} \\
+    & = -\frac{b}{2a} \pm \frac{\sqrt{b^2 - 4ac}}{2\modulo{a}} \\
+    & = -\frac{b}{2a} \pm \frac{\sqrt{b^2 - 4ac}}{2a},
+\end{align*}
+onde o módulo some pois o $\pm$ já engloba as possibilidades do módulo.
+Isso se resumo a
+\begin{equation}
+  x  = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.
+  \label{eq:bhaskara}
+\end{equation}
+A Equação \eqref{eq:bhaskara} é dita fórmula de Bháskara.
+
+\section{Resultados Computacionais (O nome pode ser diferente)}
+
+Após implementarem os métodos, compare com a solução exata, quando houver.
+Faça os gráficos que forem necessários, e pode fazer animações quando for
+possível.
+
+\section{Conclusão}
+
+Depois de tudo você conclui.
+
+% Para citas sem referenciar no texto, use
+\nocite{otimizacao:nocedal}
+\printbibliography
+
+\end{document}

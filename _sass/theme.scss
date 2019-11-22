@@ -3,7 +3,7 @@
 @import 'begin';
 @import 'syntax';
 
-$linkColor: #999;
+$linkColor: #666;
 $mobileW: 768px;
 $smallMobileW: 480px;
 $bigScreenW: 1600px;
@@ -17,7 +17,7 @@ $lightGray: #eee;
 }
 
 body {
-	font-family: 'Nunito Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	@include fluidType(16px, 19px);
 	line-height: 1.55em;
 	margin: 0;
@@ -36,6 +36,7 @@ a {
 
 
 h1, h2, h3 {
+	font-family: 'Nunito', serif;
 	line-height: 1.2em;
 }
 
@@ -92,6 +93,20 @@ header {
 			}
 		}
 	}
+}
+
+.secondary {
+  padding: 30px 0;
+  a {
+    color: white;
+  }
+}
+
+.disciplina {
+  padding: 10px 0;
+  a {
+    color: white;
+  }
 }
 
 .clearfix {
@@ -250,4 +265,18 @@ header {
 			}
 		}
 	}
+}
+
+.meu-nav {
+  list-style-type: none;
+  a {
+    color: white;
+  }
+}
+
+.bibtexentry {
+  ul {
+    list-style-type: none;
+  }
+  text-align: justify;
 }

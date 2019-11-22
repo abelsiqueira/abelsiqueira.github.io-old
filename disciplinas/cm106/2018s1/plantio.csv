@@ -1,0 +1,8 @@
+Produto,Preço Base (em R$ / Kg),Depreciação (por ton),Produção por hectare (em ton),Tempo de plantio (em meses)
+Banana,  1.49, 0.01,  1.2, 12
+Batata,  2.41, 0.005, 0.8,  6
+Cebola,  3.23, 0.01,  1.3,  3
+Maça,    3.21, 0.018, 0.1,  6
+Milho,   2.93, 0.008, 0.5, 12
+Morango, 9.33, 0.03,  1.8,  2
+Uva,     8.07, 0.012, 2.1,  6
