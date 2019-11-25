@@ -2,3 +2,4 @@ _site
 .sass-cache
 *.gif
 .ipynb_checkpoints
+.jekyll-cache

@@ -1,27 +1,23 @@
----
-layout: default
----
-<div class="post">
-  <div class="post-link-prev">
-    {% if page.parent %}
-    <a href="{{ site.baseurl }}/{{ page.parent }}/">
-      {% for pg in site.pages %}
-      {% if pg.key == page.parent %}
-      Voltar para {{ pg.title }}
-      {% endif %}
-      {% endfor %}
-    </a>
-    {% else %}
-    <a href="{{ site.baseurl }}/br/teaching/">Voltar para disciplinas</a>
-    {% endif %}
-  </div>
-
-  <header class="post-header">
-    <h1>{{ page.title }}</h1>
-  </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{%- include head.html -%}
+</head>
+<body>
+	<header class="disciplina texture-{{ site.texture.style }}">
+		<div class="container">
+			{%- include nav.html -%}
+		</div>
+    <div class="container">
+      <h2> {{ page.title }} </h2>
+      <a href="/disciplinas/">Voltar</a>
+    </div>
+	</header>
+	<main>
+		<div class="container">
+			{{ content }}
+		</div>
+	</main>
+	{%- include footer.html -%}
+</body>
+</html>

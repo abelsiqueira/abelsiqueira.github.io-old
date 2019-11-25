@@ -1,5 +1,5 @@
 ---
-layout:    page
+layout:    secondary
 title:     Orientações
 key:       supervision
 lang:      br
@@ -18,25 +18,25 @@ years:
   - "2015"
 ---
 
-## Em andamento
+## Em andamento / Ongoing
 
 <div class="row students"> <div class="col-xs-12">
 {% assign data = site.data.supervision | sort: "start" | reverse %}
 {% for student in data %}
 {% if student.end %} {% continue %} {% endif %}
 <p class="student">
-  <strong> {{ student.name }}</strong>, &nbsp;
-  <em style="font-variant: small-caps"> {{ student.theme }}</em>, &nbsp;
-  <strong>{{ site.t[student.type] }}</strong>, &nbsp;
-  desde {{ student.start | date:"%m/%Y" }}.
+  <strong> {{ student.name }}</strong> <br>
+  &nbsp; <em style="font-variant: small-caps"> {{ student.theme }}</em> <br>
+  &nbsp; {{ site.t[student.type] }} <br>
+  &nbsp; {{ student.start | date:"%m/%Y" }} --
   {% if student.coadvisor %}
-  <br>Co-orientado por <strong>{{ student.coadvisor }}</strong>.
+  &nbsp; <br>Co-orientado por <strong>{{ student.coadvisor }}</strong>.
   {% endif %}
 </p>
 {% endfor %}
 </div> </div>
 
-## Concluídas
+## Concluídas / Concluded
 
 <div class="row students"> <div class="col-xs-12">
 {% assign data = site.data.supervision | sort: "end" | reverse %}
@@ -47,17 +47,15 @@ years:
 {% capture thisyear %}{{ student.end | date:"%Y" }}{% endcapture %}
 {% if year != thisyear %} {% continue %} {% endif %}
 <p class="student">
-  <strong> {{ student.name }}</strong>, &nbsp;
-  <em style="font-variant: small-caps"> {{ student.theme }}</em>, &nbsp;
-  <strong>{{ site.t[student.type] }}</strong>, &nbsp;
-  {{ student.start | date:"%m/%Y" }} -
-  {{ student.end | date:"%m" }}/<strong>{{ student.end | date:"%Y" }}</strong>.
+  <strong> {{ student.name }}</strong> <br>
+  &nbsp; <em style="font-variant: small-caps"> {{ student.theme }}</em> <br>
+  &nbsp; {{ site.t[student.type] }} <br>
+  &nbsp; {{ student.start | date:"%m/%Y" }} -- {{ student.end | date:"%m" }}/{{ student.end | date:"%Y" }}
   {% if student.link %}
-  &nbsp;
-  <a href="{{ site.baseurl }}/assets/{{ student.link }}">Download</a>
+  <br> &nbsp; <a href="{{ site.baseurl }}/assets/{{ student.link }}">Download</a>
   {% endif %}
   {% if student.coadvisor %}
-  <br>Co-orientado por <strong>{{ student.coadvisor }}</strong>.
+  <br> &nbsp; Co-orientado por <strong>{{ student.coadvisor }}</strong>
   {% endif %}
 </p>
 {% endfor %}

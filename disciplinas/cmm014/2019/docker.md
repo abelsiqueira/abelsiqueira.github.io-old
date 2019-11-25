@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 
 # Instalação do Jupyter pelo Docker

@@ -1,9 +1,0 @@
-{% if post.categories[0] %}
-{% assign cat = post.categories[0] %}
-
-<p class="excerpt">
-  <strong> &raquo;
-    <a href="{{ post.url | prepend: site.baseurl }}"> {{ post.title }}</a>
-    <br> </strong>
-</p>
-{% endif %}
