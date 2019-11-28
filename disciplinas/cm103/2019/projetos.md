@@ -1,6 +1,5 @@
 ---
 layout: disciplina
-permalink: /cm103/2019/projetos.html
 ---
 # Projeto de Cálculo Numérico
 
