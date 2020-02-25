@@ -1,5 +1,5 @@
 ---
-layout: disciplina
+layout: secondary
 parent: cm106-2018s1
 ---
 # Exercício de Modelagem

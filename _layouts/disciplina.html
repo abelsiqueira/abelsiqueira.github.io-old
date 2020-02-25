@@ -10,7 +10,11 @@
 		</div>
     <div class="container">
       <h2> {{ page.title }} </h2>
+      {% if page.parent %}
+      <a href="{{ site.baseurl }}/{{ page.parent }}">Voltar</a>
+      {% else %}
       <a href="/disciplinas/">Voltar</a>
+      {% endif %}
     </div>
 	</header>
 	<main>

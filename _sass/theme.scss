@@ -302,3 +302,18 @@ header {
 .social .fab, .social .fas {
   color: #fff;
 }
+
+th, td {
+  border: 1px solid black;
+}
+
+tr:nth-child(odd) {
+  background-color: #fcc;
+}
+tr:nth-child(even) {
+  background-color: #f5dddd;
+}
+
+td {
+  padding: 5px;
+}
