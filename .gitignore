@@ -3,3 +3,4 @@ _site
 *.gif
 .ipynb_checkpoints
 .jekyll-cache
+.history
