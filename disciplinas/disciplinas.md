@@ -5,6 +5,7 @@ lang:       br
 icon:       book
 key:        teaching
 years:
+  - 2020t3
   - 2020s1
   - 2019s2
   - 2019s1
