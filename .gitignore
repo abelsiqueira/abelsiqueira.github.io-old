@@ -1,6 +1,5 @@
-_site
-.sass-cache
-*.gif
-.ipynb_checkpoints
-.jekyll-cache
-.history
+__site/
+.DS_Store
+franklin
+franklin.pub
+node_modules/

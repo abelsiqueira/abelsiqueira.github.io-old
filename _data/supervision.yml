@@ -1,32 +1,8 @@
-- name: Renan Oclides Domingues
-  theme: Otimização Não Linear
-  start: 2019-01-01
-  type: intern
-
-- name: Rodrigo Souza Garcia Redondo
-  theme: Otimização Não Linear
-  start: 2019-05-30
-  type: tcc
-
-- name: João Luís Ribeiro Okimoto
-  theme: Cache de avaliações em métodos de otimização sem derivadas
-  start: 2019-02-01
-  type: intern
-
 - name: Egmara Antunes
   theme: Otimização Não Linear
   start: 2018-10-01
+  end: 2020-08-26
   type: master
-
-- name: Letícia do Rocio Oliveira
-  theme: Quadrados Mínimos
-  start: 2019-01-01
-  type: intern
-
-- name: Jaqueline de Souza Ortiz
-  theme: Métodos numéricos para integração múltipla em regiões não retangulares
-  start: 2018-10-31
-  type: intern
 
 - name: Leonardo Ferreira Luciano
   theme: Estudo de decomposições matriciais e suas relações com os subespaços da matriz

@@ -1,14 +1,7 @@
----
-layout:     secondary
-title:      Publications
-key:        publications
-lang:       all
-order:      3
-icon:       id-card
-permalink:  /publications/
----
+@def title = "Publications"
 
-<bibtex src="/abel.bib"></bibtex>
+~~~
+<bibtex src="/_data/abel.bib"></bibtex>
 
 <div class="bibtex_structure">
 <div class="sections bibtextypekey">
@@ -86,3 +79,4 @@ permalink:  /publications/
   </li></ul>
 </div>
 </div>
+~~~
