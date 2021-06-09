@@ -66,10 +66,10 @@ multAx2(y2, A, x)
 norm(y1 - y2)</code></pre><pre><code class="plaintext hljs">0.0</code></pre>
 <pre><code class="julia hljs">t₀ = time()
 multAx1(y, A, x)
-Δt = time() - t₀</code></pre><pre><code class="plaintext hljs">0.005416154861450195</code></pre>
+Δt = time() - t₀</code></pre><pre><code class="plaintext hljs">0.004261970520019531</code></pre>
 <pre><code class="julia hljs">t₀ = time()
 multAx2(y, A, x)
-Δt = time() - t₀</code></pre><pre><code class="plaintext hljs">0.0017118453979492188</code></pre>
+Δt = time() - t₀</code></pre><pre><code class="plaintext hljs">0.0012979507446289062</code></pre>
 <pre><code class="julia hljs">A = rand(<span class=hljs-number >3</span>, <span class=hljs-number >3</span>)
 A[:]</code></pre><pre><code class="plaintext hljs">9-element Vector{Float64}:
  0.2161052678391404
@@ -163,7 +163,7 @@ b = A * ones(<span class=hljs-number >3</span>)</code></pre><pre><code class="pl
 <pre><code class="julia hljs">x = A\b</code></pre><pre><code class="plaintext hljs">3-element Vector{Float64}:
  0.9999999999999994
  0.9999999999999999
- 1.0000000000000007</code></pre>
+ 1.0000000000000004</code></pre>
 <pre><code class="julia hljs">A = zeros(<span class=hljs-number >5</span>,<span class=hljs-number >5</span>) + <span class=hljs-number >2</span>I
 <span class=hljs-keyword >for</span> i = <span class=hljs-number >1</span>:<span class=hljs-number >4</span>
     A[i,i+<span class=hljs-number >1</span>] = <span class=hljs-number >1</span>
@@ -338,7 +338,7 @@ elim_gauss(A, b)</code></pre><pre><code class="plaintext hljs">([3.0 1.0 2.0; 0.
  0.0  0.0      2.85714  2.85714</code></pre>
 <pre><code class="julia hljs">A \ b</code></pre><pre><code class="plaintext hljs">3-element Vector{Float64}:
  1.0
- 1.0
+ 1.0000000000000002
  0.9999999999999999</code></pre>
 <pre><code class="julia hljs">A = [<span class=hljs-number >0.0</span> <span class=hljs-number >1.0</span>; <span class=hljs-number >1.0</span> <span class=hljs-number >0.0</span>]</code></pre><pre><code class="plaintext hljs">2×2 Matrix{Float64}:
  0.0  1.0
@@ -350,7 +350,7 @@ elim_gauss(A, b)</code></pre><pre><code class="plaintext hljs">Diagonal quase nu
 b = [<span class=hljs-number >6.0</span>; <span class=hljs-number >2</span>; <span class=hljs-number >6</span>]
 A \ b</code></pre><pre><code class="plaintext hljs">3-element Vector{Float64}:
  1.0
- 1.0
+ 1.0000000000000002
  0.9999999999999999</code></pre>
 <p>Agora para o algoritmo de resolução do sistema triangular superior.</p>
 <ol>
@@ -419,9 +419,9 @@ sist_tri_sup(A, b)</code></pre><pre><code class="plaintext hljs">3-element Vecto
 A = rand(<span class=hljs-number >100</span>, <span class=hljs-number >100</span>)
 b = A * ones(<span class=hljs-number >100</span>);</code></pre>
 <pre><code class="julia hljs">(<span class=hljs-number >100</span> * <span class=hljs-number >100</span> + <span class=hljs-number >100</span> + <span class=hljs-number >100</span>) * <span class=hljs-built_in >Float64</span>.size / <span class=hljs-number >1024</span></code></pre><pre><code class="plaintext hljs">79.6875</code></pre>
-<pre><code class="julia hljs"><span class=hljs-meta >@time</span> x = resolve(A, b);</code></pre><pre><code class="plaintext hljs">  0.010924 seconds (21.27 k allocations: 12.167 MiB, 33.13% compilation time)
+<pre><code class="julia hljs"><span class=hljs-meta >@time</span> x = resolve(A, b);</code></pre><pre><code class="plaintext hljs">  0.014016 seconds (21.27 k allocations: 12.167 MiB, 35.61% compilation time)
 </code></pre>
-<pre><code class="julia hljs"><span class=hljs-meta >@time</span> x = A \ b;</code></pre><pre><code class="plaintext hljs">  0.000234 seconds (4 allocations: 79.953 KiB)
+<pre><code class="julia hljs"><span class=hljs-meta >@time</span> x = A \ b;</code></pre><pre><code class="plaintext hljs">  0.000283 seconds (4 allocations: 79.953 KiB)
 </code></pre>
 <h2 id=pontos_importantes ><a href="#pontos_importantes" class=header-anchor >Pontos importantes</a></h2>
 <ul>
@@ -479,7 +479,7 @@ A</code></pre><pre><code class="plaintext hljs">3×3 Matrix{Float64}:
  0.0  0.0      2.85714</code></pre>
 <pre><code class="julia hljs">A \ b</code></pre><pre><code class="plaintext hljs">3-element Vector{Float64}:
  1.0
- 1.0
+ 1.0000000000000002
  0.9999999999999999</code></pre>
 <pre><code class="julia hljs">A = [<span class=hljs-number >1</span> <span class=hljs-number >1e-11</span>; <span class=hljs-number >1e-11</span> <span class=hljs-number >100</span>]
 b = A * ones(<span class=hljs-number >2</span>)
@@ -491,7 +491,7 @@ b = A * ones(<span class=hljs-number >2</span>)
 resolve(A, b) .- <span class=hljs-number >1</span></code></pre><pre><code class="plaintext hljs">2-element Vector{Float64}:
  0.0004441719502210617
  0.0</code></pre>
-<pre><code class="julia hljs">cond(A)</code></pre><pre><code class="plaintext hljs">100.00000000000001</code></pre>
+<pre><code class="julia hljs">cond(A)</code></pre><pre><code class="plaintext hljs">100.0</code></pre>
 <h2 id=pivoteamento ><a href="#pivoteamento" class=header-anchor >Pivoteamento</a></h2>
 <p>Pivoteamento é o nome dado à troca de linhas no processo de eliminação Gaussiana. Às vezes podemos fazer troca de colunas também, e para diferenciar costuma-se dizer eliminação Gaussiana com pivoteamento parcial.</p>
 <p>O primeiro motivo pelo qual o pivoteamento é importante é o zero na diagonal.</p>
@@ -729,7 +729,7 @@ C</code></pre><pre><code class="plaintext hljs">4×5 Matrix{Float64}:
 <pre><code class="julia hljs">U = C[<span class=hljs-number >1</span>:<span class=hljs-number >4</span>, <span class=hljs-number >1</span>:<span class=hljs-number >4</span>]
 c = C[<span class=hljs-number >1</span>:<span class=hljs-number >4</span>, <span class=hljs-number >5</span>]
 U \ c</code></pre><pre><code class="plaintext hljs">4-element Vector{Float64}:
- 0.9999999999999996
+ 0.9999999999999998
  1.0000000000000002
  0.9999999999999997
  1.0</code></pre>
@@ -812,12 +812,12 @@ A</code></pre><pre><code class="plaintext hljs">5×5 Matrix{Float64}:
 
 A = rand(<span class=hljs-number >4</span>, <span class=hljs-number >4</span>)
 b = A * ones(<span class=hljs-number >4</span>)
-elim_gauss_pivot(A, b)</code></pre><pre><code class="plaintext hljs">([0.7913462490414747 0.8422557594578175 0.5058046332164718 0.5058741376644247; 0.0 0.11682520422031732 0.5907585334434668 0.3606584626063668; 0.0 0.0 0.7594577655944923 0.07851606035207387; 0.0 0.0 0.0 0.30820672286451894], [2.645280779380189, 1.068242200270151, 0.8379738259465661, 0.30820672286451867])</code></pre>
+elim_gauss_pivot(A, b)</code></pre><pre><code class="plaintext hljs">([0.7913462490414747 0.8422557594578175 0.5058046332164718 0.5058741376644247; 0.0 0.11682520422031732 0.5907585334434668 0.3606584626063668; 0.0 0.0 0.7594577655944923 0.07851606035207387; 0.0 0.0 0.0 0.30820672286451894], [2.6452807793801885, 1.068242200270151, 0.8379738259465666, 0.3082067228645194])</code></pre>
 <pre><code class="julia hljs">A \ b</code></pre><pre><code class="plaintext hljs">4-element Vector{Float64}:
- 0.999999999999997
- 1.0000000000000036
- 1.0
- 0.9999999999999991</code></pre>
+ 1.0000000000000044
+ 0.9999999999999949
+ 1.0000000000000002
+ 1.0000000000000013</code></pre>
 <pre><code class="julia hljs">A = [<span class=hljs-number >1e-12</span> <span class=hljs-number >100</span>; <span class=hljs-number >1</span> <span class=hljs-number >1e-12</span>]
 b = A * ones(<span class=hljs-number >2</span>)
 elim_gauss_pivot(A, b)</code></pre><pre><code class="plaintext hljs">([1.0 1.0e-12; 0.0 100.0], [1.000000000001, 100.0])</code></pre>
@@ -1026,9 +1026,9 @@ L</code></pre><pre><code class="plaintext hljs">3×3 Matrix{Float64}:
 <span class=katex-display ><span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML" display=block ><semantics><mrow><mi>x</mi><mo>=</mo><msup><mi>U</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><msup><mi>L</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>b</mi><mi mathvariant=normal >.</mi></mrow><annotation encoding="application/x-tex">x = U^{-1} L^{-1} b.</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >=</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:0.864108em;vertical-align:0em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class=msupsub ><span class=vlist-t ><span class=vlist-r ><span class=vlist  style="height:0.864108em;"><span style="top:-3.113em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class=mord ><span class="mord mathnormal">L</span><span class=msupsub ><span class=vlist-t ><span class=vlist-r ><span class=vlist  style="height:0.864108em;"><span style="top:-3.113em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mord mathnormal">b</span><span class=mord >.</span></span></span></span></span>
 <pre><code class="julia hljs">b = A * ones(<span class=hljs-number >3</span>)
 (U \ (L \ b))</code></pre><pre><code class="plaintext hljs">3-element Vector{Float64}:
- 0.9999999999999996
+ 0.9999999999999998
  1.0000000000000002
- 1.0000000000000004</code></pre>
+ 1.0000000000000002</code></pre>
 <pre><code class="julia hljs"><span class=hljs-keyword >function</span> declu(A::<span class=hljs-built_in >Matrix</span>; diagtol = <span class=hljs-number >1e-12</span>)
     n = size(A, <span class=hljs-number >1</span>)
     <span class=hljs-keyword >for</span> j = <span class=hljs-number >1</span>:n-<span class=hljs-number >1</span>

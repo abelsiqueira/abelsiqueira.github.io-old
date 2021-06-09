@@ -1,4 +1,4 @@
-Sitemap: https://abelsiqueira.github.io/sitemap.xml
+Sitemap: abelsiqueira.github.io/sitemap.xml
 
 User-agent: *
 Disallow:
