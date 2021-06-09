@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{if hasmath}} {{insert head_katex.html }}     {{end}}
+  {{if hascode}} {{insert head_highlight.html }}   {{end}}
+  <link href="/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/favicon.png">
+  <link rel="stylesheet" href="/css/code-katex.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/dark-mode.css">
+  {{isdef title}} <title>{{fill title}}</title>  {{end}}
+</head>
+<body>
+  {{insert header.html}}
+
+{{isdef image}}
+  {{isdef image_text}}
+  <div class="banner text-over-image-div">
+    <img src="/images/{{ fill image }}">
+    <section class="text-over-image-text">
+      <h1> {{fill image_text }} </h1>
+      {{ isdef image_text_sec }} <h2> {{fill image_text_sec}} </h2> {{end}}
+    </section>
+  </div>
+  {{else}}
+  <div class="banner">
+    <img src="/images/{{ fill image }}">
+  </div>
+  {{end}}
+{{end}}
+
+<div class="container-fluid">
+
+  <div class="container main-text">
+<!-- Content appended here -->

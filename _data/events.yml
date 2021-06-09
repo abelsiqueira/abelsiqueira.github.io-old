@@ -1,0 +1,114 @@
+- event: II CiDWeek - Semana de Ciência de dados
+  link: https://cidamo.com.br/II-CiDWeek/
+  kind: Organização
+  date: 24 a 30 de Abril de 2021
+  venue: Online, Brazil
+- event: I CiDWeek - Semana de Ciência de dados
+  link: https://cidamo.com.br/CiDWeek/
+  kind: Organização
+  date: 3 a 7 de Fevereiro de 2020
+  venue: Curitiba/PR, Brazil
+- event: Congresso Internacional de Biomassa - 4° Expo Biomassa
+  link: docs.google.com/presentation/d/e/2PACX-1vTExSw03IXqsEOOjWeFvvC0FLodFUw5RpIQJLNUALql9jWPjS6GG4fyVeRn3BqehrT5AmfpWYvR4Tpo/pub?start=true&loop=false&delayms=5000&slide=id.g5c57578bdc_0_1264
+  title: Otimização na Linguagem Julia
+  kind: Palestra
+  date: 26 de Junho de 2019
+  venue: Curitiba/PR, Brazil.
+- event: Talk at PPGM - UFPR
+  link: /assets/2019-05-31-PPGM.ipynb
+  title: JuliaSmoothOptimizers
+  kind: Talk
+  date: May 31st, 2019
+  venue: Curitiba/PR, Brazil.
+- event: Invited talk at Université de Sherbrooke
+  link: /assets/2019-02-07-GERAD.tar.gz
+  title: Developing optimization software with JuliaSmoothOptimizers
+  kind: Talk
+  date: February 15th, 2019
+  venue: Sherbrooke/QC, Canada.
+- event: Modeling and optimization tools in Julia - An introduction to JuMP and JSO.
+  link: /assets/2019-02-07-GERAD.tar.gz
+  title: JuliaSmoothOptimizers
+  kind: Talk
+  date: February 7th, 2019
+  venue: Montreal, Canada.
+- event: XII Brazilian Workshop on Continuous Optimization.
+  link: /assets/2018-07-23-xiibrazopt.pdf
+  title: A Regularized Interior-Point Method for Constrained Nonlinear Least Squares
+  kind: Talk
+  date: July 23rd, 2018
+  venue: Foz do Iguaçu/PR, Brasil.
+- event: Second Annual JuMP-dev Workshop
+  link: /assets/2018-06-28-jump-dev.pdf
+  title: Developing new optimization methods with packages from the JuliaSmoothOptimzers organization
+  kind: Talk
+  date: June 28th, 2018
+  venue: Université de Bordeaux, Bordeaux, France.
+- event: CODATA-RDA School of Research Data Science.
+  title: The Unix Shell
+  kind: Tutorial
+  date: December 4th, 2017
+  venue: ICPT-SAIFR/NCC-UNESP, São Paulo/SP, Brasil.
+- event: Seminars on Convex Analysis and Optimization.
+  link: /assets/2017-12-01-ufsc.pdf
+  title: Otimização Não-Linear na Linguagem Julia
+  kind: Talk
+  date: December 1st, 2017
+  venue: UFSC, Florianópolis/SC, Brazil.
+- event: 15th EUROPT Workshop on Advances in Continuous Optimization
+  link: /assets/2017-07-12-europt2017.pdf
+  title: Parameter Optimization in the Nonlinear Stepsize Control Framework for Trust-Region Methods
+  kind: Talk
+  date: July 12th, 2017
+  venue: Montréal, Canada.
+- event: IX Simpósio de Análise Numérica e Otimização
+  link: github.com/abelsiqueira/julia-simposio2017
+  title: Introdução à linguagem Julia
+  kind: Tutorial
+  date: February 20th to 22nd, 2017
+  venue: UFPR, Curitiba, Brazil.
+- event: I Simpósio de Métodos Numéricos em Engenharia
+  link: github.com/abelsiqueira/smne-2016-julia
+  title: Introdução à linguagem Julia
+  kind: Tutorial
+  date: November 30th to December 1st, 2016
+  venue: UFPR, Curitiba, Brazil.
+- event: XI Brazilian Workshop on Continuous Optimization.
+  link: /assets/brazopt-2016.pdf
+  title: Numerical Experience with a Class of Trust-Region Algorithms for Unconstrained Smooth Optimization
+  kind: Talk
+  date: May 23rd, 2016
+  venue: UFAM, Manaus, Brazil
+- event: 2016 Optimization Days.
+  link: /assets/jopt-2016.pdf
+  title: A Workflow for Designing Optimization Methods in the Julia Language
+  kind: Talk
+  date: May 4th, 2016
+  venue: HEC Montréal, Montreal, Canada.
+- event: VIII Simpósio de Análise Numérica e Otimização
+  title: Otimização Não-Linear na Linguagem Julia
+  kind: Tutorial
+  date: 2016, UFPR, Curitiba, PR, Brazil
+- event: Oficina de Ferramentas Computacionais
+  kind: Organizer
+  date: Maio de 2015
+  venue: UFPR, Curitiba, PR, Brazil
+- event: VII Simpósio de Análise Numérica e Otimização
+  title: Ferramentas computacionais para pesquisadores
+  kind: Talk
+  date: 2015
+  venue: UFPR, Curitiba, PR, Brazil
+- event: X Brazilian Workshop on Continuous Optimization.
+  title: Dynamic Control of Infeasibility for Nonlinear Programming
+  kind: Talk
+  date: 2014
+  venue: Florianópolis, SC, Brazil
+- event: 26th European Conference on Operational Research.
+  title: Dynamic Control of Infeasibility for Nonlinear Programming
+  kind: Talk
+  date: 2013
+  venue: Rome, Italy
+- event: 11th EUROPT Workshop on Advances in Continuous Optimization
+  kind: Participation
+  date: 2013
+  venue: Florence, Italy
