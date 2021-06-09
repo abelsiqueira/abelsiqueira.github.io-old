@@ -1,0 +1,8 @@
+Solução esperada: s = π/3 = 1.0471975511965976
+f(s) = 1.232595164407831e-32
+Próximo ponto flutuante: sn = 1.0471975511965979
+f(sn) = 1.232595164407831e-32
+Próximo ponto flutuante: sn2 = 1.047197551196598
+f(sn2) = 7.703719777548943e-32
+Ponto flutuante antes de s: sp = 1.0471975511965974
+f(sp) = 1.1093356479670479e-31

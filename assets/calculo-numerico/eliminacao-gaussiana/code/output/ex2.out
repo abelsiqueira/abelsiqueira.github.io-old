@@ -1,0 +1,1 @@
+[:BLAS, :asum, :axpby!, :axpy!, :blascopy!, :dotc, :dotu, :gbmv, :gbmv!, :gemm, :gemm!, :gemv, :gemv!, :ger!, :hemm, :hemm!, :hemv, :hemv!, :her!, :her2k, :her2k!, :herk, :herk!, :hpmv!, :iamax, :nrm2, :rot!, :sbmv, :sbmv!, :scal, :scal!, :spmv!, :symm, :symm!, :symv, :symv!, :syr!, :syr2k, :syr2k!, :syrk, :syrk!, :trmm, :trmm!, :trmv, :trmv!, :trsm, :trsm!, :trsv, :trsv!]

@@ -1,0 +1,10 @@
+n = 641
+Com 1024 bits obtive 308 casas
+n = 1286
+Com 2048 bits obtive 616 casas
+n = 2578
+Com 4096 bits obtive 1231 casas
+n = 5161
+Com 8192 bits obtive 2465 casas
+n = 10329
+Com 16384 bits obtive 4930 casas

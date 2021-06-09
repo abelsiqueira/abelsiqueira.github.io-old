@@ -1,0 +1,1 @@
+aproxima_derivada (generic function with 1 method)

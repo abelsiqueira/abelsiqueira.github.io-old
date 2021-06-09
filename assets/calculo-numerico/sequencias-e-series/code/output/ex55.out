@@ -1,0 +1,2 @@
+n = 20666
+  1.193587 seconds (206.68 k allocations: 420.997 MiB, 2.59% gc time)

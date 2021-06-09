@@ -1,0 +1,10 @@
+x: a    Tipo: String
+x: b    Tipo: Char
+x: 0    Tipo: Int64
+x: 3.14    Tipo: Float64
+x: true    Tipo: Bool
+x: ℯ    Tipo: Irrational{:ℯ}
+x: 3//4    Tipo: Rational{Int64}
+x: im    Tipo: Complex{Bool}
+x: [1.0, 1.0]    Tipo: Vector{Float64}
+x: [1.0 1.0; 1.0 1.0]    Tipo: Matrix{Float64}
