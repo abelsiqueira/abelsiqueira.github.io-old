@@ -15,7 +15,8 @@ ignore = ["node_modules/", "_old/"]
 generate_rss = true
 website_title = "Abel Soares Siqueira"
 website_descr = "Abel Soares Siqueira"
-website_url   = "https://abelsiqueira.github.io/"
+@def prepath     = get(ENV, "PREVIEW_FRANKLIN_PREPATH", "")
+@def website_url = get(ENV, "PREVIEW_FRANKLIN_WEBSITE_URL", "abelsiqueira.github.io")
 +++
 
 <!--
