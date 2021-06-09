@@ -592,16 +592,16 @@ simpson_composto(f, -<span class=hljs-number >1</span>+a, <span class=hljs-numbe
 
 ponto_medio(exp, <span class=hljs-number >0</span>, <span class=hljs-number >1</span>, n=<span class=hljs-number >1000</span>) - (exp(<span class=hljs-number >1</span>) - <span class=hljs-number >1</span>)</code></pre><pre><code class="plaintext hljs">MethodError: no method matching -(::Nothing, ::Float64)
 Closest candidates are:
-  -(!Matched::ForwardDiff.Dual{Tx, V, N} where {V, N}, ::AbstractFloat) where Tx at /home/runner/.julia/packages/ForwardDiff/QOqCN/src/dual.jl:139
-  -(!Matched::ForwardDiff.Dual{Tx, V, N} where {V, N}, ::Real) where Tx at /home/runner/.julia/packages/ForwardDiff/QOqCN/src/dual.jl:139
   -(!Matched::Base.TwicePrecision, ::Number) at twiceprecision.jl:281
+  -(!Matched::LinearAlgebra.UniformScaling, ::Number) at /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.6/LinearAlgebra/src/uniformscaling.jl:147
+  -(!Matched::GeometryBasics.HyperRectangle{N, T}, ::Number) where {N, T} at /home/runner/.julia/packages/GeometryBasics/qasyR/src/primitives/rectangles.jl:266
   ...
 </code></pre>
 <pre><code class="julia hljs">ponto_medio(f, -<span class=hljs-number >1</span>, <span class=hljs-number >1</span>, n=<span class=hljs-number >1000</span>) - <span class=hljs-literal >pi</span></code></pre><pre><code class="plaintext hljs">MethodError: no method matching -(::Nothing, ::Irrational{:π})
 Closest candidates are:
-  -(!Matched::ForwardDiff.Dual{Tx, V, N} where {V, N}, ::Irrational) where Tx at /home/runner/.julia/packages/ForwardDiff/QOqCN/src/dual.jl:139
-  -(!Matched::ForwardDiff.Dual{Tx, V, N} where {V, N}, ::Real) where Tx at /home/runner/.julia/packages/ForwardDiff/QOqCN/src/dual.jl:139
   -(!Matched::Base.TwicePrecision, ::Number) at twiceprecision.jl:281
+  -(!Matched::LinearAlgebra.UniformScaling, ::Number) at /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.6/LinearAlgebra/src/uniformscaling.jl:147
+  -(!Matched::GeometryBasics.HyperRectangle{N, T}, ::Number) where {N, T} at /home/runner/.julia/packages/GeometryBasics/qasyR/src/primitives/rectangles.jl:266
   ...
 </code></pre>
 <pre><code class="julia hljs">ponto_medio(x -&gt; x * log(x), <span class=hljs-number >0</span>, <span class=hljs-number >1</span>, n=<span class=hljs-number >1000</span>)</code></pre>

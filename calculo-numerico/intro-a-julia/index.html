@@ -91,13 +91,13 @@ Solução
  0.469304   0.353129  0.043141
  0.0623676  0.767602  0.267985</code></pre>
 <pre><code class="julia hljs">A * v</code></pre><pre><code class="plaintext hljs">2-element Vector{Float64}:
- 0.7823632343523123
+ 0.7823632343523121
  1.002766408376991</code></pre>
 <pre><code class="julia hljs">w = rand(<span class=hljs-number >2</span>)</code></pre><pre><code class="plaintext hljs">2-element Vector{Float64}:
  0.06684644402498341
  0.15663663731366406</code></pre>
 <pre><code class="julia hljs">A&#x27; * w</code></pre><pre><code class="plaintext hljs">3-element Vector{Float64}:
- 0.041140328727221634
+ 0.04114032872722164
  0.14383998251721294
  0.044860035999713756</code></pre>
 <pre><code class="julia hljs">A&#x27; * A</code></pre><pre><code class="plaintext hljs">3×3 Matrix{Float64}:
@@ -124,16 +124,16 @@ x = A \ b <span class=hljs-comment ># Resolve o SL</span></code></pre><pre><code
   2.1839037981597493
   0.22954922712702647</code></pre>
 <pre><code class="julia hljs">inv(A) * b</code></pre><pre><code class="plaintext hljs">3-element Vector{Float64}:
- -1.5158905674980963
+ -1.515890567498096
   2.183903798159749
   0.22954922712702644</code></pre>
 <pre><code class="julia hljs">A * x - b <span class=hljs-comment ># É pra ser zero (ou quase)</span></code></pre><pre><code class="plaintext hljs">3-element Vector{Float64}:
  -2.7755575615628914e-17
- -2.220446049250313e-16
+ -1.8041124150158794e-16
  -1.1102230246251565e-16</code></pre>
 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> LinearAlgebra
 
-norm(A * x - b) <span class=hljs-comment ># norm = ‖ ⋅ ‖</span></code></pre><pre><code class="plaintext hljs">2.498001805406602e-16</code></pre>
+norm(A * x - b) <span class=hljs-comment ># norm = ‖ ⋅ ‖</span></code></pre><pre><code class="plaintext hljs">2.1364582767275725e-16</code></pre>
 <pre><code class="julia hljs">v = [<span class=hljs-number >1.0</span>; <span class=hljs-number >2.0</span>; <span class=hljs-number >3.0</span>]
 w = [<span class=hljs-number >2.0</span>; -<span class=hljs-number >2.0</span>; <span class=hljs-number >2.0</span>]
 dot(v, w) <span class=hljs-comment ># ⟨v,w⟩</span></code></pre><pre><code class="plaintext hljs">4.0</code></pre>
@@ -219,7 +219,7 @@ Solução
 b = A * ones(<span class=hljs-number >50</span>);</code></pre>
 <p><strong>Q2:</strong></p>
 <pre><code class="julia hljs">x = A \ b
-norm(x .- <span class=hljs-number >1</span>)</code></pre><pre><code class="plaintext hljs">1.0065364234084525e-13</code></pre>
+norm(x .- <span class=hljs-number >1</span>)</code></pre><pre><code class="plaintext hljs">6.29238916693866e-14</code></pre>
 
 </div></div></div>
 

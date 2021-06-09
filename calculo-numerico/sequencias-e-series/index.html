@@ -813,7 +813,7 @@ plot(x-&gt;abs(exp(x) - exponencial4(x))/exp(x), -<span class=hljs-number >10.0<
 <span class=hljs-keyword >end</span>
 
 pi_atan()</code></pre><pre><code class="plaintext hljs">3.1415926545880506</code></pre>
-<pre><code class="julia hljs"><span class=hljs-meta >@time</span> pi_atan() - <span class=hljs-literal >pi</span></code></pre><pre><code class="plaintext hljs">  1.700257 seconds
+<pre><code class="julia hljs"><span class=hljs-meta >@time</span> pi_atan() - <span class=hljs-literal >pi</span></code></pre><pre><code class="plaintext hljs">  2.412795 seconds
 9.982574766809194e-10</code></pre>
 <p>O valor é, de fato, calculado até uma aproximação razoável, mas demora muito e leva muitas iterações. Por sorte, existem dezenas de outras maneiras de se calcular <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>.</p>
 <p>Uma dessas maneiras é a série</p>
@@ -910,7 +910,7 @@ Com 16384 bits obtive 4930 casas
 </code></pre>
 <pre><code class="julia hljs">setprecision(<span class=hljs-number >2</span>^<span class=hljs-number >15</span>)
 <span class=hljs-meta >@time</span> pi_madhava_BF();</code></pre><pre><code class="plaintext hljs">n = 20666
-  1.399809 seconds (206.68 k allocations: 420.997 MiB, 3.72% gc time)
+  1.391064 seconds (206.68 k allocations: 420.997 MiB, 2.87% gc time)
 </code></pre>
 <pre><code class="julia hljs"><span class=hljs-keyword >function</span> logaritmo2()
     ln2 = <span class=hljs-number >1.0</span> / <span class=hljs-number >2.0</span>
