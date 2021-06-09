@@ -1,1 +1,0 @@
-fat_uma_linha (generic function with 1 method)

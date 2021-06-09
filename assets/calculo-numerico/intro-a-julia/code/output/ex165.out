@@ -1,3 +1,0 @@
-MethodError: no method matching fatorial2(::Float64)
-Closest candidates are:
-  fatorial2(!Matched::Int64) at none:1

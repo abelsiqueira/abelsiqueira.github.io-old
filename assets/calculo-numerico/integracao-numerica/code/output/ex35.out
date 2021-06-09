@@ -1,6 +1,0 @@
-MethodError: no method matching -(::Nothing, ::Float64)
-Closest candidates are:
-  -(!Matched::Base.TwicePrecision, ::Number) at twiceprecision.jl:281
-  -(!Matched::LinearAlgebra.UniformScaling, ::Number) at /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.6/LinearAlgebra/src/uniformscaling.jl:147
-  -(!Matched::GeometryBasics.HyperRectangle{N, T}, ::Number) where {N, T} at /home/runner/.julia/packages/GeometryBasics/qasyR/src/primitives/rectangles.jl:266
-  ...

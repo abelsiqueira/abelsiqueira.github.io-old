@@ -1,1 +1,0 @@
-OverflowError: 21 is too large to look up in the table; consider using `factorial(big(21))` instead
