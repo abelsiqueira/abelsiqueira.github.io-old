@@ -1,28 +1,48 @@
 <!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/katex/katex.min.css"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link href="/css/bootstrap.min.css" rel=stylesheet  crossorigin=anonymous > <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&family=Montserrat&display=swap" rel=stylesheet > <link rel=icon  href="/assets/favicon.png"> <link rel=stylesheet  href="/css/code-katex.css"> <link rel=stylesheet  href="/css/custom.css"> <link rel=stylesheet  href="/css/dark-mode.css"> <title>Quadrados Mínimos</title> <header> <nav class="navbar navbar-expand-lg"> <div class=container-fluid > <a class="navbar-brand text-end" href="/">Abel S.<br>Siqueira</a> <button class=navbar-toggler  type=button  data-bs-toggle=collapse  data-bs-target="#navbarSupportedContent" aria-controls=navbarSupportedContent  aria-expanded=false  aria-label="Toggle navigation"> <span class=navbar-toggler-icon ></span> </button> <div class="collapse navbar-collapse" id=navbarSupportedContent > <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <li class=nav-item ><a class=nav-link  href="/">Home</a> <li class=nav-item ><a class=nav-link  href="/julia/">Julia</a> <li class=nav-item ><a class=nav-link  href="/research/">Research</a> <li class=nav-item ><a class=nav-link  href="/ufpr/">UFPR</a> </ul> <div class="dark-switch form-check form-switch"> <input type=checkbox  class=form-check-input  id=darkSwitch  /> <label class=custom-control-label  for=darkSwitch >Dark Mode</label> </div> <script src="/libs/dark-mode-switch.min.js"></script> </div> </div> </nav> </header> <div class=container-fluid > <div class="container main-text"> <div class=franklin-content ><h1 id="quadrados_mínimos_e_ajustes_de_curvas"><a href="#quadrados_mínimos_e_ajustes_de_curvas" class=header-anchor >Quadrados Mínimos e Ajustes de Curvas</a></h1> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> Plots
-gr(size=(<span class=hljs-number >600</span>,<span class=hljs-number >400</span>))</code></pre><pre><code class="plaintext hljs">ArgumentError: Package Plots not found in current path:
-- Run `import Pkg; Pkg.add(&quot;Plots&quot;)` to install the Plots package.
-
-</code></pre> <p>O problema de ajuste de um conjunto de dados à um modelo, simplesmente dito ajuste de curvas, é um problema bastante prático e recorrente. Esse problema acontece quando temos muito mais informação que o necessário para se determinar exatamente um modelo. Mas isso também só faz sentido se essa informação tiver algum tipo de erro experimental ou intrínseco.</p> <p>Considere o seguinte problema de ajustar um conjunto de pontos por uma reta.</p> <pre><code class="julia hljs">x = [-<span class=hljs-number >2</span>, -<span class=hljs-number >1</span>, <span class=hljs-number >0</span>, <span class=hljs-number >1</span>, <span class=hljs-number >2.0</span>]
+gr(size=(<span class=hljs-number >600</span>,<span class=hljs-number >400</span>))</code></pre><pre><code class="plaintext hljs">Plots.GRBackend()</code></pre>
+<p>O problema de ajuste de um conjunto de dados à um modelo, simplesmente dito ajuste de curvas, é um problema bastante prático e recorrente. Esse problema acontece quando temos muito mais informação que o necessário para se determinar exatamente um modelo. Mas isso também só faz sentido se essa informação tiver algum tipo de erro experimental ou intrínseco.</p>
+<p>Considere o seguinte problema de ajustar um conjunto de pontos por uma reta.</p>
+<pre><code class="julia hljs">x = [-<span class=hljs-number >2</span>, -<span class=hljs-number >1</span>, <span class=hljs-number >0</span>, <span class=hljs-number >1</span>, <span class=hljs-number >2.0</span>]
 y = [<span class=hljs-number >4</span>, <span class=hljs-number >1</span>, -<span class=hljs-number >3</span>, <span class=hljs-number >2</span>, <span class=hljs-number >3.0</span>]
 scatter(x, y)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin01&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre> <figure style="text-align: center"> <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin01.png' not found. //</span></p> </figure> <pre><code class="julia hljs">β₀, β₁, β₂ = -<span class=hljs-number >62</span>/<span class=hljs-number >70</span>, -<span class=hljs-number >1</span>/<span class=hljs-number >10</span>, <span class=hljs-number >80</span>/<span class=hljs-number >70</span>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin01&quot;</span>))</code></pre>
+
+  <figure style="text-align: center">
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin01.png" alt=""> 
+  </figure>
+  
+<pre><code class="julia hljs">β₀, β₁, β₂ = -<span class=hljs-number >62</span>/<span class=hljs-number >70</span>, -<span class=hljs-number >1</span>/<span class=hljs-number >10</span>, <span class=hljs-number >80</span>/<span class=hljs-number >70</span>
 scatter(x, y)
 plot!(x -&gt; β₀ + β₁ * x + β₂ * x^<span class=hljs-number >2</span>, -<span class=hljs-number >2</span>, <span class=hljs-number >2</span>, c=:red, lw=<span class=hljs-number >2</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin02&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre> <figure style="text-align: center"> <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin02.png' not found. //</span></p> </figure> <pre><code class="julia hljs">m = <span class=hljs-number >100</span>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin02&quot;</span>))</code></pre>
+
+  <figure style="text-align: center">
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin02.png" alt=""> 
+  </figure>
+  
+<pre><code class="julia hljs">m = <span class=hljs-number >100</span>
 x = range(-<span class=hljs-number >3</span>, <span class=hljs-number >7</span>, length=m)
 y = <span class=hljs-number >1.9</span> .+ <span class=hljs-number >0.6</span>*x + randn(m)*<span class=hljs-number >0.3</span>
 scatter(x, y, leg=<span class=hljs-literal >false</span>, c=:lightblue, ms=<span class=hljs-number >4</span>)
 plot!(x -&gt; <span class=hljs-number >0.58</span>x + <span class=hljs-number >1.92</span>, c=:red, lw=<span class=hljs-number >2</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin03&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre> <figure style="text-align: center"> <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin03.png' not found. //</span></p> </figure> <pre><code class="julia hljs">E(α,β) = <span class=hljs-number >0.5</span> * sum((y[i] - α - β * x[i])^<span class=hljs-number >2</span> <span class=hljs-keyword >for</span> i = <span class=hljs-number >1</span>:m)
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin03&quot;</span>))</code></pre>
+
+  <figure style="text-align: center">
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin03.png" alt=""> 
+  </figure>
+  
+<pre><code class="julia hljs">E(α,β) = <span class=hljs-number >0.5</span> * sum((y[i] - α - β * x[i])^<span class=hljs-number >2</span> <span class=hljs-keyword >for</span> i = <span class=hljs-number >1</span>:m)
 contour(range(<span class=hljs-number >1</span>, <span class=hljs-number >3</span>, length=<span class=hljs-number >100</span>),
         range(<span class=hljs-number >0.0</span>, <span class=hljs-number >1.0</span>, length=<span class=hljs-number >100</span>),
         E,
         levels = <span class=hljs-number >100</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin04&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: contour not defined
-</code></pre> <figure style="text-align: center"> <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin04.png' not found. //</span></p> </figure> <pre><code class="julia hljs">M11 = m
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin04&quot;</span>))</code></pre>
+
+  <figure style="text-align: center">
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin04.png" alt=""> 
+  </figure>
+  
+<pre><code class="julia hljs">M11 = m
 M12 = M21 = sum(x)
 M22 = sum(x.^<span class=hljs-number >2</span>)
 c1 = sum(y)
@@ -32,27 +52,25 @@ M = [M11 M12; M21 M22]
 c = [c1; c2]
 αβ = M \ c
 
-α, β = αβ[<span class=hljs-number >1</span>], αβ[<span class=hljs-number >2</span>]</code></pre><pre><code class="plaintext hljs">(1.841680135993397, 0.6216223412257283)</code></pre>
+α, β = αβ[<span class=hljs-number >1</span>], αβ[<span class=hljs-number >2</span>]</code></pre><pre><code class="plaintext hljs">(1.8796811933353588, 0.6053283211736717)</code></pre>
 <pre><code class="julia hljs">E(α,β) = <span class=hljs-number >0.5</span> * sum((y[i] - α - β * x[i])^<span class=hljs-number >2</span> <span class=hljs-keyword >for</span> i = <span class=hljs-number >1</span>:m)
 contour(range(<span class=hljs-number >1</span>, <span class=hljs-number >3</span>, length=<span class=hljs-number >100</span>),
         range(<span class=hljs-number >0.0</span>, <span class=hljs-number >1.0</span>, length=<span class=hljs-number >100</span>),
         E,
         levels = <span class=hljs-number >50</span>)
 scatter!([α], [β], c=:red, ms=<span class=hljs-number >3</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin05&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: contour not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin05&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin05.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin05.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">scatter(x, y, leg=<span class=hljs-literal >false</span>, c=:lightblue, ms=<span class=hljs-number >4</span>)
 plot!(x -&gt; α + β * x, c=:red, lw=<span class=hljs-number >2</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin06&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin06&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin06.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin06.png" alt=""> 
   </figure>
   
 <p>Não existe uma reta que passa por todos esses pontos. Inclusive, alguns deles podem ter o mesmo <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span>, de modo que não existe nenhum função que passa por eles. Sendo assim, precisamos encontrar uma reta que aproxima estes pontos.</p>
@@ -67,34 +85,31 @@ png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&qu
 <p>Para calcular essa derivada, devemos calcular a derivada de Erro<span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">_i</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.46166399999999996em;vertical-align:-0.15em;"></span><span class=mord ><span></span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. Então, a escolha dessa função de erro deve ser bem pensada, para que seja significativa e fácil de derivar.</p>
 <p>A escolha mais comum é Erro<span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy=false >[</mo><mi>α</mi><mo>+</mo><mi>β</mi><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><msub><mi>y</mi><mi>i</mi></msub><msup><mo stretchy=false >]</mo><mn>2</mn></msup><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy=false >[</mo><mi>L</mi><mo stretchy=false >(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy=false >)</mo><mo>−</mo><msub><mi>y</mi><mi>i</mi></msub><msup><mo stretchy=false >]</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">_i = \frac{1}{2}[\alpha + \beta x_i - y_i]^2 = \frac{1}{2}[L(x_i) - y_i]^2</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.5168699999999999em;vertical-align:-0.15em;"></span><span class=mord ><span></span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >=</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:1.190108em;vertical-align:-0.345em;"></span><span class=mord ><span class="mopen nulldelimiter"></span><span class=mfrac ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class=pstrut  style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class=pstrut  style="height:3em;"></span><span class=frac-line  style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class=pstrut  style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class=mopen >[</span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >+</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class=mord ><span class="mord mathnormal">x</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >−</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:1.064108em;vertical-align:-0.25em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mclose ><span class=mclose >]</span><span class=msupsub ><span class=vlist-t ><span class=vlist-r ><span class=vlist  style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >=</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:1.190108em;vertical-align:-0.345em;"></span><span class=mord ><span class="mopen nulldelimiter"></span><span class=mfrac ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class=pstrut  style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class=pstrut  style="height:3em;"></span><span class=frac-line  style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class=pstrut  style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class=mopen >[</span><span class="mord mathnormal">L</span><span class=mopen >(</span><span class=mord ><span class="mord mathnormal">x</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mclose >)</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >−</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:1.064108em;vertical-align:-0.25em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mclose ><span class=mclose >]</span><span class=msupsub ><span class=vlist-t ><span class=vlist-r ><span class=vlist  style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>.</p>
 <p>Essa escolha é boa pois a derivada dessa função é fácil de calcular, e é fácil de visualizar que é o quadrado da distância vertical da reta ao ponto <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy=false >(</mo><msub><mi>x</mi><mi>i</mi></msub><mo separator=true >,</mo><msub><mi>y</mi><mi>i</mi></msub><mo stretchy=false >)</mo></mrow><annotation encoding="application/x-tex">(x_i,y_i)</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:1em;vertical-align:-0.25em;"></span><span class=mopen >(</span><span class=mord ><span class="mord mathnormal">x</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mpunct >,</span><span class=mspace  style="margin-right:0.16666666666666666em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mclose >)</span></span></span></span>.</p>
-<pre><code class="julia hljs">E(<span class=hljs-number >0</span>,<span class=hljs-number >0</span>)</code></pre><pre><code class="plaintext hljs">643.97149067805</code></pre>
+<pre><code class="julia hljs">E(<span class=hljs-number >0</span>,<span class=hljs-number >0</span>)</code></pre><pre><code class="plaintext hljs">638.6062245575698</code></pre>
 <pre><code class="julia hljs">scatter(x, y, leg=<span class=hljs-literal >false</span>)
 plot!(x-&gt;<span class=hljs-number >0</span> + <span class=hljs-number >0</span>*x, x[<span class=hljs-number >1</span>], x[m], c=:red, lw=<span class=hljs-number >2</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin07&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin07&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin07.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin07.png" alt=""> 
   </figure>
   
-<pre><code class="julia hljs">E(<span class=hljs-number >2</span>,<span class=hljs-number >0</span>)</code></pre><pre><code class="plaintext hljs">226.9865269890792</code></pre>
+<pre><code class="julia hljs">E(<span class=hljs-number >2</span>,<span class=hljs-number >0</span>)</code></pre><pre><code class="plaintext hljs">220.53865742102943</code></pre>
 <pre><code class="julia hljs">scatter(x, y, leg=<span class=hljs-literal >false</span>)
 plot!(x-&gt;<span class=hljs-number >2</span> + <span class=hljs-number >0</span>*x, x[<span class=hljs-number >1</span>], x[m], c=:red, lw=<span class=hljs-number >2</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin08&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin08&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin08.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin08.png" alt=""> 
   </figure>
   
-<pre><code class="julia hljs">E(<span class=hljs-number >2</span>,<span class=hljs-number >0.5</span>)</code></pre><pre><code class="plaintext hljs">10.523268781805275</code></pre>
+<pre><code class="julia hljs">E(<span class=hljs-number >2</span>,<span class=hljs-number >0.5</span>)</code></pre><pre><code class="plaintext hljs">10.460427562604112</code></pre>
 <pre><code class="julia hljs">scatter(x, y, leg=<span class=hljs-literal >false</span>)
 plot!(x-&gt;<span class=hljs-number >2</span> + <span class=hljs-number >0.5</span>*x, x[<span class=hljs-number >1</span>], x[m], c=:red, lw=<span class=hljs-number >2</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin09&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin09&quot;</span>))</code></pre>
 <p>
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin09.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin09.png" alt=""> 
   </figure>
    É fácil ver que</p>
 <span class=katex-display ><span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML" display=block ><semantics><mrow><msub><mi mathvariant=normal >∂</mi><mi>α</mi></msub><mi>E</mi><mo stretchy=false >(</mo><mi>α</mi><mo separator=true >,</mo><mi>β</mi><mo stretchy=false >)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mo stretchy=false >(</mo><mi>α</mi><mo>+</mo><mi>β</mi><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><msub><mi>y</mi><mi>i</mi></msub><mo stretchy=false >)</mo><mo separator=true >,</mo></mrow><annotation encoding="application/x-tex"> \partial_{\alpha} E(\alpha,\beta) = \sum_{i=1}^m (\alpha + \beta x_i - y_i), </annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:1em;vertical-align:-0.25em;"></span><span class=mord ><span class=mord  style="margin-right:0.05556em;">∂</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05556em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span></span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class=mopen >(</span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class=mpunct >,</span><span class=mspace  style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class=mclose >)</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >=</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:2.929066em;vertical-align:-1.277669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:1.6513970000000002em;"><span style="top:-1.872331em;margin-left:0em;"><span class=pstrut  style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class=pstrut  style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class=pstrut  style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:1.277669em;"><span></span></span></span></span></span><span class=mopen >(</span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >+</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class=mord ><span class="mord mathnormal">x</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >−</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:1em;vertical-align:-0.25em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mclose >)</span><span class=mpunct >,</span></span></span></span></span>
@@ -108,24 +123,23 @@ png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&qu
 <p>Esse sistema é bastante fácil de resolver.</p>
 <p>Lembrando</p>
 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> LinearAlgebra
-dot(x, y)</code></pre><pre><code class="plaintext hljs">1145.4686039566354</code></pre>
+dot(x, y)</code></pre><pre><code class="plaintext hljs">1132.6985472589379</code></pre>
 <pre><code class="julia hljs">M = [m  sum(x); sum(x)   dot(x,x)]</code></pre><pre><code class="plaintext hljs">2×2 Matrix{Float64}:
  100.0   200.0
  200.0  1250.17</code></pre>
 <pre><code class="julia hljs">b = [sum(y); dot(x,y)]</code></pre><pre><code class="plaintext hljs">2-element Vector{Float64}:
-  308.4924818444854
- 1145.4686039566354</code></pre>
+  309.0337835682702
+ 1132.6985472589379</code></pre>
 <pre><code class="julia hljs">α, β = M\b</code></pre><pre><code class="plaintext hljs">2-element Vector{Float64}:
- 1.8416801359933965
- 0.6216223412257286</code></pre>
-<pre><code class="julia hljs">E(α,β)</code></pre><pre><code class="plaintext hljs">3.8748150238586176</code></pre>
+ 1.8796811933353592
+ 0.6053283211736716</code></pre>
+<pre><code class="julia hljs">E(α,β)</code></pre><pre><code class="plaintext hljs">5.336474014241325</code></pre>
 <pre><code class="julia hljs">scatter(x, y, leg=<span class=hljs-literal >false</span>)
 plot!(x-&gt;α + β*x, x[<span class=hljs-number >1</span>], x[m], c=:red, lw=<span class=hljs-number >2</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin10&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin10&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin10' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin10.png" alt=""> 
   </figure>
   
 <p>Visualmente, a reta parece aproximar bem mesmo os pontos dados.</p>
@@ -144,11 +158,10 @@ b = <span class=hljs-number >6</span>*phi1.(t) + <span class=hljs-number >4</spa
 y = b
 
 scatter(t, b, c=:lightblue, ms=<span class=hljs-number >3</span>, leg=<span class=hljs-literal >false</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin11&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin11&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin11' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin11.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">ϕ₁ = ones(m)
@@ -165,11 +178,10 @@ y_pred = β[<span class=hljs-number >1</span>] * ϕ₁ + β[<span class=hljs-num
 
 scatter(t, y, c=:lightblue, ms=<span class=hljs-number >3</span>, leg=<span class=hljs-literal >false</span>)
 plot!(t, y_pred, c=:red, lw=<span class=hljs-number >2</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin12&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin12&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin12' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin12.png" alt=""> 
   </figure>
   
 <p>Seu objetivo é estimar a temperatura em um dia no futuro. Olhando para o gráfico, aparentemente a temperatura segue um modelo do tipo</p>
@@ -297,11 +309,10 @@ y_m - f(x_m)
 <pre><code class="julia hljs">x = [<span class=hljs-number >0.0</span>; <span class=hljs-number >1</span>; <span class=hljs-number >2</span>; <span class=hljs-number >3</span>; <span class=hljs-number >4</span>]
 y = [-<span class=hljs-number >1.0</span>; <span class=hljs-number >1</span>; <span class=hljs-number >1</span>; <span class=hljs-number >3</span>; <span class=hljs-number >5</span>]
 scatter(x, y, leg=<span class=hljs-literal >false</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin14&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin14&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin14' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin14.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">A = [ones(<span class=hljs-number >5</span>)  x  x.^<span class=hljs-number >2</span>]</code></pre><pre><code class="plaintext hljs">5×3 Matrix{Float64}:
@@ -326,11 +337,10 @@ png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&qu
 x = range(-<span class=hljs-number >2</span>, <span class=hljs-number >3</span>, length=n)
 y = exp.(-x) .* x + randn(n)
 scatter(x, y)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin15&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin15&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin15' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin15.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">ϕ<span class=hljs-number >1</span>(x) = log(x + <span class=hljs-number >2</span> + <span class=hljs-number >1e-8</span>)
@@ -342,20 +352,18 @@ X = [ϕ<span class=hljs-number >1.</span>(x) ϕ<span class=hljs-number >2.</span
 β = (X&#x27; * X) \ (X&#x27; * y)
 scatter(x, y)
 plot!(x -&gt; β[<span class=hljs-number >1</span>] * ϕ<span class=hljs-number >1</span>(x) + β[<span class=hljs-number >2</span>] * ϕ<span class=hljs-number >2</span>(x) + β[<span class=hljs-number >3</span>] * ϕ<span class=hljs-number >3</span>(x) + β[<span class=hljs-number >4</span>] * ϕ<span class=hljs-number >4</span>(x) + β[<span class=hljs-number >5</span>] * ϕ<span class=hljs-number >5</span>(x), -<span class=hljs-number >2</span>, <span class=hljs-number >3</span>, c=:red, lw=<span class=hljs-number >2</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin16&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin16&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin16' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin16.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">scatter(x, y, leg=<span class=hljs-literal >false</span>)
 plot!(x -&gt; β[<span class=hljs-number >1</span>] + β[<span class=hljs-number >2</span>] * x + β[<span class=hljs-number >3</span>] * x^<span class=hljs-number >2</span>, -<span class=hljs-number >0.5</span>, <span class=hljs-number >4.5</span>, c=:red, lw=<span class=hljs-number >2</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin17&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin17&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin17' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin17.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs"><span class=hljs-string >&quot;&quot;&quot;`regressao_linear(x, y)`
@@ -421,7 +429,7 @@ n = length(F)</code></pre><pre><code class="plaintext hljs">7</code></pre>
 scatter(t, b, leg=<span class=hljs-literal >false</span>, ms=<span class=hljs-number >3</span>, c=:lightblue)
 <span class=hljs-comment >#plot!(t-&gt;α[1]*F[1](t) + α[2]*F[2](t) + α[3]*F[3](t), 0, 1, c=:red, lw=2)</span>
 plot!(t -&gt; sum(α[j]*F[j](t) <span class=hljs-keyword >for</span> j = <span class=hljs-number >1</span>:n), <span class=hljs-number >0</span>, <span class=hljs-number >1</span>, c=:red, lw=<span class=hljs-number >2</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin20&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin20&quot;</span>))</code></pre><pre><code class="plaintext hljs">MethodError: no method matching getindex(::Nothing, ::Int64)
 </code></pre>
 <p>
   <figure style="text-align: center">
@@ -432,7 +440,7 @@ png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&qu
 
 scatter(t, b, leg=<span class=hljs-literal >false</span>)
 plot!(f, <span class=hljs-number >0</span>, <span class=hljs-number >1</span>, c=:red, lw=<span class=hljs-number >2</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin21&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin21&quot;</span>))</code></pre><pre><code class="plaintext hljs">MethodError: no method matching getindex(::Nothing, ::Int64)
 </code></pre>
 
   <figure style="text-align: center">
@@ -451,11 +459,10 @@ x = collect(<span class=hljs-number >1</span>:<span class=hljs-number >4</span>)
 scatter(x, y, leg=<span class=hljs-literal >false</span>)
 scatter!(x, exp.(X * β), c=:red, ms=<span class=hljs-number >5</span>)
 plot!(x -&gt; exp(β[<span class=hljs-number >1</span>] + β[<span class=hljs-number >2</span>] * x), c=:red)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin22&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin22&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin22' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin22.png" alt=""> 
   </figure>
   
 <p>A avaliação de um modelo...</p>
@@ -504,11 +511,10 @@ plot!([x[<span class=hljs-number >1</span>], x[<span class=hljs-keyword >end</sp
     plot!([x[i], x[i]], [y[i], y_med], c=:red, l=:dash)
 <span class=hljs-keyword >end</span>
 title!(<span class=hljs-string >&quot;y_Med&quot;</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin23&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin23&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin23' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin23.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">scatter(x, y, leg=<span class=hljs-literal >false</span>)
@@ -520,11 +526,10 @@ plot!(xlin, ylin, c=:blue)
     plot!([x[i], x[i]], [y[i], y_pred[i]], c=:red, l=:dash)
 <span class=hljs-keyword >end</span>
 title!(<span class=hljs-string >&quot;y_pred&quot;</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin24&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin24&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin24' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin24.png" alt=""> 
   </figure>
   
 <p>A métrica <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">R^2</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.8141079999999999em;vertical-align:0em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class=msupsub ><span class=vlist-t ><span class=vlist-r ><span class=vlist  style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> é definida pela fórmula</p>
@@ -540,11 +545,10 @@ plot!(x, y_nao_otimo, c=:blue)
     plot!([x[i], x[i]], [y[i], y_nao_otimo[i]], c=:red, l=:dash)
 <span class=hljs-keyword >end</span>
 title!(<span class=hljs-string >&quot;y_nao_otimo&quot;</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin25&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin25&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin25' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin25.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">R2 = <span class=hljs-number >1</span> - norm(y_nao_otimo - y)^<span class=hljs-number >2</span> / norm(y_med .- y)^<span class=hljs-number >2</span></code></pre><pre><code class="plaintext hljs">0.9350294978415356</code></pre>
@@ -569,11 +573,10 @@ scatter(t, y, c=:black, ms=<span class=hljs-number >1</span>, leg=<span class=hl
 plot!([t[<span class=hljs-number >1</span>], t[<span class=hljs-keyword >end</span>]], [y_med, y_med], c=:black, l=:dash, lw=<span class=hljs-number >1</span>)
 plot!(t, y_quase, c=:blue, lw=<span class=hljs-number >2</span>)
 plot!(t, y_pred, c=:red, lw=<span class=hljs-number >2</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin26&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin26&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin26' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin26.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">ST = norm(y .- y_med)^<span class=hljs-number >2</span>
@@ -601,11 +604,10 @@ x = sort(rand(m))
 <span class=hljs-comment >#x = collect(range(-1, 1, length=m))</span>
 y = <span class=hljs-number >3</span>x .+ <span class=hljs-number >5</span> + randn(m) * <span class=hljs-number >0.25</span>
 scatter(x, y, leg=<span class=hljs-literal >false</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin27&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin27&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin27' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin27.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">p = <span class=hljs-number >1</span>
@@ -615,11 +617,10 @@ y_pred = [β[<span class=hljs-number >1</span>] + sum(β[j + <span class=hljs-nu
 scatter(x, y, leg=<span class=hljs-literal >false</span>)
 plot!(xlin, y_pred, c=:red, lw=<span class=hljs-number >2</span>)
 <span class=hljs-comment >#ylims!(4.9, 8.1)</span>
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin28&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin28&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin28' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin28.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">y_med = mean(y)
@@ -640,11 +641,10 @@ plot!(xlin, ylin, c=:red, lw=<span class=hljs-number >2</span>)
 ylims!(<span class=hljs-number >0</span>, <span class=hljs-number >10</span>)
 R2 = <span class=hljs-number >1</span> - norm(y - y_pred)^<span class=hljs-number >2</span> / norm(y .- y_med)^<span class=hljs-number >2</span>
 title!(<span class=hljs-meta >@sprintf</span>(<span class=hljs-string >&quot;SQR = %6.4f, R2 = %6.4f&quot;</span>, norm(y_pred - y)^<span class=hljs-number >2</span>, R2))
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin29&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin29&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin29' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin29.png" alt=""> 
   </figure>
   
 <p><strong>Dados além dos conhecidos</strong></p>
@@ -666,11 +666,10 @@ plot!(xlin, ylin, c=:red, lw=<span class=hljs-number >2</span>)
 
 R2 = <span class=hljs-number >1</span> - norm(mais_y - y_pred)^<span class=hljs-number >2</span> / norm(mais_y .- y_med)^<span class=hljs-number >2</span>
 title!(<span class=hljs-meta >@sprintf</span>(<span class=hljs-string >&quot;SQR = %6.4f, R2 = %6.4f&quot;</span>, norm(y_pred - mais_y)^<span class=hljs-number >2</span>, R2))
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin30&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin30&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin30' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin30.png" alt=""> 
   </figure>
   
 <h3 id="validação_cruzada_-_separação_em_treino_e_teste"><a href="#validação_cruzada_-_separação_em_treino_e_teste" class=header-anchor >Validação Cruzada - Separação em treino e teste</a></h3>
@@ -682,11 +681,10 @@ x = range(<span class=hljs-number >0</span>, <span class=hljs-number >1</span>, 
 <span class=hljs-comment >#y = 5 + 3x - 2x.^2 + randn(m) * 0.05</span>
 y = <span class=hljs-number >6</span> .- <span class=hljs-number >3</span> * sin.(<span class=hljs-number >2</span><span class=hljs-literal >π</span> * x) + <span class=hljs-number >7</span> * cos.(<span class=hljs-number >2</span><span class=hljs-literal >π</span> * x) + randn(m) * <span class=hljs-number >1.5</span>
 scatter(x, y, leg=<span class=hljs-literal >false</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin31&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin31&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin31' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin31.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">Random.seed!(<span class=hljs-number >0</span>)
@@ -702,21 +700,19 @@ erro = <span class=hljs-number >0.5</span> * norm(y_te - y_pred)^<span class=hlj
 <pre><code class="julia hljs">scatter(leg=<span class=hljs-literal >false</span>)
 scatter!(x_tr, y_tr, c=:blue)
 plot!(x -&gt; β[<span class=hljs-number >1</span>] + sum(β[j + <span class=hljs-number >1</span>] * x^j <span class=hljs-keyword >for</span> j = <span class=hljs-number >1</span>:p), <span class=hljs-number >0</span>, <span class=hljs-number >1.0</span>, c=:green, lw=<span class=hljs-number >2</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin32&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin32&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin32' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin32.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">scatter(leg=<span class=hljs-literal >false</span>)
 scatter!(x_te, y_te, c=:red)
 plot!(x -&gt; β[<span class=hljs-number >1</span>] + sum(β[j + <span class=hljs-number >1</span>] * x^j <span class=hljs-keyword >for</span> j = <span class=hljs-number >1</span>:p), <span class=hljs-number >0</span>, <span class=hljs-number >1.0</span>, c=:green, lw=<span class=hljs-number >2</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin33&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin33&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin33' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin33.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">max_p = <span class=hljs-number >15</span>
@@ -734,19 +730,17 @@ scatter(<span class=hljs-number >1</span>:max_p, erro_treino, c=:blue, leg=<span
 plot!(<span class=hljs-number >1</span>:max_p, erro_treino, c=:blue)
 scatter!(<span class=hljs-number >1</span>:max_p, erro_teste, c=:red)
 plot!(<span class=hljs-number >1</span>:max_p, erro_teste, c=:red)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin34&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin34&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin34' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin34.png" alt=""> 
   </figure>
   
 <h1 id="um_pouco_mais_sobre_a_visão_estatística"><a href="#um_pouco_mais_sobre_a_visão_estatística" class=header-anchor >Um pouco mais sobre a visão estatística</a></h1>
 <p>Suponha uma relação real <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><msub><mi>β</mi><mn>1</mn></msub><mi>x</mi><mo>+</mo><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">y = \beta_0 + \beta_1 x + \epsilon</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >=</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >+</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">x</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >+</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">ϵ</span></span></span></span> onde <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">ϵ</span></span></span></span> é um erro do tipo normal.</p>
 <pre><code class="julia hljs">β = [<span class=hljs-number >3.0</span>; <span class=hljs-number >5.0</span>]
 σ = <span class=hljs-number >2.7</span>
-plot(x -&gt; β[<span class=hljs-number >1</span>] + β[<span class=hljs-number >2</span>] * x, -<span class=hljs-number >2</span>, <span class=hljs-number >3</span>, c=:black, lw=<span class=hljs-number >2</span>, leg=<span class=hljs-literal >false</span>)</code></pre><pre><code class="plaintext hljs">UndefVarError: plot not defined
-</code></pre>
+plot(x -&gt; β[<span class=hljs-number >1</span>] + β[<span class=hljs-number >2</span>] * x, -<span class=hljs-number >2</span>, <span class=hljs-number >3</span>, c=:black, lw=<span class=hljs-number >2</span>, leg=<span class=hljs-literal >false</span>)</code></pre><pre><code class="plaintext hljs">Plot{Plots.GRBackend() n=1}</code></pre>
 <p>uma amostra</p>
 <pre><code class="julia hljs">n = <span class=hljs-number >1000</span>
 x = range(-<span class=hljs-number >2</span>, <span class=hljs-number >3</span>, length=n)
@@ -758,35 +752,31 @@ yhat = X * βhat
 <span class=hljs-comment >#yhat = X * [1.0; 9.0]</span>
 plot!(x, yhat, c=:gray)
 ylims!(-<span class=hljs-number >15</span>, <span class=hljs-number >25</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin35&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter! not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin35&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin35' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin35.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">scatter(x, y - yhat, c=:gray)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin36&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: yhat not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin36&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin36' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin36.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">scatter(x * <span class=hljs-number >0</span>, y - yhat, c=:gray)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin37&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: yhat not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin37&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin37' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin37.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">histogram(x, y - yhat, bins=<span class=hljs-number >20</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin38&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: yhat not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin38&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin38' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin38.png" alt=""> 
   </figure>
   
 <p>100 amostras</p>
@@ -799,11 +789,10 @@ png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&qu
     plot!(x, yhat, c=:gray)
 <span class=hljs-keyword >end</span>
 plot!(x -&gt; β[<span class=hljs-number >1</span>] + β[<span class=hljs-number >2</span>] * x, -<span class=hljs-number >2</span>, <span class=hljs-number >3</span>, c=:black, lw=<span class=hljs-number >2</span>, leg=<span class=hljs-literal >false</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin39&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: plot not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin39&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin39' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin39.png" alt=""> 
   </figure>
   
 <h2 id=forma_matricial ><a href="#forma_matricial" class=header-anchor >Forma matricial</a></h2>
@@ -831,11 +820,10 @@ T = [<span class=hljs-number >39.1262</span>; <span class=hljs-number >30.5367</
 t = [<span class=hljs-number >0.0</span>; <span class=hljs-number >1.0</span>; <span class=hljs-number >2.0</span>; <span class=hljs-number >3.0</span>; <span class=hljs-number >4.0</span>; <span class=hljs-number >5.0</span>; <span class=hljs-number >6.0</span>; <span class=hljs-number >7.0</span>; <span class=hljs-number >8.0</span>; <span class=hljs-number >9.0</span>]
 scatter(t, T)
 plot!(t-&gt;Ta, c=:green, l=:dash)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin40&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin40&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin40' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin40.png" alt=""> 
   </figure>
   
 <p>De uma maneira geral, podemos considerar um modelo <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant=normal >Φ</mi><mo stretchy=false >(</mo><mi>α</mi><mo separator=true >,</mo><mi>x</mi><mo stretchy=false >)</mo><mo>=</mo><msub><mi>α</mi><mn>1</mn></msub><msub><mi>ϕ</mi><mn>1</mn></msub><mo stretchy=false >(</mo><mi>x</mi><mo stretchy=false >)</mo><mo>+</mo><mo>⋯</mo><mo>+</mo><msub><mi>α</mi><mi>n</mi></msub><msub><mi>ϕ</mi><mi>n</mi></msub><mo stretchy=false >(</mo><mi>x</mi><mo stretchy=false >)</mo></mrow><annotation encoding="application/x-tex">\Phi(\alpha,x) = \alpha_1 \phi_1(x) + \dots + \alpha_n \phi_n(x)</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:1em;vertical-align:-0.25em;"></span><span class=mord >Φ</span><span class=mopen >(</span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class=mpunct >,</span><span class=mspace  style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">x</span><span class=mclose >)</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >=</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:1em;vertical-align:-0.25em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mord ><span class="mord mathnormal">ϕ</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mopen >(</span><span class="mord mathnormal">x</span><span class=mclose >)</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >+</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:0.66666em;vertical-align:-0.08333em;"></span><span class=minner >⋯</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >+</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:1em;vertical-align:-0.25em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mord ><span class="mord mathnormal">ϕ</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mopen >(</span><span class="mord mathnormal">x</span><span class=mclose >)</span></span></span></span> e considerar a minimização de</p>
@@ -845,11 +833,10 @@ png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&qu
 <h2 id="quadrados_mínimos_não-lineares_linearizável"><a href="#quadrados_mínimos_não-lineares_linearizável" class=header-anchor >Quadrados Mínimos Não-Lineares Linearizável</a></h2>
 <p>Note o seguinte gráfico.</p>
 <pre><code class="julia hljs">scatter(t, T .- Ta, yaxis=:log)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin40&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin40&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin40' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin40.png" alt=""> 
   </figure>
   
 <p>Ou seja, embora os dados <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy=false >(</mo><msub><mi>t</mi><mi>i</mi></msub><mo separator=true >,</mo><msub><mi>T</mi><mi>i</mi></msub><mo stretchy=false >)</mo></mrow><annotation encoding="application/x-tex">(t_i,T_i)</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:1em;vertical-align:-0.25em;"></span><span class=mopen >(</span><span class=mord ><span class="mord mathnormal">t</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mpunct >,</span><span class=mspace  style="margin-right:0.16666666666666666em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mclose >)</span></span></span></span> não possam ser aproximados por uma reta, os dados <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy=false >(</mo><msub><mi>t</mi><mi>i</mi></msub><mo separator=true >,</mo><mi>ln</mi><mo>⁡</mo><mo stretchy=false >(</mo><msub><mi>T</mi><mi>i</mi></msub><mo>−</mo><msub><mi>T</mi><mi>a</mi></msub><mo stretchy=false >)</mo><mo stretchy=false >)</mo></mrow><annotation encoding="application/x-tex">(t_i,\ln (T_i - T_a))</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:1em;vertical-align:-0.25em;"></span><span class=mopen >(</span><span class=mord ><span class="mord mathnormal">t</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mpunct >,</span><span class=mspace  style="margin-right:0.16666666666666666em;"></span><span class=mop >ln</span><span class=mopen >(</span><span class=mord ><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >−</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:1em;vertical-align:-0.25em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mclose >))</span></span></span></span> podem.</p>
@@ -857,11 +844,10 @@ png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&qu
 α = (A&#x27;*A)\(A&#x27;*log.(T .- Ta))
 scatter(t, log.(T .- Ta), c=:blue)
 plot!(t, α[<span class=hljs-number >1</span>] .+ α[<span class=hljs-number >2</span>] * t, c=:red, lw=<span class=hljs-number >2</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin41&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin41&quot;</span>))</code></pre>
 <p>
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin41' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin41.png" alt=""> 
   </figure>
    Desse modo, estamos aproximando <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ln</mi><mo>⁡</mo><mo stretchy=false >(</mo><msub><mi>T</mi><mi>i</mi></msub><mo>−</mo><msub><mi>T</mi><mi>a</mi></msub><mo stretchy=false >)</mo><mo>≈</mo><msub><mi>α</mi><mn>1</mn></msub><mo>+</mo><msub><mi>α</mi><mn>2</mn></msub><msub><mi>t</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\ln(T_i - T_a) \approx \alpha_1 + \alpha_2 t_i</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:1em;vertical-align:-0.25em;"></span><span class=mop >ln</span><span class=mopen >(</span><span class=mord ><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >−</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:1em;vertical-align:-0.25em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mclose >)</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >≈</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:0.73333em;vertical-align:-0.15em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >+</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:0.76508em;vertical-align:-0.15em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mord ><span class="mord mathnormal">t</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, de modo que</p>
 <span class=katex-display ><span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML" display=block ><semantics><mrow><mi>T</mi><mo stretchy=false >(</mo><mi>t</mi><mo stretchy=false >)</mo><mo>≈</mo><msub><mi>T</mi><mi>a</mi></msub><mo>+</mo><msup><mi>e</mi><mrow><msub><mi>α</mi><mn>1</mn></msub><mo>+</mo><msub><mi>α</mi><mn>2</mn></msub><msub><mi>t</mi><mi>i</mi></msub></mrow></msup><mo>=</mo><msub><mi>T</mi><mi>a</mi></msub><mo>+</mo><msub><mi>β</mi><mn>1</mn></msub><msup><mi>e</mi><mrow><msub><mi>α</mi><mn>2</mn></msub><msub><mi>t</mi><mi>i</mi></msub></mrow></msup><mo separator=true >,</mo></mrow><annotation encoding="application/x-tex">T(t) \approx T_a + e^{\alpha_1 + \alpha_2 t_i}  = T_a + \beta_1 e^{\alpha_2 t_i}, </annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class=mopen >(</span><span class="mord mathnormal">t</span><span class=mclose >)</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >≈</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:0.83333em;vertical-align:-0.15em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >+</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:0.843556em;vertical-align:0em;"></span><span class=mord ><span class="mord mathnormal">e</span><span class=msupsub ><span class=vlist-t ><span class=vlist-r ><span class=vlist  style="height:0.843556em;"><span style="top:-3.113em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.0037em;margin-right:0.07142857142857144em;"><span class=pstrut  style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">1</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.143em;"><span></span></span></span></span></span></span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.0037em;margin-right:0.07142857142857144em;"><span class=pstrut  style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class=pstrut  style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >=</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:0.83333em;vertical-align:-0.15em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >+</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:1.037996em;vertical-align:-0.19444em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mord ><span class="mord mathnormal">e</span><span class=msupsub ><span class=vlist-t ><span class=vlist-r ><span class=vlist  style="height:0.843556em;"><span style="top:-3.113em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.0037em;margin-right:0.07142857142857144em;"><span class=pstrut  style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class=pstrut  style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class=mpunct >,</span></span></span></span></span>
@@ -869,11 +855,10 @@ png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&qu
 <p>Mas se <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mn>1</mn></msub><mo>+</mo><msub><mi>α</mi><mn>2</mn></msub><msub><mi>x</mi><mi>i</mi></msub><mo>≈</mo><mi>log</mi><mo>⁡</mo><msub><mi>y</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\alpha_1 + \alpha_2 x_i \approx \log y_i</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.73333em;vertical-align:-0.15em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >+</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:0.63312em;vertical-align:-0.15em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.0037em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mord ><span class="mord mathnormal">x</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >≈</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class=mop >lo<span style="margin-right:0.01389em;">g</span></span><span class=mspace  style="margin-right:0.16666666666666666em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, então <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>i</mi></msub><mo>≈</mo><msup><mi>e</mi><mrow><msub><mi>α</mi><mn>1</mn></msub><mo>+</mo><msub><mi>α</mi><mn>2</mn></msub><msub><mi>x</mi><mi>i</mi></msub></mrow></msup></mrow><annotation encoding="application/x-tex">y_i \approx e^{\alpha_1 + \alpha_2 x_i}</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.6775599999999999em;vertical-align:-0.19444em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >≈</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:0.771331em;vertical-align:0em;"></span><span class=mord ><span class="mord mathnormal">e</span><span class=msupsub ><span class=vlist-t ><span class=vlist-r ><span class=vlist  style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.0037em;margin-right:0.07142857142857144em;"><span class=pstrut  style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">1</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.143em;"><span></span></span></span></span></span></span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.0037em;margin-right:0.07142857142857144em;"><span class=pstrut  style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class=pstrut  style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>.</p>
 <pre><code class="julia hljs">scatter(t, T, ms=<span class=hljs-number >3</span>)
 plot!(t-&gt;Ta + exp.(α[<span class=hljs-number >1</span>] + α[<span class=hljs-number >2</span>] * t), c=:red, lw=<span class=hljs-number >2</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin42&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin42&quot;</span>))</code></pre>
 <p>
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin42' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin42.png" alt=""> 
   </figure>
    De fato, esse modelo parece ajustar muito bem os dados.</p>
 <p>Alguns dos modelos que podem ser linearizados estão abaixo:</p>
@@ -902,29 +887,26 @@ y = T .- Ta</code></pre><pre><code class="plaintext hljs">10-element Vector{Floa
   0.8207000000000004</code></pre>
 <p>Dados anteriores, do tipo αeᵝˣ</p>
 <pre><code class="julia hljs">scatter(x, log.(y), ms=<span class=hljs-number >3</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin43&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin43&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin43' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin43.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">scatter(x, <span class=hljs-number >1</span> ./ y, ms=<span class=hljs-number >3</span>) <span class=hljs-comment ># Ruim</span>
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin44&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin44&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin44' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin44.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">x = sort(rand(<span class=hljs-number >500</span>)*<span class=hljs-number >3</span> .+ <span class=hljs-number >1</span>)
 y = <span class=hljs-number >2.1</span>*x.^(<span class=hljs-number >5.5</span>) .* (<span class=hljs-number >1</span> .+ rand(<span class=hljs-number >500</span>)*<span class=hljs-number >0.5</span>)
 scatter(x, y, ms=<span class=hljs-number >3</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin45&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-quadmin45&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/quadrados-minimos/code/fig-quadmin45' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/quadrados-minimos/code/output/fig-quadmin45.png" alt=""> 
   </figure>
   
 <h2 id="álgebra_linear_do_problema_de_quadrados_mínimos"><a href="#álgebra_linear_do_problema_de_quadrados_mínimos" class=header-anchor >Álgebra linear do problema de quadrados mínimos</a></h2>

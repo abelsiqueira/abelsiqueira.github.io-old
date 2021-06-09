@@ -340,13 +340,10 @@ scatter!([a], [f(a)], c=:red, lab=<span class=hljs-string >&quot;x0&quot;</span>
 L(x) = f(a) + <span class=hljs-number >2</span> * a * (x - a)
 plot!(L, <span class=hljs-number >0</span>, <span class=hljs-number >3</span>, c=:red, lab=<span class=hljs-string >&quot;L0&quot;</span>)
 ylims!(-<span class=hljs-number >2</span>, <span class=hljs-number >5</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-zeros1&quot;</span>))</code></pre><pre><code class="plaintext hljs">ArgumentError: Package Plots not found in current path:
-- Run `import Pkg; Pkg.add(&quot;Plots&quot;)` to install the Plots package.
-
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-zeros1&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/zeros-de-funcoes/code/fig-zeros1.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/zeros-de-funcoes/code/output/fig-zeros1.png" alt=""> 
   </figure>
   
 <p>Motivação geométrica</p>
@@ -361,11 +358,10 @@ scatter!([a], [f(a)], c=:red, lab=<span class=hljs-string >&quot;x1&quot;</span>
 L(x) = f(a) + <span class=hljs-number >2</span> * a * (x - a)
 plot!(L, <span class=hljs-number >0</span>, <span class=hljs-number >3</span>, c=:red, lab=<span class=hljs-string >&quot;L1&quot;</span>)
 ylims!(-<span class=hljs-number >2</span>, <span class=hljs-number >5</span>)
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-zeros2&quot;</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: plot not defined
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig-zeros2&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/zeros-de-funcoes/code/fig-zeros2.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/zeros-de-funcoes/code/output/fig-zeros2.png" alt=""> 
   </figure>
   
 <h4 id="a_motivação_é_bastante_simples_achar_o_zero_de_uma_função_afim_é_muito_mais_simples_que_de_uma_função_não_afim"><a href="#a_motivação_é_bastante_simples_achar_o_zero_de_uma_função_afim_é_muito_mais_simples_que_de_uma_função_não_afim" class=header-anchor >A motivação é bastante simples: achar o zero de uma função afim é muito mais simples que de uma função não afim.</a></h4>
@@ -693,13 +689,9 @@ m_{k-1}, \text{caso contrário}.
 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> ForwardDiff
 
 f(x) = exp(x) * x - <span class=hljs-number >1</span>
-g(x) = ForwardDiff.derivative(f, x)</code></pre><pre><code class="plaintext hljs">ArgumentError: Package ForwardDiff not found in current path:
-- Run `import Pkg; Pkg.add(&quot;ForwardDiff&quot;)` to install the ForwardDiff package.
-
-</code></pre>
-<pre><code class="julia hljs">(f(<span class=hljs-number >2</span> + <span class=hljs-number >1e-8</span>) - f(<span class=hljs-number >2</span>)) / <span class=hljs-number >1e-8</span> - exp(<span class=hljs-number >2</span>) * <span class=hljs-number >3</span></code></pre><pre><code class="plaintext hljs">-20.16716830894689</code></pre>
-<pre><code class="julia hljs">g(<span class=hljs-number >2</span>) - exp(<span class=hljs-number >2</span>) * <span class=hljs-number >3</span></code></pre><pre><code class="plaintext hljs">UndefVarError: g not defined
-</code></pre>
+g(x) = ForwardDiff.derivative(f, x)</code></pre><pre><code class="plaintext hljs">g (generic function with 1 method)</code></pre>
+<pre><code class="julia hljs">(f(<span class=hljs-number >2</span> + <span class=hljs-number >1e-8</span>) - f(<span class=hljs-number >2</span>)) / <span class=hljs-number >1e-8</span> - exp(<span class=hljs-number >2</span>) * <span class=hljs-number >3</span></code></pre><pre><code class="plaintext hljs">-1.068681356741763e-7</code></pre>
+<pre><code class="julia hljs">g(<span class=hljs-number >2</span>) - exp(<span class=hljs-number >2</span>) * <span class=hljs-number >3</span></code></pre><pre><code class="plaintext hljs">0.0</code></pre>
 <pre><code class="julia hljs">f(x) = <span class=hljs-keyword >begin</span>
     println(<span class=hljs-string >&quot;f em <span class=hljs-variable >$x</span>&quot;</span>)
     <span class=hljs-keyword >return</span> exp(x) * x
@@ -707,8 +699,8 @@ g(x) = ForwardDiff.derivative(f, x)</code></pre><pre><code class="plaintext hljs
 f(<span class=hljs-number >2</span>)</code></pre><pre><code class="plaintext hljs">f em 2
 14.7781121978613</code></pre>
 <pre><code class="julia hljs">g(x) = ForwardDiff.derivative(f, x)
-g(<span class=hljs-number >2</span>)</code></pre><pre><code class="plaintext hljs">UndefVarError: ForwardDiff not defined
-</code></pre>
+g(<span class=hljs-number >2</span>)</code></pre><pre><code class="plaintext hljs">f em Dual{ForwardDiff.Tag{typeof(Main.FD_SANDBOX_4982183343611322225.f), Int64}}(2,1)
+22.16716829679195</code></pre>
 <h1 id="exercícios"><a href="#exercícios" class=header-anchor >Exercícios</a></h1>
 <p>Faça os exercícios do capítulo 2, com exceção daqueles de assuntos não vistos em classe &#40;e.g. Método do Ponto Fixo&#41;.</p>
 <ol>

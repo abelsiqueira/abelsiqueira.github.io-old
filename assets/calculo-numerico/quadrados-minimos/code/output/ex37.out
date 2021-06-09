@@ -1,1 +1,1 @@
-UndefVarError: scatter not defined
+MethodError: no method matching getindex(::Nothing, ::Int64)

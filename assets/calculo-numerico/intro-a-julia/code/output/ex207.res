@@ -1,1 +1,1 @@
-nothing
+Plots.AnimatedGif("/home/runner/work/abelsiqueira.github.io/abelsiqueira.github.io/__site/assets/calculo-numerico/intro-a-julia/code/output/exemplo-5.gif")

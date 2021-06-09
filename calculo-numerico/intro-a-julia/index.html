@@ -801,54 +801,46 @@ Solução
 <p>Para o help dos gráficos, veja Julia Plots &#40;https://juliaplots.github.io&#41;.</p>
 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> Plots
 gr(size=(<span class=hljs-number >600</span>,<span class=hljs-number >400</span>))
-plot([<span class=hljs-number >1</span>; <span class=hljs-number >2</span>; <span class=hljs-number >3</span>], [<span class=hljs-number >3</span>; <span class=hljs-number >1</span>; <span class=hljs-number >2</span>]) <span class=hljs-comment ># plot(x, y)</span></code></pre><pre><code class="plaintext hljs">ArgumentError: Package Plots not found in current path:
-- Run `import Pkg; Pkg.add(&quot;Plots&quot;)` to install the Plots package.
-
-</code></pre>
+plot([<span class=hljs-number >1</span>; <span class=hljs-number >2</span>; <span class=hljs-number >3</span>], [<span class=hljs-number >3</span>; <span class=hljs-number >1</span>; <span class=hljs-number >2</span>]) <span class=hljs-comment ># plot(x, y)</span></code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/intro-a-julia/code/plt-ex1.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/intro-a-julia/code/output/plt-ex1.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">x = range(<span class=hljs-number >0</span>, <span class=hljs-number >1</span>, length=<span class=hljs-number >100</span>) <span class=hljs-comment ># 100 elementos igual. esp. de 0 a 1</span>
 y = x.^<span class=hljs-number >2</span>
-plot(x, y)</code></pre><pre><code class="plaintext hljs">UndefVarError: plot not defined
-</code></pre>
+plot(x, y)</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/intro-a-julia/code/plt-ex2.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/intro-a-julia/code/output/plt-ex2.png" alt=""> 
   </figure>
   
-<pre><code class="julia hljs">scatter(x, x .* (<span class=hljs-number >1</span> .- x) * <span class=hljs-number >4</span>)</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+<pre><code class="julia hljs">scatter(x, x .* (<span class=hljs-number >1</span> .- x) * <span class=hljs-number >4</span>)</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/intro-a-julia/code/plt-ex3.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/intro-a-julia/code/output/plt-ex3.png" alt=""> 
   </figure>
   
-<pre><code class="julia hljs">scatter(x, rand(<span class=hljs-number >100</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: scatter not defined
-</code></pre>
+<pre><code class="julia hljs">scatter(x, rand(<span class=hljs-number >100</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/intro-a-julia/code/plt-ex4.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/intro-a-julia/code/output/plt-ex4.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">f(x) = x * sin(x)
-plot(f, <span class=hljs-number >0</span>, <span class=hljs-number >4</span><span class=hljs-literal >pi</span>) <span class=hljs-comment ># plot(f, a, b)</span></code></pre><pre><code class="plaintext hljs">UndefVarError: plot not defined
-</code></pre>
+plot(f, <span class=hljs-number >0</span>, <span class=hljs-number >4</span><span class=hljs-literal >pi</span>) <span class=hljs-comment ># plot(f, a, b)</span></code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/intro-a-julia/code/plt-ex5.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/intro-a-julia/code/output/plt-ex5.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">plot(x-&gt;exp(x) * x, -<span class=hljs-number >1</span>, <span class=hljs-number >1</span>)
 plot!(x-&gt;exp(-x), -<span class=hljs-number >1</span>, <span class=hljs-number >1</span>)
 xlims!(-<span class=hljs-number >0.5</span>, <span class=hljs-number >0.5</span>)
-ylims!(<span class=hljs-number >0.5</span>, <span class=hljs-number >1.5</span>)</code></pre><pre><code class="plaintext hljs">UndefVarError: plot not defined
-</code></pre>
+ylims!(<span class=hljs-number >0.5</span>, <span class=hljs-number >1.5</span>)</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/intro-a-julia/code/plt-ex6.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/intro-a-julia/code/output/plt-ex6.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">t = range(-<span class=hljs-number >2</span>, stop=<span class=hljs-number >3</span>, length=<span class=hljs-number >200</span>)
@@ -856,11 +848,10 @@ x = cos.(t*<span class=hljs-literal >pi</span>*<span class=hljs-number >2</span>
 y = sin.(t*<span class=hljs-literal >pi</span>*<span class=hljs-number >2</span>) .* exp.(t)
 plot(x, y)
 xlims!(-<span class=hljs-number >20</span>, <span class=hljs-number >30</span>)
-ylims!(-<span class=hljs-number >30</span>, <span class=hljs-number >20</span>)</code></pre><pre><code class="plaintext hljs">UndefVarError: plot not defined
-</code></pre>
+ylims!(-<span class=hljs-number >30</span>, <span class=hljs-number >20</span>)</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/intro-a-julia/code/plt-ex7.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/intro-a-julia/code/output/plt-ex7.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">plot(sin, <span class=hljs-number >0</span>, <span class=hljs-number >2</span><span class=hljs-literal >pi</span>, label=<span class=hljs-string >&quot;sin&quot;</span>)
@@ -871,11 +862,10 @@ xlabel!(<span class=hljs-string >&quot;x in [0,2pi]&quot;</span>)
 ylabel!(<span class=hljs-string >&quot;sin, cos&quot;</span>)
 title!(<span class=hljs-string >&quot;Funções seno e cosseno&quot;</span>)
 ylims!(-<span class=hljs-number >1.2</span>, <span class=hljs-number >1.2</span>)
-xticks!(<span class=hljs-number >0</span>:<span class=hljs-literal >pi</span>/<span class=hljs-number >2</span>:<span class=hljs-number >2</span><span class=hljs-literal >pi</span>, [<span class=hljs-string >&quot;0&quot;</span>, <span class=hljs-string >&quot;\\pi /2&quot;</span>, <span class=hljs-string >&quot;\\pi&quot;</span>, <span class=hljs-string >&quot;3\\pi/2&quot;</span>, <span class=hljs-string >&quot;2\\pi&quot;</span>])</code></pre><pre><code class="plaintext hljs">UndefVarError: plot not defined
-</code></pre>
+xticks!(<span class=hljs-number >0</span>:<span class=hljs-literal >pi</span>/<span class=hljs-number >2</span>:<span class=hljs-number >2</span><span class=hljs-literal >pi</span>, [<span class=hljs-string >&quot;0&quot;</span>, <span class=hljs-string >&quot;\\pi /2&quot;</span>, <span class=hljs-string >&quot;\\pi&quot;</span>, <span class=hljs-string >&quot;3\\pi/2&quot;</span>, <span class=hljs-string >&quot;2\\pi&quot;</span>])</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/intro-a-julia/code/plt-ex8.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/intro-a-julia/code/output/plt-ex8.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">x = range(<span class=hljs-number >0</span>, stop=<span class=hljs-number >2</span>*<span class=hljs-literal >pi</span>, length=<span class=hljs-number >100</span>)
@@ -883,9 +873,8 @@ anim = Animation()
 <span class=hljs-keyword >for</span> i = <span class=hljs-number >1</span>:<span class=hljs-number >5</span>:<span class=hljs-number >100</span>
     plot(x[<span class=hljs-number >1</span>:i], sin.(x[<span class=hljs-number >1</span>:i]))
     frame(anim)
-<span class=hljs-keyword >end</span></code></pre><pre><code class="plaintext hljs">UndefVarError: Animation not defined
-</code></pre>
-<p><span style="color:red;">// Image matching '/assets/calculo-numerico/intro-a-julia/code/exemplo-1.gif' not found. //</span></p>
+<span class=hljs-keyword >end</span></code></pre><pre><code class="plaintext hljs">Plots.AnimatedGif(&quot;/home/runner/work/abelsiqueira.github.io/abelsiqueira.github.io/__site/assets/calculo-numerico/intro-a-julia/code/output/exemplo-1.gif&quot;)</code></pre>
+<img src="/assets/calculo-numerico/intro-a-julia/code/output/exemplo-1.gif" alt="">
 <pre><code class="julia hljs">x = range(<span class=hljs-number >0</span>, stop=<span class=hljs-number >2</span>*<span class=hljs-literal >pi</span>, length=<span class=hljs-number >100</span>)
 anim = Animation()
 <span class=hljs-keyword >for</span> i = <span class=hljs-number >1</span>:<span class=hljs-number >3</span>:<span class=hljs-number >100</span>
@@ -893,9 +882,8 @@ anim = Animation()
     xlims!(x[<span class=hljs-number >1</span>], x[<span class=hljs-keyword >end</span>])
     ylims!(-<span class=hljs-number >1</span>, <span class=hljs-number >1</span>)
     frame(anim)
-<span class=hljs-keyword >end</span></code></pre><pre><code class="plaintext hljs">UndefVarError: Animation not defined
-</code></pre>
-<p><span style="color:red;">// Image matching '/assets/calculo-numerico/intro-a-julia/code/exemplo-2.gif' not found. //</span></p>
+<span class=hljs-keyword >end</span></code></pre><pre><code class="plaintext hljs">Plots.AnimatedGif(&quot;/home/runner/work/abelsiqueira.github.io/abelsiqueira.github.io/__site/assets/calculo-numerico/intro-a-julia/code/output/exemplo-2.gif&quot;)</code></pre>
+<img src="/assets/calculo-numerico/intro-a-julia/code/output/exemplo-2.gif" alt="">
 <pre><code class="julia hljs">x = range(<span class=hljs-number >0</span>, stop=<span class=hljs-number >2</span>*<span class=hljs-literal >pi</span>, length=<span class=hljs-number >100</span>)
 anim = Animation()
 <span class=hljs-keyword >for</span> i = <span class=hljs-number >1</span>:<span class=hljs-number >3</span>:<span class=hljs-number >100</span>
@@ -906,9 +894,8 @@ anim = Animation()
     xlims!(x[<span class=hljs-number >1</span>], x[<span class=hljs-keyword >end</span>])
     ylims!(-<span class=hljs-number >2</span>, <span class=hljs-number >2</span>)
     frame(anim)
-<span class=hljs-keyword >end</span></code></pre><pre><code class="plaintext hljs">UndefVarError: Animation not defined
-</code></pre>
-<p><span style="color:red;">// Image matching '/assets/calculo-numerico/intro-a-julia/code/exemplo-3.gif' not found. //</span></p>
+<span class=hljs-keyword >end</span></code></pre><pre><code class="plaintext hljs">Plots.AnimatedGif(&quot;/home/runner/work/abelsiqueira.github.io/abelsiqueira.github.io/__site/assets/calculo-numerico/intro-a-julia/code/output/exemplo-3.gif&quot;)</code></pre>
+<img src="/assets/calculo-numerico/intro-a-julia/code/output/exemplo-3.gif" alt="">
 <pre><code class="julia hljs">x = range(<span class=hljs-number >0</span>, stop=<span class=hljs-number >2</span>*<span class=hljs-literal >pi</span>, length=<span class=hljs-number >100</span>)
 anim = Animation()
 <span class=hljs-keyword >for</span> i = <span class=hljs-number >1</span>:<span class=hljs-number >3</span>:<span class=hljs-number >100</span>
@@ -919,9 +906,8 @@ anim = Animation()
     xlims!(x[<span class=hljs-number >1</span>], x[<span class=hljs-keyword >end</span>])
     ylims!(-<span class=hljs-number >2</span>, <span class=hljs-number >2</span>)
     frame(anim)
-<span class=hljs-keyword >end</span></code></pre><pre><code class="plaintext hljs">UndefVarError: Animation not defined
-</code></pre>
-<p><span style="color:red;">// Image matching '/assets/calculo-numerico/intro-a-julia/code/exemplo-4.gif' not found. //</span></p>
+<span class=hljs-keyword >end</span></code></pre><pre><code class="plaintext hljs">Plots.AnimatedGif(&quot;/home/runner/work/abelsiqueira.github.io/abelsiqueira.github.io/__site/assets/calculo-numerico/intro-a-julia/code/output/exemplo-4.gif&quot;)</code></pre>
+<img src="/assets/calculo-numerico/intro-a-julia/code/output/exemplo-4.gif" alt="">
 <p>Imagens 3d &#40;ou de objetos 3d&#41;</p>
 <p>As principais ferramentas são o contour para curvas de nível e surface e   wireframe para superfícies.</p>
 <pre><code class="julia hljs">f(x,y) = x^<span class=hljs-number >2</span> + <span class=hljs-number >4</span>y^<span class=hljs-number >2</span>
@@ -932,11 +918,10 @@ plt = plot(layout = layout)
 contour!(plt[<span class=hljs-number >1</span>], X, Y, f)
 surface!(plt[<span class=hljs-number >2</span>], X, Y, f)
 wireframe!(plt[<span class=hljs-number >3</span>], X, Y, f)
-surface!(plt[<span class=hljs-number >4</span>], X, Y, f, camera=(<span class=hljs-number >60</span>, <span class=hljs-number >60</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: grid not defined
-</code></pre>
+surface!(plt[<span class=hljs-number >4</span>], X, Y, f, camera=(<span class=hljs-number >60</span>, <span class=hljs-number >60</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/intro-a-julia/code/plt-3d1.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/intro-a-julia/code/output/plt-3d1.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">f(x,y) = (y - <span class=hljs-number >0.5</span>) / (x^<span class=hljs-number >2</span> + <span class=hljs-number >1</span>)
@@ -945,11 +930,10 @@ plt = plot(layout = layout)
 contour!(plt[<span class=hljs-number >1</span>], X, Y, f)
 surface!(plt[<span class=hljs-number >2</span>], X, Y, f)
 wireframe!(plt[<span class=hljs-number >3</span>], X, Y, f)
-surface!(plt[<span class=hljs-number >4</span>], X, Y, f, camera=(<span class=hljs-number >60</span>, <span class=hljs-number >60</span>))</code></pre><pre><code class="plaintext hljs">UndefVarError: grid not defined
-</code></pre>
+surface!(plt[<span class=hljs-number >4</span>], X, Y, f, camera=(<span class=hljs-number >60</span>, <span class=hljs-number >60</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/intro-a-julia/code/plt-3d2.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/intro-a-julia/code/output/plt-3d2.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">u0(x, y) = exp(-((x - y^<span class=hljs-number >2</span>)^<span class=hljs-number >2</span> + x^<span class=hljs-number >2</span>))
@@ -969,9 +953,8 @@ anim = Animation()
     surface!(plt[<span class=hljs-number >4</span>], X, Y, (x,y) -&gt; u(ti,x,y), camera=(<span class=hljs-number >60</span>, <span class=hljs-number >60</span>))
     zlims!(<span class=hljs-number >0</span>, <span class=hljs-number >1</span>)
     frame(anim)
-<span class=hljs-keyword >end</span></code></pre><pre><code class="plaintext hljs">UndefVarError: Animation not defined
-</code></pre>
-<p><span style="color:red;">// Image matching '/assets/calculo-numerico/intro-a-julia/code/exemplo-5.gif' not found. //</span></p>
+<span class=hljs-keyword >end</span></code></pre><pre><code class="plaintext hljs">Plots.AnimatedGif(&quot;/home/runner/work/abelsiqueira.github.io/abelsiqueira.github.io/__site/assets/calculo-numerico/intro-a-julia/code/output/exemplo-5.gif&quot;)</code></pre>
+<img src="/assets/calculo-numerico/intro-a-julia/code/output/exemplo-5.gif" alt="">
 <h1>Exercícios</h1>
 <ol>
 <li><p>Crie um vetor x aleatório, e crie y &#61; 2x &#43; 3. Crie um plot e depois um   scatter de x vs y.</p>
@@ -992,13 +975,11 @@ Solução
 <pre><code class="julia hljs">x = rand(<span class=hljs-number >100</span>)
 y = <span class=hljs-number >2</span>x .+ <span class=hljs-number >3</span>
 plot(x, y)
-scatter!(x, y)</code></pre><pre><code class="plaintext hljs">UndefVarError: plot not defined
-</code></pre>
+scatter!(x, y)</code></pre><pre><code class="plaintext hljs">Plot{Plots.GRBackend() n=2}</code></pre>
 <pre><code class="julia hljs">plot(x -&gt; exp(x), -<span class=hljs-number >1</span>, <span class=hljs-number >1</span>, c=:red)
 plot!(x -&gt; <span class=hljs-number >1</span>, -<span class=hljs-number >1</span>, <span class=hljs-number >1</span>, c=:blue, l=:dash)
 plot!(x -&gt; <span class=hljs-number >1</span> + x, -<span class=hljs-number >1</span>, <span class=hljs-number >1</span>, c=:blue, l=:dash)
-plot!(x -&gt; <span class=hljs-number >1</span> + x + <span class=hljs-number >0.5</span>x^<span class=hljs-number >2</span>, -<span class=hljs-number >1</span>, <span class=hljs-number >1</span>, c=:blue, l=:dash)</code></pre><pre><code class="plaintext hljs">UndefVarError: plot not defined
-</code></pre>
+plot!(x -&gt; <span class=hljs-number >1</span> + x + <span class=hljs-number >0.5</span>x^<span class=hljs-number >2</span>, -<span class=hljs-number >1</span>, <span class=hljs-number >1</span>, c=:blue, l=:dash)</code></pre><pre><code class="plaintext hljs">Plot{Plots.GRBackend() n=4}</code></pre>
 
 </div></div></div>
 

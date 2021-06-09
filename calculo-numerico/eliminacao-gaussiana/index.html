@@ -1,9 +1,9 @@
 <!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/katex/katex.min.css"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link href="/css/bootstrap.min.css" rel=stylesheet  crossorigin=anonymous > <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&family=Montserrat&display=swap" rel=stylesheet > <link rel=icon  href="/assets/favicon.png"> <link rel=stylesheet  href="/css/code-katex.css"> <link rel=stylesheet  href="/css/custom.css"> <link rel=stylesheet  href="/css/dark-mode.css"> <title>Eliminação Gaussiana</title> <header> <nav class="navbar navbar-expand-lg"> <div class=container-fluid > <a class="navbar-brand text-end" href="/">Abel S.<br>Siqueira</a> <button class=navbar-toggler  type=button  data-bs-toggle=collapse  data-bs-target="#navbarSupportedContent" aria-controls=navbarSupportedContent  aria-expanded=false  aria-label="Toggle navigation"> <span class=navbar-toggler-icon ></span> </button> <div class="collapse navbar-collapse" id=navbarSupportedContent > <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <li class=nav-item ><a class=nav-link  href="/">Home</a> <li class=nav-item ><a class=nav-link  href="/julia/">Julia</a> <li class=nav-item ><a class=nav-link  href="/research/">Research</a> <li class=nav-item ><a class=nav-link  href="/ufpr/">UFPR</a> </ul> <div class="dark-switch form-check form-switch"> <input type=checkbox  class=form-check-input  id=darkSwitch  /> <label class=custom-control-label  for=darkSwitch >Dark Mode</label> </div> <script src="/libs/dark-mode-switch.min.js"></script> </div> </div> </nav> </header> <div class=container-fluid > <div class="container main-text"> <div class=franklin-content ><h1 id=matrizes ><a href="#matrizes" class=header-anchor >Matrizes</a></h1> <p>Matrizes são maneiras eficientes de representação de várias coisas, em especial transformações lineares. Muitas aplicações práticas caem em sistemas lineares, e mais outras têm representações matriciais. Sendo assim, a execução eficiente da chamada <strong>álgebra linear numérica</strong> é essencial.</p> <h2 id=blas ><a href="#blas" class=header-anchor >BLAS</a></h2> <p><strong>BLAS - Basic Linear Algebra Subroutines</strong>, corresponde à uma classe de softwares que implementam álgebra linear numérica. Existem diversos BLAS, sendo alguns proprietários, alguns abertos, alguns genéricos, e alguns específicos para o processador. O BLAS é uma das unidades mais básicas do software matemático, e não vamos tentar reimplementá-lo. Porém, vamos estudar alguns aspectos que são a base para coisas mais avançadas.</p> <pre><code class="julia hljs">A = rand(<span class=hljs-number >3</span>,<span class=hljs-number >3</span>)
 v = rand(<span class=hljs-number >3</span>)
 A * v</code></pre><pre><code class="plaintext hljs">3-element Vector{Float64}:
- 1.2255919431609743
- 0.6130191676055462
- 1.1325751247802582</code></pre> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> LinearAlgebra
+ 0.6063311281180966
+ 1.3074334601811501
+ 0.6045143479640743</code></pre> <pre><code class="julia hljs"><span class=hljs-keyword >using</span> LinearAlgebra
 
 names(LinearAlgebra.BLAS) |&gt; show</code></pre><pre><code class="plaintext hljs">[:BLAS, :asum, :axpby!, :axpy!, :blascopy!, :dotc, :dotu, :gbmv, :gbmv!, :gemm, :gemm!, :gemv, :gemv!, :ger!, :hemm, :hemm!, :hemv, :hemv!, :her!, :her2k, :her2k!, :herk, :herk!, :hpmv!, :iamax, :nrm2, :rot!, :sbmv, :sbmv!, :scal, :scal!, :spmv!, :symm, :symm!, :symv, :symv!, :syr!, :syr2k, :syr2k!, :syrk, :syrk!, :trmm, :trmm!, :trmv, :trmv!, :trsm, :trsm!, :trsv, :trsv!]</code></pre>
 <p>As operações são classificas em ordens diferentes, de acordo com o número de operações. Alguns exemplos:</p>
@@ -66,42 +66,43 @@ multAx2(y2, A, x)
 norm(y1 - y2)</code></pre><pre><code class="plaintext hljs">0.0</code></pre>
 <pre><code class="julia hljs">t₀ = time()
 multAx1(y, A, x)
-Δt = time() - t₀</code></pre><pre><code class="plaintext hljs">0.004261970520019531</code></pre>
+Δt = time() - t₀</code></pre><pre><code class="plaintext hljs">0.004273891448974609</code></pre>
 <pre><code class="julia hljs">t₀ = time()
 multAx2(y, A, x)
-Δt = time() - t₀</code></pre><pre><code class="plaintext hljs">0.0012979507446289062</code></pre>
+Δt = time() - t₀</code></pre><pre><code class="plaintext hljs">0.0012400150299072266</code></pre>
 <pre><code class="julia hljs">A = rand(<span class=hljs-number >3</span>, <span class=hljs-number >3</span>)
 A[:]</code></pre><pre><code class="plaintext hljs">9-element Vector{Float64}:
- 0.2161052678391404
- 0.8631896591631327
- 0.06534170236345038
- 0.6999897089476348
- 0.8502054654407449
- 0.7145890517231919
- 0.4394579359338935
- 0.27989925502310564
- 0.3401842212195725</code></pre>
+ 0.12592383127519824
+ 0.4063946092151689
+ 0.8555454056193958
+ 0.9655295549364478
+ 0.07833452852304967
+ 0.4340232100672128
+ 0.7131603007139902
+ 0.03903373160157608
+ 0.30698615755540515</code></pre>
 <p>Para matrizes esparsas, o armazenamento pode ser muito mais complicado. A estratégia mais simples é armazenar todos os índices e valores. No Julia, existem ferramentas para trabalhar com matrizes esparsas nativamente.</p>
 <pre><code class="julia hljs"><span class=hljs-keyword >using</span> SparseArrays
 
-A = sprand(<span class=hljs-number >4</span>, <span class=hljs-number >4</span>, <span class=hljs-number >0.3</span>)</code></pre><pre><code class="plaintext hljs">4×4 SparseArrays.SparseMatrixCSC{Float64, Int64} with 6 stored entries:
- 0.435091   ⋅   0.507595   ⋅ 
- 0.986474   ⋅   0.215805  0.858794
- 0.997141   ⋅    ⋅         ⋅ 
-  ⋅         ⋅    ⋅         ⋅ </code></pre>
+A = sprand(<span class=hljs-number >4</span>, <span class=hljs-number >4</span>, <span class=hljs-number >0.3</span>)</code></pre><pre><code class="plaintext hljs">4×4 SparseArrays.SparseMatrixCSC{Float64, Int64} with 7 stored entries:
+  ⋅         ⋅         ⋅         ⋅ 
+ 0.152652   ⋅        0.143727   ⋅ 
+ 0.113762  0.358659   ⋅         ⋅ 
+ 0.299503  0.612308  0.636136   ⋅ </code></pre>
 <pre><code class="julia hljs"><span class=hljs-built_in >Matrix</span>(A)</code></pre><pre><code class="plaintext hljs">4×4 Matrix{Float64}:
- 0.435091  0.0  0.507595  0.0
- 0.986474  0.0  0.215805  0.858794
- 0.997141  0.0  0.0       0.0
- 0.0       0.0  0.0       0.0</code></pre>
-<pre><code class="julia hljs">rows, cols, vals = findnz(A)</code></pre><pre><code class="plaintext hljs">([1, 2, 3, 1, 2, 2], [1, 1, 1, 3, 3, 4], [0.4350912679355716, 0.9864741595827231, 0.9971409330496965, 0.5075945203340313, 0.21580452555225316, 0.8587941857319608])</code></pre>
-<pre><code class="julia hljs">[rows cols vals]</code></pre><pre><code class="plaintext hljs">6×3 Matrix{Float64}:
- 1.0  1.0  0.435091
- 2.0  1.0  0.986474
- 3.0  1.0  0.997141
- 1.0  3.0  0.507595
- 2.0  3.0  0.215805
- 2.0  4.0  0.858794</code></pre>
+ 0.0       0.0       0.0       0.0
+ 0.152652  0.0       0.143727  0.0
+ 0.113762  0.358659  0.0       0.0
+ 0.299503  0.612308  0.636136  0.0</code></pre>
+<pre><code class="julia hljs">rows, cols, vals = findnz(A)</code></pre><pre><code class="plaintext hljs">([2, 3, 4, 3, 4, 2, 4], [1, 1, 1, 2, 2, 3, 3], [0.15265152417732009, 0.11376165502982749, 0.29950336069511074, 0.3586586928420774, 0.6123077282392284, 0.14372698286566488, 0.6361362986166581])</code></pre>
+<pre><code class="julia hljs">[rows cols vals]</code></pre><pre><code class="plaintext hljs">7×3 Matrix{Float64}:
+ 2.0  1.0  0.152652
+ 3.0  1.0  0.113762
+ 4.0  1.0  0.299503
+ 3.0  2.0  0.358659
+ 4.0  2.0  0.612308
+ 2.0  3.0  0.143727
+ 4.0  3.0  0.636136</code></pre>
 <pre><code class="julia hljs"><span class=hljs-keyword >function</span> multAxs(y, rows, cols, vals, x)
     n = length(y)
     <span class=hljs-keyword >for</span> i = <span class=hljs-number >1</span>:n
@@ -123,47 +124,47 @@ multAxs(ys, rows, cols, vals, x)</code></pre>
  0.0
  0.0
  0.0</code></pre>
-<pre><code class="julia hljs">A</code></pre><pre><code class="plaintext hljs">4×4 SparseArrays.SparseMatrixCSC{Float64, Int64} with 6 stored entries:
- 0.435091   ⋅   0.507595   ⋅ 
- 0.986474   ⋅   0.215805  0.858794
- 0.997141   ⋅    ⋅         ⋅ 
-  ⋅         ⋅    ⋅         ⋅ </code></pre>
+<pre><code class="julia hljs">A</code></pre><pre><code class="plaintext hljs">4×4 SparseArrays.SparseMatrixCSC{Float64, Int64} with 7 stored entries:
+  ⋅         ⋅         ⋅         ⋅ 
+ 0.152652   ⋅        0.143727   ⋅ 
+ 0.113762  0.358659   ⋅         ⋅ 
+ 0.299503  0.612308  0.636136   ⋅ </code></pre>
 <pre><code class="julia hljs">A = sprand(<span class=hljs-number >1000</span>, <span class=hljs-number >1000</span>, <span class=hljs-number >0.001</span>)
-A = A * A&#x27;</code></pre><pre><code class="plaintext hljs">1000×1000 SparseArrays.SparseMatrixCSC{Float64, Int64} with 1665 stored entries:
-⠑⢄⠀⢢⠂⡁⡚⠂⠄⠠⠀⠀⠠⠀⠀⢐⢆⠁⠂⣀⠀⡔⠢⠀⠄⠠⡀⠀⢊⠀⠔⢁⠂⢂⠀⡀⠀⢀⠀⠌
-⠠⣀⠛⢄⠀⠔⡀⢤⠄⠀⠀⡀⠄⠀⠸⠀⠆⠂⢄⠀⠃⢁⢀⢀⠠⠓⢃⠅⠌⠃⠄⠄⠢⠑⠀⠂⡇⡍⠀⠁
-⠌⠠⢀⠄⠑⢄⠠⠢⢁⣠⠀⡁⡐⠀⠠⠈⢒⢄⠐⡢⡀⠤⠡⠀⠁⢶⠀⠄⠁⠌⢒⠨⢔⠠⠀⢀⠄⠁⠠⠀
-⠺⠈⠀⣌⠠⡂⠛⣤⠈⠀⠄⠀⡀⠀⠂⠁⠀⠂⠉⠀⡀⣁⢐⠀⠀⠠⠀⡁⠇⠁⠤⠔⠊⢀⡀⠀⡀⠍⡡⠁
-⠀⡁⠀⠁⠁⣰⠂⠀⠑⣤⢀⠀⢘⠀⡁⠂⢠⢀⠀⠀⣠⡠⠁⠀⠄⣄⠠⠀⠀⢨⠥⠀⠀⠠⢂⢪⠂⠐⠀⠁
-⠀⠀⠀⠠⠄⠠⠀⠁⠀⠐⡑⢌⠀⠈⠄⡀⠀⠔⠐⠄⠀⠂⠈⠀⠀⠡⠀⠀⠀⠀⠀⠀⠀⢀⠀⠰⠀⠡⠀⠂
-⠀⠂⠀⠁⠐⠈⠀⠈⠒⠐⡀⠀⠑⢄⠰⠀⢔⢂⠐⢂⠀⠀⠪⠡⠌⡀⠥⠁⡀⠐⠀⢠⠀⢀⠚⠄⠠⠪⠅⠂
-⢀⢀⠒⠂⡀⠂⠌⠀⠡⠈⠀⠡⠐⠂⠑⢄⠠⠀⠄⠆⠆⠀⠐⠀⡄⠀⡀⢂⠀⠀⢁⢀⠀⡀⠀⢁⠂⡰⠀⠀
-⠌⠑⠨⠁⠘⢔⠠⠀⠀⢒⢀⠄⠰⢑⠀⠂⠑⣤⠑⠄⠂⠀⠀⠀⢪⠑⠀⠀⡄⠠⡀⠚⠐⠀⡐⡀⠁⢤⠈⠀
-⠈⢠⠀⠑⠰⡠⠃⠀⠀⠀⠐⠄⠰⢀⠠⠅⠑⠄⠕⢅⠂⠀⠈⠀⠀⠀⢢⠀⣀⢠⠀⠀⠑⠠⡂⠀⠀⠂⢉⠀
-⢀⠤⠍⢀⠀⡌⠄⢨⠀⡺⠠⠀⠀⠀⠈⠁⠈⠀⠈⠀⡑⢌⠨⠀⠃⢈⠙⠄⠀⠐⠐⢀⠁⠈⡑⣙⠀⠈⢉⠀
-⠈⠂⠀⢐⠁⠂⠐⠐⠁⠀⠂⠀⠎⡂⠐⠀⠀⠀⠂⠀⠂⠂⠑⢄⠀⠀⠄⠂⠁⠈⠂⢀⠐⠘⠂⢐⠀⠐⣂⠀
-⠀⡁⢤⠂⢡⣄⠀⡀⠀⢥⠄⡀⠂⠡⠀⠉⢎⠒⠀⠀⡉⢀⠀⠀⠑⢄⠈⠀⠒⠉⣀⠐⡀⠣⡀⠈⠀⡀⠁⠀
-⠀⠈⠍⠔⠀⠄⠄⠠⠀⠂⠀⠀⠅⠃⠠⢈⠀⠀⠈⠒⠓⠄⠠⠁⠂⠀⢑⢔⠂⠔⠀⣀⠠⠈⠐⠀⠂⡐⠐⠄
-⠊⠐⠦⠁⡁⠄⠍⠁⡀⣀⠀⠀⢀⠈⠀⠀⠀⡉⠀⣘⢀⠀⡁⠀⡜⠀⢈⠄⡕⢍⠀⡍⠠⠂⠀⢀⠄⢀⠀⠄
-⠔⢁⠀⠅⡘⡐⢀⠇⠁⠃⠀⠀⠀⣀⠁⢐⣠⠈⠀⠀⠐⢀⠈⢀⢀⠘⠀⢠⡄⠤⠛⢄⠐⠊⡉⡁⠄⡈⠀⠀
-⠨⢀⢌⠂⠐⡑⠊⢀⠀⡀⠀⢀⠀⢀⠀⠠⠐⠀⠑⡀⡁⠀⣐⠀⠤⡈⡀⠂⠠⠂⡰⠀⢑⢔⣄⠒⠀⠀⠀⠂
-⠀⠠⠠⠀⠀⢀⠀⠈⡨⣐⢀⡀⠚⠄⠄⢀⠐⠨⠈⠈⣕⢨⢈⢀⡀⠈⠐⠀⠀⢀⠇⠨⢠⠙⡕⢍⠢⠩⣅⠀
-⠀⢀⡍⠭⠄⠁⡄⠌⢈⠀⠄⡀⡠⡂⢈⡠⠁⣄⠠⠀⡀⠀⢀⠀⠀⠠⢈⠠⠀⢁⡀⠡⠀⠀⡌⡂⠑⢄⠂⠀
-⡀⠄⠄⠀⠀⠂⠅⠊⠄⠀⠠⠀⠡⠁⠀⠀⠂⠀⠃⠐⠃⠐⠈⠘⠁⠀⠐⠄⠀⠄⠀⠀⠠⠀⠁⠙⠈⠀⠑⢄</code></pre>
+A = A * A&#x27;</code></pre><pre><code class="plaintext hljs">1000×1000 SparseArrays.SparseMatrixCSC{Float64, Int64} with 1540 stored entries:
+⠑⢄⠀⠐⠂⠀⠄⠀⠐⠀⠄⠠⡠⡤⠄⡀⠘⡂⡀⢐⠀⠀⠤⡤⠂⠂⠀⢀⡠⠂⠐⠂⠂⠀⢂⢄⢀⣀⠠⣄
+⢀⠀⡑⢌⢐⢀⠐⡂⢁⠁⡀⡀⠀⡂⠠⠐⢢⢈⡀⢅⠀⠀⠁⠈⡈⡀⠀⠀⠈⠄⠀⠈⡚⠀⠂⠠⠀⠐⠂⠀
+⠈⠀⠐⢐⠑⢄⠑⡠⠀⠑⠊⠢⠀⠐⠀⠒⠀⠠⠄⠠⠈⢂⠀⠀⠀⠂⠘⠀⠠⠁⠀⠃⠁⠀⡁⠀⠁⠐⠠⠈
+⠀⠁⠰⠠⠑⡠⠑⣤⠂⠐⠀⠒⠀⠔⠀⠒⠀⢄⠑⠀⢴⠀⠐⠀⠉⠄⠉⣄⠋⠨⠠⡀⢀⠀⠀⢅⠀⠊⠘⠋
+⠐⠀⠅⠐⢄⠀⢈⠀⠑⢄⠀⡁⢀⠕⠀⡀⠁⠐⠀⠠⠂⠀⠂⠈⠠⠀⠄⠀⡁⠀⠄⠀⠀⡈⠀⠀⠄⢄⠀⠁
+⠀⡁⠀⠨⠪⡀⢠⠀⠄⠠⠑⢄⠇⡠⠀⠠⠠⡄⠀⠀⡀⡀⡀⢕⡂⠩⠄⠀⢀⠬⠀⠀⠄⠁⠀⠠⠂⠠⠢⡆
+⠀⡮⠠⠠⢀⠀⢀⠄⢄⠔⠉⡡⠑⢄⢀⠄⠀⠉⠑⠶⠀⡄⡠⠀⢔⡠⠳⠀⠄⠀⠀⡀⡂⠁⠀⢐⢰⠀⠐⠈
+⠀⠡⢀⠂⢠⠀⢠⠀⠀⠠⠀⡀⠀⠔⠛⢄⠈⠀⠀⠀⠀⡀⠠⠀⠐⠀⠁⠐⠀⡀⠀⠂⠁⠉⠀⠀⠠⠀⠀⠃
+⠲⠠⡈⢒⠀⡀⠀⢄⢁⠀⠀⠦⡄⠀⠂⠀⢵⢗⠁⠂⠀⠀⠀⡠⡉⠀⠀⠁⠀⠂⢀⢀⡀⠀⠐⠐⠁⠀⠀⡠
+⢀⢈⠄⢌⠀⡁⠑⠀⠀⡀⠀⠀⢱⡄⠀⠀⠡⠀⢑⢔⡔⠀⠀⠀⠐⣀⠐⠀⠨⠀⠀⡀⣀⠀⠠⢰⡈⠃⠀⠀
+⠀⠀⠀⠀⠢⢀⠐⠓⠈⠀⠀⠨⠀⠤⠀⠠⠀⠀⠐⠉⠑⢄⠐⠀⠒⠙⠂⠆⠂⡀⠀⠀⠀⠀⡀⠀⠀⠐⠈⠀
+⠀⡧⡁⠀⠀⠀⠐⠀⡈⠀⢄⢌⠀⠊⠀⠂⠀⡠⠀⠀⠐⠀⡑⣬⠐⢒⠈⢠⢊⠀⠀⠠⠀⣀⠀⠠⠀⠁⠀⠀
+⠨⠀⠂⠨⠠⠀⠃⠄⠀⠂⡌⡈⠐⡱⠐⠀⠃⠈⠐⢠⣜⠀⢰⢀⢛⢔⠕⠀⠂⠠⠁⠄⠀⡉⠐⠄⠡⠀⢰⠁
+⠀⢀⠀⠀⠒⠀⠃⢤⠀⠁⠀⠁⠙⠂⢁⠀⠄⠀⠐⠀⠨⠄⠂⣀⠑⠁⠑⢄⡐⠀⠠⡀⠀⠁⡄⠙⠍⠈⡀⠐
+⠠⠊⠂⠄⠄⠂⡋⡀⠁⠈⡀⡔⠀⠁⠀⠠⠠⠀⠂⠂⠈⠠⠊⠐⠈⡀⠐⠈⡑⣬⠲⠠⠄⠀⠁⠨⢀⡠⠁⠍
+⠰⠀⡀⠀⠤⠀⠀⠢⠀⠁⠀⠀⠀⠠⠠⠀⠀⢐⠀⠠⠀⠀⠀⡀⠁⠄⠀⠢⠘⡂⡑⢌⠂⠈⠀⠠⠁⠠⠀⡀
+⠈⠀⠚⠈⠁⠀⠀⠐⡀⠠⠄⠁⠌⠈⡅⠀⠀⠈⠀⠘⠀⠀⠀⢠⡄⠠⠄⠀⠀⠁⡈⠀⠑⢄⡀⠈⡠⠀⠂⠁
+⠈⢔⠈⡀⠁⠈⠄⢄⠀⠀⠀⡀⢀⢀⠀⠀⢐⠀⢀⣂⠀⠈⠀⡀⠐⠄⣄⠉⡁⡀⠀⡀⡀⠈⠑⢄⠁⢀⠱⠀
+⠀⢰⢀⠀⢁⠀⡠⠀⠀⢅⠈⡀⠐⠒⠀⠂⠁⠀⠦⠈⢀⠀⠄⠀⠁⠂⡃⠁⠀⡰⠁⡀⠀⠊⠁⢀⠑⢄⠢⠀
+⠀⢦⠈⠀⡀⠂⡶⠀⠄⠀⠨⠦⡐⠀⠤⠀⠀⡠⠀⠀⠂⠀⠀⠀⠔⠒⢀⠈⡅⠄⠀⠠⠌⠀⠑⠂⠈⠂⡑⢌</code></pre>
 <h1 id=sistemas_lineares ><a href="#sistemas_lineares" class=header-anchor >Sistemas Lineares</a></h1>
 <p>Sistemas lineares são extremamentes importantes. Em quase todas aplicações avançadas teremos sistemas lineares. Em muitos casos, esses sistemas serão especiais, de modo que teremos métodos especiais para resolvê-los. Estudaremos aqui, no entanto, a maneira mais geral de resolvê-los. Estudos mais avançados serão feitos em disciplinas posteriores.</p>
 <h2 id=a_barra_invertida ><a href="#a_barra_invertida" class=header-anchor >A barra invertida</a></h2>
 <p>Em Julia e Matlab/Octave, existe um comando especial e simples para se resolver sistemas lineares: a barra invertida ....</p>
 <pre><code class="julia hljs">A = rand(<span class=hljs-number >3</span>, <span class=hljs-number >3</span>)
 b = A * ones(<span class=hljs-number >3</span>)</code></pre><pre><code class="plaintext hljs">3-element Vector{Float64}:
- 1.9740291706173343
- 1.7165512822469684
- 1.38511006871715</code></pre>
+ 1.9681159477327848
+ 1.3370926625978168
+ 1.032617290529063</code></pre>
 <p>b foi criado para que Ax &#61; b tenha como solução o vetor de uns.</p>
 <pre><code class="julia hljs">x = A\b</code></pre><pre><code class="plaintext hljs">3-element Vector{Float64}:
- 0.9999999999999994
- 0.9999999999999999
- 1.0000000000000004</code></pre>
+ 1.0
+ 1.0
+ 1.0</code></pre>
 <pre><code class="julia hljs">A = zeros(<span class=hljs-number >5</span>,<span class=hljs-number >5</span>) + <span class=hljs-number >2</span>I
 <span class=hljs-keyword >for</span> i = <span class=hljs-number >1</span>:<span class=hljs-number >4</span>
     A[i,i+<span class=hljs-number >1</span>] = <span class=hljs-number >1</span>
@@ -204,16 +205,16 @@ A \ b</code></pre><pre><code class="plaintext hljs">5-element Vector{Float64}:
 <p>Se <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span> é uma matriz quadrada e inversível, então é garantido que a matriz aumentada escalonada será da forma <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo fence=true >[</mo><mtable rowspacing=0.1600em  columnalign="center center" columnspacing=1em ><mtr><mtd><mstyle scriptlevel=0  displaystyle=false ><mi>U</mi></mstyle></mtd><mtd><mstyle scriptlevel=0  displaystyle=false ><mi>c</mi></mstyle></mtd></mtr></mtable><mo fence=true >]</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix} U &amp; c \end{bmatrix}</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:1.20001em;vertical-align:-0.35001em;"></span><span class=minner ><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size1">[</span></span><span class=mord ><span class=mtable ><span class=col-align-c ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.8500000000000001em;"><span style="top:-3.01em;"><span class=pstrut  style="height:3em;"></span><span class=mord ><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.35000000000000003em;"><span></span></span></span></span></span><span class=arraycolsep  style="width:0.5em;"></span><span class=arraycolsep  style="width:0.5em;"></span><span class=col-align-c ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.8500000000000001em;"><span style="top:-3.01em;"><span class=pstrut  style="height:3em;"></span><span class=mord ><span class="mord mathnormal">c</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.35000000000000003em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size1">]</span></span></span></span></span></span>, onde <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi></mrow><annotation encoding="application/x-tex">U</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> é uma matriz triangular superior com diagonal não nula, isto é <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mrow><mi>i</mi><mo separator=true >,</mo><mi>j</mi></mrow></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b_{i,j} = 0</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.980548em;vertical-align:-0.286108em;"></span><span class=mord ><span class="mord mathnormal">b</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.286108em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >=</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:0.64444em;vertical-align:0em;"></span><span class=mord >0</span></span></span></span> se <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>&gt;</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i &gt; j</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.69862em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">i</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >&gt;</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span>, e <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mrow><mi>i</mi><mo separator=true >,</mo><mi>i</mi></mrow></msub><mo mathvariant=normal >≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b_{i,i} \neq 0</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.980548em;vertical-align:-0.286108em;"></span><span class=mord ><span class="mord mathnormal">b</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">i</span></span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.286108em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel ><span class=mrel ><span class="mord vbox"><span class=thinbox ><span class=rlap ><span class=strut  style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class=inner ><span class=mord ><span class=mrel ></span></span></span><span class=fix ></span></span></span></span></span><span class=mrel >=</span></span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:0.64444em;vertical-align:0em;"></span><span class=mord >0</span></span></span></span>. Em outras palavras, a primeira linha é não nula, e cada linha abaixo tem um zero a mais que a anterior.</p>
 <p>Exemplo</p>
 <pre><code class="julia hljs">U = triu(rand(<span class=hljs-number >1</span>:<span class=hljs-number >999</span>, <span class=hljs-number >10</span>, <span class=hljs-number >10</span>)) / <span class=hljs-number >1000</span></code></pre><pre><code class="plaintext hljs">10×10 Matrix{Float64}:
- 0.263  0.265  0.467  0.994  0.332  0.328  0.759  0.715  0.797  0.402
- 0.0    0.42   0.221  0.718  0.926  0.257  0.952  0.902  0.178  0.838
- 0.0    0.0    0.541  0.299  0.917  0.344  0.216  0.385  0.505  0.302
- 0.0    0.0    0.0    0.572  0.857  0.181  0.942  0.009  0.487  0.135
- 0.0    0.0    0.0    0.0    0.407  0.487  0.347  0.418  0.652  0.337
- 0.0    0.0    0.0    0.0    0.0    0.242  0.954  0.194  0.639  0.243
- 0.0    0.0    0.0    0.0    0.0    0.0    0.204  0.353  0.19   0.726
- 0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.977  0.714  0.803
- 0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.848  0.388
- 0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.844</code></pre>
+ 0.632  0.812  0.015  0.341  0.276  0.311  0.236  0.955  0.318  0.751
+ 0.0    0.056  0.727  0.004  0.224  0.721  0.511  0.92   0.145  0.05
+ 0.0    0.0    0.03   0.832  0.111  0.729  0.172  0.397  0.371  0.11
+ 0.0    0.0    0.0    0.651  0.131  0.551  0.651  0.526  0.684  0.256
+ 0.0    0.0    0.0    0.0    0.45   0.254  0.019  0.497  0.244  0.582
+ 0.0    0.0    0.0    0.0    0.0    0.59   0.693  0.046  0.75   0.544
+ 0.0    0.0    0.0    0.0    0.0    0.0    0.139  0.143  0.197  0.106
+ 0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.792  0.346  0.045
+ 0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.976  0.96
+ 0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.859</code></pre>
 <p>Computacionalmente, vamos fazer as mesmas operações, com exceção da multiplicação de uma linha por um número, por motivos que ficarão claros no futuro. Além disso, o motivo para se mudar as linhas ao fazer essas operações na mão era para facilitar as contas. Computacionalmente, teremos outros objetivos, e só faremos a mudança de linhas quando necessário.</p>
 <p>Portanto, nossa operação principal será a adição de um múltiplo de outra linha a linha atual. Nossa notação será</p>
 <span class=katex-display ><span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML" display=block ><semantics><mrow><msub><mi>L</mi><mi>j</mi></msub><mo>←</mo><msub><mi>L</mi><mi>j</mi></msub><mo>+</mo><mi>α</mi><msub><mi>L</mi><mi>i</mi></msub><mo separator=true >,</mo></mrow><annotation encoding="application/x-tex"> L_j \leftarrow L_j + \alpha L_i, </annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.969438em;vertical-align:-0.286108em;"></span><span class=mord ><span class="mord mathnormal">L</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.286108em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >←</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:0.969438em;vertical-align:-0.286108em;"></span><span class=mord ><span class="mord mathnormal">L</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.286108em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >+</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class=mord ><span class="mord mathnormal">L</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mpunct >,</span></span></span></span></span>
@@ -419,9 +420,9 @@ sist_tri_sup(A, b)</code></pre><pre><code class="plaintext hljs">3-element Vecto
 A = rand(<span class=hljs-number >100</span>, <span class=hljs-number >100</span>)
 b = A * ones(<span class=hljs-number >100</span>);</code></pre>
 <pre><code class="julia hljs">(<span class=hljs-number >100</span> * <span class=hljs-number >100</span> + <span class=hljs-number >100</span> + <span class=hljs-number >100</span>) * <span class=hljs-built_in >Float64</span>.size / <span class=hljs-number >1024</span></code></pre><pre><code class="plaintext hljs">79.6875</code></pre>
-<pre><code class="julia hljs"><span class=hljs-meta >@time</span> x = resolve(A, b);</code></pre><pre><code class="plaintext hljs">  0.014016 seconds (21.27 k allocations: 12.167 MiB, 35.61% compilation time)
+<pre><code class="julia hljs"><span class=hljs-meta >@time</span> x = resolve(A, b);</code></pre><pre><code class="plaintext hljs">  0.012411 seconds (21.27 k allocations: 12.167 MiB, 33.69% compilation time)
 </code></pre>
-<pre><code class="julia hljs"><span class=hljs-meta >@time</span> x = A \ b;</code></pre><pre><code class="plaintext hljs">  0.000283 seconds (4 allocations: 79.953 KiB)
+<pre><code class="julia hljs"><span class=hljs-meta >@time</span> x = A \ b;</code></pre><pre><code class="plaintext hljs">  0.000342 seconds (4 allocations: 79.953 KiB)
 </code></pre>
 <h2 id=pontos_importantes ><a href="#pontos_importantes" class=header-anchor >Pontos importantes</a></h2>
 <ul>

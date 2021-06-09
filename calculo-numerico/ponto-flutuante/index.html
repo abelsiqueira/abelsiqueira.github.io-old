@@ -97,13 +97,10 @@ D = <span class=hljs-built_in >Float16</span>[<span class=hljs-number >0.0</span
 
 scatter(X, D, ms=<span class=hljs-number >1</span>, m=(stroke(<span class=hljs-number >0</span>)), leg=<span class=hljs-literal >false</span>)
 yticks!(<span class=hljs-number >2</span> .^ (<span class=hljs-number >0</span>:<span class=hljs-number >5</span>))
-png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig1&quot;</span>))</code></pre><pre><code class="plaintext hljs">ArgumentError: Package Plots not found in current path:
-- Run `import Pkg; Pkg.add(&quot;Plots&quot;)` to install the Plots package.
-
-</code></pre>
+png(joinpath(<span class=hljs-meta >@OUTPUT</span>, <span class=hljs-string >&quot;fig1&quot;</span>))</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/ponto-flutuante/code/fig1.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/ponto-flutuante/code/output/fig1.png" alt=""> 
   </figure>
   
 <p>Veja que as distância são as potências de 2.</p>
@@ -381,13 +378,10 @@ valores_h = [<span class=hljs-number >2.0</span>^p <span class=hljs-keyword >for
 plot(valores_h, fill(<span class=hljs-number >0.5</span>, length(valores_h)), c=:black, l=:dash, lab=<span class=hljs-string >&quot;Exato&quot;</span>)
 plot(xaxis=:log, yaxis=:log)
 scatter!(valores_h, Ap1.(valores_h), c=:red, lab=<span class=hljs-string >&quot;Ruim&quot;</span>, ms=<span class=hljs-number >3</span>)
-scatter!(valores_h, Ap2.(valores_h), c=:blue, lab=<span class=hljs-string >&quot;Boa&quot;</span>, ms=<span class=hljs-number >3</span>)</code></pre><pre><code class="plaintext hljs">ArgumentError: Package Plots not found in current path:
-- Run `import Pkg; Pkg.add(&quot;Plots&quot;)` to install the Plots package.
-
-</code></pre>
+scatter!(valores_h, Ap2.(valores_h), c=:blue, lab=<span class=hljs-string >&quot;Boa&quot;</span>, ms=<span class=hljs-number >3</span>)</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/ponto-flutuante/code/fig-sqrt.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/ponto-flutuante/code/output/fig-sqrt.png" alt=""> 
   </figure>
   
 <p>Perceba que alguns ponto do &quot;Ruim&quot; na verdade tem um erro nulo. Isso acontece quando o ponto flutuante coincide com o valor real.</p>
@@ -414,40 +408,34 @@ gr()
 <span class=hljs-comment >#Aproximação para $h = 1e-4$</span>
 h = <span class=hljs-number >1e-4</span>
 plot(f, -<span class=hljs-number >1</span>, <span class=hljs-number >1</span>, c=:blue)
-plot!(x-&gt;DF(x, h), -<span class=hljs-number >1</span>, <span class=hljs-number >1</span>, c=:red)</code></pre><pre><code class="plaintext hljs">ArgumentError: Package Plots not found in current path:
-- Run `import Pkg; Pkg.add(&quot;Plots&quot;)` to install the Plots package.
-
-</code></pre>
+plot!(x-&gt;DF(x, h), -<span class=hljs-number >1</span>, <span class=hljs-number >1</span>, c=:red)</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/ponto-flutuante/code/fig-der1.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/ponto-flutuante/code/output/fig-der1.png" alt=""> 
   </figure>
   
-<pre><code class="julia hljs">plot(x-&gt;DF(x, h) - f(x), -<span class=hljs-number >1</span>, <span class=hljs-number >1</span>, c=:blue)</code></pre><pre><code class="plaintext hljs">UndefVarError: plot not defined
-</code></pre>
+<pre><code class="julia hljs">plot(x-&gt;DF(x, h) - f(x), -<span class=hljs-number >1</span>, <span class=hljs-number >1</span>, c=:blue)</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/ponto-flutuante/code/fig-der2.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/ponto-flutuante/code/output/fig-der2.png" alt=""> 
   </figure>
   
 <p>Essa aproximação parece bastante boa. Vamos ver num intervalo maior.</p>
 <p>Aproximação para <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mn>1</mn><mi>e</mi><mo>−</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">h = 1e-4</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">h</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >=</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:0.72777em;vertical-align:-0.08333em;"></span><span class=mord >1</span><span class="mord mathnormal">e</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >−</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:0.64444em;vertical-align:0em;"></span><span class=mord >4</span></span></span></span></p>
 <pre><code class="julia hljs">h = <span class=hljs-number >1e-4</span>
 plot(f, -<span class=hljs-number >10</span>, <span class=hljs-number >10</span>, c=:blue)
-plot!(x-&gt;DF(x, h), -<span class=hljs-number >10</span>, <span class=hljs-number >10</span>, c=:red)</code></pre><pre><code class="plaintext hljs">UndefVarError: plot not defined
-</code></pre>
+plot!(x-&gt;DF(x, h), -<span class=hljs-number >10</span>, <span class=hljs-number >10</span>, c=:red)</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/ponto-flutuante/code/fig-der3.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/ponto-flutuante/code/output/fig-der3.png" alt=""> 
   </figure>
   
 <p>Vamos ver o erro dessa aproximação. Aproximação para <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mn>1</mn><mi>e</mi><mo>−</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">h = 1e-4</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">h</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >=</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:0.72777em;vertical-align:-0.08333em;"></span><span class=mord >1</span><span class="mord mathnormal">e</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >−</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span></span><span class=base ><span class=strut  style="height:0.64444em;vertical-align:0em;"></span><span class=mord >4</span></span></span></span></p>
 <pre><code class="julia hljs">h = <span class=hljs-number >1e-4</span>
-plot(x-&gt;f(x) - DF(x, h), -<span class=hljs-number >10</span>, <span class=hljs-number >10</span>, c=:red)</code></pre><pre><code class="plaintext hljs">UndefVarError: plot not defined
-</code></pre>
+plot(x-&gt;f(x) - DF(x, h), -<span class=hljs-number >10</span>, <span class=hljs-number >10</span>, c=:red)</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/ponto-flutuante/code/fig-der4.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/ponto-flutuante/code/output/fig-der4.png" alt=""> 
   </figure>
   
 <pre><code class="julia hljs">abs(f(<span class=hljs-number >1.0</span>) - DF(<span class=hljs-number >1.0</span>, <span class=hljs-number >1e-4</span>))/f(<span class=hljs-number >1.0</span>)</code></pre><pre><code class="plaintext hljs">5.000166739738369e-5</code></pre>
@@ -469,11 +457,10 @@ x = <span class=hljs-number >1.0</span>
     push!(Es, E)
     h = h / <span class=hljs-number >2</span>
 <span class=hljs-keyword >end</span>
-plot(hs, Es, m=<span class=hljs-number >3</span>, xaxis=:log, yaxis=:log)</code></pre><pre><code class="plaintext hljs">UndefVarError: plot not defined
-</code></pre>
+plot(hs, Es, m=<span class=hljs-number >3</span>, xaxis=:log, yaxis=:log)</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/ponto-flutuante/code/fig-der5.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/ponto-flutuante/code/output/fig-der5.png" alt=""> 
   </figure>
   
 <p>Pelo gráfico podemos ver que o erro diminui até por volta de <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>8</mn></mrow></msup></mrow><annotation encoding="application/x-tex">10^{-8}</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.8141079999999999em;vertical-align:0em;"></span><span class=mord >1</span><span class=mord ><span class=mord >0</span><span class=msupsub ><span class=vlist-t ><span class=vlist-r ><span class=vlist  style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">8</span></span></span></span></span></span></span></span></span></span></span></span>, e depois aumenta, erraticamente. Vamos tentar descobrir teoricamente o motivo disso.</p>
@@ -500,11 +487,10 @@ plot(hs, Es, m=<span class=hljs-number >3</span>, xaxis=:log, yaxis=:log)</code>
 <p>onde <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>L</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">L_2</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.83333em;vertical-align:-0.15em;"></span><span class=mord ><span class="mord mathnormal">L</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> é um limitante para <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant=normal >∣</mi><msup><mi>f</mi><mrow><mo mathvariant=normal >′</mo><mo mathvariant=normal >′</mo></mrow></msup><mo stretchy=false >(</mo><mi>x</mi><mo stretchy=false >)</mo><mi mathvariant=normal >∣</mi></mrow><annotation encoding="application/x-tex">|f&#x27;&#x27;(x)|</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:1.001892em;vertical-align:-0.25em;"></span><span class=mord >∣</span><span class=mord ><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class=msupsub ><span class=vlist-t ><span class=vlist-r ><span class=vlist  style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′′</span></span></span></span></span></span></span></span></span><span class=mopen >(</span><span class="mord mathnormal">x</span><span class=mclose >)</span><span class=mord >∣</span></span></span></span> no intervalo <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy=false >(</mo><mi>a</mi><mo separator=true >,</mo><mi>b</mi><mo stretchy=false >)</mo></mrow><annotation encoding="application/x-tex">(a,b)</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:1em;vertical-align:-0.25em;"></span><span class=mopen >(</span><span class="mord mathnormal">a</span><span class=mpunct >,</span><span class=mspace  style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class=mclose >)</span></span></span></span>.</p>
 <pre><code class="julia hljs">hs = <span class=hljs-number >10.0</span> .^ (-<span class=hljs-number >11</span>:<span class=hljs-number >0.02</span>:-<span class=hljs-number >2</span>)
 plot(hs, hs / <span class=hljs-number >2</span>, xaxis=:log, yaxis=:log, lab=<span class=hljs-string >&quot;h / 2&quot;</span>)
-plot!(hs, <span class=hljs-number >2e-16</span> ./ hs, c=:red, lab=<span class=hljs-string >&quot;2e-16 / h&quot;</span>)</code></pre><pre><code class="plaintext hljs">UndefVarError: plot not defined
-</code></pre>
+plot!(hs, <span class=hljs-number >2e-16</span> ./ hs, c=:red, lab=<span class=hljs-string >&quot;2e-16 / h&quot;</span>)</code></pre>
 
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/ponto-flutuante/code/fig-der6.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/ponto-flutuante/code/output/fig-der6.png" alt=""> 
   </figure>
   
 <p>Note que o limitante para o erro depende de <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi mathvariant=normal >/</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">1/h</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:1em;vertical-align:-0.25em;"></span><span class=mord >1/</span><span class="mord mathnormal">h</span></span></span></span> além de depender de h. Isso quer dizer que a diminuição de h faz o erro crescer bastante, apesar do termo linear dizer que o erro diminui. Felizmente, temos <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi mathvariant=normal >/</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">1/h</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:1em;vertical-align:-0.25em;"></span><span class=mord >1/</span><span class="mord mathnormal">h</span></span></span></span> multiplicado por <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ϵ</mi><mi>M</mi></msub></mrow><annotation encoding="application/x-tex">\epsilon_M</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.58056em;vertical-align:-0.15em;"></span><span class=mord ><span class="mord mathnormal">ϵ</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, de modo que esse erro começa relativamente pequeno.</p>
@@ -588,11 +574,10 @@ fx = exp(x)
     h = h /= <span class=hljs-number >2</span>
 <span class=hljs-keyword >end</span>
 plot(hs, E_av, m=<span class=hljs-number >3</span>, xaxis=:log, yaxis=:log, c=:blue)
-plot!(hs, E_ct, m=<span class=hljs-number >3</span>, xaxis=:log, yaxis=:log, c=:red)</code></pre><pre><code class="plaintext hljs">UndefVarError: plot not defined
-</code></pre>
+plot!(hs, E_ct, m=<span class=hljs-number >3</span>, xaxis=:log, yaxis=:log, c=:red)</code></pre>
 <p>
   <figure style="text-align: center">
-   <p><span style="color:red;">// Image matching '/assets/calculo-numerico/ponto-flutuante/code/fig-der7.png' not found. //</span></p> 
+   <img src="/assets/calculo-numerico/ponto-flutuante/code/output/fig-der7.png" alt=""> 
   </figure>
    A mesma análise pode ser feita para a segunda derivada, assim como outras. Além disso, existem várias maneiras de se aproximar as derivadas, utilizando mais avaliações da função f.</p>
 <h3 id="exercícios"><a href="#exercícios" class=header-anchor >Exercícios</a></h3>

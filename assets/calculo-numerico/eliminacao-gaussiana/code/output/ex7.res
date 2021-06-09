@@ -1,5 +1,5 @@
-4×4 SparseArrays.SparseMatrixCSC{Float64, Int64} with 6 stored entries:
- 0.435091   ⋅   0.507595   ⋅ 
- 0.986474   ⋅   0.215805  0.858794
- 0.997141   ⋅    ⋅         ⋅ 
-  ⋅         ⋅    ⋅         ⋅ 
+4×4 SparseArrays.SparseMatrixCSC{Float64, Int64} with 7 stored entries:
+  ⋅         ⋅         ⋅         ⋅ 
+ 0.152652   ⋅        0.143727   ⋅ 
+ 0.113762  0.358659   ⋅         ⋅ 
+ 0.299503  0.612308  0.636136   ⋅ 
