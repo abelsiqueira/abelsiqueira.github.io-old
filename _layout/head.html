@@ -13,6 +13,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&family=Montserrat&display=swap" rel="stylesheet">
   {{isdef title}} <title>{{fill title}}</title>  {{end}}
+
+  <!-- Social media -->
+  <meta property="og:title" content="{{ fill website_title }}">
+  <meta name="twitter:title" content="{{ fill website_title }}">
+
+  {{isdef description}}
+  <meta property="og:description" content="{{ fill title }}: {{ fill description }}">
+  <meta name="twitter:description" content="{{ fill title }}: {{ fill description }}">
+  {{else}}
+  <meta property="og:description" content="{{ fill title }}">
+  <meta name="twitter:description" content="{{ fill title }}">
+  {{end}}
+
+  {{isdef image}}
+  <meta property="og:image" content="https://abelsiqueira.github.io/images/{{ fill image }}">
+  <meta name="twitter:image" content="https://abelsiqueira.github.io/images/{{ fill image }}">
+  {{else}}
+  <meta property="og:image" content="https://abelsiqueira.github.io/images/abel-banner.jpg">
+  <meta name="twitter:image" content="https://abelsiqueira.github.io/images/abel-banner.jpg">
+  {{end}}
+
+  <meta property="og:url" content="{{ fill website_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+
 </head>
 <body>
   {{insert header.html}}

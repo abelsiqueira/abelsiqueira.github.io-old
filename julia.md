@@ -1,4 +1,5 @@
-@def title = "Julia"
+@def title = "Julia Language"
+@def description = "My work using Julia"
 @def image = "code.jpg"
 @def image_text = "Julia Language"
 @def image_text_sec = "Trabalho, vídeos e apostilas<br>Work, videos, and notes"
