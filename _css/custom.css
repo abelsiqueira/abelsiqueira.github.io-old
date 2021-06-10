@@ -53,12 +53,12 @@ header a:hover {
   font-size: 1.5em;
   line-height: 1em;
   padding: 20px;
+  width: 150px;
+  height: 100px;
 }
 
 .navbar-brand {
   background-image: url('/images/logo-light.png');
-  width: 150px;
-  height: 100px;
 }
 
 /* FOOTER */
