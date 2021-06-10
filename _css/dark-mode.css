@@ -24,6 +24,10 @@
   background-color: #242424 !important;
 }
 
+[data-theme="dark"] .navbar-brand {
+  background-image: url('/images/logo-dark.png');
+}
+
 [data-theme="dark"] header a {
   color: #90caf9 !important
 }

@@ -55,6 +55,12 @@ header a:hover {
   padding: 20px;
 }
 
+.navbar-brand {
+  background-image: url('/images/logo-light.png');
+  width: 150px;
+  height: 100px;
+}
+
 /* FOOTER */
 footer {
   background-color: #242424 !important;
