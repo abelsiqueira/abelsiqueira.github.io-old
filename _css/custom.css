@@ -1,6 +1,6 @@
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #000;
 }
 
@@ -34,7 +34,7 @@ body {
 header {
   background-color: #90caf9 !important;
   border-bottom: 1px solid black;
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', serif;
   font-weight: bold;
 }
 
