@@ -1,7 +1,7 @@
 @def title = "Publications"
 
 ~~~
-<bibtex src="/_data/abel.bib"></bibtex>
+<bibtex src="/assets/abel.bib"></bibtex>
 
 <div class="bibtex_structure">
 <div class="sections bibtextypekey">

@@ -43,7 +43,11 @@
 
 {{isdef image}}
   {{isdef image_text}}
-  <div class="banner text-over-image-div">
+  {{isdef big_image }}
+  <div class="banner text-over-image-div big-image">
+  {{else}}
+  <div class="banner text-over-image-div small-image">
+  {{end}}
     <img src="/images/{{ fill image }}">
     <section class="text-over-image-text">
       <h1> {{fill image_text }} </h1>
@@ -51,7 +55,11 @@
     </section>
   </div>
   {{else}}
-  <div class="banner">
+  {{isdef big_image }}
+  <div class="banner big-image">
+  {{else}}
+  <div class="banner small-image">
+  {{end}}
     <img src="/images/{{ fill image }}">
   </div>
   {{end}}

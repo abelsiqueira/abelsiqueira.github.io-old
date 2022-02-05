@@ -134,10 +134,17 @@ h1#title {
 .banner img {
   display: grid;
   width: 100%;
-  height: 600px;
   background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
+}
+
+.small-image img {
+  height: 300px;
+}
+
+.big-image img {
+  height: 500px;
 }
 
 /* DESCRIPTION */
